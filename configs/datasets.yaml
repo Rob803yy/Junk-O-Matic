@@ -1,0 +1,11 @@
+datasets:
+  - name: taco
+    enabled: true
+    type: detection
+    source: https://github.com/pedropro/TACO
+    local_root: data/external/taco
+  - name: trashnet
+    enabled: true
+    type: classification
+    source: https://github.com/garythung/trashnet
+    local_root: data/external/trashnet

@@ -1,0 +1,1 @@
+"""Junk-O-Matic package."""

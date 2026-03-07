@@ -1,0 +1,8 @@
+classes:
+  - plastic_bottle
+  - paper
+  - can
+  - glass
+  - carton
+  - food_waste
+  - other_trash

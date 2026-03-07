@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-03-07T02:56:23.209488+00:00",
+  "taxonomy_version": "v0",
+  "datasets": [
+    {
+      "name": "taco",
+      "images": 0,
+      "annotations": 0,
+      "classes_seen": [
+        "plastic_bottle",
+        "paper",
+        "can",
+        "glass",
+        "carton",
+        "food_waste",
+        "other_trash"
+      ]
+    },
+    {
+      "name": "trashnet",
+      "images": 0,
+      "annotations": 0,
+      "classes_seen": [
+        "plastic_bottle",
+        "paper",
+        "can",
+        "glass",
+        "carton",
+        "food_waste",
+        "other_trash"
+      ]
+    }
+  ],
+  "totals": {
+    "images": 0,
+    "annotations": 0
+  }
+}
