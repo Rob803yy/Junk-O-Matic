@@ -1,8 +1,58 @@
+# Python
 .venv/
+venv/
+env/
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configs and secrets
+*.local.yaml
+*.local.yml
+local_*.yaml
+local_*.yml
+.env
+.env.*
+
+# V1.0A local run evidence
+test_data/*
+!test_data/README.md
+!test_data/.gitkeep
+data/raw/
+data/interim/
+logs/
 *.log
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.h264
+*.bag
+*.db3
+*.mcap
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Keep generated reports intentional.
+reports/tmp/
+reports/raw/
+
+# OS and editor files
 .DS_Store
 Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arduino build output
+*.hex
+*.elf
+*.bin

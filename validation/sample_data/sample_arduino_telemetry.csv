@@ -1,0 +1,2 @@
+timestamp_utc,aux_battery_voltage,rail_12v,rail_5v,imu_roll_deg,imu_pitch_deg,imu_yaw_deg,enclosure_temp_c,estop,fault_code
+2026-05-02T14:30:00Z,23.7,12.1,5.05,1.2,-0.7,85.4,34.2,false,0

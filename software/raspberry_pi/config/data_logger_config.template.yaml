@@ -1,0 +1,29 @@
+stage: "V1.0A - Instrumented RC Platform"
+control_authority: "SCX6 RC transmitter receiver ESC servo and motor are sole drive-control authority"
+
+run:
+  output_root: "test_data"
+  operator: "TODO_OPERATOR"
+  buggy_id: "JOM-V1A-TODO"
+  route_id: "ROUTE-TODO"
+  evidence_folder: "TODO_LOCAL_OR_ONEDRIVE_PATH"
+
+arduino:
+  enabled: true
+  serial_port: "/dev/ttyUSB0"
+  baud_rate: 115200
+  timeout_s: 0.2
+
+camera:
+  enabled: false
+  device_index: 0
+  width: 1280
+  height: 720
+  fps: 30
+  output_file: "front_camera.mp4"
+
+pi_health:
+  sample_interval_s: 5
+
+logging:
+  flush_every_rows: 1

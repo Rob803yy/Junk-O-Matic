@@ -1,0 +1,2 @@
+run_id,route_id,started_at_utc,ended_at_utc,duration_s,video_enabled,video_file,telemetry_rows,pi_health_rows,event_rows,fault_rows,control_authority,evidence_folder
+JOM-V1A-20260502-RUN01,ROUTE-TODO,2026-05-02T14:30:00Z,2026-05-02T15:15:00Z,2700,true,video/front_camera.mp4,2700,540,8,0,SCX6 RC transmitter receiver ESC servo and motor are sole drive-control authority,TODO_LOCAL_OR_ONEDRIVE_PATH

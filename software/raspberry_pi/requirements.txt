@@ -1,0 +1,6 @@
+PyYAML>=6.0.1
+pyserial>=3.5
+psutil>=5.9.0
+
+# Optional for USB camera MP4 recording; uncomment on the Pi when needed.
+# opencv-python>=4.9.0
