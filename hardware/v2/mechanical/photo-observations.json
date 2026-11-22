@@ -1,0 +1,235 @@
+{
+  "revision": "CAD-R2",
+  "review_date": "2026-11-21",
+  "sources": [
+    {
+      "id": "CAD-P01",
+      "file_name": "codex-clipboard-e1f9543e-1265-4704-abef-dc206b5ebae2.png",
+      "sha256": "e044b85a135274628c61f65025aaf9a5d166503cf0d4aa56bfb5282e19d05280",
+      "type": "owner_supplied_photo",
+      "capture_date": null,
+      "scale_reference": null,
+      "scope": "Enclosure-side oblique: flared tub, three visible red strip groups, external orange case, blue front-corner hardware and low metal strip.",
+      "raw_media_in_git": false
+    },
+    {
+      "id": "CAD-P02",
+      "file_name": "codex-clipboard-24bcfdf6-a407-43aa-8136-452083c0f02b.png",
+      "sha256": "da637917bc28ec9ebd16a85273b5da98c1a499c52fbacee0db3b78f8de8fbf22",
+      "type": "owner_supplied_photo",
+      "capture_date": null,
+      "scale_reference": null,
+      "scope": "Yellow-handle end: tub width, molded end recess, yellow attachment, two white lights, blue side hardware, black bumper and red detail.",
+      "raw_media_in_git": false
+    },
+    {
+      "id": "CAD-P03",
+      "file_name": "codex-clipboard-a7d49cec-6fe8-43b3-93a4-676971ab0c8c.png",
+      "sha256": "eddf94d83bc15b808e12c62bd537f379984fee7cd39e0da393a3b696a64ca517",
+      "type": "owner_supplied_photo",
+      "capture_date": null,
+      "scale_reference": null,
+      "scope": "Opposite-side oblique: tapered tub and floor ribs, longer rear overhang, strip lights and low silver strip.",
+      "raw_media_in_git": false
+    }
+  ],
+  "owner_confirmations": [
+    {
+      "id": "CAD-U01",
+      "claim": "Yellow-handle end is driving front; +X points forward.",
+      "basis": "Owner answer in current CAD review"
+    },
+    {
+      "id": "CAD-U02",
+      "claim": "Show assembly without bucket.",
+      "basis": "Owner display preference; removable payload omitted"
+    }
+  ],
+  "observations": [
+    {
+      "id": "CAD-001",
+      "subject": "Tub profile",
+      "bounded_observation": "Rounded corners; upper opening wider and longer than the lower floor.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Rounded-profile tapered shell and thick rim.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-002",
+      "subject": "Floor molding",
+      "bounded_observation": "Longitudinal floor ribs are visible. Their exact count and section are unmeasured.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Stylized ribs; no mold tooling or manufacturing claim.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-003",
+      "subject": "Cart offset",
+      "bounded_observation": "The opposite/yellow-handle-rear end visibly overhangs the rear wheels farther.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Rear-biased tub; numeric offset is a layout estimate.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-004",
+      "subject": "Enclosure placement",
+      "bounded_observation": "Orange enclosure is outside a long tub wall near the yellow-handle end, with a broad vertical lid.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Vertical case outside wall; R1 horizontal tray interpretation replaced.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-005",
+      "subject": "Enclosure internals",
+      "bounded_observation": "Electronics are indistinct through the lid; boards and fasteners cannot be resolved.",
+      "source_ids": [
+        "CAD-P01"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Remove invented Pi/Uno internal placement. Native lid is translucent; internal layout open.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-006",
+      "subject": "Battery/dock appearance",
+      "bounded_observation": "Blue pack-like body and dark adapter/rail hardware project from the enclosure-side front corner.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Separate pack, adapter, slide rails and retention features; identity/polarity/rating still unresolved.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-007",
+      "subject": "Front attachment",
+      "bounded_observation": "Yellow molded attachment is on the short end.",
+      "source_ids": [
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Simplified yellow handle/attachment plus dark end panel; exact mechanism unknown.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-008",
+      "subject": "Rim lighting",
+      "bounded_observation": "Red/pink strip assemblies are visible on both long sides across supplied views.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Three stylized strip groups per side; actual total/channel wiring not established.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-009",
+      "subject": "Front lighting",
+      "bounded_observation": "Two bright white light points appear below the yellow attachment.",
+      "source_ids": [
+        "CAD-P02"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Two lamp proxies and a support; fasteners/routing remain open.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-010",
+      "subject": "Chassis and wheels",
+      "bounded_observation": "Four treaded wheels, a compact ladder-chassis region and broad front bumper are visible.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Tire shoulders, tread, rims, axle and bumper envelopes; no OEM part-level reverse engineering.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-011",
+      "subject": "Low metal strips",
+      "bounded_observation": "Silver strips extend down from the cart/chassis region in side views.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Visible strip envelopes retained; attachment load path/sections/holes unverified.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-012",
+      "subject": "Hidden supports",
+      "bounded_observation": "Most tub-to-chassis joints are occluded.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Under-tub crossmembers remain inferred layout proxies, clearly tagged.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-013",
+      "subject": "Sensor availability",
+      "bounded_observation": "These views do not identify an installed ultrasonic module.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Remove floating HC-SR04 from assembly; historical reference remains hidden and excluded from STEP.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-014",
+      "subject": "Payload display",
+      "bounded_observation": "Bucket is present in photographs.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Owner requests no bucket in assembly; this is a display decision, not a claim that bucket was absent.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    }
+  ]
+}

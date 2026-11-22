@@ -1,0 +1,22 @@
+[
+  {
+    "file": "v2_assembly.FCStd",
+    "native_gui_presentation_saved": true
+  },
+  {
+    "file": "v2_battery_mount.FCStd",
+    "native_gui_presentation_saved": true
+  },
+  {
+    "file": "v2_cart_mount.FCStd",
+    "native_gui_presentation_saved": true
+  },
+  {
+    "file": "v2_electronics_enclosure.FCStd",
+    "native_gui_presentation_saved": true
+  },
+  {
+    "file": "v2_sensor_mounts.FCStd",
+    "native_gui_presentation_saved": true
+  }
+]

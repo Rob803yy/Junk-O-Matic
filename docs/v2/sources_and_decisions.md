@@ -82,3 +82,15 @@ Historical prices, generic fuse recipes, simulated approvals, concept-poster
 performance and third-party software test counts are not current installation,
 cost or qualification evidence. Source-scoped requirement IDs avoid silently
 merging different SYS-001 definitions. No new PDF was generated for R1.
+
+## CAD-R2 owner photo feedback
+
+Three additional owner photographs are recorded under CAD-P01..03 in
+hardware/v2/mechanical/photo-observations.json (hashes only; raw media stays local).
+They resolve observable tub flare/rim/ribs, external vertical orange enclosure,
+blue front-corner hardware, yellow attachment and light positions. Numerical
+dimensions and hidden mounting joints remain unmeasured. Owner CAD-U01 confirms
+yellow-handle end is front; CAD-U02 requests no bucket in the assembly. The new
+native models and CAD-R2 previews supersede the previous generic mechanical proxies.
+No Pi identity, battery electrical specification or ultrasonic installation is
+inferred from indistinct electronics or absent close-ups in these images.

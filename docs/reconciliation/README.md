@@ -4,6 +4,10 @@ Reconciled 2026-11-21. **Corrected editable sources are ready for technical revi
 
 The owner confirms an Elegoo Uno R3. Version naming is proposed pending owner confirmation: V1 historical RC baseline, V2 current reconstruction/reliability/instrumentation, V3 future concepts. Pi 3B/Pi4 and range-sensor state remain conflicting.
 
+## Latest CAD feedback
+
+CAD-R2 refines the five models against three additional owner photographs. Yellow-handle end is confirmed front; bucket omitted by owner request. See [mechanical review guide](../../hardware/v2/mechanical/README.md). R1 documents below remain the earlier reconciliation baseline; current CAD-R2 geometry supersedes their older mechanical proxy descriptions. No PDFs were regenerated.
+
 ## Review files
 
 - [Unified editable Word correction record](editable/LitterBuggy_Version_Reconciliation_R1.docx)

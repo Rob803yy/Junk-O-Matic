@@ -4,7 +4,7 @@ Record opened and reconciled 2026-11-21. Initial main audit: b163861c78d02060da3
 
 **Owner-confirmed current controller: Elegoo Uno R3.** Its power, pins and running sketch remain separate verification items. Pi and range-sensor conflicts remain open. No new physical inspection or measurements were performed.
 
-There are 118 bounded verification records: 14 confirmed, 4 conflicting, 13 proposed, 87 unknown. Counts are evidence states, not completion percentages. Confirmed includes repository/source facts, not installed-hardware certification.
+There are 118 bounded verification records: 15 confirmed, 4 conflicting, 12 proposed, 87 unknown. Counts are evidence states, not completion percentages. Confirmed includes repository/source facts, not installed-hardware certification.
 
 See [38 discrepancy resolutions](../reconciliation/README.md), [current engineering review](../v2/README.md), [structured register](verification-register.json), [capture templates](capture-templates.json) and [verification procedure](verification-session.md). R0 historical media inspections are described in [source notes](../v2/sources_and_decisions.md).
 
@@ -30,7 +30,7 @@ Version naming remains provisional. Repeated assistant claims, concept posters, 
 | V2-007 | SCX6 identity | unknown | SCX6 is described in project scope and prior reviews; exact installed variant unverified | R01, C03, C04 | Record product label, chassis variant and installed modifications. |
 | V2-008 | Cart identity | unknown | Prior reviews describe Gorilla Cart; exact model unverified | C03, C04 | Record cart label/model and distinguish tub from complete original cart. |
 | V2-009 | Configuration date and change history | unknown | No dated current as-built inventory established | U02 | Owner records last modifications and inspection date. |
-| V2-010 | Front and left/right convention | proposed | Use yellow-handle end as assembly front only after owner confirms; record steering axle separately | C04 | Photograph labelled front/rear/left/right and mark coordinate frame. |
+| V2-010 | Front and left/right convention | confirmed | Owner confirms yellow-handle end is driving front. CAD-R2 +X forward, +Z up; -Y enclosure side. | C04, CAD-U01 | Record physical left/right from this datum before measuring. |
 | V2-011 | Control authority | proposed | Repository intends manual RC drive with Pi/Arduino observational only | R01, R04 | Owner confirms actual current control interfaces; trace wiring before asserting separation. |
 | V2-012 | Drive modifications | unknown | Prior assistant review mentions rear-wheel drive; not independently verified in this audit | C04 | Photograph drivetrain and record installed/disconnected shafts and current driven axles. |
 | V2-013 | Auxiliary battery identity | unknown | Kobalt 24V described in repository and prior adapter discussion | R01, C01 | Photograph pack label; record model, capacity, condition and exact nominal/max label ratings. |
@@ -104,8 +104,8 @@ Version naming remains provisional. Repeated assistant claims, concept posters, 
 | V2-081 | Dock mounting recesses | unknown | Prior photos did not establish whether recesses are mounting holes | C01 | Inspect with battery removed; record hole/boss type without assuming usable screw paths. |
 | V2-082 | Battery mounting proposal | proposed | Plate and secondary strap suggested previously; not confirmed installed | C01 | Record actual mounting first; keep any redesign separate from as-built drawing. |
 | V2-083 | Proposed plate size | proposed | Prior suggested roughly 4x6 inch plate and material thicknesses were estimates | C01 | Do not manufacture from suggestion; derive geometry from measured interfaces and loads. |
-| V2-084 | Enclosure dimensions and layout | unknown | All measured dimensions unknown. Enclosure nominal source claim 11.5x7.5x5.1in =292.1x190.5x129.54mm used only as unverified layout envelope. | R10, S04 | Measure walls, usable volume, standoffs, cable openings and component positions. |
-| V2-085 | Sensor positions and axes | unknown | IMU orientation and ultrasonic beam direction unrecorded | C02 | Record position and orientation relative to confirmed assembly axes. |
+| V2-084 | Enclosure dimensions and layout | unknown | Enclosure broad vertical face is visible outside long wall (CAD-P01/P02). Actual dimensions/internal layout unknown; source nominal size is not measured. | R10, S04, CAD-P01 | Measure actual case, mounting and internal clearances. |
+| V2-085 | Sensor positions and axes | unknown | Two white front light points observed (CAD-P02); sensor installation/orientation unresolved. Historical ultrasonic excluded from CAD-R2 assembly. | C02, CAD-P02 | Inspect actual sensor module and mount; distinguish light hardware.  |
 | V2-086 | Mass distribution | unknown | No complete current assembly/equipment mass record | C03 | Weigh components and assembly; record four-wheel loads on equal-height supports if available. |
 | V2-087 | Suspension setup | unknown | Actual spring IDs, preload positions, shock mounts and oil state unknown | C03 | Photograph and record four corner settings before any adjustment. |
 | V2-088 | Suspension travel and settling | unknown | Prior review reports asymmetric settling; no current calibrated corner measurements | C03 | Measure comparable chassis-to-axle gaps and repeat settling with fixed known load. |

@@ -1,114 +1,262 @@
 {
-  "revision": "R1",
+  "revision": "CAD-R2",
   "units": "mm",
   "dimension_status": "proposed",
-  "notice": "All measured_mm remain null. Layout proxies are not measured as-built dimensions or fabrication authority. Enclosure envelope uses an unverified source catalog specification; all other numbers are illustrative.",
-  "datum": "Proposed: ground plane Z=0; assembly centre X=Y=0. +X towards labelled assembly front; owner must confirm handle/steering relationship.",
+  "notice": "All measured_mm are null. Shapes and locations follow supplied photos; numeric values remain layout estimates or unverified source specifications. Owner confirms yellow-handle end is front and requests no bucket. Not fabrication dimensions.",
+  "datum": "Right-handed: ground Z=0; axle midpoint X=Y=0. +X=owner-confirmed yellow-handle/front end, +Z=up. Enclosure-side long wall is -Y; opposite wall +Y.",
   "parameters": {
     "wheelbase": {
       "layout_mm": 500,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "track_centres": {
       "layout_mm": 380,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "tyre_radius": {
       "layout_mm": 88,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "tyre_width": {
       "layout_mm": 65,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "rail_length": {
       "layout_mm": 620,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "rail_spacing": {
       "layout_mm": 180,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "chassis_z": {
-      "layout_mm": 170,
-      "measured_mm": null
+      "layout_mm": 160,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "mount_z": {
       "layout_mm": 285,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "cart_length": {
-      "layout_mm": 820,
-      "measured_mm": null
+      "layout_mm": 950,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "cart_width": {
-      "layout_mm": 500,
-      "measured_mm": null
+      "layout_mm": 590,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "cart_height": {
-      "layout_mm": 270,
-      "measured_mm": null
+      "layout_mm": 185,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "cart_bottom_length": {
+      "layout_mm": 790,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "cart_bottom_width": {
+      "layout_mm": 450,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "cart_offset_x": {
+      "layout_mm": -100,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "cart_corner_radius": {
+      "layout_mm": 65,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "cart_bottom_radius": {
+      "layout_mm": 50,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "wall": {
       "layout_mm": 5,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "rim_overhang": {
+      "layout_mm": 9,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "rim_height": {
+      "layout_mm": 18,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "enclosure_length": {
       "layout_mm": 292.1,
       "measured_mm": null,
-      "source_spec_mm": 292.1,
-      "source": "S04 V1.0 C16: 11.5 x 7.5 x 5.1 inches; nominal catalog claim, not measured",
-      "evidence_status": "unknown"
+      "evidence_status": "proposed",
+      "source": "S04 V1.0 C16 nominal 11.5in; identity/fit unverified. Broad face mapped X/Z from photo appearance, depth along Y.",
+      "source_spec_mm": 292.1
     },
     "enclosure_width": {
-      "layout_mm": 190.5,
-      "measured_mm": null,
-      "source_spec_mm": 190.5,
-      "source": "S04 V1.0 C16: 11.5 x 7.5 x 5.1 inches; nominal catalog claim, not measured",
-      "evidence_status": "unknown"
-    },
-    "enclosure_height": {
       "layout_mm": 129.54,
       "measured_mm": null,
-      "source_spec_mm": 129.54,
-      "source": "S04 V1.0 C16: 11.5 x 7.5 x 5.1 inches; nominal catalog claim, not measured",
-      "evidence_status": "unknown"
+      "evidence_status": "proposed",
+      "source": "S04 V1.0 C16 nominal 5.1in; identity/fit unverified. Broad face mapped X/Z from photo appearance, depth along Y.",
+      "source_spec_mm": 129.54
+    },
+    "enclosure_height": {
+      "layout_mm": 190.5,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "S04 V1.0 C16 nominal 7.5in; identity/fit unverified. Broad face mapped X/Z from photo appearance, depth along Y.",
+      "source_spec_mm": 190.5
+    },
+    "enclosure_x": {
+      "layout_mm": 185,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "enclosure_z": {
+      "layout_mm": 370,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "enclosure_gap": {
+      "layout_mm": 6,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "dock_length": {
       "layout_mm": 110,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "dock_width": {
       "layout_mm": 80,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     },
     "dock_height": {
       "layout_mm": 25,
-      "measured_mm": null
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "battery_length": {
+      "layout_mm": 125,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "battery_width": {
+      "layout_mm": 95,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "battery_depth": {
+      "layout_mm": 80,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "dock_x": {
+      "layout_mm": 400,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "dock_y": {
+      "layout_mm": -295,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "dock_z": {
+      "layout_mm": 385,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "dock_yaw_deg": {
+      "layout_deg": 35,
+      "measured_deg": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "dock_tilt_deg": {
+      "layout_deg": 15,
+      "measured_deg": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "handle_width": {
+      "layout_mm": 190,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "handle_height": {
+      "layout_mm": 90,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "front_lamp_spacing": {
+      "layout_mm": 130,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
     }
   },
   "unknown_interfaces": [
-    "all mounting hole centres/diameters",
-    "cart moulded profile",
-    "metal member cross-sections",
-    "dock recess purpose",
-    "battery slide and release clearance",
-    "enclosure installed location",
-    "sensor orientation",
-    "steering and suspension travel",
-    "spring rates/preload",
-    "component mass and payload envelope",
-    "Pi 3B versus Pi 4 envelope and cable-entry fit",
-    "range sensor reported lost; final mount/sensor not selected",
-    "source-listed enclosure size versus actual orange enclosure identity"
+    "All absolute dimensions and mounting holes",
+    "Exact tub model, mold radii, wall thickness and floor rib count",
+    "Under-tub supports, sections, joints and fasteners",
+    "Battery/adapter identity, retention, exact tilt and extraction clearance",
+    "Actual enclosure dimensions, mounting ears, seals and internal layout",
+    "Steering/suspension movement and structural capacity",
+    "Lighting housings, bracket geometry, power and wiring",
+    "Current range sensor fitting or absence; no ultrasonic inferred from photographs"
   ],
   "evidence": [
-    "Owner Uno R3 confirmation",
-    "Historical photos 1000061963-1000061971: tub, metal frame and coilovers",
-    "Photos 1000063718-1000063721: blue dock, guide rails and red/black leads",
-    "Videos 1000062231/2233/2235: raised cart, lighting and loaded motion (sampled frames only)",
-    "S04 C16 nominal enclosure dimensions retained as source specification only",
-    "S06 reported HC-SR04 lost and Pi 3B reuse; source report not fresh physical inspection",
-    "S11 RevB cradle, closed ring and trailer concepts are future proposals, not this reconstruction"
+    "CAD-P01..CAD-P03: see photo-observations.json; raw media stays outside Git",
+    "CAD-U01: owner confirms yellow-handle end is front",
+    "CAD-U02: owner requests assembly without bucket",
+    "S04 V1.0 C16: unverified nominal enclosure specification"
   ]
 }

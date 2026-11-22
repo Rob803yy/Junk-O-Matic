@@ -14,7 +14,7 @@ remain unresolved. Version allocation is proposed pending owner confirmation.
 | Digital connectivity | [Connectivity diagram](../../hardware/v2/architecture/v2_digital_connectivity.drawio) | [SVG](../../hardware/v2/architecture/v2_digital_connectivity.svg); open UART replacement and power interfaces |
 | Power schematic | [Three-sheet QElectroTech project](../../hardware/v2/electrical/v2_electrical.qet) | [Native PNG previews](../../hardware/v2/electrical/exports); all drawn nets untraced hypotheses |
 | Wiring | [Power YAML](../../hardware/v2/wiring/v2_power_harness.yml), [sensor YAML](../../hardware/v2/wiring/v2_sensor_harness.yml) | [Registers and HTML/SVG/PNG/BOM](../../hardware/v2/wiring); logical functions, physical pins TBD |
-| Mechanical assembly | [Assembly](../../hardware/v2/mechanical/v2_assembly.FCStd), [cart mount](../../hardware/v2/mechanical/v2_cart_mount.FCStd), [battery mount](../../hardware/v2/mechanical/v2_battery_mount.FCStd), [enclosure](../../hardware/v2/mechanical/v2_electronics_enclosure.FCStd), [sensor mounts](../../hardware/v2/mechanical/v2_sensor_mounts.FCStd) | [STEP/SVG/PNG](../../hardware/v2/mechanical/exports); [parameter provenance](../../hardware/v2/mechanical/dimensions.json) |
+| Mechanical assembly (CAD-R2) | [Assembly](../../hardware/v2/mechanical/v2_assembly.FCStd), [cart mount](../../hardware/v2/mechanical/v2_cart_mount.FCStd), [battery mount](../../hardware/v2/mechanical/v2_battery_mount.FCStd), [enclosure](../../hardware/v2/mechanical/v2_electronics_enclosure.FCStd), [sensor mounts](../../hardware/v2/mechanical/v2_sensor_mounts.FCStd) | [STEP/SVG/PNG](../../hardware/v2/mechanical/exports); [parameter provenance](../../hardware/v2/mechanical/dimensions.json) |
 | Firmware and Pi logger | [Uno source](../../software/v2/arduino/README.md), [Pi logger/SQL/service](../../software/v2/raspberry_pi/README.md) | [Shared serial protocol](serial_protocol.md), [tests](../../software/v2/tests), [validation](validation.md) |
 
 ## Workbook and evidence controls
@@ -36,10 +36,12 @@ diagrams indicates historical observation, not current installation verification
 Green confirms Uno identity only. Red exposes conflicts. Dashed links and QET
 TBD nets are unresolved/proposed; no physical pin numbering is implied.
 
+CAD-R2 follows the latest three owner photographs; [mechanical review guide](../../hardware/v2/mechanical/README.md) and [observation record](../../hardware/v2/mechanical/photo-observations.json) describe the changes. Yellow-handle end is owner-confirmed front; bucket is omitted by owner request.
+
 All CAD measured dimensions remain null. The enclosure layout uses an unverified
 source catalog size; the other layout numbers are illustrative. Native solid
 validity does not establish fit, moving clearance, load capacity or fabrication
-dimensions. The HC-SR04 mount is a historical profile; replacement is open.
+dimensions. The historical HC-SR04 reference is hidden and excluded from the assembly/STEP; the fifth document now shows front lighting and a reserved sensor interface. Replacement is open.
 
 New firmware defaults sensor drivers and feedback off. The optional HC-SR04
 profile must be explicitly selected and cannot drive the proposed UART sensor.

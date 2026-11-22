@@ -9,7 +9,7 @@
 - WireViz 0.4.1 with Graphviz 13.1.2 generated both harnesses, diagrams, HTML,
   connector inventories and BOM tables. Rendered diagrams were inspected.
 - FreeCAD 1.1.4 generated five native files and five STEP exports; all reopened.
-  41 exported component shapes passed validity checks. Additional native checks
+  93 exported component records across the assembly/submodels passed validity checks. Additional native checks
   tested all saved shape objects, spreadsheet wheelbase propagation and tyre
   centre spacing. A centre/end placement inconsistency was corrected before
   the final model export. These are illustrative geometry checks, not fit tests.
@@ -69,3 +69,15 @@ invalid score range and no-current-test denominators. Canonical BOM preserves
 All 13 tracked R0 PDFs are byte-identical. PDF generation and Word pagination/PDF
 proofing are intentionally held until owner content review. Current source/native
 checks and previews do not substitute for those later PDF layout checks.
+
+## CAD-R2 validation
+
+Five FreeCAD and STEP files reopened. All constrained profile sketches are fully
+constrained; wheelbase, cart length and vertically oriented case height edits
+propagate to native geometry. Tub floor/open interior and wheel centres were checked.
+Named draft intersections between case/tub, case/rim and case/blue pack were checked;
+this is not a full assembly interference or real fit test. Native component grouping,
+colors, construction/reference visibility and lid translucency are saved. Fourteen
+photo observations and two owner decisions are recorded. No measured dimensions,
+bucket, installed ultrasonic claim or new PDF was introduced. Software was unchanged
+in this CAD-only feedback pass; its earlier 32-test receipt remains scoped to R1.

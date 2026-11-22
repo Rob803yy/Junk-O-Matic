@@ -16,6 +16,8 @@ and all measured dimensions remain unresolved. Future concept claims are not
 installed capabilities. No hardware upload, Pi deployment or field validation
 was performed. Version naming is proposed pending owner confirmation.
 
+Latest CAD feedback: [CAD-R2 photo-informed models and previews](hardware/v2/mechanical/README.md), with owner-confirmed front orientation and no bucket.
+
 **PDF generation is held for owner review.** Prior R0 PDFs remain historical and
 stale for R1. Current SVG/PNG previews accompany the editable sources.
 

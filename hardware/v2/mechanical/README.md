@@ -1,30 +1,75 @@
-# Five mechanical review models / R1
+# CAD-R2 / photo-informed V2 mechanical review
 
-The assembly, cart mount, battery dock/mount envelope, electronics enclosure and
-sensor mount are native parametric FreeCAD documents with STEP and SVG reference
-drawings. PNG previews accompany them. Parameters sheets contain provenance and
-UNKNOWN measured values. Editable models are simplified review proxies.
+This revision addresses owner CAD feedback on PR #3 using three supplied photographs
+(CAD-P01..03). The owner confirms **yellow-handle end = FRONT** and requests the
+assembly **without the removable bucket**. +X is forward, +Z up, -Y is the enclosure
+side. Standalone component documents use local frames; the assembly places them.
 
-dimensions.json separates layout_mm, optional source_spec_mm and measured_mm.
-**Every measured_mm remains null.** Enclosure envelope 292.1 × 190.5 × 129.54mm
-is an unverified source catalog claim (S04 V1.0 C16: 11.5 × 7.5 × 5.1 inches),
-not a measurement of the actual orange box. Other numeric values are illustrative
-layout choices. No photograph was scaled into an as-built dimension. Stock
-overall width is not a tyre-centre track measurement.
+## Review files
 
-The raised tub/support relationship follows historical media. RevB rail pods,
-four-post/five-truss cradle, closed ring, detachable Case4 module and trailer in
-S11 are future/source proposals. No fit, strength, suspension clearance or payload
-rating is established. The HC-SR04 geometry is a historical profile reported lost
-in S06; final sensor/mount selection is open. Pi3B/Pi4 identity is unresolved.
+| Native FreeCAD source | Current interpretation | Exports |
+| --- | --- | --- |
+| [Assembly](v2_assembly.FCStd) | Flared rounded tub, thick rim, ribs, rear-biased placement, external vertical enclosure, blue corner pack/adapter, yellow front handle, red rim lights, two white front lights, treaded wheels and bumper | [Review sheet](exports/v2_assembly.png), [STEP](exports/v2_assembly.step), [SVG](exports/v2_assembly.svg) |
+| [Cart support](v2_cart_mount.FCStd) | Visible low silver strips; hidden under-tub interfaces remain inferred | [Sheet](exports/v2_cart_mount.png), [STEP](exports/v2_cart_mount.step) |
+| [Battery mount](v2_battery_mount.FCStd) | Blue pack-like body, dark adapter, guide/rail and unidentified release-like feature | [Sheet](exports/v2_battery_mount.png), [STEP](exports/v2_battery_mount.step) |
+| [Enclosure](v2_electronics_enclosure.FCStd) | Rounded orange case, translucent lid, rim and stylized latches; internal PCB placement removed | [Sheet](exports/v2_electronics_enclosure.png), [STEP](exports/v2_electronics_enclosure.step) |
+| [Front lighting / reserved sensor interface](v2_sensor_mounts.FCStd) | Two observed white light points and a bracket proxy; historical HC-SR04 reference is hidden and excluded from assembly/STEP | [Sheet](exports/v2_sensor_mounts.png), [STEP](exports/v2_sensor_mounts.step) |
 
-Run build_models.FCMacro with FreeCAD Python to regenerate native/STEP/mesh files.
-Run python scripts/v2/render_mechanical.py for current SVG/PNG source sheets; it
-does not generate PDFs by default. Existing R0 PDFs remain stale and held until
-owner review. Do not fabricate or drill from these proxies. STEP carries geometry;
-retain the native file and parameter JSON for provenance and editable expressions.
+Additional assembly views: [front](exports/v2_assembly_front.png),
+[opposite side](exports/v2_assembly_opposite.png),
+[tub hidden](exports/v2_assembly_tub_hidden.png), [large oblique](exports/v2_assembly_iso.png).
+The tub-hidden view exposes simplified/inferred supports; it is not a verified
+load-path drawing. No new fabrication holes or bracket design is released.
 
-FreeCAD reopened every native file and STEP, checked solid validity and tested
-wheelbase parameter propagation and tyre-centre geometry. These are software
-geometry checks only. Physical measurement, datum, hole patterns, latch/slide
-access, steering/suspension travel and mass distribution need technical review.
+## Evidence and dimensions
+
+[photo-observations.json](photo-observations.json) records 14 bounded observations,
+source hashes and the two owner decisions. Raw field photographs stay outside
+Git. Capture dates and a dimensional scale reference are absent.
+
+**No measured dimension was introduced.** [dimensions.json](dimensions.json) and
+the native Parameters spreadsheets separate layout estimates, source specifications
+and UNKNOWN measurements. mm apply to lengths; *_deg parameters are angles.
+The nominal enclosure catalog tuple remains 11.5 × 7.5 × 5.1in. Its broad face is
+now mapped to X/Z (292.1 × 190.5mm) with 129.54mm depth along Y, matching the observed
+vertical orientation. The actual enclosure model, dimensions and fit remain unverified.
+
+Rib/tread/strip counts and cosmetic latches are stylized. Chassis detail, hidden
+support sections/joints, battery identity/retention, light brackets and sensor
+fitting remain open. A recognizable photo-informed envelope is not an OEM replica.
+The bucket's omission follows the owner's display request; photographs do show it.
+
+## Editing and regeneration
+
+The five native files contain named component groups and evidence properties.
+Rounded profiles are fully constrained sketches driving native lofts, cuts,
+fillets and tire revolutions. Main dimensions and placements edit through the
+Parameters sheet without an installed custom Python proxy. Cosmetic tread and
+compound dock angle construction require regeneration after those specific edits.
+
+Run build_models.FCMacro with FreeCAD Python (implementation: model_components.py).
+Regeneration replaces manual native edits; preserve them or update the source first.
+Run python scripts/v2/render_mechanical.py with NumPy/Pillow for PNG/SVG review
+sheets. SVG annotations are editable text; its geometry previews are raster views
+of the native mesh. STEP contains the selected visible solids with global placement;
+construction and historical sensor reference geometry are excluded.
+
+For native colors, visibility, lid translucency and a saved camera, run
+scripts/v2/save_cad_presentation.FCMacro in FreeCAD. The checked files include this
+GUI state. Run scripts/v2/check_freecad.py with FreeCAD Python for native/STEP
+readbacks, fully constrained sketches, real parameter edits and limited named
+draft clash checks. Successful checks do not verify real-world moving clearance,
+fit, payload, material properties or structural capacity.
+
+PDF generation remains held for owner review. Existing R0 PDFs are unchanged and
+stale. R1 reconciliation Word/workbooks remain the earlier review baseline;
+CAD-R2 supersedes their prior mechanical pictures/proxy descriptions only.
+
+## Most useful next CAD feedback
+
+1. Cart silhouette and fore/aft offset: too long, wide, tall or shifted?
+2. Enclosure size, height and fore/aft position relative to the front wheel?
+3. Blue pack/adapter location and tilt at the front corner?
+4. Under-tub supports: close views are needed to resolve the hidden interfaces.
+
+Use CAD-001..014 observation IDs or component names when returning corrections.

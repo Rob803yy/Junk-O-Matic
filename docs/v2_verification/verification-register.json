@@ -279,6 +279,32 @@
       "path": "Attached concept poster V3",
       "sha256": "c69989f47e7ccb756c466df1b92d0226e18c2d1ee650429de535309d6d07078b",
       "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "CAD-P01",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-e1f9543e-1265-4704-abef-dc206b5ebae2.png",
+      "sha256": "e044b85a135274628c61f65025aaf9a5d166503cf0d4aa56bfb5282e19d05280",
+      "scope": "Bounded visual observation; capture date and scale unknown; raw media excluded from Git"
+    },
+    {
+      "id": "CAD-P02",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-24bcfdf6-a407-43aa-8136-452083c0f02b.png",
+      "sha256": "da637917bc28ec9ebd16a85273b5da98c1a499c52fbacee0db3b78f8de8fbf22",
+      "scope": "Bounded visual observation; capture date and scale unknown; raw media excluded from Git"
+    },
+    {
+      "id": "CAD-P03",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-a7d49cec-6fe8-43b3-93a4-676971ab0c8c.png",
+      "sha256": "eddf94d83bc15b808e12c62bd537f379984fee7cd39e0da393a3b696a64ca517",
+      "scope": "Bounded visual observation; capture date and scale unknown; raw media excluded from Git"
+    },
+    {
+      "id": "CAD-U01",
+      "type": "owner_statement",
+      "scope": "Yellow-handle end is driving front, in current CAD feedback"
     }
   ],
   "records": [
@@ -451,18 +477,19 @@
       "id": "V2-010",
       "category": "configuration",
       "subject": "Front and left/right convention",
-      "status": "proposed",
-      "recorded_value": "Use yellow-handle end as assembly front only after owner confirms; record steering axle separately",
+      "status": "confirmed",
+      "recorded_value": "Owner confirms yellow-handle end is driving front. CAD-R2 +X forward, +Z up; -Y enclosure side.",
       "evidence_basis": "historical_chat_summary",
       "source_ids": [
-        "C04"
+        "C04",
+        "CAD-U01"
       ],
       "supporting_evidence_ids": [],
-      "next_verification": "Photograph labelled front/rear/left/right and mark coordinate frame.",
+      "next_verification": "Record physical left/right from this datum before measuring.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "CAD-R2 owner photo feedback; no measured dimensions inferred."
     },
     {
       "id": "V2-011",
@@ -1733,35 +1760,37 @@
       "category": "mechanical_dimensions",
       "subject": "Enclosure dimensions and layout",
       "status": "unknown",
-      "recorded_value": "All measured dimensions unknown. Enclosure nominal source claim 11.5x7.5x5.1in =292.1x190.5x129.54mm used only as unverified layout envelope.",
+      "recorded_value": "Enclosure broad vertical face is visible outside long wall (CAD-P01/P02). Actual dimensions/internal layout unknown; source nominal size is not measured.",
       "evidence_basis": "R1 source reconciliation; not current physical verification",
       "source_ids": [
         "R10",
-        "S04"
+        "S04",
+        "CAD-P01"
       ],
       "supporting_evidence_ids": [],
-      "next_verification": "Measure walls, usable volume, standoffs, cable openings and component positions.",
+      "next_verification": "Measure actual case, mounting and internal clearances.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": "REC-024"
+      "resolution_notes": "CAD-R2 owner photo feedback; no measured dimensions inferred."
     },
     {
       "id": "V2-085",
       "category": "mechanical_dimensions",
       "subject": "Sensor positions and axes",
       "status": "unknown",
-      "recorded_value": "IMU orientation and ultrasonic beam direction unrecorded",
+      "recorded_value": "Two white front light points observed (CAD-P02); sensor installation/orientation unresolved. Historical ultrasonic excluded from CAD-R2 assembly.",
       "evidence_basis": "historical_chat_summary",
       "source_ids": [
-        "C02"
+        "C02",
+        "CAD-P02"
       ],
       "supporting_evidence_ids": [],
-      "next_verification": "Record position and orientation relative to confirmed assembly axes.",
+      "next_verification": "Inspect actual sensor module and mount; distinguish light hardware. ",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "CAD-R2 owner photo feedback; no measured dimensions inferred."
     },
     {
       "id": "V2-086",

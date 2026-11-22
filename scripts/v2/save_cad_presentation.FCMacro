@@ -1,0 +1,25 @@
+import FreeCAD as App,FreeCADGui as Gui,json,traceback
+from pathlib import Path
+R=Path(__file__).resolve().parents[2]
+colors={'cart':(.13,.15,.16),'rim':(.20,.22,.23),'chassis':(.13,.16,.18),'tyre':(.075,.085,.09),'tread':(.11,.12,.13),'wheel':(.19,.20,.21),'metal':(.68,.70,.70),'orange':(.95,.31,.055),'lid':(.66,.72,.75),'blue':(.025,.22,.80),'yellow':(.98,.78,.035),'red':(.95,.04,.07),'white':(.89,.96,1.),'reference':(.50,.55,.57)}
+receipt=[]
+try:
+    Gui.getMainWindow().hide()
+    for p in (R/'hardware/v2/mechanical').glob('*.FCStd'):
+        d=App.openDocument(str(p))
+        for o in d.Objects:
+            if o.ViewObject and hasattr(o,'ReviewRole'):
+                if o.ReviewRole=='reference':o.AppearanceEvidence='S06 historical description; not observed in CAD-P01..03'
+                o.ViewObject.Visibility=o.ReviewRole=='render'
+                if hasattr(o.ViewObject,'ShapeColor'):
+                    o.ViewObject.ShapeColor=colors[o.DraftColor];o.ViewObject.LineColor=(.07,.08,.09)
+                    o.ViewObject.Transparency=int((1-o.ReviewOpacity)*100)
+                    if hasattr(o.ViewObject,'DisplayMode'):o.ViewObject.DisplayMode='Flat Lines'
+        view=Gui.activeDocument().activeView();view.viewAxonometric()
+        if p.stem=='v2_assembly':view.setCameraOrientation(App.Rotation(App.Vector(1,1,0),App.Vector(-1,1,2),App.Vector(1,-1,1),'ZXY').Q)
+        view.fitAll()
+        d.recompute();d.save();receipt.append({'file':p.name,'native_gui_presentation_saved':True});App.closeDocument(d.Name)
+    (R/'reports/v2/cad-presentation.json').write_text(json.dumps(receipt,indent=2))
+except Exception:
+    (R/'reports/v2/cad-presentation-error.txt').write_text(traceback.format_exc())
+Gui.getMainWindow().close()
