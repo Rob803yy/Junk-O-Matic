@@ -1,0 +1,217 @@
+{
+  "revision": "V3-PLAN-R0",
+  "baseline_main_commit": "902b8baeac3b8d834a162f9c4661b4664d3f53da",
+  "scope": "Planning records, coverage, preservation and saved workbook structure/data only.",
+  "status": "passed",
+  "checks": [
+    {
+      "check": "owner mission and design/deployment distinction",
+      "passed": true,
+      "detail": "Only the assisted mission is confirmed; no deployment is asserted."
+    },
+    {
+      "check": "scope exclusions and inherited constraints",
+      "passed": true,
+      "detail": "Reviewable scope/exclusion/invariant records present; not physical proof."
+    },
+    {
+      "check": "all baseline paths and Git identities",
+      "passed": true,
+      "detail": {
+        "baseline_commit": "902b8baeac3b8d834a162f9c4661b4664d3f53da",
+        "tracked_files": 232
+      }
+    },
+    {
+      "check": "license content excluded",
+      "passed": true,
+      "detail": "Git path/object metadata listed only; license content not opened."
+    },
+    {
+      "check": "deliverable coverage and requirement references",
+      "passed": true,
+      "detail": {
+        "deliverable_groups": 23,
+        "requirements": 16
+      }
+    },
+    {
+      "check": "deliverable baseline references resolve",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "native implementation is not claimed",
+      "passed": true,
+      "detail": "hardware/v3 and software/v3 are planned destinations, not delivered implementations."
+    },
+    {
+      "check": "open requirements do not inherit passes or measurements",
+      "passed": true,
+      "detail": "16 requirements open; numeric targets/results/evidence/review dates blank."
+    },
+    {
+      "check": "all BOM source records preserved without promotion",
+      "passed": true,
+      "detail": {
+        "current": 55,
+        "future": 23,
+        "new_candidate": "CAM-MOUNT1"
+      }
+    },
+    {
+      "check": "proposed camera quantities distinct from fitted quantities",
+      "passed": true,
+      "detail": {
+        "CAM1": 1,
+        "CAM-MOUNT1": 1
+      }
+    },
+    {
+      "check": "file-impact-register.csv matches JSON view",
+      "passed": true,
+      "detail": {
+        "rows": 232,
+        "columns": [
+          "id",
+          "path",
+          "family",
+          "action",
+          "plan_id",
+          "proposed_target_paths",
+          "target_status",
+          "reason",
+          "git_blob_sha1"
+        ]
+      }
+    },
+    {
+      "check": "bom-plan.csv matches JSON view",
+      "passed": true,
+      "detail": {
+        "rows": 79,
+        "columns": [
+          "id",
+          "item",
+          "origin",
+          "inherited_status",
+          "source_listed_qty",
+          "verified_installed_qty",
+          "proposed_v3_qty",
+          "requirement_role",
+          "action",
+          "change",
+          "source"
+        ]
+      }
+    },
+    {
+      "check": "V2 runtime/native/archive/Office/receipt preservation",
+      "passed": true,
+      "detail": {
+        "baseline_navigation_edits": [
+          "AGENTS.md",
+          "README.md",
+          "docs/README.md",
+          "docs/repository-layout.md",
+          "docs/v2/README.md"
+        ],
+        "unexpected_changes": []
+      }
+    },
+    {
+      "check": "held PDF hashes preserved",
+      "passed": true,
+      "detail": {
+        "held_pdfs": 13,
+        "regenerated": 0
+      }
+    },
+    {
+      "check": "planning and navigation Markdown links resolve",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "saved workbook sheet names",
+      "passed": true,
+      "detail": [
+        "Deliverables",
+        "File map",
+        "BOM plan",
+        "Requirements"
+      ]
+    },
+    {
+      "check": "Deliverables saved workbook panes/errors",
+      "passed": true,
+      "detail": {
+        "formula_error_cells": [],
+        "freeze": "B8"
+      }
+    },
+    {
+      "check": "File map saved workbook panes/errors",
+      "passed": true,
+      "detail": {
+        "formula_error_cells": [],
+        "freeze": "B8"
+      }
+    },
+    {
+      "check": "BOM plan saved workbook panes/errors",
+      "passed": true,
+      "detail": {
+        "formula_error_cells": [],
+        "freeze": "B8"
+      }
+    },
+    {
+      "check": "Requirements saved workbook panes/errors",
+      "passed": true,
+      "detail": {
+        "formula_error_cells": [],
+        "freeze": "B8"
+      }
+    },
+    {
+      "check": "saved workbook table coverage",
+      "passed": true,
+      "detail": [
+        "A7:J30",
+        "A7:H239",
+        "A7:I86",
+        "A7:J23"
+      ]
+    },
+    {
+      "check": "saved workbook calculated counts",
+      "passed": true,
+      "detail": {
+        "baseline_files": "232",
+        "deliverables": "23"
+      }
+    },
+    {
+      "check": "saved workbook IDs and baseline paths",
+      "passed": true,
+      "detail": "Every deliverable/file/requirement row matches the owning JSON."
+    },
+    {
+      "check": "saved workbook source/fitted/proposed quantities",
+      "passed": true,
+      "detail": "79 component rows; unknown quantities remain empty."
+    },
+    {
+      "check": "saved workbook pending acceptance and reviews",
+      "passed": true,
+      "detail": "No zero targets/results or completed physical verification inserted."
+    }
+  ],
+  "workbook_sha256": "31acd1983214cbabf05c3e19ff1b274cd67825e3d4bbf7b271eea694311cc5a5",
+  "limitations": [
+    "Native Excel was not opened; workbook was artifact-tool rendered and imported for readback.",
+    "No V3 detector, training, hardware, firmware upload, service installation or field test performed.",
+    "No PDFs regenerated; native/runtime derivatives remain planned."
+  ]
+}

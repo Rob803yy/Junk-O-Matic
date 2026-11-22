@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "revision": "V3-PLAN-R0",
+  "date": "2026-11-22",
+  "baseline_main_commit": "902b8baeac3b8d834a162f9c4661b4664d3f53da",
+  "owner_selected_scope": "Assisted V3: camera detection, operator alerts and reliable logging; manual RC controls motion",
+  "scope_status": "confirmed",
+  "design_status": "proposed",
+  "deployment_status": "not_verified",
+  "configuration_id": "CFG-V3-ASSISTED-R0",
+  "configuration_id_status": "proposed_design_identifier_not_deployed",
+  "source_basis": [
+    {
+      "id": "OWNER-V3-001",
+      "type": "owner_answer",
+      "date": "2026-11-22",
+      "claim_scope": "Mission boundary only; not installed hardware or passed tests."
+    },
+    {
+      "id": "V2-BASE",
+      "path": "docs/v2/README.md",
+      "commit": "902b8baeac3b8d834a162f9c4661b4664d3f53da"
+    },
+    {
+      "id": "CAD-R3",
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "commit": "902b8baeac3b8d834a162f9c4661b4664d3f53da"
+    },
+    {
+      "id": "BOM-R1",
+      "path": "docs/v2/bom.json",
+      "commit": "902b8baeac3b8d834a162f9c4661b4664d3f53da"
+    },
+    {
+      "id": "SERIAL2",
+      "path": "docs/v2/serial_protocol.md",
+      "commit": "902b8baeac3b8d834a162f9c4661b4664d3f53da"
+    }
+  ],
+  "included": [
+    "Camera litter detection",
+    "Operator-facing advisory alerts",
+    "Reliable local acquisition, archive, transfer and review",
+    "Manual RC motion authority"
+  ],
+  "excluded": [
+    "Computer-controlled steering/throttle/shift/arming",
+    "Autonomous navigation or return-to-base",
+    "Powered pickup/intake/arm and physical sorting",
+    "Mandatory GPS/RTK, LiDAR, encoders or PWM board",
+    "Automatic adoption of poster payload/runtime/IP67/dimension claims"
+  ],
+  "invariants": [
+    {
+      "id": "V3-I01",
+      "claim": "Elegoo Uno R3 identity carries forward; physical pins/power/deployment remain separate evidence.",
+      "basis": "Owner / BOM UNO1"
+    },
+    {
+      "id": "V3-I02",
+      "claim": "Yellow-handle end is front +X. Rear tub hinge remains attached; outer gray frame stays fixed.",
+      "basis": "CAD-U01/U04/U05/U06"
+    },
+    {
+      "id": "V3-I03",
+      "claim": "Fore/aft members below gray frame; transverse members above it.",
+      "basis": "CAD-U07"
+    },
+    {
+      "id": "V3-I04",
+      "claim": "Bucket omission is a display choice, not verified operating payload absence.",
+      "basis": "CAD-U02"
+    },
+    {
+      "id": "V3-I05",
+      "claim": "No measured CAD dimensions or validated payload/runtime/ingress rating are introduced.",
+      "basis": "CAD-R3 / REC-020..025"
+    },
+    {
+      "id": "V3-I06",
+      "claim": "No common RC/aux ground or galvanic isolation, assigned U5A load or Uno external power entry is inferred.",
+      "basis": "REC-007/010/011"
+    },
+    {
+      "id": "V3-I07",
+      "claim": "Retain raw-first telemetry, exact/null-aware protocol 2 and separate physical sample counts.",
+      "basis": "SERIAL2 / current source"
+    },
+    {
+      "id": "V3-I08",
+      "claim": "V2 records, archived examples and 13 held PDFs remain preserved and scoped.",
+      "basis": "LAYOUT-R1"
+    }
+  ]
+}
