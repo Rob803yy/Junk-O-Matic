@@ -1,0 +1,27 @@
+{
+  "revision": "LAYOUT-R1",
+  "date": "2026-11-22",
+  "baseline_main_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d",
+  "checks": {
+    "relocated_files": 50,
+    "unchanged_git_content": 33,
+    "navigation_only_documents": 17,
+    "active_v2_source_exports_and_receipts_unchanged": 89,
+    "archived_pdf_byte_hashes": 13,
+    "local_links_checked": 282,
+    "markdown_files_checked": 58,
+    "python_syntax_files": 27,
+    "root_requirements": "V2 logger only",
+    "competing_legacy_folders": "absent from Git working tree",
+    "archived_inventory_tests": "8 passed after relocation; source/test hashes match original receipt",
+    "old_pdf_book": "refuses former acknowledgement flag",
+    "architecture_source_check": "passed; no outputs rewritten",
+    "archive_raw_local_output_ignore_rules": "passed"
+  },
+  "result": "passed",
+  "limits": [
+    "Physical configuration, deployment and operating performance not verified.",
+    "No PDFs generated; old source receipts retain their original revision/date.",
+    "No license-content review, archived dashboard browser run or dataset download."
+  ]
+}

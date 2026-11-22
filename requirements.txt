@@ -1,12 +1,3 @@
-# Historical dashboard + V1A helper dependencies. Current V2 logger and drafting
-# use separate requirement files; see docs/environment-setup.md. No version update
-# or locked portable environment is implied by this REPO-R1 clarification.
-streamlit>=1.32.0
-pandas>=2.2.0
-PyYAML>=6.0.1
-numpy>=1.26.0
-pyserial>=3.5
-psutil>=5.9.0
-
-# Optional for Raspberry Pi USB camera MP4 recording; uncomment when needed.
-# opencv-python>=4.9.0
+# Default: active V2 serial logger only. No dashboard/legacy acquisition dependencies.
+# Drafting/CAD and archived workspaces have separate requirements; see docs/environment-setup.md.
+-r software/v2/raspberry_pi/requirements.txt

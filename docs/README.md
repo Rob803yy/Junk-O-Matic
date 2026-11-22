@@ -5,6 +5,7 @@ does not date every file or prove a technical review.
 
 | Start here | Scope |
 | --- | --- |
+| [Active/archive layout](repository-layout.md) | Current sources, historical areas and relocation record |
 | [V2 engineering index](v2/README.md) | Native source and current engineering review order |
 | [Repository alignment review](repository_review/README.md) | Baseline inventory, severity order, Six Thinking Hats decisions, corrections and open evidence |
 | [Source reconciliation](reconciliation/README.md) | 38 V1/V2/V3 source discrepancies, editable corrections and original source disposition |
@@ -15,9 +16,9 @@ does not date every file or prove a technical review.
 | [Wiring entry](wiring_notes.md) | Current unknowns and links, not historical connection instructions |
 | [Environment setup](environment-setup.md) | Separate current, historical and drafting dependencies |
 
-Historical-only references: [V1A scope](project_scope_v1a.md),
-[V1A test procedure](test_procedure_v1a.md), [legacy exit targets](v1_to_v2_exit_criteria.md)
-and [preserved former guides](history/). These do not establish current fitting,
+Historical-only references: [V1A scope](../archive/v1a/docs/project_scope_v1a.md),
+[V1A test procedure](../archive/v1a/docs/test_procedure_v1a.md), [legacy exit targets](../archive/v1a/docs/v1_to_v2_exit_criteria.md)
+and [preserved former guides](../archive/reference-pages/README.md). These do not establish current fitting,
 synchronized data, passed gates or permission to expand motion control.
 
 Native editable sources take precedence over frozen stale PDFs for this review.

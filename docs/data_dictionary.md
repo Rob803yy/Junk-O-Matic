@@ -3,7 +3,7 @@
 The new V2 source uses [serial protocol 2](v2/serial_protocol.md) and
 [schema.sql](../software/v2/raspberry_pi/schema.sql). The actual installed sketch,
 original output and deployed logger remain unknown. The former dictionary is
-[preserved separately](history/v1a-data-dictionary.md).
+[preserved separately](../archive/reference-pages/v1a-data-dictionary.md).
 
 | Interface | Historical V1A example | New V2 draft |
 | --- | --- | --- |

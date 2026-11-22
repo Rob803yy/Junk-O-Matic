@@ -7,8 +7,8 @@ not physical verification, and no tool here establishes an installed configurati
 
 | Entry | Input / actual behavior | Output / overwrite boundary |
 | --- | --- | --- |
-| `download/bootstrap_datasets.py` | Configured enabled roots; directory-creation stub only | Creates local directories; no download, labels, splits or training |
-| `convert/build_inventory.py` | Revised scanner counts images only; no annotation parser | New `reports/local/dataset_inventory.json`; refuses overwrite unless explicit `--overwrite`; does not replace the committed fixture |
+| `archive/dataset-model-scaffold/scripts/download/bootstrap_datasets.py` | Configured enabled roots; directory-creation stub only | Creates local directories; no download, labels, splits or training |
+| `archive/dataset-model-scaffold/scripts/convert/build_inventory.py` | Revised scanner counts images only; no annotation parser | New `reports/local/dataset_inventory.json`; refuses overwrite unless explicit `--overwrite`; does not replace the committed fixture |
 | `v2/architecture_diagrams.py --check` | Scene JSON, evidence refs and protocol defaults | Read-only drawio/SVG comparison and checks; normal invocation regenerates three diagrams/previews/receipt; digital R1 and PDFs excluded |
 | `v2/draft_drawings.py` | Compatibility wrapper for the same renderer | Same three-source overwrite boundary |
 | `v2/build_power.py` | Embedded QET generator with draft hypotheses | Replaces `hardware/v2/electrical/v2_electrical.qet`; new UUIDs; manual edits/native re-save can be lost; regenerate in a copy |
@@ -17,15 +17,18 @@ not physical verification, and no tool here establishes an installed configurati
 | `v2/render_mechanical.py` / `cad_preview.py` | Current exported review meshes | Replaces CAD-R3 previews/poses; no PDF; not a full physical interference test |
 | `v2/check_freecad.py` | FreeCAD Python, five native/STEP sources | Writes a new scoped native receipt; does not measure the vehicle |
 | `v2/run_checks.py` | Requires explicit Arduino CLI + dependencies | Rewrites named test/build/replay receipts with its R1 scope/date; not a review-freshness updater; never upload |
-| `v2/build_review_book.py` | Historical R0 book assembly | Default refuses while held. An acknowledgement flag alone still assembles stale R0 PDFs; **not a current export workflow** |
+| `v2/build_review_book.py` | Historical R0 book assembly | Disabled unconditionally; its preserved R0 body is historical. The workflow must be updated/proofed after content review, not re-enabled by an acknowledgement flag. |
 | `repository_review/check_review.py` | Baseline inventory, links, dispositions, preserved sources/PDF hashes | Read-only checks by default; writes a new receipt only with explicit `--write-receipt` |
 
-Example local inventory (the output is ignored):
+Optional historical inventory (run inside its archive directory; output is ignored):
 
 ```sh
+cd archive/dataset-model-scaffold
 python scripts/convert/build_inventory.py --output reports/local/dataset_inventory.json
 python -m unittest discover -s scripts/repository_review/tests -v
+cd ../..
 python scripts/repository_review/check_review.py
+python scripts/repository_review/check_layout.py
 ```
 
 Missing roots are not treated as verified empty datasets; disabled roots are not
@@ -34,7 +37,8 @@ separate. Source URLs, live downloads, taxonomy mappings and model evaluation ar
 outside the scanner. The historical committed inventory is intentionally retained.
 
 PDFs remain held under [export status](../docs/reconciliation/export-status.json).
-A future export step must regenerate current subsystem PDFs, proof them, revise
+Old PDF paths in the R0 book script are historical; their files now live in
+`archive/exports-r0`. A future export step must regenerate current subsystem PDFs, proof them, revise
 the book's revision/content and update the hold/hash record after owner content
 review. Do not combine stale R0 PDFs and label the result ARCH-R2/CAD-R3.
 Manual checks exist; no GitHub Actions workflow or deployment was installed here.

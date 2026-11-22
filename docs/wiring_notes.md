@@ -1,7 +1,7 @@
 # Wiring review entry / current V2
 
 This page routes to the current review sources. The former instructions are
-[preserved as historical V1A notes](history/v1a-wiring-notes.md); they are not a
+[preserved as historical V1A notes](../archive/reference-pages/v1a-wiring-notes.md); they are not a
 current connection or grounding plan.
 
 Read [ARCH-R2 power domains](../hardware/v2/architecture/v2_power_domains.drawio),

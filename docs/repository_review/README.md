@@ -1,3 +1,5 @@
+> Historical REPO-R1 preparation record. The subsequent [layout cleanup](../repository-layout.md) publishes these corrections together with the active/archive separation. Old paths below retain their dated meaning; use the [relocation map](../../archive/relocation-manifest.json).
+
 # Repository alignment review / REPO-R1
 
 Prepared 2026-11-22 against merged `main` commit

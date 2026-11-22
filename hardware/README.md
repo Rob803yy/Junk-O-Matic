@@ -1,6 +1,6 @@
 # Hardware documentation / current V2 and historical placeholders
 
-Use [hardware/v2](v2/) for the current engineering drafts and
+Use [hardware/v2](v2) for the current engineering drafts and
 [the engineering index](../docs/v2/README.md) for review order.
 
 | Source | Current material |
@@ -11,8 +11,8 @@ Use [hardware/v2](v2/) for the current engineering drafts and
 | [Mechanical](v2/mechanical/README.md) | CAD-R3 native files, STEP and previews; numeric dimensions unmeasured |
 | [Master BOM](../docs/v2/bom.json) | Normalized evidence/status/quantity record; editable workbook in reconciliation |
 
-The older `bom`, `wiring_diagrams` and `enclosure_layout` folders are retained
-entry points, not competing build definitions. Uno R3 is owner-confirmed; Pi model,
-sensor fitting, installed wiring and operating ratings remain open. No physical
-control isolation, payload or assembled ingress rating is established. PDFs remain
-held; use current native/SVG/PNG/STEP sources.
+The former BOM/wiring/enclosure placeholders are in [archive/v1a](../archive/v1a/README.md).
+Uno R3 is owner-confirmed; Pi model, sensor fitting, installed wiring and ratings
+remain open. No physical control isolation, payload or assembled ingress rating
+is established. Stale PDFs are [archived unchanged](../archive/exports-r0/README.md);
+current native/SVG/PNG/STEP review sources stay here.

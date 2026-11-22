@@ -1,71 +1,84 @@
 {
-  "revision": "R1",
-  "status": "Held until owner content review; no PDF generated",
+  "revision": "LAYOUT-R1",
+  "status": "13 historical R0 PDFs relocated unchanged under archive/exports-r0; generation remains held until owner content review",
   "held_pdfs": [
     {
-      "path": "hardware/v2/architecture/v2_data_flow.pdf",
+      "path": "archive/exports-r0/hardware/v2/architecture/v2_data_flow.pdf",
       "sha256": "54c648b2100074ab99d4be8947568fc1ad8a15f2fe1842bb7b5e8d6e3ff521d3",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/architecture/v2_data_flow.pdf"
     },
     {
-      "path": "hardware/v2/architecture/v2_power_domains.pdf",
+      "path": "archive/exports-r0/hardware/v2/architecture/v2_power_domains.pdf",
       "sha256": "e913f2c76068d05c29184b95befa4bce8b5017264936a129dd2399ee53799a49",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/architecture/v2_power_domains.pdf"
     },
     {
-      "path": "hardware/v2/architecture/v2_system_overview.pdf",
+      "path": "archive/exports-r0/hardware/v2/architecture/v2_system_overview.pdf",
       "sha256": "d1601c697a66f611c0e0c164dece7031dab6f986233902c38222ff7b83d432e9",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/architecture/v2_system_overview.pdf"
     },
     {
-      "path": "hardware/v2/electrical/v2_electrical.pdf",
+      "path": "archive/exports-r0/hardware/v2/electrical/v2_electrical.pdf",
       "sha256": "9ee68a5e8a967819101d8fb4de7607e539bf3bb45748b0adc8bc3968d5b45742",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/electrical/v2_electrical.pdf"
     },
     {
-      "path": "hardware/v2/mechanical/exports/v2_assembly.pdf",
+      "path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_assembly.pdf",
       "sha256": "52d75b3472d72044b2356b51a8250f9e7ad8f9863e99743342d3e93614c777a8",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/mechanical/exports/v2_assembly.pdf"
     },
     {
-      "path": "hardware/v2/mechanical/exports/v2_battery_mount.pdf",
+      "path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_battery_mount.pdf",
       "sha256": "d82a41dc6efda8fd78f26dbd18359b51717b74e99270044961d9c462131a9d6b",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/mechanical/exports/v2_battery_mount.pdf"
     },
     {
-      "path": "hardware/v2/mechanical/exports/v2_cart_mount.pdf",
+      "path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_cart_mount.pdf",
       "sha256": "a04916d7e3b1c971ad94c09e2916343c3421c8373782c6de1d3ff0dce6204009",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/mechanical/exports/v2_cart_mount.pdf"
     },
     {
-      "path": "hardware/v2/mechanical/exports/v2_electronics_enclosure.pdf",
+      "path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_electronics_enclosure.pdf",
       "sha256": "6d568e09bf4033435f2eb52dc65abfebe12fee9de880111a35256ab76a105d44",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/mechanical/exports/v2_electronics_enclosure.pdf"
     },
     {
-      "path": "hardware/v2/mechanical/exports/v2_sensor_mounts.pdf",
+      "path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_sensor_mounts.pdf",
       "sha256": "7d8d9047528d84f9179ad67416e70dfb57948f6c32fcd319799c169c77de1066",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/mechanical/exports/v2_sensor_mounts.pdf"
     },
     {
-      "path": "hardware/v2/wiring/exports/v2_power_harness.pdf",
+      "path": "archive/exports-r0/hardware/v2/wiring/exports/v2_power_harness.pdf",
       "sha256": "9a9abb54b687eecb00a790514e7b67983e326ad8d7d3f1a26688ffd0a5374ec3",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/wiring/exports/v2_power_harness.pdf"
     },
     {
-      "path": "hardware/v2/wiring/exports/v2_sensor_harness.pdf",
+      "path": "archive/exports-r0/hardware/v2/wiring/exports/v2_sensor_harness.pdf",
       "sha256": "503e25dd3c58bc317da444e2dc7a45d2121133785481ab7b3734f0ea182f4b88",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "hardware/v2/wiring/exports/v2_sensor_harness.pdf"
     },
     {
-      "path": "reports/v2/LitterBuggy-V2-review.pdf",
+      "path": "archive/exports-r0/reports/v2/LitterBuggy-V2-review.pdf",
       "sha256": "4f5c052c8dceb5f7136818a598f9c20ee71eee0e680e9485630d13b03ea81b15",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "reports/v2/LitterBuggy-V2-review.pdf"
     },
     {
-      "path": "reports/v2/review-introduction.pdf",
+      "path": "archive/exports-r0/reports/v2/review-introduction.pdf",
       "sha256": "caf1383ef834d2b27dd0380b11bbb8788669dbab9874fd1c3922a8d58759300c",
-      "status": "Historical R0; stale for R1"
+      "status": "Historical R0; archived unchanged; stale for current editable sources; PDF regeneration held",
+      "original_path": "reports/v2/review-introduction.pdf"
     }
   ]
 }

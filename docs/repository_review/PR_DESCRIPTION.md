@@ -1,3 +1,5 @@
+> Historical REPO-R1 preparation record. The subsequent [layout cleanup](../repository-layout.md) publishes these corrections together with the active/archive separation. Old paths below retain their dated meaning; use the [relocation map](../../archive/relocation-manifest.json).
+
 Suggested title: Align legacy folders and evidence guidance with the current V2 review
 
 Older folder entry points still present Nano/Pi4 wiring assumptions, legacy logger
