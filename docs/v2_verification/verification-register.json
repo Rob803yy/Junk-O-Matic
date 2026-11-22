@@ -1,0 +1,2238 @@
+{
+  "schema_version": "1.0",
+  "record_date": "2026-11-21",
+  "project": "LitterBuggy",
+  "repository": "Rob803yy/Junk-O-Matic",
+  "audited_commit": "b163861c78d02060da30a026469f19e3c1409d11",
+  "physical_configuration_revision": "V2-current-unmeasured",
+  "scope": "Initial evidence review; no physical inspection, instrumentation, firmware readback, upload or execution on the buggy performed.",
+  "status_definitions": {
+    "confirmed": "Supported bounded claim; evidence basis must be stated. Repository content and historical owner observations do not establish current physical condition.",
+    "conflicting": "Sources disagree or project definitions diverge; resolution pending or historical documents still need reconciliation.",
+    "proposed": "Suggested design, method or requirement; not evidence of installation or completion.",
+    "unknown": "Insufficient evidence for current state, exact value or operation; historical claims may exist."
+  },
+  "sources": [
+    {
+      "id": "R01",
+      "type": "repository",
+      "path": "README.md",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/blob/b163861c78d02060da30a026469f19e3c1409d11/README.md",
+      "scope": "Source text establishes repository content only; not proof of installation or operation"
+    },
+    {
+      "id": "R02",
+      "type": "repository",
+      "path": "docs/wiring_notes.md",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/blob/b163861c78d02060da30a026469f19e3c1409d11/docs/wiring_notes.md",
+      "scope": "Source text establishes repository content only; not proof of installation or operation"
+    },
+    {
+      "id": "R03",
+      "type": "repository",
+      "path": "docs/data_dictionary.md",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/blob/b163861c78d02060da30a026469f19e3c1409d11/docs/data_dictionary.md",
+      "scope": "Source text establishes repository content only; not proof of installation or operation"
+    },
+    {
+      "id": "R04",
+      "type": "repository",
+      "path": "docs/project_scope_v1a.md",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/blob/b163861c78d02060da30a026469f19e3c1409d11/docs/project_scope_v1a.md",
+      "scope": "Source text establishes repository content only; not proof of installation or operation"
+    },
+    {
+      "id": "R05",
+      "type": "repository",
+      "path": "docs/v1_to_v2_exit_criteria.md",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/blob/b163861c78d02060da30a026469f19e3c1409d11/docs/v1_to_v2_exit_criteria.md",
+      "scope": "Source text establishes repository content only; not proof of installation or operation"
+    },
+    {
+      "id": "R06",
+      "type": "repository",
+      "path": "software/raspberry_pi/README.md",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/blob/b163861c78d02060da30a026469f19e3c1409d11/software/raspberry_pi/README.md",
+      "scope": "Source text establishes repository content only; not proof of installation or operation"
+    },
+    {
+      "id": "R07",
+      "type": "repository",
+      "path": "hardware/bom/README.md",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/blob/b163861c78d02060da30a026469f19e3c1409d11/hardware/bom/README.md",
+      "scope": "Source text establishes repository content only; not proof of installation or operation"
+    },
+    {
+      "id": "R08",
+      "type": "repository",
+      "path": "software/arduino/telemetry_logger_stub/telemetry_logger_stub.ino",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/blob/b163861c78d02060da30a026469f19e3c1409d11/software/arduino/telemetry_logger_stub/telemetry_logger_stub.ino",
+      "scope": "Source text establishes repository content only; not proof of installation or operation"
+    },
+    {
+      "id": "R09",
+      "type": "repository",
+      "path": "software/raspberry_pi/src/jom_data_logger.py",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/blob/b163861c78d02060da30a026469f19e3c1409d11/software/raspberry_pi/src/jom_data_logger.py",
+      "scope": "Source text establishes repository content only; not proof of installation or operation"
+    },
+    {
+      "id": "R10",
+      "type": "repository",
+      "path": "hardware/",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/tree/b163861c78d02060da30a026469f19e3c1409d11/hardware/",
+      "scope": "Tree inspection: hardware folders contain README placeholders; no CAD or wiring drawings in audited tree"
+    },
+    {
+      "id": "R11",
+      "type": "repository",
+      "path": "AGENTS.md",
+      "revision": "b163861c78d02060da30a026469f19e3c1409d11",
+      "url": "https://github.com/Rob803yy/Junk-O-Matic/blob/b163861c78d02060da30a026469f19e3c1409d11/AGENTS.md",
+      "scope": "Source text establishes repository content only; not proof of installation or operation"
+    },
+    {
+      "id": "U01",
+      "type": "owner_statement",
+      "date": "2026-11-21",
+      "chat_title": "Create LitterBuggy project files",
+      "excerpt": "Junk-O-Matic is where we'll work off of. the information inside needs to be re-verified first."
+    },
+    {
+      "id": "U02",
+      "type": "owner_scope",
+      "date": "2026-11-21",
+      "chat_title": "Create LitterBuggy project files",
+      "summary": "Reconstruct current V2; electrical scope names Kobalt adapter, 3S propulsion, converters, Pi, Arduino, sensors; mechanical SCX6/Gorilla Cart; create thorough verification record."
+    },
+    {
+      "id": "U03",
+      "type": "owner_statement",
+      "date": "2026-11-21",
+      "chat_title": "Create LitterBuggy project files",
+      "excerpt": "And yes we're using an Elegoo Uno R3."
+    },
+    {
+      "id": "C01",
+      "type": "historical_chat",
+      "chat_title": "V2 Field Testing Setup",
+      "chat_id": "6b02184c-a198-83e9-9b88-247baba3958e",
+      "review_scope": "Returned message text reviewed; attached images/videos not directly re-inspected in this audit",
+      "limitation": "Assistant interpretations remain historical claims. Only attributed owner statements can establish an owner-reported observation.",
+      "key_turn_ids": [
+        "bbb2147c-60cf-4cea-a437-613d26af6120",
+        "bbb212c3-e4d5-4e88-b54d-438448a227dd",
+        "bbb2175f-ff30-434b-8ead-7f6c290eb438",
+        "bbb2123a-e09f-488a-bd72-ed6ed020d383",
+        "bbb21568-da3f-49cd-89ee-9f52953a34af"
+      ]
+    },
+    {
+      "id": "C02",
+      "type": "historical_chat",
+      "chat_title": "Plan Raspberry Pi Build",
+      "chat_id": "6af9436c-1cd4-83ea-93a4-2e0fd9cbe2ef",
+      "review_scope": "Returned message text reviewed; attached images/videos not directly re-inspected in this audit",
+      "limitation": "Assistant interpretations remain historical claims. Only attributed owner statements can establish an owner-reported observation.",
+      "key_turn_ids": [
+        "3283961f-51f4-4f13-8ddb-9f04c8362528",
+        "80c38399-8b85-4208-aacb-dd348d84accd",
+        "de0e67fc-659a-458e-b86e-ed7c43105fcd",
+        "bbb210cd-9b03-4251-955e-c2e353964190",
+        "bbb21b66-3dd2-4399-ba51-459e3afb1dca"
+      ]
+    },
+    {
+      "id": "C03",
+      "type": "historical_chat",
+      "chat_title": "LitterBuggy Status Review",
+      "chat_id": "6addd6d8-2184-83e9-b31f-71192ac3fa45",
+      "review_scope": "Returned message text reviewed; attached images/videos not directly re-inspected in this audit",
+      "limitation": "Assistant interpretations remain historical claims. Only attributed owner statements can establish an owner-reported observation.",
+      "key_turn_ids": [
+        "bbb212ff-623b-4e6e-945a-7d7b41bc6033",
+        "bbb2160a-3be0-433f-9013-c8bade610fbc",
+        "bbb21bf5-51ae-437e-a5f1-6f9bdf3c92b0",
+        "bbb21f09-0298-4115-a1f7-2b9ba98ecc0f",
+        "bbb212eb-9c7a-4401-8937-6409751d845f"
+      ]
+    },
+    {
+      "id": "C04",
+      "type": "historical_chat",
+      "chat_title": "Integration milestone update",
+      "chat_id": "6ae3eaef-a090-83ea-8ada-5a4ad63cf845",
+      "review_scope": "Returned message text reviewed; attached images/videos not directly re-inspected in this audit",
+      "limitation": "Assistant interpretations remain historical claims. Only attributed owner statements can establish an owner-reported observation.",
+      "key_turn_ids": [
+        "bbb21b0e-4aae-42ef-9ff1-479f10435644",
+        "bbb21b8d-1136-424a-b572-bbe49daad1c5",
+        "bbb21fbc-6873-41bb-9768-9443a66c52ed",
+        "bbb21f08-0d8d-4533-816e-514b0856ae7e",
+        "bbb2195b-d2d1-406d-8991-72eb549feef4"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "V2-001",
+      "category": "configuration",
+      "subject": "Project repository",
+      "status": "confirmed",
+      "recorded_value": "Rob803yy/Junk-O-Matic selected by owner",
+      "evidence_basis": "owner_statement",
+      "source_ids": [
+        "U01"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Retain repository identity in all records.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-002",
+      "category": "configuration",
+      "subject": "Physical build name",
+      "status": "confirmed",
+      "recorded_value": "Owner calls current physical configuration V2",
+      "evidence_basis": "owner_statement",
+      "source_ids": [
+        "U02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Assign a dated configuration revision after inventory.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-003",
+      "category": "configuration",
+      "subject": "Repository stage mismatch",
+      "status": "conflicting",
+      "recorded_value": "Repository describes V1.0A; owner requests current V2 reconstruction",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "U02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Define physical build revision separately from software/test stage; owner confirms terminology.",
+      "acceptance_criteria": "Record the resolution and its evidence; reconcile affected references without erasing the historical claim.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-004",
+      "category": "configuration",
+      "subject": "Controller identity",
+      "status": "confirmed",
+      "recorded_value": "Elegoo Uno R3; owner explicitly confirmed on 2026-11-21",
+      "evidence_basis": "owner_statement",
+      "source_ids": [
+        "U03",
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Optional dated board-label photograph strengthens identification; do not substitute Nano.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "Owner statement",
+      "verification_date": "2026-11-21",
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-005",
+      "category": "configuration",
+      "subject": "Historical Nano references",
+      "status": "conflicting",
+      "recorded_value": "README, BOM, wiring notes and test procedure specify Nano; current controller is Uno R3",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "R02",
+        "R04",
+        "R07",
+        "U03"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Reconcile affected documents after recording exact Uno wiring and power.",
+      "acceptance_criteria": "Record the resolution and its evidence; reconcile affected references without erasing the historical claim.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-006",
+      "category": "configuration",
+      "subject": "Pi hardware identity",
+      "status": "unknown",
+      "recorded_value": "Repository specifies Raspberry Pi 4B; current board model and RAM unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "R07"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Read board label and OS model output; capture RAM and board revision.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-007",
+      "category": "configuration",
+      "subject": "SCX6 identity",
+      "status": "unknown",
+      "recorded_value": "SCX6 is described in project scope and prior reviews; exact installed variant unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "C03",
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record product label, chassis variant and installed modifications.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-008",
+      "category": "configuration",
+      "subject": "Cart identity",
+      "status": "unknown",
+      "recorded_value": "Prior reviews describe Gorilla Cart; exact model unverified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C03",
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record cart label/model and distinguish tub from complete original cart.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-009",
+      "category": "configuration",
+      "subject": "Configuration date and change history",
+      "status": "unknown",
+      "recorded_value": "No dated current as-built inventory established",
+      "evidence_basis": "owner_statement",
+      "source_ids": [
+        "U02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Owner records last modifications and inspection date.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-010",
+      "category": "configuration",
+      "subject": "Front and left/right convention",
+      "status": "proposed",
+      "recorded_value": "Use yellow-handle end as assembly front only after owner confirms; record steering axle separately",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Photograph labelled front/rear/left/right and mark coordinate frame.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-011",
+      "category": "configuration",
+      "subject": "Control authority",
+      "status": "proposed",
+      "recorded_value": "Repository intends manual RC drive with Pi/Arduino observational only",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "R04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Owner confirms actual current control interfaces; trace wiring before asserting separation.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-012",
+      "category": "configuration",
+      "subject": "Drive modifications",
+      "status": "unknown",
+      "recorded_value": "Prior assistant review mentions rear-wheel drive; not independently verified in this audit",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Photograph drivetrain and record installed/disconnected shafts and current driven axles.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-013",
+      "category": "installed_components",
+      "subject": "Auxiliary battery identity",
+      "status": "unknown",
+      "recorded_value": "Kobalt 24V described in repository and prior adapter discussion",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "C01"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Photograph pack label; record model, capacity, condition and exact nominal/max label ratings.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-014",
+      "category": "installed_components",
+      "subject": "Kobalt adapter identity",
+      "status": "unknown",
+      "recorded_value": "Prior chat identifies photographed part as Kobalt dock; manufacturer/model unverified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C01"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record adapter markings, connector and mounting provisions.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-015",
+      "category": "installed_components",
+      "subject": "Propulsion battery",
+      "status": "unknown",
+      "recorded_value": "Owner task names 3S propulsion power; installed pack details unverified",
+      "evidence_basis": "owner_statement",
+      "source_ids": [
+        "U02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record label, chemistry, capacity, cell count, connector and retention.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-016",
+      "category": "installed_components",
+      "subject": "5V converter",
+      "status": "unknown",
+      "recorded_value": "Repository calls for 24V-to-5V buck; installed unit unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02",
+        "R07"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record model, labelled input/output ranges and current rating.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-017",
+      "category": "installed_components",
+      "subject": "12V converter",
+      "status": "unknown",
+      "recorded_value": "Repository calls for 24V-to-12V buck; installed unit unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02",
+        "R07"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record model, labelled ranges and actual connected loads.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-018",
+      "category": "installed_components",
+      "subject": "Other converters",
+      "status": "unknown",
+      "recorded_value": "Number of installed converters not established",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Inventory every converter and identify its source and loads.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-019",
+      "category": "installed_components",
+      "subject": "Main fuse",
+      "status": "unknown",
+      "recorded_value": "Repository lists fuse with TODO rating; installation unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record location, holder type, installed rating and protected wire segments.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-020",
+      "category": "installed_components",
+      "subject": "Branch fuses",
+      "status": "unknown",
+      "recorded_value": "No current branch protection inventory",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Inspect each source branch and record installed protection or explicitly absent.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-021",
+      "category": "installed_components",
+      "subject": "Main switch",
+      "status": "unknown",
+      "recorded_value": "Main switch is a repository architecture item",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record installed switch model, rating, poles and interrupted conductor.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-022",
+      "category": "installed_components",
+      "subject": "RC receiver",
+      "status": "unknown",
+      "recorded_value": "Repository calls receiver stock; actual model unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Read label and record channel wiring.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-023",
+      "category": "installed_components",
+      "subject": "ESC",
+      "status": "unknown",
+      "recorded_value": "Repository calls ESC stock; actual model/settings unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record model and current configuration without changing settings.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-024",
+      "category": "installed_components",
+      "subject": "Motor and gearing",
+      "status": "unknown",
+      "recorded_value": "Repository calls traction motor stock; actual hardware unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record motor label, gearing and transmission configuration.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-025",
+      "category": "installed_components",
+      "subject": "Steering and shift servos",
+      "status": "unknown",
+      "recorded_value": "Installed servo models and supply paths unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record labels, channels and any external BEC.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-026",
+      "category": "installed_components",
+      "subject": "IMU",
+      "status": "unknown",
+      "recorded_value": "Prior assistant identifies MPU-6050 breakout; current installation not re-inspected",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Photograph board and markings; identify breakout variant and orientation.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-027",
+      "category": "installed_components",
+      "subject": "Ultrasonic sensor",
+      "status": "unknown",
+      "recorded_value": "Prior assistant identifies HC-SR04; current installation not re-inspected",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Photograph label and installed connector.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-028",
+      "category": "installed_components",
+      "subject": "LED and resistor",
+      "status": "unknown",
+      "recorded_value": "Prior assistant describes red LED on breadboard",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record installed LED, series resistance and wiring.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-029",
+      "category": "installed_components",
+      "subject": "Buzzer",
+      "status": "unknown",
+      "recorded_value": "Prior assistant describes buzzer; active/passive type unverified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Identify installed module/type and drive circuit.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-030",
+      "category": "installed_components",
+      "subject": "OLED",
+      "status": "proposed",
+      "recorded_value": "Prior discussion considered OLED; installed status unverified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Owner confirms fitted or absent; if fitted record markings and controller.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-031",
+      "category": "installed_components",
+      "subject": "Camera",
+      "status": "unknown",
+      "recorded_value": "Repository supports optional camera; no current model established",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "R06"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record camera type, interface, mounting and installed status.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-032",
+      "category": "installed_components",
+      "subject": "Temperature sensor",
+      "status": "unknown",
+      "recorded_value": "Repository schema includes enclosure temperature; sensor presence unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R03",
+        "R08"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record actual sensor or explicitly absent.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-033",
+      "category": "installed_components",
+      "subject": "Voltage sensing hardware",
+      "status": "unknown",
+      "recorded_value": "Stub mentions voltage dividers but does not read them",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R08"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Inventory actual dividers/ADC modules and calibrated ratios; do not infer fitted sensors.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-034",
+      "category": "installed_components",
+      "subject": "GPS and environmental sensors",
+      "status": "proposed",
+      "recorded_value": "Optional repository items without installation evidence",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Owner confirms absent or identifies each fitted module.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-035",
+      "category": "installed_components",
+      "subject": "Lighting and fan loads",
+      "status": "unknown",
+      "recorded_value": "Prior reviews mention lighting; repository lists optional 12V loads",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C04",
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Inventory each light/fan and record source, model and measured load.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-036",
+      "category": "installed_components",
+      "subject": "Breadboard and interconnects",
+      "status": "unknown",
+      "recorded_value": "Prior chat describes breadboard sensor circuit",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record current breadboard/terminal arrangement and all connector identifiers.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-037",
+      "category": "installed_components",
+      "subject": "Electronics enclosure",
+      "status": "unknown",
+      "recorded_value": "Prior reviews describe orange enclosure; dimensions and model unknown",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C01",
+        "C03"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record material, dimensions, ingress provisions and mounting method.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-038",
+      "category": "actual_connections",
+      "subject": "Connection trace completeness",
+      "status": "unknown",
+      "recorded_value": "No pin-to-pin current wiring drawing in reviewed repository",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02",
+        "R10"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Assign component/connector IDs and trace every conductor with power disconnected.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-039",
+      "category": "actual_connections",
+      "subject": "Propulsion positive and return path",
+      "status": "unknown",
+      "recorded_value": "3S-to-ESC path not traced",
+      "evidence_basis": "owner_statement",
+      "source_ids": [
+        "U02",
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record battery connector, switch/protection if fitted, ESC input polarity and return.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-040",
+      "category": "actual_connections",
+      "subject": "ESC motor connections",
+      "status": "unknown",
+      "recorded_value": "Installed motor phase/power wiring unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Trace ESC outputs to motor; label wires and connectors.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-041",
+      "category": "actual_connections",
+      "subject": "Receiver/ESC/BEC path",
+      "status": "unknown",
+      "recorded_value": "Receiver power and BEC topology unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Trace receiver ports and supply conductors; record external BEC if any.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-042",
+      "category": "actual_connections",
+      "subject": "Steering/shift channel paths",
+      "status": "unknown",
+      "recorded_value": "Channel assignments not recorded",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record receiver channel, servo connector orientation and supply source.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-043",
+      "category": "actual_connections",
+      "subject": "Auxiliary battery-to-adapter",
+      "status": "unknown",
+      "recorded_value": "Adapter contact polarity and connector pin numbers unverified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C01"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Map labelled contacts and output leads; verify polarity with appropriate measurement.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-044",
+      "category": "actual_connections",
+      "subject": "Adapter-to-fuse-to-switch",
+      "status": "unknown",
+      "recorded_value": "Repository lists intended elements; installed order unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Trace exact order, distances from source and unprotected segments.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-045",
+      "category": "actual_connections",
+      "subject": "Converter input distribution",
+      "status": "unknown",
+      "recorded_value": "Parallel feeds and terminal distribution unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record each converter input source, connector pin, polarity and protection.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-046",
+      "category": "actual_connections",
+      "subject": "Pi power entry",
+      "status": "unknown",
+      "recorded_value": "5V rail intended; USB-C versus GPIO or other entry unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Trace actual entry connector and cable; record any alternate power inputs.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-047",
+      "category": "actual_connections",
+      "subject": "Uno external power entry",
+      "status": "unknown",
+      "recorded_value": "Prior chat mentions buck supply; barrel/VIN/5V pin path unknown",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02",
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record exact pin/connector and supply setting; inspect simultaneous USB/external power arrangement.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-048",
+      "category": "actual_connections",
+      "subject": "Pi-to-Uno link",
+      "status": "unknown",
+      "recorded_value": "USB serial intended; current physical link and recognition unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R04",
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record cable endpoints, data capability, serial identity and USB power path.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-049",
+      "category": "actual_connections",
+      "subject": "Auxiliary common returns",
+      "status": "unknown",
+      "recorded_value": "Single-point ground is a repository instruction, not verified implementation",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Map actual return junctions, conductor paths and chassis connections.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-050",
+      "category": "actual_connections",
+      "subject": "RC/auxiliary separation",
+      "status": "unknown",
+      "recorded_value": "Repository asserts independent domains; physical isolation not established",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Trace all shared grounds/signals/shields/metal contact paths and document actual topology.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-051",
+      "category": "actual_connections",
+      "subject": "Uno-to-IMU wiring",
+      "status": "unknown",
+      "recorded_value": "I2C discussed; actual SDA/SCL/power/return pins unverified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Trace each wire; record breakout supply and pull-up rail after identifying module.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-052",
+      "category": "actual_connections",
+      "subject": "Uno-to-ultrasonic wiring",
+      "status": "unknown",
+      "recorded_value": "Trigger/echo assignments and sensor supply unverified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record Uno pin, sensor pin, voltage and any interface components.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-053",
+      "category": "actual_connections",
+      "subject": "Uno-to-LED wiring",
+      "status": "unknown",
+      "recorded_value": "Pin, polarity and resistance unverified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Trace digital output through resistor and LED to return.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-054",
+      "category": "actual_connections",
+      "subject": "Uno-to-buzzer wiring",
+      "status": "unknown",
+      "recorded_value": "Pin, polarity and driver components unverified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Trace supply/control and record transistor/diode if fitted.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-055",
+      "category": "actual_connections",
+      "subject": "OLED bus/power wiring",
+      "status": "unknown",
+      "recorded_value": "Proposed I2C arrangement must not be treated as installed",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "If fitted trace actual VCC/GND/SDA/SCL and identify voltage compatibility.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-056",
+      "category": "actual_connections",
+      "subject": "Camera wiring",
+      "status": "unknown",
+      "recorded_value": "Camera interface and supply unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02",
+        "R06"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Trace USB/CSI/other data and power cables.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-057",
+      "category": "actual_connections",
+      "subject": "Voltage sense paths",
+      "status": "unknown",
+      "recorded_value": "Battery/rail inputs not mapped",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R03",
+        "R08"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "If fitted record resistor values, reference, ADC channel and calibration; verify before energizing.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-058",
+      "category": "actual_connections",
+      "subject": "Temperature and optional inputs",
+      "status": "unknown",
+      "recorded_value": "Sensor bus/pins and observational estop input not mapped",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R03"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record only fitted hardware and label absent schema fields explicitly.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-059",
+      "category": "actual_connections",
+      "subject": "Wire and connector specifications",
+      "status": "unknown",
+      "recorded_value": "Gauges, colours, lengths and connector part numbers not established",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record both ends, pin numbers, connector viewing direction, gauge, colour and length for each cable.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-060",
+      "category": "actual_connections",
+      "subject": "Harness strain relief and routing",
+      "status": "unknown",
+      "recorded_value": "No current routing evidence",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R10"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Photograph route, abrasion points, moving clearances and strain relief.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-061",
+      "category": "actual_connections",
+      "subject": "USB connection history",
+      "status": "confirmed",
+      "recorded_value": "Owner previously reported Windows unknown-device entry disappears when Uno unplugged",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Historical report only; repeat recognition check to establish current state.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-062",
+      "category": "actual_connections",
+      "subject": "Current USB health",
+      "status": "unknown",
+      "recorded_value": "No confirmed resolution found in reviewed chat",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record cable/host/port, OS recognition and stable serial capture result.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-063",
+      "category": "electrical_measurements",
+      "subject": "Auxiliary pack voltage",
+      "status": "unknown",
+      "recorded_value": "No measured current pack voltage established; stub 23.7 is synthetic",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R08"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record meter, pack state, time and terminal voltage; never use stub value as measurement.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-064",
+      "category": "electrical_measurements",
+      "subject": "Propulsion pack voltage",
+      "status": "unknown",
+      "recorded_value": "No current measurement established",
+      "evidence_basis": "owner_statement",
+      "source_ids": [
+        "U02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record pack total and cell readings using appropriate equipment.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-065",
+      "category": "electrical_measurements",
+      "subject": "Converter outputs unloaded",
+      "status": "unknown",
+      "recorded_value": "Stub 12.1/5.05 are fixed constants",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R08"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Measure actual converter outputs with loads isolated as appropriate and record settings.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-066",
+      "category": "electrical_measurements",
+      "subject": "Converter outputs loaded",
+      "status": "unknown",
+      "recorded_value": "No loaded rail measurements established",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R05"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Measure at converter and load during representative boot/logging/lighting load.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-067",
+      "category": "electrical_measurements",
+      "subject": "Pi input stability",
+      "status": "unknown",
+      "recorded_value": "No measured input minimum or transient evidence",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R05"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record input voltage under startup and combined loads; capture reset/undervoltage evidence.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-068",
+      "category": "electrical_measurements",
+      "subject": "Load currents",
+      "status": "unknown",
+      "recorded_value": "Auxiliary total and branch currents not measured",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record instrument/range, operating mode and steady/peak current per branch.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-069",
+      "category": "electrical_measurements",
+      "subject": "Fuse/wire adequacy",
+      "status": "unknown",
+      "recorded_value": "Fuse selection remains TODO in repository",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Compare actual measured loads with identified conductor, connector, switch and converter ratings; document selection rationale.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-070",
+      "category": "electrical_measurements",
+      "subject": "Battery discharge protection",
+      "status": "unknown",
+      "recorded_value": "Prior adapter discussion raised cutoff question; installed protection unknown",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C01"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Identify pack/adapter protection documentation and actual configured cutoff; record observed low-battery procedure.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-071",
+      "category": "electrical_measurements",
+      "subject": "Logic voltage compatibility",
+      "status": "unknown",
+      "recorded_value": "Exact sensor breakout tolerances/pull-ups unverified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Identify modules and their specifications; measure bus rail as needed before validating interfaces.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-072",
+      "category": "electrical_measurements",
+      "subject": "Thermal operating measurements",
+      "status": "unknown",
+      "recorded_value": "No current converter/enclosure temperature dataset established",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R05"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record ambient and component/enclosure temperatures during representative operation.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-073",
+      "category": "mechanical_dimensions",
+      "subject": "Dimension reference and state",
+      "status": "proposed",
+      "recorded_value": "Use mm with explicit datums; record payload, battery, surface and suspension condition",
+      "evidence_basis": "owner_statement",
+      "source_ids": [
+        "U02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Label datums in photos; record instrument resolution and uncertainty for every measurement.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-074",
+      "category": "mechanical_dimensions",
+      "subject": "Overall assembly envelope",
+      "status": "unknown",
+      "recorded_value": "No current measured length/width/height",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R10"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Measure assembled extremes including handle, lights and protrusions.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-075",
+      "category": "mechanical_dimensions",
+      "subject": "Wheelbase and track",
+      "status": "unknown",
+      "recorded_value": "Stock dimensions in prior research are not measurements of this build",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Measure axle centres and tyre contact/centre references; state exact definition.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-076",
+      "category": "mechanical_dimensions",
+      "subject": "Ground and moving clearances",
+      "status": "unknown",
+      "recorded_value": "No measured current clearance envelope",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record underside clearance and interference through steering/suspension travel.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-077",
+      "category": "mechanical_dimensions",
+      "subject": "Cart dimensions and position",
+      "status": "unknown",
+      "recorded_value": "Tub length/width/depth and installed offsets unknown",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Measure tub envelope, floor/rim heights and offsets from assembly datums.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-078",
+      "category": "mechanical_dimensions",
+      "subject": "Cart-to-chassis structure",
+      "status": "unknown",
+      "recorded_value": "Prior reviews describe adapter/aluminium frame",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C03",
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Measure member sections, spans, attachment points and joint hardware.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-079",
+      "category": "mechanical_dimensions",
+      "subject": "Mount hole patterns",
+      "status": "unknown",
+      "recorded_value": "No measured cart/frame/enclosure/dock hole coordinates",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C01",
+        "R10"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record X/Y/Z, diameter, spacing, slot extent, fastener and datum for each interface.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-080",
+      "category": "mechanical_dimensions",
+      "subject": "Battery and dock envelope",
+      "status": "unknown",
+      "recorded_value": "Actual pack/dock dimensions and removal travel unknown",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C01"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Measure installed envelope, latch access, slide direction and required extraction space.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-081",
+      "category": "mechanical_dimensions",
+      "subject": "Dock mounting recesses",
+      "status": "unknown",
+      "recorded_value": "Prior photos did not establish whether recesses are mounting holes",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C01"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Inspect with battery removed; record hole/boss type without assuming usable screw paths.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-082",
+      "category": "mechanical_dimensions",
+      "subject": "Battery mounting proposal",
+      "status": "proposed",
+      "recorded_value": "Plate and secondary strap suggested previously; not confirmed installed",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C01"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record actual mounting first; keep any redesign separate from as-built drawing.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-083",
+      "category": "mechanical_dimensions",
+      "subject": "Proposed plate size",
+      "status": "proposed",
+      "recorded_value": "Prior suggested roughly 4x6 inch plate and material thicknesses were estimates",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C01"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Do not manufacture from suggestion; derive geometry from measured interfaces and loads.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-084",
+      "category": "mechanical_dimensions",
+      "subject": "Enclosure dimensions and layout",
+      "status": "unknown",
+      "recorded_value": "No measured external/internal dimensions or component coordinates",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R10"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Measure walls, usable volume, standoffs, cable openings and component positions.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-085",
+      "category": "mechanical_dimensions",
+      "subject": "Sensor positions and axes",
+      "status": "unknown",
+      "recorded_value": "IMU orientation and ultrasonic beam direction unrecorded",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record position and orientation relative to confirmed assembly axes.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-086",
+      "category": "mechanical_dimensions",
+      "subject": "Mass distribution",
+      "status": "unknown",
+      "recorded_value": "No complete current assembly/equipment mass record",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C03"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Weigh components and assembly; record four-wheel loads on equal-height supports if available.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-087",
+      "category": "mechanical_dimensions",
+      "subject": "Suspension setup",
+      "status": "unknown",
+      "recorded_value": "Actual spring IDs, preload positions, shock mounts and oil state unknown",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C03"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Photograph and record four corner settings before any adjustment.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-088",
+      "category": "mechanical_dimensions",
+      "subject": "Suspension travel and settling",
+      "status": "unknown",
+      "recorded_value": "Prior review reports asymmetric settling; no current calibrated corner measurements",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C03"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Measure comparable chassis-to-axle gaps and repeat settling with fixed known load.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-089",
+      "category": "mechanical_dimensions",
+      "subject": "Historical right lean",
+      "status": "confirmed",
+      "recorded_value": "Owner described right sag during removal/replacement of books; books were left of centre",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C03"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Preserve as historical owner observation; quantify separately in current configuration.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-090",
+      "category": "mechanical_dimensions",
+      "subject": "Roll mechanism and root cause",
+      "status": "unknown",
+      "recorded_value": "Prior assistant inferred suspension roll; fault/root cause not established",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C03",
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Separate tub/chassis/axle motion with fixed references and repeatable loading.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-091",
+      "category": "mechanical_dimensions",
+      "subject": "Payload limits",
+      "status": "unknown",
+      "recorded_value": "Prior demonstrations and discussed targets do not establish validated capacity",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C03",
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Define intended mass/offset/lean requirements and validate bounded operating conditions.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-092",
+      "category": "mechanical_dimensions",
+      "subject": "Loaded mobility history",
+      "status": "unknown",
+      "recorded_value": "Prior assistant reports loaded travel in videos 2231/2235; original media not re-reviewed here",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Locate original media and link configuration, load, date and observed result.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-093",
+      "category": "running_software",
+      "subject": "Repository firmware nature",
+      "status": "confirmed",
+      "recorded_value": "telemetry_logger_stub.ino emits fixed illustrative values at nominal 1 s interval",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R08"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Keep simulation explicitly identified; no sensor-acquisition claims.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-094",
+      "category": "running_software",
+      "subject": "Running Uno firmware",
+      "status": "unknown",
+      "recorded_value": "Owner reported code on Uno and lost sketch; running image not identified",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Locate original source/build artifacts; record source hash or unknown and preserve firmware before replacement.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-095",
+      "category": "running_software",
+      "subject": "Firmware preservation",
+      "status": "proposed",
+      "recorded_value": "Search original source first; preserve readable firmware and verify repeat reads before upload",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record tool/version, exact operation, result and hashes; binary backup is not recovered source.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-096",
+      "category": "running_software",
+      "subject": "IDE/toolchain/libraries",
+      "status": "unknown",
+      "recorded_value": "Actual IDE, board package and library versions unrecorded",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record installed tool versions and board selection; capture reproducible compile output once source recovered.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-097",
+      "category": "running_software",
+      "subject": "Existing sensor behaviour",
+      "status": "unknown",
+      "recorded_value": "Original sample timing, alarms and filtering unrecorded",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Capture observed output/LED/buzzer behaviour without overwriting firmware.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-098",
+      "category": "running_software",
+      "subject": "Actual serial format",
+      "status": "unknown",
+      "recorded_value": "Repository stub sends JSON lines at 115200; running firmware format unknown",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R08",
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Capture unedited serial bytes with port/baud/time; retain headers, malformed lines and startup output.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-099",
+      "category": "running_software",
+      "subject": "Stub/logger format pairing",
+      "status": "confirmed",
+      "recorded_value": "Stub JSON field names align with logger telemetry columns; runtime compatibility untested",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R03",
+        "R08",
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Replay synthetic lines separately from physical sensor validation.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-100",
+      "category": "running_software",
+      "subject": "Protocol metadata",
+      "status": "proposed",
+      "recorded_value": "Document version, units, timestamps, sequence, validity and missing-data rules after current output capture",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R03",
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Define one shared contract and distinguish simulator values from measured values.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-101",
+      "category": "running_software",
+      "subject": "Sensor calibration",
+      "status": "unknown",
+      "recorded_value": "No current bias/scale/orientation/distance calibration evidence",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record procedures, reference values, residual error and calibration version per sensor.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-102",
+      "category": "running_software",
+      "subject": "Pi operating environment",
+      "status": "unknown",
+      "recorded_value": "Current OS, Python, dependencies and storage unknown",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R06"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record OS/model/Python/package versions, time sync, storage free space and output path.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-103",
+      "category": "running_software",
+      "subject": "Pi logger deployment",
+      "status": "unknown",
+      "recorded_value": "Repository contains jom_data_logger.py; installation/running process unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Locate deployed file, hash and command; compare with repository commit.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-104",
+      "category": "running_software",
+      "subject": "Logger startup/service",
+      "status": "unknown",
+      "recorded_value": "No demonstrated current service/boot setup",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R06",
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record actual manual/service launch, user, working directory and shutdown procedure.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-105",
+      "category": "running_software",
+      "subject": "Serial disconnect handling",
+      "status": "confirmed",
+      "recorded_value": "Inspected logger has no reconnect loop; readline failures are not handled in worker",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Test unplug/replug using test harness or controlled bench; define expected recovery before field use.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-106",
+      "category": "running_software",
+      "subject": "Telemetry validation gaps",
+      "status": "confirmed",
+      "recorded_value": "Logger accepts JSON objects without required-field/type checks; non-object JSON can raise on .get",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Test missing fields, wrong types, arrays/null, partial lines and document results before reuse.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-107",
+      "category": "running_software",
+      "subject": "Sample provenance gaps",
+      "status": "confirmed",
+      "recorded_value": "Logger adds Pi receive time but does not preserve raw lines or device sequence/sample time fields",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Define raw capture and sample provenance needed for validation; verify actual deployed behaviour.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-108",
+      "category": "running_software",
+      "subject": "Camera success reporting",
+      "status": "confirmed",
+      "recorded_value": "Code records requested video path but does not check capture/writer isOpened or report camera faults into faults.csv",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Test unavailable camera and review actual file/frames before claiming usable recording.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-109",
+      "category": "running_software",
+      "subject": "Summary interpretation",
+      "status": "confirmed",
+      "recorded_value": "telemetry_rows counts parsed objects; summary does not calculate expected-row percentage or camera usable percentage",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R09",
+        "R05"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Define denominators, timing and validity rules; assess validation separately from file creation.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-110",
+      "category": "running_software",
+      "subject": "Pi health evidence",
+      "status": "confirmed",
+      "recorded_value": "Code samples CPU/memory/disk/temp; it does not directly log undervoltage flags or reset cause",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Capture independent power/reset evidence for any no-reset or rail-stability claim.",
+      "acceptance_criteria": "Source supports exactly the bounded claim; preserve distinction between owner report, source inspection and physical verification.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-111",
+      "category": "running_software",
+      "subject": "Time alignment",
+      "status": "unknown",
+      "recorded_value": "Actual Pi clock accuracy and sensor/video synchronisation unverified",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Record clock source/offset and align a visible event with serial/log timestamp.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-112",
+      "category": "running_software",
+      "subject": "Software tests and field proof",
+      "status": "unknown",
+      "recorded_value": "No current hardware test result established by inspected source/sample files",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R05",
+        "R09"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Run meaningful offline replay then bench tests; attach actual outputs and limitations.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-113",
+      "category": "requirements_and_evidence",
+      "subject": "Validation targets",
+      "status": "proposed",
+      "recorded_value": "Repository defines 10/10 starts, >=95% video/telemetry, five 45-minute sessions and rail stability",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R05"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Owner reviews applicability to V2 and defines measurement methods; targets are not completed results.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-114",
+      "category": "requirements_and_evidence",
+      "subject": "Evidence archive",
+      "status": "proposed",
+      "recorded_value": "Large raw media/logs remain outside Git; commit lightweight metadata and hashes",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R01",
+        "R05"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Choose durable archive and record accessible relative paths or links, not temporary preview paths.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-115",
+      "category": "requirements_and_evidence",
+      "subject": "Historical media traceability",
+      "status": "unknown",
+      "recorded_value": "Chat attachment names exist but original media content was not re-inspected in this audit",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C04"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Recover originals, hash files and associate with configuration/date/record IDs.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-116",
+      "category": "requirements_and_evidence",
+      "subject": "As-built drawing release",
+      "status": "proposed",
+      "recorded_value": "Create system overview, verified pin-to-pin wiring and dimensioned assembly from closed records",
+      "evidence_basis": "owner_statement",
+      "source_ids": [
+        "U02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Label unresolved links/dimensions explicitly; no invented pins or manufacturing dimensions.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-117",
+      "category": "requirements_and_evidence",
+      "subject": "Repository guidance mismatch",
+      "status": "conflicting",
+      "recorded_value": "AGENTS.md prioritises dataset/evaluation/Jetson work; current owner scope is V2 reconstruction",
+      "evidence_basis": "repository_inspection",
+      "source_ids": [
+        "R11",
+        "U02"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Update guidance alongside later scope reconciliation; current owner instruction governs this work.",
+      "acceptance_criteria": "Record the resolution and its evidence; reconcile affected references without erasing the historical claim.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    },
+    {
+      "id": "V2-118",
+      "category": "requirements_and_evidence",
+      "subject": "Change validation discipline",
+      "status": "proposed",
+      "recorded_value": "Record baseline then change one factor and repeat a comparable check",
+      "evidence_basis": "historical_chat_summary",
+      "source_ids": [
+        "C03"
+      ],
+      "supporting_evidence_ids": [],
+      "next_verification": "Link change, before/after configuration, result and any rollback; retain failed/negative evidence.",
+      "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
+      "verified_by": "",
+      "verification_date": null,
+      "resolution_notes": ""
+    }
+  ]
+}

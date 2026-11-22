@@ -1,0 +1,302 @@
+{
+  "FreeCAD_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "checks": [
+    {
+      "document": "v2_cart_mount",
+      "object": "LongMember0",
+      "valid": true,
+      "volume_mm3": 242000.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "LongMember1",
+      "valid": true,
+      "volume_mm3": 242000.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "CrossMember0",
+      "valid": true,
+      "volume_mm3": 135519.99999999997,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "CrossMember1",
+      "valid": true,
+      "volume_mm3": 135519.99999999997,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_battery_mount",
+      "object": "DockEnvelope",
+      "valid": true,
+      "volume_mm3": 220000.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_battery_mount",
+      "object": "SlideRailA",
+      "valid": true,
+      "volume_mm3": 7039.999999999999,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_battery_mount",
+      "object": "SlideRailB",
+      "valid": true,
+      "volume_mm3": 7039.999999999999,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_electronics_enclosure",
+      "object": "Enclosure",
+      "valid": true,
+      "volume_mm3": 417000.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_electronics_enclosure",
+      "object": "PiEnvelope",
+      "valid": true,
+      "volume_mm3": 85680.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_electronics_enclosure",
+      "object": "UnoR3Envelope",
+      "valid": true,
+      "volume_mm3": 55890.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_sensor_mounts",
+      "object": "SensorBracket",
+      "valid": true,
+      "volume_mm3": 7200.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_sensor_mounts",
+      "object": "UltrasonicBoard",
+      "valid": true,
+      "volume_mm3": 1839.9999999999995,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_sensor_mounts",
+      "object": "TransducerA",
+      "valid": true,
+      "volume_mm3": 2412.7431579569625,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_sensor_mounts",
+      "object": "TransducerB",
+      "valid": true,
+      "volume_mm3": 2412.7431579569625,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "ChassisRail0",
+      "valid": true,
+      "volume_mm3": 238080.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "ChassisRail1",
+      "valid": true,
+      "volume_mm3": 238080.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "Axle0",
+      "valid": true,
+      "volume_mm3": 171907.95000443354,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "Tyre00",
+      "valid": true,
+      "volume_mm3": 1581352.0781109591,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "Tyre01",
+      "valid": true,
+      "volume_mm3": 1581352.0781109591,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "CoiloverEnvelope00",
+      "valid": true,
+      "volume_mm3": 20357.520395261865,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "CoiloverEnvelope01",
+      "valid": true,
+      "volume_mm3": 20357.520395261865,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "Axle1",
+      "valid": true,
+      "volume_mm3": 171907.9500044336,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "Tyre10",
+      "valid": true,
+      "volume_mm3": 1581352.0781109591,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "Tyre11",
+      "valid": true,
+      "volume_mm3": 1581352.0781109591,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "CoiloverEnvelope10",
+      "valid": true,
+      "volume_mm3": 20357.520395261858,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "CoiloverEnvelope11",
+      "valid": true,
+      "volume_mm3": 20357.520395261858,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "LongMember0",
+      "valid": true,
+      "volume_mm3": 242000.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "LongMember1",
+      "valid": true,
+      "volume_mm3": 242000.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "CrossMember0",
+      "valid": true,
+      "volume_mm3": 135519.99999999997,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "CrossMember1",
+      "valid": true,
+      "volume_mm3": 135519.99999999997,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "CartTub",
+      "valid": true,
+      "volume_mm3": 5521499.999999985,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "Enclosure",
+      "valid": true,
+      "volume_mm3": 417000.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "PiEnvelope",
+      "valid": true,
+      "volume_mm3": 85680.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "UnoR3Envelope",
+      "valid": true,
+      "volume_mm3": 55890.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "DockEnvelope",
+      "valid": true,
+      "volume_mm3": 220000.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "SlideRailA",
+      "valid": true,
+      "volume_mm3": 7039.999999999999,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "SlideRailB",
+      "valid": true,
+      "volume_mm3": 7039.999999999999,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "SensorBracket",
+      "valid": true,
+      "volume_mm3": 7200.0,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "UltrasonicBoard",
+      "valid": true,
+      "volume_mm3": 1839.9999999999995,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "TransducerA",
+      "valid": true,
+      "volume_mm3": 2412.7431579569625,
+      "dimension_status": "illustrative"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "TransducerB",
+      "valid": true,
+      "volume_mm3": 2412.7431579569625,
+      "dimension_status": "illustrative"
+    }
+  ],
+  "note": "Geometric validity only. Illustrative layout; no measured fit, travel or structural validation."
+}

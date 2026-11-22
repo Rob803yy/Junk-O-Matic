@@ -1,4 +1,25 @@
-# Junk-O-Matic / Ideal Litterbuggy V1.0A
+# Junk-O-Matic / LitterBuggy
+
+## Current engineering work: V2 draft R0
+
+[Start the V2 technical review](docs/v2/README.md): editable diagrams.net
+architecture, QElectroTech power schematic, WireViz harnesses, FreeCAD/STEP
+assembly and mounts, Uno R3 firmware, and a Pi serial/SQLite logger with tests.
+PDF/SVG/PNG exports accompany the native files for immediate review.
+
+The owner confirms an **Elegoo Uno R3**. Unverified wiring and all mechanical
+layout dimensions remain explicit. New software is a draft, not recovered
+original firmware. No hardware upload, installation, fabrication or field
+validation was performed. See the [validation report](docs/v2/validation.md)
+and [verification record](docs/v2_verification/README.md).
+
+## Historical V1.0A scope (preserved below)
+
+The following describes the prior repository stage and contains historical Nano
+and stock-system references requiring reconciliation. It is not a current as-built
+description of V2.
+
+### Junk-O-Matic / Ideal Litterbuggy V1.0A
 
 Instrumented RC-based litter buggy platform. V1.0A focuses on Raspberry Pi data collection, telemetry logging, camera recording, and validation evidence generation while the SCX6 RC system remains the only drive-control authority.
 

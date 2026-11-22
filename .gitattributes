@@ -1,0 +1,12 @@
+*.pdf binary
+*.FCStd binary
+*.FCStd1 binary
+*.png binary
+*.jpg binary
+*.zip binary
+*.step text eol=lf
+*.drawio text eol=lf
+*.qet text eol=lf
+*.yml text eol=lf
+*.py text eol=lf
+*.ino text eol=lf

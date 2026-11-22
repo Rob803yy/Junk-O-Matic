@@ -1,0 +1,10 @@
+WireViz==0.4.1
+PyYAML>=6.0.2,<7
+ReportLab>=4,<6
+Pillow>=10,<14
+numpy>=2,<3
+pypdf>=5,<8
+pytest>=8,<10
+pyserial==3.5
+# External: Graphviz dot, QElectroTech, FreeCAD Python, arduino-cli + arduino:avr 1.8.8.
+# Optional media/video review: opencv-python-headless (not needed for serial logger).

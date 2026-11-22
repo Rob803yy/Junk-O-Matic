@@ -1,0 +1,31 @@
+id,item,quantity_for_review,status,evidence_or_basis,missing_details
+B1,3S propulsion pack,1,unknown,Owner scope,chemistry/model/capacity/connector
+B2,Kobalt auxiliary pack,1,unknown,Repository and historical dock discussion,model/capacity/voltage range/cutoff
+A1,Blue KBT-marked adapter,1,unknown,Photos 3718-3721 re-opened,model/polarity/ratings/mounting provisions
+F1,Main auxiliary fuse,1,proposed,Repository functional architecture,installation/rating/holder/location
+S1,Main auxiliary switch,1,proposed,Repository functional architecture,installation/poles/rating
+XT1,Auxiliary distribution interface,1,proposed,Functional drawing placeholder,physical terminal type and quantity
+U5,5V converter,1,unknown,Repository,installed model/settings/current rating
+U12,12V converter,1,unknown,Repository,installed model/settings/current rating
+PI1,Raspberry Pi,1,unknown,Repository specifies 4B,current model/RAM/power entry/OS
+UNO1,Elegoo Uno R3,1,confirmed,Owner confirmation 2026-11-21,serial identity/power entry/current firmware
+IMU1,MPU-6050 breakout,1,unknown,Historical assistant identification,actual module/pullups/supply/orientation
+RANGE1,HC-SR04 ultrasonic,1,unknown,Historical assistant identification,module identity/trigger/echo pins
+LED1,LED with resistor,1,unknown,Historical chat,colour/resistance/pin/polarity
+BZ1,Buzzer and driver,1,unknown,Historical chat,type/driver/pin/polarity
+OLED1,OLED display,TBD,unknown,Discussed addition,confirm fitted or absent
+CAM1,Camera,TBD,unknown,Optional repository capability,confirm fitted/model/interface
+L1,Lighting assembly,TBD,unknown,Sampled outdoor video frames,quantity/voltage/source/mounting
+ESC1,Propulsion ESC,1,unknown,Repository,actual model/BEC/LVC/settings
+RX1,RC receiver,1,unknown,Repository,model/channel/power paths
+M1,Traction motor,1,unknown,Repository,model/wiring/gearing
+SV1,Steering servo,1,unknown,Repository,model/supply/channel
+SV2,Shift or auxiliary servo,TBD,unknown,SCX6 functional scope,installed state/model/channel
+CH1,SCX6 chassis assembly,1,unknown,Historical photos,variant/drivetrain modifications
+TY1,Tyre and wheel,4,unknown,Historical assembly photos,current dimensions/condition
+SH1,Coilover,4,unknown,Historical suspension photos,spring IDs/preload/mounts/travel
+CT1,Gorilla Cart tub,1,unknown,Historical assembly photos,model/dimensions/mass
+MT1,Metal cart mounting structure,1,unknown,Photos 1963-1971 re-opened,sections/joints/fasteners/dimensions
+ENC1,Electronics enclosure,1,unknown,Historical descriptions,material/dimensions/placement/retention
+BM1,Battery mount and retention,TBD,unknown,Prior mounting question,actual bracket/strap/latch clearance
+SM1,Sensor mounting bracket,TBD,proposed,CAD envelope only,installed geometry and holes

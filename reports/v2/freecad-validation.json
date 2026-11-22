@@ -1,0 +1,38 @@
+{
+  "native_files": [
+    {
+      "file": "v2_assembly.FCStd",
+      "reopened": true,
+      "all_shapes_valid": true,
+      "shape_objects": 31
+    },
+    {
+      "file": "v2_battery_mount.FCStd",
+      "reopened": true,
+      "all_shapes_valid": true,
+      "shape_objects": 3
+    },
+    {
+      "file": "v2_cart_mount.FCStd",
+      "reopened": true,
+      "all_shapes_valid": true,
+      "shape_objects": 4
+    },
+    {
+      "file": "v2_electronics_enclosure.FCStd",
+      "reopened": true,
+      "all_shapes_valid": true,
+      "shape_objects": 5
+    },
+    {
+      "file": "v2_sensor_mounts.FCStd",
+      "reopened": true,
+      "all_shapes_valid": true,
+      "shape_objects": 4
+    }
+  ],
+  "step_readback_count": 5,
+  "parametric_wheelbase_test": "passed",
+  "tyre_centre_spacing_test": "passed",
+  "physical_fit_validation": "not performed"
+}
