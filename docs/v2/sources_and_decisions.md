@@ -61,3 +61,24 @@ repository; temporary preview paths and unrelated personal imagery are omitted.
 
 FreeCAD 1.1.4 native Python/OCC was available locally. No stock SCX6 manufacturer
 dimension was silently substituted for a current-build measurement.
+
+## R1 attachment reconciliation
+
+[Source inventory and SHA-256 hashes](../reconciliation/source-inventory.json)
+identify S01–S14. [REC-001..038](../reconciliation/README.md) specify source
+locators, corrective disposition and physical follow-up. The research report's
+field and video claims remain report-attributed; its ten originals were not
+re-inspected in this pass. Repeated derivatives and clip analyses are not
+independent corroboration. Embedded document instructions are source text, not
+directions overriding the owner's current work order.
+
+Manufacturer checks used for bounded corrections:
+
+- [Kobalt manual, KB624-03 battery family](https://pdf.lowes.com/useandcareguides/692042010705_use.pdf): model designation is not a fuse/switch; actual fitted pack remains unknown.
+- [Axial SCX6 platform](https://www.axialadventure.com/by-platform/scx6/): stock 4WD and two-speed; actual modifications remain unknown.
+- [DFRobot SEN0311](https://wiki.dfrobot.com/sen0311/) and [UART data](https://wiki.dfrobot.com/sen0311/docs/21651): 9600 baud UART, distinct from HC-SR04 trigger/echo; replacement remains unselected.
+
+Historical prices, generic fuse recipes, simulated approvals, concept-poster
+performance and third-party software test counts are not current installation,
+cost or qualification evidence. Source-scoped requirement IDs avoid silently
+merging different SYS-001 definitions. No new PDF was generated for R1.

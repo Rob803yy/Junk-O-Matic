@@ -1,8 +1,9 @@
 metadata:
-  title: v2_power_harness / DRAFT R0 - NOT AS BUILT
-  revision: R0
-  notes: All links proposed or untraced. Wire gauge, colour, length and physical pin
-    numbering TBD.
+  title: v2_power_harness / DRAFT R1 - NOT AS BUILT
+  revision: R1
+  notes: All links proposed or untraced. Physical details TBD. U5A separate 5V 3A
+    routing OPEN. RANGE1 historical HC-SR04 reported lost; replacement not selected.
+    A02YYUW UART is not a trigger/echo substitute.
 connectors:
   B2:
     type: Kobalt pack / DRAFT - physical connector TBD

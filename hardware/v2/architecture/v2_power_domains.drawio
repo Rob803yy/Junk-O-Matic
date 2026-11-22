@@ -47,10 +47,10 @@
         <mxCell id="auxload" value="Auxiliary loads&#10;Pi / Uno / sensors / lights&#10;USB backfeed review required&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
           <mxGeometry x="1100" y="750" width="350" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="n0" value="No shared ground is assumed.&#10;No electrical isolation claim is made.&#10;No fuse size, converter setting or wire gauge is invented.&#10;Detailed review drawing: ../electrical/v2_electrical.qet" style="text;html=0;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="40" y="725" width="1400" height="92" as="geometry" />
+        <mxCell id="n0" value="U5: source-listed 5V 10A; U5A: separate source-listed 5V 3A.&#10;U5A routing is OPEN; outputs are not paralleled.&#10;12V converter is a proposal; fitted lighting voltage unknown.&#10;KB624-03 is a battery designation, not a fuse/switch.&#10;No shared ground, isolation or selected fuse value is assumed.&#10;Detailed review drawing: ../electrical/v2_electrical.qet" style="text;html=0;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="725" width="1400" height="138" as="geometry" />
         </mxCell>
-        <mxCell id="footer" value="DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending" style="text;html=0;align=left;verticalAlign=top;fontSize=13;" vertex="1" parent="1">
+        <mxCell id="footer" value="DRAFT R1 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending" style="text;html=0;align=left;verticalAlign=top;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="40" y="950" width="1420" height="35" as="geometry" />
         </mxCell>
       </root>

@@ -1,3 +1,4 @@
+-- R1 observational data draft. Raw IMU die counts and Pi CPU health are not enclosure-temperature or heading measurements.
 PRAGMA foreign_keys=ON;
 CREATE TABLE metadata (key TEXT PRIMARY KEY, value_json TEXT NOT NULL);
 CREATE TABLE sessions (id INTEGER PRIMARY KEY, source TEXT NOT NULL, started_utc TEXT NOT NULL, ended_utc TEXT, end_reason TEXT);

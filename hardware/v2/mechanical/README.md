@@ -1,37 +1,30 @@
-# V2 mechanical draft R0
+# Five mechanical review models / R1
 
-Five native, parametric FreeCAD documents and matching STEP exports are provided:
-assembly, cart mounting structure, battery dock/mount envelope, enclosure layout,
-and sensor mount. The assembly includes chassis rails, axles, four tyres,
-coilover envelopes, raised metal support, hollow cart tub, enclosure and boards,
-blue dock and ultrasonic bracket. These are simplified envelopes, not reverse
-engineered OEM parts.
+The assembly, cart mount, battery dock/mount envelope, electronics enclosure and
+sensor mount are native parametric FreeCAD documents with STEP and SVG reference
+drawings. PNG previews accompany them. Parameters sheets contain provenance and
+UNKNOWN measured values. Editable models are simplified review proxies.
 
-**Every numeric dimension is illustrative.** `dimensions.json` deliberately
-separates `layout_mm` from `measured_mm: null`. No dimension was recovered from
-photographs without a scale. A valid solid is not an accurate fit or rated part.
-No hole coordinates or dock recess function are invented. No drilling/cutting
-should be based on these draft exports.
+dimensions.json separates layout_mm, optional source_spec_mm and measured_mm.
+**Every measured_mm remains null.** Enclosure envelope 292.1 × 190.5 × 129.54mm
+is an unverified source catalog claim (S04 V1.0 C16: 11.5 × 7.5 × 5.1 inches),
+not a measurement of the actual orange box. Other numeric values are illustrative
+layout choices. No photograph was scaled into an as-built dimension. Stock
+overall width is not a tyre-centre track measurement.
 
-Historical photos 1963-1971 informed the raised tub, metal support members,
-four-wheel chassis and coilover representation. Photos 3718-3721 informed the
-blue dock/guide-rail envelope. Sampled video frames support retaining lighting
-in the overall system scope, but don't establish locations or dimensions.
-Enclosure/dock/sensor placement in CAD is a proposed layout. The symmetric
-suspension geometry is an envelope, not a correction of the observed right lean.
+The raised tub/support relationship follows historical media. RevB rail pods,
+four-post/five-truss cradle, closed ring, detachable Case4 module and trailer in
+S11 are future/source proposals. No fit, strength, suspension clearance or payload
+rating is established. The HC-SR04 geometry is a historical profile reported lost
+in S06; final sensor/mount selection is open. Pi3B/Pi4 identity is unresolved.
 
-Open the FCStd files and edit the **Parameters** spreadsheet. Named dimensional
-expressions drive the main envelopes. Individual primitive dimensions/placements
-are also editable. Rebuild all documents and STEP exports by running
-`build_models.FCMacro` using the FreeCAD Python runtime (set macro `__file__`
-when invoking by exec from a console), then run
-`python scripts/v2/render_mechanical.py` with Pillow and ReportLab installed.
+Run build_models.FCMacro with FreeCAD Python to regenerate native/STEP/mesh files.
+Run python scripts/v2/render_mechanical.py for current SVG/PNG source sheets; it
+does not generate PDFs by default. Existing R0 PDFs remain stale and held until
+owner review. Do not fabricate or drill from these proxies. STEP carries geometry;
+retain the native file and parameter JSON for provenance and editable expressions.
 
-`exports/geometry-checks.json` records native reopen and solid validity checks;
-the generator also reads back every STEP export. Review PDFs/PNGs use the same
-generated geometry. The assembly PDF contains illustrative layout dimensions.
-The drawings remain reference sheets until measured dimensions are entered.
-
-First review: orientation/datum, cart/frame interface, enclosure and battery
-location, mount hole patterns, extraction/latch access, wire routing, full
-steering/suspension clearance, mass distribution and payload position.
+FreeCAD reopened every native file and STEP, checked solid validity and tested
+wheelbase parameter propagation and tyre-centre geometry. These are software
+geometry checks only. Physical measurement, datum, hole patterns, latch/slide
+access, steering/suspension travel and mass distribution need technical review.

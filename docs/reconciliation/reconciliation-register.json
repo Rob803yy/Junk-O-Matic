@@ -1,0 +1,501 @@
+{
+  "revision": "R1",
+  "as_of": "2026-11-21",
+  "current_configuration_id": "CFG-V2-R1",
+  "version_map_status": "proposed editorial mapping pending owner confirmation",
+  "version_map": {
+    "V1": "Historical RC hauler baseline; source-specific legacy labels retained",
+    "V2": "Current physical reconstruction and reliability/instrumentation; manual RC scope",
+    "V3": "Future assisted/autonomous concepts; no fitted capability implied"
+  },
+  "confirmed_current": {
+    "controller": "Elegoo Uno R3"
+  },
+  "unresolved_current": [
+    "Pi 3B versus Pi 4",
+    "range sensor current installed/absent state",
+    "actual installed power topology and ratings",
+    "dimensions, payload/runtime limits, ingress and safety validation",
+    "exact drivetrain modifications"
+  ],
+  "issues": [
+    {
+      "id": "REC-001",
+      "topic": "Version labels",
+      "source_claims": "V2 variously means autonomy, assisted collection, payload integration or reliability retrofit.",
+      "resolution": "Use distinct axes: V1 historical baseline, V2 current physical reconstruction/reliability/instrumentation, V3 future concepts. This editorial mapping is proposed for owner confirmation; legacy labels remain source-qualified.",
+      "sources": [
+        "S02 t27",
+        "S03 t15",
+        "S06 p64",
+        "S08 p8-p11",
+        "S12-S14"
+      ],
+      "resolution_status": "pending_owner_nomenclature",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-002",
+      "topic": "Controller identity",
+      "source_claims": "Mega in V1/V2 posters; Nano in V3, old repo; Nano/Pico in BOM.",
+      "resolution": "Current owner-confirmed controller is Elegoo Uno R3. Kits, Mega, Nano and Pico are historical alternatives, not current installed identity.",
+      "sources": [
+        "Owner 2026-11-21",
+        "S04 V1.0!C26",
+        "S04 V2.0!C14",
+        "S12-S14"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-003",
+      "topic": "Pi model",
+      "source_claims": "Pi 4 in BOM/posters; Pi 3B in research report.",
+      "resolution": "Raspberry Pi model remains conflicting; no Pi-specific current rating or enclosure fit is confirmed.",
+      "sources": [
+        "S04 V1.0!C25",
+        "S06 p20,p87",
+        "S12-S14"
+      ],
+      "resolution_status": "unresolved_physical",
+      "physical_follow_up": "Read board label or /proc/device-tree/model."
+    },
+    {
+      "id": "REC-004",
+      "topic": "Tool battery family",
+      "source_claims": "18V generic/Milwaukee posters; V3 poster says 18V and Kobalt 24V MAX.",
+      "resolution": "Retain Kobalt 24V family as owner project scope. Pack label, capacity and voltage range remain unverified. Never substitute an 18V/20V-family cutoff.",
+      "sources": [
+        "Owner scope",
+        "S04 V1.0!C31",
+        "S12-S14"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-005",
+      "topic": "KB624-03 misidentification",
+      "source_claims": "BOM calls KB624-03 a fuse switch.",
+      "resolution": "Official Kobalt documentation identifies KB 624-03 as a battery-pack model. Remove it as the switch/adapter part number. Physical pack identity still requires a label.",
+      "sources": [
+        "S04 V1.0!C30",
+        "https://pdf.lowes.com/useandcareguides/692042010705_use.pdf"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-006",
+      "topic": "Adapter quantity",
+      "source_claims": "BOM lists two; photos show one photographed adapter.",
+      "resolution": "Record source-listed quantity 2 separately from installed quantity unknown. No inference of two fitted power feeds.",
+      "sources": [
+        "S04 V1.0!D31",
+        "S04 V2.0!D7",
+        "Historical adapter photos"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-007",
+      "topic": "Secondary 5V converter omitted in R0",
+      "source_claims": "Source lists 5V 10A and separate 5V 3A converters; R0 drew only one.",
+      "resolution": "Add U5A secondary 5V source-listed candidate to architecture/power/connectivity and BOM. Leave output/load unconnected and never parallel outputs by assumption.",
+      "sources": [
+        "S04 V1.0!C32:C33",
+        "S04 V2.0!C8:C9"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-008",
+      "topic": "Converter ratings and 12V rail",
+      "source_claims": "10A/3A/5A labels presented as installed ratings.",
+      "resolution": "Treat as source-listed specifications, not verified output capability or measured load. 12V converter remains proposed/source-listed, not confirmed fitted.",
+      "sources": [
+        "S04",
+        "S12-S14"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-009",
+      "topic": "Protection ratings",
+      "source_claims": "Generic 30A auxiliary and 60-80A traction fuses; mixed 5A/10A/15A kit.",
+      "resolution": "No installed fuse rating is established. Remove generic values from the active design; size against actual conductors, loads, connectors and source limits after verification.",
+      "sources": [
+        "S09 section 5",
+        "S04 V1.0!C34:C36"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-010",
+      "topic": "Grounds and isolation",
+      "source_claims": "Some guides mandate common ground while others call the domains isolated.",
+      "resolution": "Separate source positives; actual returns and crossing signals must be traced. No RC/auxiliary ground tie or galvanic isolation is asserted.",
+      "sources": [
+        "S08 p40-p46",
+        "S09 section 5",
+        "S10 p88-p100"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-011",
+      "topic": "Uno power entry",
+      "source_claims": "External buck discussed historically; research proposes Pi USB power.",
+      "resolution": "USB-A-to-B is the proposed data link. Uno external VIN/barrel/5V entry and simultaneous USB power remain unresolved; do not add a duplicate supply path.",
+      "sources": [
+        "S06 p74-p75",
+        "Historical Pi chat"
+      ],
+      "resolution_status": "unresolved_physical",
+      "physical_follow_up": "Trace both power entry routes and actual USB cable."
+    },
+    {
+      "id": "REC-012",
+      "topic": "Propulsion 3S versus 4S",
+      "source_claims": "Generic reference permits 3S/4S; integrated spec retains 3S.",
+      "resolution": "Retain 3S as current project design scope. Actual pack and installed ESC limits remain verification items; no 4S change is adopted.",
+      "sources": [
+        "Owner scope",
+        "S03 t20r2",
+        "S09 section 5"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-013",
+      "topic": "4WD versus RWD",
+      "source_claims": "Prior chat review mentioned RWD; research rejects a stock transmitter 2WD mode.",
+      "resolution": "Stock SCX6 is 4WD with a two-speed transmission. Installed driven axles remain unknown until mechanical modifications are inspected; high/low gear is not 2WD/4WD selection.",
+      "sources": [
+        "S06 p7,p247",
+        "https://www.axialadventure.com/by-platform/scx6/"
+      ],
+      "resolution_status": "unresolved_physical",
+      "physical_follow_up": "Inspect shafts/axles and document any modifications."
+    },
+    {
+      "id": "REC-014",
+      "topic": "Range sensor current state",
+      "source_claims": "Historical HC-SR04; research says lost and recommends A02YYUW.",
+      "resolution": "Record HC-SR04 as historical; present installation/replacement unknown. A02YYUW is a proposal, not a drop-in trigger/echo replacement.",
+      "sources": [
+        "S06 p21-p26,p87",
+        "Historical Pi chat"
+      ],
+      "resolution_status": "unresolved_physical",
+      "physical_follow_up": "Owner confirms sensor fitted or absent; inspect model."
+    },
+    {
+      "id": "REC-015",
+      "topic": "A02YYUW interface",
+      "source_claims": "Replacement discussed beside HC-SR04 code.",
+      "resolution": "Manufacturer SEN0311 uses 9600-baud UART, not trigger/echo. Do not connect it to the HC-SR04 harness or enable that driver. Replacement needs its own pin/power/protocol review.",
+      "sources": [
+        "S06 p123-p124",
+        "https://wiki.dfrobot.com/sen0311/",
+        "https://wiki.dfrobot.com/sen0311/docs/21651"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-016",
+      "topic": "MPU heading and temperature",
+      "source_claims": "BOM claims heading; old schema includes yaw/enclosure temperature.",
+      "resolution": "MPU raw axes and die-temperature counts do not establish absolute heading or enclosure temperature. Keep raw acquisition; no calibrated angles, compass or enclosure readings are invented.",
+      "sources": [
+        "S04 V2.0!F21",
+        "S06 p80",
+        "R0 protocol"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-017",
+      "topic": "Camera GPS lidar encoders and PCA9685",
+      "source_claims": "Posters depict them; guides discuss purchases and integration.",
+      "resolution": "Classify as historical inventory claim or future proposal. Fitting, deployment and current part identity are unknown; exclude them from current mandatory wiring and actuator control.",
+      "sources": [
+        "S04 V2.0!C22:C31",
+        "S10 t4r2,t27r4",
+        "S12-S14"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-018",
+      "topic": "Autonomy and pickup claims",
+      "source_claims": "Posters advertise autonomy, classification, return to base, anti-jam intake and dual bins.",
+      "resolution": "These are future concepts. Current source package is RC-observational acquisition; no deployed autonomy, powered intake, physical sorting or manipulator is established.",
+      "sources": [
+        "S12-S14",
+        "S02 t27",
+        "S03 t15",
+        "R0 source"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-019",
+      "topic": "BOM checkmarks",
+      "source_claims": "Checkmarks/coloured symbols with no legend; \u2714\u274c ambiguous; footer rows shifted.",
+      "resolution": "Preserve raw rows as source catalog. Use explicit evidence status and separate listed/proposed quantity from verified installed quantity. Deduplicate shifted tail rows; never total ambiguous quantities as actual inventory.",
+      "sources": [
+        "S04 V1.0!E2:E53",
+        "S04 V2.0!A48:F56"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-020",
+      "topic": "Payload ratings",
+      "source_claims": "15-20kg safe continuous; posters 10-25kg; 15lb/20lb development plan; 50/60lb objectives.",
+      "resolution": "No validated modified-vehicle payload rating exists in the supplied evidence. Preserve these as separate source targets. Rough total litter collected is not simultaneous payload capacity.",
+      "sources": [
+        "S09 section 2",
+        "S12-S14",
+        "S03 p20",
+        "S06 p3,p54,p249",
+        "S11 t1r5"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-021",
+      "topic": "Runtime speed mass dimensions",
+      "source_claims": "Posters advertise 2.4-3.6h, 0-1.5 or 1-5m/s, 15-25kg and 80-95cm dimensions.",
+      "resolution": "All are concept targets/estimates without current measurement. They do not populate measured CAD, runtime or operating-envelope cells.",
+      "sources": [
+        "S12-S14"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-022",
+      "topic": "Weather and IP67",
+      "source_claims": "Posters label entire electronics system IP67; guides recommend sealed hardware.",
+      "resolution": "A component rating does not qualify the assembled enclosure/vehicle. Actual glands, seals, modifications and ingress tests remain unknown.",
+      "sources": [
+        "S12-S14",
+        "S06 p76",
+        "S03 OD-08"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-023",
+      "topic": "Current geometry versus Rev B/trailer proposal",
+      "source_claims": "Photos show raised cart; consolidated reference calls rail pods, four-post/five-truss Rev B and tractor/trailer adopted.",
+      "resolution": "Keep raised-cart reconstruction as current historical geometry. Rev B cradle, rail pods, closed ring, removable-module Case 4 and passive trailer remain source-described proposals, not fitted parts.",
+      "sources": [
+        "Historical photos 1963-1971",
+        "S11 sections 5-9",
+        "S03 sections 5-7"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-024",
+      "topic": "Enclosure dimensions",
+      "source_claims": "BOM lists 11.5 x 7.5 x 5.1in; R0 CAD used 210 x 130 x 90mm placeholder.",
+      "resolution": "Record source candidate as 292.1 x 190.5 x 129.54mm, not measured. Use it only as an explicitly source-listed layout envelope; actual box identity/fit remains unknown.",
+      "sources": [
+        "S04 V1.0!C16",
+        "R0 dimensions.json"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-025",
+      "topic": "Stock dimensions versus as built",
+      "source_claims": "Stock width/wheelbase and poster totals are mixed with CAD values.",
+      "resolution": "Keep stock product specs, source candidates, illustrative layout and measured dimensions in separate fields. Overall width is not automatically tyre-centre track spacing.",
+      "sources": [
+        "S10 t8r9",
+        "S12-S14",
+        "R0 dimensions.json"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-026",
+      "topic": "Rollover counts and confidence",
+      "source_claims": "Review calls clips 2/4/5/7 four independent failures and assigns 90-92% confidence.",
+      "resolution": "Source itself describes clip 5 as same route/analysis and clip 7 as repeated event. Do not count four independent experiments or treat subjective confidence as measured probability. Preserve source claims and require unique original evidence IDs.",
+      "sources": [
+        "S02 t3r3,t3r5,t3r6,t3r8,t5",
+        "S05 Evidence Log"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-027",
+      "topic": "Historical versus current operating approval",
+      "source_claims": "Review and data workbook mark pavement Approved with unnamed approval evidence.",
+      "resolution": "Demonstrated travel is not a released operating envelope. Keep historical observations but no current approval, load limit or reviewer sign-off is inferred.",
+      "sources": [
+        "S02 t18",
+        "S05 Operating Envelope!N5:Q14"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-028",
+      "topic": "Simulated stakeholder consensus",
+      "source_claims": "Integrated spec reports a simulated panel and unanimous decisions.",
+      "resolution": "Simulation is design reasoning, not approval by actual reviewers. Requirements remain candidate requirements until owner/review adoption is recorded.",
+      "sources": [
+        "S03 section 3",
+        "S03 t38"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-029",
+      "topic": "Requirement ID collisions",
+      "source_claims": "SYS-001 etc mean different requirements across integrated and offline references.",
+      "resolution": "Preserve legacy IDs with source namespaces IPDS0: and OFFLINE1:. Do not join or score solely on the bare ID.",
+      "sources": [
+        "S03 t16",
+        "S10 t21",
+        "S05 Requirements"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-030",
+      "topic": "Blank scorecard produces Kill",
+      "source_claims": "Blank measured scores calculate 0%, triggering Kill/Repurpose; safety says Pending/Pass.",
+      "resolution": "Guard missing/invalid scores and evidence. Default becomes Pending evidence, not a failure or pass. Distinguish critical failures from noncritical category failure.",
+      "sources": [
+        "S01 V1_to_V2_Scorecard!E2:E9,G9",
+        "S01 Dashboard!A5:E5"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-031",
+      "topic": "Scorecards mix legacy and current configs",
+      "source_claims": "Historical source assessments drive dashboard as current data.",
+      "resolution": "Filter dashboard and requirement summaries to CFG-V2-R1. Preserve historical rows and source-reported outcomes separately; no current physical pass rate exists without measured results.",
+      "sources": [
+        "S05 Dashboard",
+        "S05 Requirement Assessments"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-032",
+      "topic": "Threshold conflicts",
+      "source_claims": "95% versus99.5% logging, 10/20/50-100Hz, 65/85/90C, 2/5/10min setup.",
+      "resolution": "Retain source-scoped candidate thresholds; no arbitrary global threshold is declared approved. Current draft firmware is 100ms/10Hz coupled acquisition, not a 50-100Hz validated stream.",
+      "sources": [
+        "S01 Gate_Criteria",
+        "S03 requirements",
+        "S06 p81,p182,p186",
+        "R0 config.h"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-033",
+      "topic": "Serial formats",
+      "source_claims": "Research proposes CSV D/heartbeat lines; old repo JSON synthetic; R0 introduces strict JSON v2.",
+      "resolution": "Use documented proposed JSON protocol v2 for the new code only. Preserve existing raw firmware output first; no claim that original code uses it. Legacy CSV requires an explicit adapter, not silent parser fallback.",
+      "sources": [
+        "S06 p80,p156",
+        "R0 serial_protocol.md"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-034",
+      "topic": "Software test counts",
+      "source_claims": "Consolidated reference claims 113 CV tests; R0 has32 acquisition tests.",
+      "resolution": "These refer to separate codebases. 32 local draft acquisition tests are checked; 113 CV tests are source-reported/unverified here and do not prove deployed perception.",
+      "sources": [
+        "S11 p55,p115",
+        "R0 test receipts"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-035",
+      "topic": "Historical field outcome",
+      "source_claims": "Research reports two-mile trip, ~10lb collected, lost sensor, unusable mount, no usable field data.",
+      "resolution": "Retain as report-attributed observations, not a verified new field dataset. Their dates/configuration and original ten videos must be linked before closing physical records.",
+      "sources": [
+        "S06 p3-p11,p244-p249"
+      ],
+      "resolution_status": "unresolved_evidence",
+      "physical_follow_up": "Obtain original run manifest/media or owner confirmation."
+    },
+    {
+      "id": "REC-036",
+      "topic": "Quoted costs and evidence dates",
+      "source_claims": "Research contains current verified prices; source reviews say May2026 without original run records.",
+      "resolution": "Treat prices as historical quotes/allowances, not new prices or purchase evidence. Source dates are document assertions, not verified test dates.",
+      "sources": [
+        "S06 t3,p88",
+        "S02 t1r2",
+        "S05 Review Register!D5"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-037",
+      "topic": "Unverified deployment and service",
+      "source_claims": "Existing diagrams/firmware could imply installed working logger and hardware protection.",
+      "resolution": "New sources are engineering drafts. Compile/replay/native validity checks are distinct from deployment, bench results, field reliability or physical protection.",
+      "sources": [
+        "R0 validation",
+        "S06 missing data"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    },
+    {
+      "id": "REC-038",
+      "topic": "PDF and derivative control",
+      "source_claims": "Old R0 PDF exports would disagree after native edits.",
+      "resolution": "Freeze PDF bytes for this pass. Mark them stale for R1 and link current editable/SVG/STEP sources. Regeneration occurs only after owner review.",
+      "sources": [
+        "Owner request current turn"
+      ],
+      "resolution_status": "resolved_documentary",
+      "physical_follow_up": ""
+    }
+  ]
+}

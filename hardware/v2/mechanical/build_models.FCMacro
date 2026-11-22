@@ -13,17 +13,17 @@ OUT=BASE/'exports'; OUT.mkdir(exist_ok=True)
 COL={'chassis':(0.22,0.27,0.32),'tyre':(.10,.12,.14),'cart':(.25,.29,.27),'metal':(.65,.70,.74),'dock':(.08,.35,.85),'enclosure':(.94,.35,.10),'board':(.10,.60,.40)}
 meshes={}; checks=[]
 def newdoc(name):
-    d=App.newDocument(name);s=d.addObject('Spreadsheet::Sheet','Parameters');s.set('A1','ILLUSTRATIVE LAYOUT ONLY - NOT MEASURED')
-    s.set('A2','parameter');s.set('B2','layout_mm');s.set('C2','measured_mm')
+    d=App.newDocument(name);s=d.addObject('Spreadsheet::Sheet','Parameters');s.set('A1','R1 LAYOUT PROXIES / UNVERIFIED SOURCE SPECS - NOT MEASURED')
+    s.set('A2','parameter');s.set('B2','layout_mm');s.set('C2','measured_mm');s.set('D2','source / status')
     for row,(k,v) in enumerate(CFG['parameters'].items(),3):
-        s.set('A'+str(row),k);s.set('B'+str(row),str(v['layout_mm']));s.setAlias('B'+str(row),k);s.set('C'+str(row),'UNKNOWN')
+        s.set('A'+str(row),k);s.set('B'+str(row),str(v['layout_mm']));s.setAlias('B'+str(row),k);s.set('C'+str(row),'UNKNOWN');s.set('D'+str(row),v.get('source','Illustrative layout choice, not a measured or manufacturer dimension'))
     d.recompute();return d
 def expr(o,prop,val):o.setExpression(prop,str(val))
 def box(d,name,L,W,H,x,y,z,color):
     o=d.addObject('Part::Box',name)
     for prop,val in zip(['Length','Width','Height','Placement.Base.x','Placement.Base.y','Placement.Base.z'],[L,W,H,x,y,z]):expr(o,prop,val)
     o.addProperty('App::PropertyString','EvidenceStatus');o.EvidenceStatus='PROPOSED - illustrative geometry; measure before use'
-    o.addProperty('App::PropertyString','ReviewNote');o.ReviewNote='No hole pattern, tolerance or strength qualification'
+    o.addProperty('App::PropertyString','ReviewNote');o.ReviewNote='R1: Pi model unresolved; range sensor reported lost. No hole pattern, tolerance or strength qualification'
     if App.GuiUp:o.ViewObject.ShapeColor=COL[color]
     o.addProperty('App::PropertyString','DraftColor');o.DraftColor=color
     return o
@@ -38,7 +38,7 @@ def shell(d,name,L,W,H,x,y,z,color,wall='Parameters.wall'):
     a=box(d,name+'Outer',L,W,H,x,y,z,color)
     b=box(d,name+'Void',f'({L})-2*({wall})',f'({W})-2*({wall})',H,f'({x})+({wall})',f'({y})+({wall})',f'({z})+({wall})',color)
     cut=d.addObject('Part::Cut',name);cut.Base=a;cut.Tool=b;cut.addProperty('App::PropertyString','DraftColor');cut.DraftColor=color
-    cut.addProperty('App::PropertyString','EvidenceStatus');cut.EvidenceStatus='PROPOSED open shell; actual moulded profile unknown'
+    cut.addProperty('App::PropertyString','EvidenceStatus');cut.EvidenceStatus='R1 PROPOSED open shell; nominal enclosure source spec is unverified; actual moulded profile unknown'
     if App.GuiUp:a.ViewObject.Visibility=False;b.ViewObject.Visibility=False;cut.ViewObject.ShapeColor=COL[color]
     return cut
 def finish(d,objects):

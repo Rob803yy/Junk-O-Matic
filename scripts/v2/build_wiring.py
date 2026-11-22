@@ -5,7 +5,7 @@ import yaml
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'hardware/v2/wiring';OUT.mkdir(parents=True,exist_ok=True)
 def connector(name,pins):return {'type':name+' / DRAFT - physical connector TBD','pins':pins,'pinlabels':pins,'notes':'Logical functions only; physical order/view, part number and ratings TBD.'}
 def write(name,conns,cables,paths):
-    data={'metadata':{'title':name+' / DRAFT R0 - NOT AS BUILT','revision':'R0','notes':'All links proposed or untraced. Wire gauge, colour, length and physical pin numbering TBD.'},'connectors':conns,'cables':cables,'connections':paths}
+    data={'metadata':{'title':name+' / DRAFT R1 - NOT AS BUILT','revision':'R1','notes':'All links proposed or untraced. Physical details TBD. U5A separate 5V 3A routing OPEN. RANGE1 historical HC-SR04 reported lost; replacement not selected. A02YYUW UART is not a trigger/echo substitute.'},'connectors':conns,'cables':cables,'connections':paths}
     (OUT/(name+'.yml')).write_text(yaml.safe_dump(data,sort_keys=False),encoding='utf-8')
     return data
 power={};cables={};paths=[]
@@ -19,7 +19,7 @@ sensors={
  'UNO1_I2C':connector('Elegoo Uno R3 proposed I2C',['SDA_A4','SCL_A5','SUPPLY_TBD','GND']),
  'IMU1':connector('MPU-6050 breakout identity unverified',['SDA','SCL','VCC_TBD','GND']),
  'UNO1_RANGE':connector('Elegoo Uno R3 digital pins unresolved',['TRIG_PIN_TBD','ECHO_PIN_TBD','SUPPLY_TBD','GND']),
- 'RANGE1':connector('HC-SR04 identity unverified',['TRIG','ECHO','VCC_TBD','GND']),
+ 'RANGE1':connector('Historical HC-SR04 reported lost / NOT fitted claim',['TRIG','ECHO','VCC_TBD','GND']),
  'UNO1_LED':connector('Uno LED output unresolved',['LED_PIN_TBD','GND']),
  'LED1':connector('LED with series resistor TBD',['RESISTOR_LED_PATH','GND']),
  'UNO1_BUZZ':connector('Uno buzzer output unresolved',['BUZZ_PIN_TBD','GND']),
@@ -31,7 +31,9 @@ s=write('v2_sensor_harness',sensors,sc,sp)
 with (OUT/'connector_register.csv').open('w',newline='',encoding='utf-8') as f:
     w=csv.writer(f);w.writerow(['logical_id','description','logical_functions','physical_part','physical_pin_order','view_direction','status'])
     for data in [p,s]:
-        for id,c in data['connectors'].items():w.writerow([id,c['type'],';'.join(c['pins']),'TBD','TBD','TBD','proposed'])
+        for id,c in data['connectors'].items():w.writerow([id,c['type'],';'.join(c['pins']),'TBD','TBD','TBD','conflicting' if id=='RANGE1' else 'proposed'])
+    w.writerow(['U5A','Separate source-listed 5V 3A converter','INPUT_TBD;OUTPUT_TBD','TBD','TBD','TBD','unknown - OPEN, not connected'])
+    w.writerow(['RANGE2','A02YYUW / SEN0311 replacement candidate','UART_TX;RX_MODE;VCC;GND - manufacturer functions only','not selected','TBD','TBD','proposed - OPEN, no driver'])
 with (OUT/'connection_register.csv').open('w',newline='',encoding='utf-8') as f:
     w=csv.writer(f);w.writerow(['harness','conductor','from_id','from_function','to_id','to_function','colour','gauge','length_mm','status'])
     for data in [p,s]:

@@ -18,8 +18,8 @@
 <rect x="40" y="140" width="340" height="150" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
 <text x="54" y="166" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">RC drive system</text>
 <text x="54" y="192" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">3S propulsion pack (owner scope)</text>
-<text x="54" y="212" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">ESC / receiver / servos / motor</text>
-<text x="54" y="232" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Exact models and driven axles TBD</text>
+<text x="54" y="212" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Stock SCX6: 4WD / two-speed</text>
+<text x="54" y="232" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Installed modifications unverified</text>
 <text x="54" y="278" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
 <rect x="560" y="140" width="360" height="150" rx="8" fill="white" stroke="#3978a8" stroke-width="2"/>
 <text x="574" y="166" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#3978a8">SCX6 + cart mounting interface</text>
@@ -41,33 +41,33 @@
 <text x="54" y="568" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#3978a8">HISTORICAL</text>
 <rect x="560" y="410" width="360" height="170" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
 <text x="574" y="436" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">Converters / distribution</text>
-<text x="574" y="462" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">5V and 12V rails in repository</text>
-<text x="574" y="482" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Fuse, switch and returns TBD</text>
-<text x="574" y="502" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Trace current build before wiring</text>
+<text x="574" y="462" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">5V 10A + separate 5V 3A listed</text>
+<text x="574" y="482" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">12V branch is a proposal</text>
+<text x="574" y="502" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Settings / routing unverified</text>
 <text x="574" y="568" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<rect x="1100" y="410" width="350" height="170" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="1114" y="436" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">Raspberry Pi</text>
-<text x="1114" y="462" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Model, power entry and OS TBD</text>
-<text x="1114" y="482" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">USB acquisition + local logger</text>
-<text x="1114" y="502" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No drive-control interface planned</text>
-<text x="1114" y="568" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
+<rect x="1100" y="410" width="350" height="170" rx="8" fill="white" stroke="#b33a3a" stroke-width="2"/>
+<text x="1114" y="436" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b33a3a">Raspberry Pi / model conflict</text>
+<text x="1114" y="462" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Pi 3B in S06; Pi 4 elsewhere</text>
+<text x="1114" y="482" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Power entry, OS and fitting TBD</text>
+<text x="1114" y="502" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">New draft: logging only</text>
+<text x="1114" y="568" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b33a3a">CONFLICTING</text>
 <rect x="560" y="720" width="360" height="150" rx="8" fill="white" stroke="#216e4e" stroke-width="2"/>
 <text x="574" y="746" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#216e4e">Elegoo Uno R3</text>
 <text x="574" y="772" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Board identity confirmed by owner</text>
 <text x="574" y="792" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Existing sketch not recovered</text>
 <text x="574" y="812" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">New draft defaults to idle sensors</text>
 <text x="574" y="858" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED</text>
-<rect x="1100" y="720" width="350" height="150" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="1114" y="746" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">Sensors / local feedback</text>
-<text x="1114" y="772" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">MPU-6050 + HC-SR04 in history</text>
-<text x="1114" y="792" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">LED + buzzer in history</text>
-<text x="1114" y="812" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">OLED / camera fitting TBD</text>
-<text x="1114" y="858" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<text x="40" y="650" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Evidence: owner Uno confirmation; historical photos.</text>
-<text x="40" y="671" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Photo IDs: 1963-1971 and 3718-3721.</text>
-<text x="40" y="692" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No stock dimensions are measured V2 facts.</text>
-<text x="40" y="713" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Enclosure and battery placement: measure first.</text>
-<text x="40" y="734" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No RC-to-auxiliary power tie is drawn.</text>
-<text x="40" y="755" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Physical isolation and grounds: unresolved.</text>
-<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
+<rect x="1100" y="720" width="350" height="150" rx="8" fill="white" stroke="#b33a3a" stroke-width="2"/>
+<text x="1114" y="746" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b33a3a">Sensors / availability conflict</text>
+<text x="1114" y="772" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">HC-SR04 reported lost (S06)</text>
+<text x="1114" y="792" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">A02YYUW UART is proposed</text>
+<text x="1114" y="812" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">IMU / LED / buzzer fitting TBD</text>
+<text x="1114" y="858" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b33a3a">CONFLICTING</text>
+<text x="40" y="650" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Owner confirms Uno; other claims source-attributed.</text>
+<text x="40" y="671" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">S01-S14: docs/reconciliation/source-inventory.json</text>
+<text x="40" y="692" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Version map is provisional: V2 reconstruction,</text>
+<text x="40" y="713" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">V3 future capability concepts; owner review pending.</text>
+<text x="40" y="734" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Posters do not prove installation or performance.</text>
+<text x="40" y="755" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Grounds, mount dimensions and Pi remain unresolved.</text>
+<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R1 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
 </svg>

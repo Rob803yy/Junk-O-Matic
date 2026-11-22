@@ -10,3 +10,7 @@
 *.yml text eol=lf
 *.py text eol=lf
 *.ino text eol=lf
+
+*.xlsx binary
+
+*.docx binary

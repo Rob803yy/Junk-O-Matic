@@ -5,7 +5,11 @@ Wire         1.0     <USER_HOME>\AppData\Local\Arduino15\packages\arduino\hardwa
 Used platform Version Path
 arduino:avr   1.8.8   <USER_HOME>\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.8
 In file included from <USER_HOME>\Documents\Codex\2026-11-21\let\work\Junk-O-Matic\software\v2\arduino\litterbuggy_v2\litterbuggy_v2.ino:7:0:
-<USER_HOME>\Documents\Codex\2026-11-21\let\work\Junk-O-Matic\software\v2\arduino\litterbuggy_v2\config.h:36:1: error: static assertion failed: Review and assign separate digital trigger/echo pins 2..13
+<USER_HOME>\Documents\Codex\2026-11-21\let\work\Junk-O-Matic\software\v2\arduino\litterbuggy_v2\config.h:43:1: error: static assertion failed: Select the HC-SR04 profile explicitly; A02YYUW UART is not implemented
+ static_assert(!ENABLE_RANGE || RANGE_PROFILE == RANGE_PROFILE_HCSR04, "Select the HC-SR04 profile explicitly; A02YYUW UART is not implemented");
+ ^~~~~~~~~~~~~
+In file included from <USER_HOME>\Documents\Codex\2026-11-21\let\work\Junk-O-Matic\software\v2\arduino\litterbuggy_v2\litterbuggy_v2.ino:7:0:
+<USER_HOME>\Documents\Codex\2026-11-21\let\work\Junk-O-Matic\software\v2\arduino\litterbuggy_v2\config.h:44:1: error: static assertion failed: Review and assign separate digital trigger/echo pins 2..13
  static_assert(!ENABLE_RANGE || (TRIG_PIN >= 2 && TRIG_PIN <= 13 && ECHO_PIN >= 2 && ECHO_PIN <= 13 && TRIG_PIN != ECHO_PIN), "Review and assign separate digital trigger/echo pins 2..13");
  ^~~~~~~~~~~~~
 Error during build: exit status 1

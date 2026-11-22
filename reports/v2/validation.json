@@ -1,5 +1,5 @@
 {
-  "revision": "V2-R0",
+  "revision": "V2-R1",
   "review_date": "2026-11-21",
   "checks": [
     {
@@ -33,13 +33,19 @@
       "receipt": "replay-cli.txt"
     },
     {
+      "check": "uno-reject-uart-as-trigger-echo",
+      "passed": true,
+      "exit_code": 1,
+      "receipt": "uno-reject-uart-as-trigger-echo.txt"
+    },
+    {
       "check": "replay-raw-database-manifest",
       "passed": true
     },
     {
       "check": "drawio-xml",
       "passed": true,
-      "files": 3
+      "files": 4
     },
     {
       "check": "qet-xml",
@@ -47,16 +53,16 @@
       "files": 1
     },
     {
-      "check": "readable-pdf-containers-and-draft-labels",
+      "check": "prior-pdf-bytes-unchanged",
       "passed": true,
-      "files": 11,
-      "pages": 15
+      "files": 13
     }
   ],
   "limits": [
     "No hardware upload or sensor bench test",
     "No measured mechanical dimensions or physical fit validation",
     "No electrical polarity/rating/continuity verification",
-    "Systemd and real camera not exercised on Pi"
+    "Systemd and real camera not exercised on Pi",
+    "PDF regeneration deferred pending owner review"
   ]
 }

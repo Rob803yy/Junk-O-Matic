@@ -1,0 +1,2139 @@
+{
+  "revision": "R1",
+  "current_configuration_id": "CFG-V2-R1",
+  "notice": "Source-listed quantity is not verified installed quantity. Only Uno identity/count is owner-confirmed. Future allocation is editorial, pending owner nomenclature confirmation.",
+  "current": [
+    {
+      "id": "CH1",
+      "subsystem": "Mobility",
+      "item": "Axial SCX6 chassis",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Exact variant TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical media",
+      "sources": "S04 V1.0!C2; photos",
+      "current_resolution": "Current drive modifications must be inspected."
+    },
+    {
+      "id": "B1",
+      "subsystem": "Power",
+      "item": "Propulsion pack",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "3S project scope; chemistry/model TBD",
+      "status": "unknown",
+      "evidence_basis": "Owner scope",
+      "sources": "Owner; S03 t20r2",
+      "current_resolution": "No 4S change adopted; actual pack unverified."
+    },
+    {
+      "id": "B2",
+      "subsystem": "Power",
+      "item": "Kobalt auxiliary pack",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "24V family; exact label/capacity TBD",
+      "status": "unknown",
+      "evidence_basis": "Owner scope and source catalog",
+      "sources": "Owner; S04 C30:C31",
+      "current_resolution": "KB624-03 is a battery model, not a switch identity."
+    },
+    {
+      "id": "A1",
+      "subsystem": "Power",
+      "item": "Kobalt-compatible adapter",
+      "source_listed_qty": 2,
+      "verified_installed_qty": null,
+      "source_specification": "Blue KBT-marked adapter in historical photos",
+      "status": "unknown",
+      "evidence_basis": "Source-listed quantity; photos show one adapter",
+      "sources": "S04 V1.0!C31; photos3718-3721",
+      "current_resolution": "Installed count and polarity unknown; not two verified feeds."
+    },
+    {
+      "id": "U5",
+      "subsystem": "Power",
+      "item": "Primary 5V converter",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Source-listed 24V to 5V 10A",
+      "status": "unknown",
+      "evidence_basis": "BOM claim",
+      "sources": "S04 V1.0!C32",
+      "current_resolution": "Model, continuous capability and loads unverified."
+    },
+    {
+      "id": "U5A",
+      "subsystem": "Power",
+      "item": "Secondary 5V converter",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Source-listed 24V to 5V 3A",
+      "status": "unknown",
+      "evidence_basis": "BOM claim",
+      "sources": "S04 V1.0!C33",
+      "current_resolution": "Separate candidate rail; no parallel output or backup function assumed."
+    },
+    {
+      "id": "U12",
+      "subsystem": "Power",
+      "item": "12V converter",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Source-listed 24V to 12V 5A+",
+      "status": "proposed",
+      "evidence_basis": "BOM proposal",
+      "sources": "S04 V2.0!C10",
+      "current_resolution": "Fitted state and lighting voltage unknown."
+    },
+    {
+      "id": "F1",
+      "subsystem": "Protection",
+      "item": "Main inline fuse and holder",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Rating TBD",
+      "status": "proposed",
+      "evidence_basis": "Source architecture",
+      "sources": "S04 V1.0!C35:C36",
+      "current_resolution": "Fuse kit values are not selected circuit ratings."
+    },
+    {
+      "id": "S1",
+      "subsystem": "Protection",
+      "item": "Main power switch",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Model/poles/rating TBD",
+      "status": "proposed",
+      "evidence_basis": "Source architecture",
+      "sources": "S04 V1.0!C30",
+      "current_resolution": "Remove KB624-03 switch misidentification."
+    },
+    {
+      "id": "FB1",
+      "subsystem": "Protection",
+      "item": "Six-way blade fuse block",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Model and installed fuse values TBD",
+      "status": "unknown",
+      "evidence_basis": "BOM claim",
+      "sources": "S04 V1.0!C34",
+      "current_resolution": "Installation and topology unverified."
+    },
+    {
+      "id": "XT5",
+      "subsystem": "Distribution",
+      "item": "5V distribution terminals",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "12 positions claimed",
+      "status": "proposed",
+      "evidence_basis": "BOM proposal",
+      "sources": "S04 V1.0!C37",
+      "current_resolution": "No fitted position count or return topology verified."
+    },
+    {
+      "id": "XT0",
+      "subsystem": "Distribution",
+      "item": "Return distribution terminals",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "12 positions claimed",
+      "status": "proposed",
+      "evidence_basis": "BOM proposal",
+      "sources": "S04 V1.0!C38",
+      "current_resolution": "No fitted position count or return topology verified."
+    },
+    {
+      "id": "XT12",
+      "subsystem": "Distribution",
+      "item": "12V distribution terminals",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "8 positions claimed",
+      "status": "proposed",
+      "evidence_basis": "BOM proposal",
+      "sources": "S04 V1.0!C39",
+      "current_resolution": "No fitted position count or return topology verified."
+    },
+    {
+      "id": "XTS",
+      "subsystem": "Distribution",
+      "item": "Signal terminals",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "16-20 positions claimed",
+      "status": "proposed",
+      "evidence_basis": "BOM proposal",
+      "sources": "S04 V1.0!C40",
+      "current_resolution": "No fitted position count or return topology verified."
+    },
+    {
+      "id": "PI1",
+      "subsystem": "Compute",
+      "item": "Raspberry Pi",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Pi 4 versus Pi 3B conflict",
+      "status": "conflicting",
+      "evidence_basis": "Conflicting documents",
+      "sources": "S04 V1.0!C25; S06 p87",
+      "current_resolution": "Read physical board label before supply/fit assumptions."
+    },
+    {
+      "id": "UNO1",
+      "subsystem": "Compute",
+      "item": "Elegoo Uno R3",
+      "source_listed_qty": 1,
+      "verified_installed_qty": 1,
+      "source_specification": "ATmega328P Uno R3 target",
+      "status": "confirmed",
+      "evidence_basis": "Owner confirmation",
+      "sources": "Owner 2026-11-21",
+      "current_resolution": "Identity confirmed; pins/power/running firmware separate unknowns."
+    },
+    {
+      "id": "ENC1",
+      "subsystem": "Packaging",
+      "item": "Electronics enclosure",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "11.5 x 7.5 x 5.1in source candidate",
+      "status": "unknown",
+      "evidence_basis": "BOM dimensions; historical orange enclosure",
+      "sources": "S04 V1.0!C16",
+      "current_resolution": "292.1 x190.5 x129.54mm conversion; actual identity/fit/IP unverified."
+    },
+    {
+      "id": "CT1",
+      "subsystem": "Payload",
+      "item": "Gorilla cart tub and removable bucket",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact tub/bucket model TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical media and research report",
+      "sources": "photos1963-1971; S06 p8,p72",
+      "current_resolution": "No original cart payload rating transfers to this conversion."
+    },
+    {
+      "id": "MT1",
+      "subsystem": "Structure",
+      "item": "Existing metal mounting interface",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Sections, joints and hole patterns TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical photos",
+      "sources": "photos1963-1971",
+      "current_resolution": "Raised existing interface is distinct from proposed Rev B cradle."
+    },
+    {
+      "id": "IMU1",
+      "subsystem": "Sensors",
+      "item": "MPU-6050 / GY-521 candidate",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Breakout identity and orientation TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical identification",
+      "sources": "S04 V1.0!C50; historical Pi chat",
+      "current_resolution": "No absolute heading or enclosure temperature claim."
+    },
+    {
+      "id": "RANGE1",
+      "subsystem": "Sensors",
+      "item": "Historical HC-SR04",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Present state unknown; report says lost",
+      "status": "conflicting",
+      "evidence_basis": "Historical chat versus research report",
+      "sources": "S06 p21-p26",
+      "current_resolution": "Do not describe it as currently installed without confirmation."
+    },
+    {
+      "id": "RANGE2",
+      "subsystem": "Sensors",
+      "item": "A02YYUW SEN0311 replacement candidate",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "UART 9600; manufacturer 3.3-5V",
+      "status": "proposed",
+      "evidence_basis": "Research recommendation",
+      "sources": "S06 t3r3; DFRobot",
+      "current_resolution": "Not trigger/echo; not selected, purchased or installed by this record."
+    },
+    {
+      "id": "LED1",
+      "subsystem": "Current inventory candidate",
+      "item": "LED and series resistor",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact model/configuration TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical/source claim",
+      "sources": "Historical Pi chat",
+      "current_resolution": "Current inspection required; no upgrade inferred."
+    },
+    {
+      "id": "BZ1",
+      "subsystem": "Current inventory candidate",
+      "item": "Buzzer and drive components",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact model/configuration TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical/source claim",
+      "sources": "Historical Pi chat",
+      "current_resolution": "Current inspection required; no upgrade inferred."
+    },
+    {
+      "id": "L1",
+      "subsystem": "Current inventory candidate",
+      "item": "Front/rear lighting",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact model/configuration TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical/source claim",
+      "sources": "Videos2231/2233/2235",
+      "current_resolution": "Current inspection required; no upgrade inferred."
+    },
+    {
+      "id": "RX1",
+      "subsystem": "Current inventory candidate",
+      "item": "RC receiver",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact model/configuration TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical/source claim",
+      "sources": "S03 t13r3",
+      "current_resolution": "Current inspection required; no upgrade inferred."
+    },
+    {
+      "id": "ESC1",
+      "subsystem": "Current inventory candidate",
+      "item": "ESC / BEC",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact model/configuration TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical/source claim",
+      "sources": "S03 t13r2",
+      "current_resolution": "Current inspection required; no upgrade inferred."
+    },
+    {
+      "id": "M1",
+      "subsystem": "Current inventory candidate",
+      "item": "Traction motor / gearing",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact model/configuration TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical/source claim",
+      "sources": "S03 t13r2",
+      "current_resolution": "Current inspection required; no upgrade inferred."
+    },
+    {
+      "id": "SV1",
+      "subsystem": "Current inventory candidate",
+      "item": "Steering servo",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact model/configuration TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical/source claim",
+      "sources": "S03 t13r3",
+      "current_resolution": "Current inspection required; no upgrade inferred."
+    },
+    {
+      "id": "SV2",
+      "subsystem": "Current inventory candidate",
+      "item": "Shift servo",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact model/configuration TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical/source claim",
+      "sources": "Stock baseline; physical install TBD",
+      "current_resolution": "Current inspection required; no upgrade inferred."
+    },
+    {
+      "id": "SH1",
+      "subsystem": "Current inventory candidate",
+      "item": "Coilovers / springs",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact model/configuration TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical/source claim",
+      "sources": "photos1963-1971",
+      "current_resolution": "Current inspection required; no upgrade inferred."
+    },
+    {
+      "id": "TY1",
+      "subsystem": "Current inventory candidate",
+      "item": "Wheels / tyres",
+      "source_listed_qty": null,
+      "verified_installed_qty": null,
+      "source_specification": "Exact model/configuration TBD",
+      "status": "unknown",
+      "evidence_basis": "Historical/source claim",
+      "sources": "photos1963-1971",
+      "current_resolution": "Current inspection required; no upgrade inferred."
+    },
+    {
+      "id": "USB1",
+      "subsystem": "Connectivity",
+      "item": "USB-A to USB-B data cable",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Length and installed identity TBD",
+      "status": "proposed",
+      "evidence_basis": "Proposed Pi-to-Uno link",
+      "sources": "S06 t3r2,p75",
+      "current_resolution": "Old descriptor error unresolved; cable recommendation is not purchase proof."
+    },
+    {
+      "id": "SUP7",
+      "subsystem": "Structural Frame",
+      "item": "Rear crossbar",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Aluminum anti-sway brace",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C7:F7",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP8",
+      "subsystem": "Structural Frame",
+      "item": "Mount brackets",
+      "source_listed_qty": "6\u201310",
+      "verified_installed_qty": null,
+      "source_specification": "Stainless L-brackets / corner braces",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C8:F8",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP9",
+      "subsystem": "Structural Frame",
+      "item": "Bolts / washers / nyloc nuts",
+      "source_listed_qty": "Assorted",
+      "verified_installed_qty": null,
+      "source_specification": "M4\u2013M6 hardware",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C9:F9",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP10",
+      "subsystem": "Structural Frame",
+      "item": "Fender washers",
+      "source_listed_qty": "8\u201312",
+      "verified_installed_qty": null,
+      "source_specification": "HDPE reinforcement",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C10:F10",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP11",
+      "subsystem": "Structural Frame",
+      "item": "Rubber isolators",
+      "source_listed_qty": "4\u20138",
+      "verified_installed_qty": null,
+      "source_specification": "Bin + enclosure vibration control",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C11:F11",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP12",
+      "subsystem": "Payload Handling",
+      "item": "Shock cord / bungee + tarp clips",
+      "source_listed_qty": "1 set",
+      "verified_installed_qty": null,
+      "source_specification": "Bag retention",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C12:F12",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP17",
+      "subsystem": "Internal Mounting",
+      "item": "3mm HDPE/aluminum mounting tray",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Component mounting",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C17:F17",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP18",
+      "subsystem": "Internal Mounting",
+      "item": "M2.5/M3 standoff kit",
+      "source_listed_qty": "1 kit",
+      "verified_installed_qty": null,
+      "source_specification": "Pi/Uno standoffs; exact pattern and height unverified",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C18:F18",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP19",
+      "subsystem": "Cable Management",
+      "item": "Cable glands PG7/PG9/PG11",
+      "source_listed_qty": "5\u20138",
+      "verified_installed_qty": null,
+      "source_specification": "Waterproof cable exits",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C19:F19",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP20",
+      "subsystem": "Cable Management",
+      "item": "Heat shrink kit",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Wiring insulation",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C20:F20",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP21",
+      "subsystem": "Cable Management",
+      "item": "Ferrule kit + crimper",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Professional terminations",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C21:F21",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP22",
+      "subsystem": "Cable Management",
+      "item": "Zip tie mounts",
+      "source_listed_qty": "1 pack",
+      "verified_installed_qty": null,
+      "source_specification": "Cable routing",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C22:F22",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP23",
+      "subsystem": "Cable Management",
+      "item": "Zip ties",
+      "source_listed_qty": "Assorted",
+      "verified_installed_qty": null,
+      "source_specification": "General cable management",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C23:F23",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP24",
+      "subsystem": "Cable Management",
+      "item": "Rubber grommets",
+      "source_listed_qty": "Assorted",
+      "verified_installed_qty": null,
+      "source_specification": "Strain relief",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C24:F24",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP27",
+      "subsystem": "Thermal",
+      "item": "Pi heatsink/fan",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Thermal control",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C27:F27",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP28",
+      "subsystem": "Storage",
+      "item": "MicroSD card 32\u2013128GB",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "OS + software",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C28:F28",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP29",
+      "subsystem": "Expansion",
+      "item": "Powered USB hub",
+      "source_listed_qty": 1,
+      "verified_installed_qty": null,
+      "source_specification": "Camera/sensors if required",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C29:F29",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP36",
+      "subsystem": "Distribution Protection",
+      "item": "5A / 10A / 15A fuse assortment",
+      "source_listed_qty": "1 kit",
+      "verified_installed_qty": null,
+      "source_specification": "Correct branch sizing",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C36:F36",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP41",
+      "subsystem": "Wiring",
+      "item": "18 AWG stranded wire",
+      "source_listed_qty": "Assorted",
+      "verified_installed_qty": null,
+      "source_specification": "Main rails",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C41:F41",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP42",
+      "subsystem": "Wiring",
+      "item": "22\u201324 AWG wire",
+      "source_listed_qty": "Assorted",
+      "verified_installed_qty": null,
+      "source_specification": "Sensors/signals",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C42:F42",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP43",
+      "subsystem": "Wiring",
+      "item": "Ring/spade/JST/XT60 connectors",
+      "source_listed_qty": "Assorted",
+      "verified_installed_qty": null,
+      "source_specification": "Modular service",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C43:F43",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    },
+    {
+      "id": "SUP49",
+      "subsystem": "Mounting",
+      "item": "Light brackets / hardware",
+      "source_listed_qty": "Assorted",
+      "verified_installed_qty": null,
+      "source_specification": "Mast + rear mounting",
+      "status": "proposed",
+      "evidence_basis": "Historical BOM line",
+      "sources": "S04 V1.0!C49:F49",
+      "current_resolution": "Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values."
+    }
+  ],
+  "future": [
+    {
+      "id": "CAM1",
+      "item": "Camera / FPV",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 C51; S12-S14"
+    },
+    {
+      "id": "GPS1",
+      "item": "GPS or RTK",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 V2.0!C22; S12-S14"
+    },
+    {
+      "id": "LIDAR1",
+      "item": "Lidar / ToF",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 V2.0!C46; S14"
+    },
+    {
+      "id": "ENCODER1",
+      "item": "Wheel encoders",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 V2.0!C30; S14"
+    },
+    {
+      "id": "PCA1",
+      "item": "PCA9685 PWM module",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S10 t4r2,t27r4"
+    },
+    {
+      "id": "ARM1",
+      "item": "Robotic arm / gripper",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 V2.0!C47; S09"
+    },
+    {
+      "id": "INTAKE1",
+      "item": "Powered anti-jam intake",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S14"
+    },
+    {
+      "id": "BIN2",
+      "item": "Dual trash/recycle bin",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S14"
+    },
+    {
+      "id": "FRAMEB",
+      "item": "Rev B four-post/five-truss cradle and rail pods",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S11 sections6-9"
+    },
+    {
+      "id": "TRAILER1",
+      "item": "Passive trailer/hitch/outriggers",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S11 section5"
+    },
+    {
+      "id": "WD1",
+      "item": "Independent motion watchdog / RC handoff",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S01 S-01:S-06; S14"
+    },
+    {
+      "id": "OLED1",
+      "item": "OLED display",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "Historical Pi chat"
+    },
+    {
+      "id": "MOS1",
+      "item": "Lighting MOSFET modules",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 C46:C47"
+    },
+    {
+      "id": "CUTOFF1",
+      "item": "Battery cutoff / backup rail / supercapacitor",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S14"
+    },
+    {
+      "id": "CHARGE1",
+      "item": "Solar / docking",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 V2.0!A48:F48"
+    },
+    {
+      "id": "THERM1",
+      "item": "Dedicated enclosure/ESC/motor temperature sensors",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S01 and S03 test proposals"
+    },
+    {
+      "id": "VOLT1",
+      "item": "Voltage/current measurement hardware",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S03 ELEC-008"
+    },
+    {
+      "id": "SW2",
+      "item": "External motion emergency-stop chain",
+      "allocation": "V3 or later candidate; legacy source labels preserved",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S01 S-02"
+    },
+    {
+      "id": "LEG5",
+      "item": "Plant support ring / retention ring",
+      "allocation": "Historical structural/intake proposal; not adopted as current hardware",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 V1.0!C5"
+    },
+    {
+      "id": "LEG6",
+      "item": "Rear uprights",
+      "allocation": "Historical structural/intake proposal; not adopted as current hardware",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 V1.0!C6"
+    },
+    {
+      "id": "LEG13",
+      "item": "Wide dustpan scoop",
+      "allocation": "Historical structural/intake proposal; not adopted as current hardware",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 V1.0!C13"
+    },
+    {
+      "id": "LEG14",
+      "item": "Scoop hinge",
+      "allocation": "Historical structural/intake proposal; not adopted as current hardware",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 V1.0!C14"
+    },
+    {
+      "id": "LEG15",
+      "item": "Scoop limiter (chain/paracord/spring)",
+      "allocation": "Historical structural/intake proposal; not adopted as current hardware",
+      "status": "proposed",
+      "installed_qty": null,
+      "source": "S04 V1.0!C15"
+    }
+  ],
+  "source_rows": [
+    {
+      "sheet": "V1.0",
+      "row": 2,
+      "values": [
+        "L1 Core Platform",
+        "Mobility Base",
+        "Axial SCX6 chassis",
+        1,
+        "\u2714",
+        "Primary drivetrain platform"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 3,
+      "values": [
+        "L1 Core Platform",
+        "Mobility Base",
+        "SCX6 drive battery",
+        "1\u20132",
+        "\ud83d\udd35/\ud83d\udfe1",
+        "RC propulsion battery"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 4,
+      "values": [
+        "L1 Core Platform",
+        "Payload Body",
+        "HDPE tote / payload bin",
+        1,
+        "\ud83d\udfe1",
+        "12 gal or finalized payload body"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 5,
+      "values": [
+        "L1 Core Platform",
+        "Payload Body",
+        "Plant support ring / retention ring",
+        1,
+        "\ud83d\udfe1",
+        "Trash bag mouth"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 6,
+      "values": [
+        "L1 Core Platform",
+        "Structural Frame",
+        "Rear uprights",
+        2,
+        "\ud83d\udd35",
+        "Aluminum flat bar / square tube, 18\u201324 in"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 7,
+      "values": [
+        "L1 Core Platform",
+        "Structural Frame",
+        "Rear crossbar",
+        1,
+        "\ud83d\udd35",
+        "Aluminum anti-sway brace"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 8,
+      "values": [
+        "L1 Core Platform",
+        "Structural Frame",
+        "Mount brackets",
+        "6\u201310",
+        "\ud83d\udd35",
+        "Stainless L-brackets / corner braces"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 9,
+      "values": [
+        "L1 Core Platform",
+        "Structural Frame",
+        "Bolts / washers / nyloc nuts",
+        "Assorted",
+        "\ud83d\udd35",
+        "M4\u2013M6 hardware"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 10,
+      "values": [
+        "L1 Core Platform",
+        "Structural Frame",
+        "Fender washers",
+        "8\u201312",
+        "\ud83d\udd35",
+        "HDPE reinforcement"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 11,
+      "values": [
+        "L1 Core Platform",
+        "Structural Frame",
+        "Rubber isolators",
+        "4\u20138",
+        "\ud83d\udd35",
+        "Bin + enclosure vibration control"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 12,
+      "values": [
+        "L1 Core Platform",
+        "Payload Handling",
+        "Shock cord / bungee + tarp clips",
+        "1 set",
+        "\ud83d\udd35",
+        "Bag retention"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 13,
+      "values": [
+        "L1 Core Platform",
+        "Payload Handling",
+        "Wide dustpan scoop",
+        1,
+        "\ud83d\udd35",
+        "Front debris intake"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 14,
+      "values": [
+        "L1 Core Platform",
+        "Payload Handling",
+        "Scoop hinge",
+        1,
+        "\ud83d\udd35",
+        "Floating scoop mount"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 15,
+      "values": [
+        "L1 Core Platform",
+        "Payload Handling",
+        "Scoop limiter (chain/paracord/spring)",
+        2,
+        "\ud83d\udd35",
+        "Drag prevention"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 16,
+      "values": [
+        "L1 Electronics Enclosure",
+        "Main Housing",
+        "11.5 x 7.5 x 5.1 in enclosure",
+        1,
+        "\u2714/\ud83d\udfe1",
+        "Electronics housing"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 17,
+      "values": [
+        "L1 Electronics Enclosure",
+        "Internal Mounting",
+        "3mm HDPE/aluminum mounting tray",
+        1,
+        "\ud83d\udd35",
+        "Component mounting"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 18,
+      "values": [
+        "L1 Electronics Enclosure",
+        "Internal Mounting",
+        "M2.5/M3 standoff kit",
+        "1 kit",
+        "\ud83d\udd35",
+        "Pi/Nano mounting"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 19,
+      "values": [
+        "L1 Electronics Enclosure",
+        "Cable Management",
+        "Cable glands PG7/PG9/PG11",
+        "5\u20138",
+        "\ud83d\udd35",
+        "Waterproof cable exits"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 20,
+      "values": [
+        "L1 Electronics Enclosure",
+        "Cable Management",
+        "Heat shrink kit",
+        1,
+        "\ud83d\udd35",
+        "Wiring insulation"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 21,
+      "values": [
+        "L1 Electronics Enclosure",
+        "Cable Management",
+        "Ferrule kit + crimper",
+        1,
+        "\ud83d\udd35",
+        "Professional terminations"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 22,
+      "values": [
+        "L1 Electronics Enclosure",
+        "Cable Management",
+        "Zip tie mounts",
+        "1 pack",
+        "\ud83d\udd35",
+        "Cable routing"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 23,
+      "values": [
+        "L1 Electronics Enclosure",
+        "Cable Management",
+        "Zip ties",
+        "Assorted",
+        "\ud83d\udfe1",
+        "General cable management"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 24,
+      "values": [
+        "L1 Electronics Enclosure",
+        "Cable Management",
+        "Rubber grommets",
+        "Assorted",
+        "\ud83d\udd35",
+        "Strain relief"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 25,
+      "values": [
+        "L1 Compute + Control",
+        "Main Compute",
+        "Raspberry Pi 4",
+        1,
+        "\u2714",
+        "Bare board + heatsink preferred"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 26,
+      "values": [
+        "L1 Compute + Control",
+        "Secondary MCU",
+        "Nano / Pico / Arduino Nano",
+        1,
+        "\u2714\u274c",
+        "Verify exact model"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 27,
+      "values": [
+        "L1 Compute + Control",
+        "Thermal",
+        "Pi heatsink/fan",
+        1,
+        "\ud83d\udd35",
+        "Thermal control"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 28,
+      "values": [
+        "L1 Compute + Control",
+        "Storage",
+        "MicroSD card 32\u2013128GB",
+        1,
+        "\ud83d\udd35",
+        "OS + software"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 29,
+      "values": [
+        "L1 Compute + Control",
+        "Expansion",
+        "Powered USB hub",
+        1,
+        "\u26aa",
+        "Camera/sensors if required"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 30,
+      "values": [
+        "L1 Compute + Control",
+        "Safety Control",
+        "KB624-03 fuse switch",
+        2,
+        "\u2714",
+        "Main power cutoff"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 31,
+      "values": [
+        "L1 Power Architecture",
+        "Battery Interface",
+        "Kobalt 24V adapter",
+        2,
+        "\u2714",
+        "Electronics power"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 32,
+      "values": [
+        "L1 Power Architecture",
+        "Main Rail",
+        "24V\u21925V 10A buck converter",
+        1,
+        "\u2714",
+        "Pi primary rail"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 33,
+      "values": [
+        "L1 Power Architecture",
+        "Auxiliary Rail",
+        "24V\u21925V 3A buck converter",
+        1,
+        "\u2714",
+        "Backup / accessories"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 34,
+      "values": [
+        "L1 Power Architecture",
+        "Distribution Protection",
+        "6-way blade fuse block",
+        1,
+        "\u2714",
+        "Main branch distribution"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 35,
+      "values": [
+        "L1 Power Architecture",
+        "Distribution Protection",
+        "Waterproof inline fuse holders",
+        2,
+        "\u2714",
+        "Branch protection"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 36,
+      "values": [
+        "L1 Power Architecture",
+        "Distribution Protection",
+        "5A / 10A / 15A fuse assortment",
+        "1 kit",
+        "\u2714/\ud83d\udd35",
+        "Correct branch sizing"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 37,
+      "values": [
+        "L1 Power Architecture",
+        "Distribution",
+        "5V distribution block (12 pos)",
+        1,
+        "\ud83d\udd35",
+        "Main logic rail"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 38,
+      "values": [
+        "L1 Power Architecture",
+        "Distribution",
+        "GND distribution block (12 pos)",
+        1,
+        "\ud83d\udd35",
+        "Common ground"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 39,
+      "values": [
+        "L1 Power Architecture",
+        "Distribution",
+        "12V distribution block (8 pos)",
+        1,
+        "\ud83d\udd35",
+        "Lighting rail"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 40,
+      "values": [
+        "L1 Power Architecture",
+        "Distribution",
+        "Signal terminal block (16\u201320 pos)",
+        1,
+        "\u2714/\u26aa",
+        "Sensor/signal routing"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 41,
+      "values": [
+        "L1 Power Architecture",
+        "Wiring",
+        "18 AWG stranded wire",
+        "Assorted",
+        "\ud83d\udd35",
+        "Main rails"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 42,
+      "values": [
+        "L1 Power Architecture",
+        "Wiring",
+        "22\u201324 AWG wire",
+        "Assorted",
+        "\ud83d\udd35",
+        "Sensors/signals"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 43,
+      "values": [
+        "L1 Power Architecture",
+        "Wiring",
+        "Ring/spade/JST/XT60 connectors",
+        "Assorted",
+        "\ud83d\udd35",
+        "Modular service"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 44,
+      "values": [
+        "L1 Lighting + Visibility",
+        "Lighting",
+        "Front white 12V LED",
+        1,
+        "\ud83d\udd35",
+        "Primary night visibility"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 45,
+      "values": [
+        "L1 Lighting + Visibility",
+        "Lighting",
+        "Rear red 12V LED",
+        "1\u20132",
+        "\ud83d\udd35",
+        "Rear visibility"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 46,
+      "values": [
+        "L1 Lighting + Visibility",
+        "Control",
+        "3.3V/5V high-current MOSFET",
+        1,
+        "\u2714",
+        "Main programmable LED control"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 47,
+      "values": [
+        "L1 Lighting + Visibility",
+        "Control",
+        "MOSFET trigger modules",
+        5,
+        "\u2714",
+        "Multi-zone lighting"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 48,
+      "values": [
+        "L1 Lighting + Visibility",
+        "Power",
+        "24V\u219212V buck converter",
+        1,
+        "\ud83d\udd35",
+        "LED rail"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 49,
+      "values": [
+        "L1 Lighting + Visibility",
+        "Mounting",
+        "Light brackets / hardware",
+        "Assorted",
+        "\ud83d\udd35",
+        "Mast + rear mounting"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 50,
+      "values": [
+        "L1 Sensor Minimum",
+        "Vehicle Stability",
+        "IMU MPU6050 / GY-521",
+        1,
+        "\ud83d\udd35",
+        "Stability / orientation"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 51,
+      "values": [
+        "L1 Sensor Minimum",
+        "Remote Vision",
+        "USB / Pi camera",
+        1,
+        "\ud83d\udd35",
+        "FPV"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 52,
+      "values": [
+        "L1 Sensor Minimum",
+        "Navigation",
+        "GPS module",
+        0,
+        "\u26aa",
+        "V2"
+      ]
+    },
+    {
+      "sheet": "V1.0",
+      "row": 53,
+      "values": [
+        "L1 Sensor Minimum",
+        "Obstacle Detection",
+        "Ultrasonic sensors",
+        0,
+        "\u26aa",
+        "V2"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 2,
+      "values": [
+        "L1 Core Platform",
+        "Mobility Base",
+        "Axial SCX6 chassis",
+        1,
+        "\u2714",
+        "V1 base retained; suspension tuned for payload"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 3,
+      "values": [
+        "L1 Core Platform",
+        "Payload Body",
+        "Reinforced HDPE tote/bin",
+        1,
+        "\u2714",
+        "V1 bin, Rev B reinforced mount plate"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 4,
+      "values": [
+        "L1 Core Platform",
+        "Ring System",
+        "Dual-upright ring frame + retention",
+        1,
+        "\u2714/\ud83d\udd35",
+        "V1 ring plus improved anti-sway + quick swap"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 5,
+      "values": [
+        "L1 Core Platform",
+        "Scoop System",
+        "Floating dustpan intake Rev B",
+        1,
+        "\u2714/\ud83d\udd35",
+        "Hinged + spring return + curb tolerance"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 6,
+      "values": [
+        "L1 Core Platform",
+        "Main Enclosure",
+        "Electronics enclosure Rev B",
+        1,
+        "\u2714",
+        "V1 enclosure with optimized service layout"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 7,
+      "values": [
+        "L1 Power Architecture",
+        "Main Battery Interface",
+        "Kobalt 24V adapter",
+        2,
+        "\u2714",
+        "Existing system retained"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 8,
+      "values": [
+        "L1 Power Architecture",
+        "Main 5V Rail",
+        "24V\u21925V 10A buck",
+        1,
+        "\u2714",
+        "Compute rail"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 9,
+      "values": [
+        "L1 Power Architecture",
+        "Aux 5V Rail",
+        "24V\u21925V 3A buck",
+        1,
+        "\u2714",
+        "Secondary low-power rail"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 10,
+      "values": [
+        "L1 Power Architecture",
+        "Lighting Rail",
+        "24V\u219212V 5A+ buck",
+        1,
+        "\ud83d\udd35",
+        "Dedicated V2 lighting + accessories rail"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 11,
+      "values": [
+        "L1 Power Architecture",
+        "Fuse System",
+        "6-way fuse block + branch fuses",
+        1,
+        "\u2714",
+        "V1 retained, branch expanded"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 12,
+      "values": [
+        "L1 Power Architecture",
+        "Distribution",
+        "5V / 12V / GND / signal terminal blocks",
+        4,
+        "\ud83d\udd35",
+        "Industrialized distribution architecture"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 13,
+      "values": [
+        "L1 Compute",
+        "Main Compute",
+        "Raspberry Pi 4",
+        1,
+        "\u2714",
+        "Vision + autonomy stack"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 14,
+      "values": [
+        "L1 Compute",
+        "Real-Time MCU",
+        "Arduino Nano / Pico",
+        1,
+        "\u2714\u274c",
+        "Verify exact board"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 15,
+      "values": [
+        "L1 Compute",
+        "Storage",
+        "High-endurance microSD",
+        1,
+        "\ud83d\udd35",
+        "Logging + autonomy"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 16,
+      "values": [
+        "L1 Compute",
+        "Cooling",
+        "Pi heatsink + fan",
+        1,
+        "\ud83d\udd35",
+        "Required under V2 load"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 17,
+      "values": [
+        "L1 Communications",
+        "Local Telemetry",
+        "WiFi hotspot / Pi AP mode",
+        1,
+        "\u26aa",
+        "Local control + telemetry"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 18,
+      "values": [
+        "L1 Communications",
+        "RC Override",
+        "Existing RC controller",
+        1,
+        "\u2714",
+        "Failsafe manual override"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 19,
+      "values": [
+        "L1 Safety",
+        "E-stop",
+        "External emergency kill switch",
+        1,
+        "\ud83d\udd35",
+        "Visible field-safe cutoff"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 20,
+      "values": [
+        "L1 Safety",
+        "Weatherproofing",
+        "Cable glands / seals / conformal protection",
+        "Assorted",
+        "\ud83d\udd35",
+        "Higher environmental resilience"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 21,
+      "values": [
+        "L2 Perception",
+        "IMU",
+        "MPU6050 / GY-521",
+        1,
+        "\ud83d\udd35",
+        "Chassis-mounted stability + heading"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 22,
+      "values": [
+        "L2 Perception",
+        "GPS",
+        "u-blox NEO-6M / better",
+        1,
+        "\ud83d\udd35",
+        "Mast-mounted navigation"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 23,
+      "values": [
+        "L2 Perception",
+        "Ultrasonic Front",
+        "Waterproof ultrasonic sensors",
+        2,
+        "\ud83d\udd35",
+        "Forward obstacle avoidance"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 24,
+      "values": [
+        "L2 Perception",
+        "Ultrasonic Side",
+        "Waterproof ultrasonic sensors",
+        2,
+        "\u26aa",
+        "Side clearance"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 25,
+      "values": [
+        "L2 Perception",
+        "FPV Camera",
+        "USB / Pi camera",
+        1,
+        "\ud83d\udd35",
+        "Remote operation"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 26,
+      "values": [
+        "L2 Perception",
+        "Mast Lighting",
+        "Front white LED bar",
+        1,
+        "\ud83d\udd35",
+        "Low-light navigation"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 27,
+      "values": [
+        "L2 Perception",
+        "Rear Safety Lighting",
+        "Rear red LED modules",
+        2,
+        "\ud83d\udd35",
+        "Night visibility"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 28,
+      "values": [
+        "L2 Perception",
+        "Hazard Lighting",
+        "Amber LED markers",
+        "2\u20134",
+        "\u26aa",
+        "V2 visibility"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 29,
+      "values": [
+        "L2 Perception",
+        "MOSFET Control",
+        "Logic-level MOSFET modules",
+        "3\u20136",
+        "\u2714/\ud83d\udd35",
+        "Independent zone control"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 30,
+      "values": [
+        "L2 Navigation",
+        "Wheel/Odometry",
+        "Optional encoder solution",
+        "1 set",
+        "\u26aa",
+        "Better localization"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 31,
+      "values": [
+        "L2 Navigation",
+        "Compass / Magnetometer",
+        "Optional HMC5883L or integrated",
+        1,
+        "\u26aa",
+        "GPS+IMU fusion improvement"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 32,
+      "values": [
+        "L2 Structural",
+        "Mast System",
+        "Front mast Rev B",
+        1,
+        "\u2714/\ud83d\udd35",
+        "GPS + camera + lights"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 33,
+      "values": [
+        "L2 Structural",
+        "Chassis Reinforcement",
+        "Load plate / anti-tip widening",
+        "1 set",
+        "\ud83d\udd35",
+        "Payload + slope stability"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 34,
+      "values": [
+        "L2 Structural",
+        "Suspension Upgrade",
+        "Springs / preload tuning",
+        "1 set",
+        "\u26aa",
+        "Full-load handling"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 35,
+      "values": [
+        "L2 Structural",
+        "Waterproof Connectors",
+        "XT60/JST/aviation connectors",
+        "Assorted",
+        "\ud83d\udd35",
+        "Serviceability"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 36,
+      "values": [
+        "L3 Software",
+        "Operating System",
+        "Raspberry Pi OS",
+        1,
+        "\ud83d\udd35",
+        "Base system"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 37,
+      "values": [
+        "L3 Software",
+        "GPIO / Device Control",
+        "Python + GPIO libraries",
+        1,
+        "\ud83d\udd35",
+        "Sensor + power logic"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 38,
+      "values": [
+        "L3 Software",
+        "Camera Stack",
+        "OpenCV / stream tools",
+        1,
+        "\ud83d\udd35",
+        "Detection + FPV"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 39,
+      "values": [
+        "L3 Software",
+        "Sensor Fusion",
+        "IMU + GPS integration scripts",
+        1,
+        "\ud83d\udd35",
+        "Navigation baseline"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 40,
+      "values": [
+        "L3 Software",
+        "Telemetry UI",
+        "Web dashboard / mobile dashboard",
+        1,
+        "\u26aa",
+        "Battery + health + control"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 41,
+      "values": [
+        "L3 Software",
+        "Object Detection",
+        "Lightweight litter detection model",
+        1,
+        "\u26aa",
+        "V2 assisted targeting"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 42,
+      "values": [
+        "L3 Software",
+        "Logging",
+        "Event + GPS + battery logging",
+        1,
+        "\ud83d\udd35",
+        "Debug + iteration"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 43,
+      "values": [
+        "L3 Serviceability",
+        "Internal Tray Rev B",
+        "Removable electronics tray",
+        1,
+        "\ud83d\udd35",
+        "Maintenance"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 44,
+      "values": [
+        "L3 Serviceability",
+        "Wiring Harness Rev B",
+        "Labeled harness with ferrules",
+        "1 set",
+        "\ud83d\udd35",
+        "Stable field service"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 45,
+      "values": [
+        "L3 Serviceability",
+        "Spare Fuse + Repair Kit",
+        "Fuse + hardware kit",
+        1,
+        "\u26aa",
+        "Field resilience"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 46,
+      "values": [
+        "L3 Future Expansion",
+        "LiDAR",
+        "RPLidar / equivalent",
+        1,
+        "\u26aa",
+        "V3+"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 47,
+      "values": [
+        "L3 Future Expansion",
+        "Robotic Arm / Pickup",
+        "Servo/gripper module",
+        1,
+        "\u26aa",
+        "V3+ active pickup"
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 48,
+      "values": [
+        "L3 Future Expansion",
+        "Solar / Docking",
+        "Charging ecosystem",
+        "\u26aa",
+        "V4+",
+        null
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 49,
+      "values": [
+        "MOSFET modules",
+        "Trigger modules",
+        5,
+        "\u2714",
+        "Multi-zone",
+        null
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 50,
+      "values": [
+        "12V buck",
+        "24\u219212V buck",
+        1,
+        "\ud83d\udd35",
+        "LED rail",
+        null
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 51,
+      "values": [
+        "Light brackets",
+        "Mount hardware",
+        "\ud83d\udd35",
+        "Mast + rear",
+        null,
+        null
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 52,
+      "values": [
+        "Subsystem",
+        "Item",
+        "Qty",
+        "Status",
+        "Spec / Notes",
+        null
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 53,
+      "values": [
+        "IMU",
+        "MPU6050 / GY-521",
+        1,
+        "\ud83d\udd35",
+        "Stability",
+        null
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 54,
+      "values": [
+        "Camera",
+        "USB / Pi cam",
+        1,
+        "\ud83d\udd35",
+        "FPV",
+        null
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 55,
+      "values": [
+        "GPS",
+        null,
+        null,
+        "\u26aa",
+        "V2",
+        null
+      ]
+    },
+    {
+      "sheet": "V2.0",
+      "row": 56,
+      "values": [
+        "Ultrasonic",
+        null,
+        null,
+        "\u26aa",
+        "V2",
+        null
+      ]
+    }
+  ]
+}

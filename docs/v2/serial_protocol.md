@@ -1,8 +1,17 @@
-# Proposed serial protocol v2 / R0
+# Proposed serial protocol v2 / R1
 
 This is a new draft contract between the supplied Uno and Pi programs. It is
 not a transcription of the unrecovered original firmware's serial format.
 Physical hardware revision V2 and protocol version 2 are separately versioned.
+
+R1 reconciles the attachments while retaining this single JSON contract. The
+CSV `D`/`H` records and 20Hz/1Hz schedule in S06 are alternative proposals,
+not the existing serial format or an implemented compatibility mode. The new
+draft emits at a proposed 10Hz. Neither the legacy 50–100Hz target nor the S06
+20Hz acquisition target has been demonstrated. HC-SR04 is an optional historical
+profile; S06 reports it lost. The proposed A02YYUW UART sensor is unselected and
+has no driver in this revision. Its eventual integration requires a protocol
+review of echo fields and sensor identity, not merely different pin numbers.
 
 Transport: USB serial, proposed 115200 baud, 8N1. One UTF-8 JSON object per line;
 firmware emits CRLF. Maximum frame is 512 bytes including line terminators. The
@@ -39,7 +48,7 @@ separately from valid-frame counts.
 Default disabled example (synthetic fixture):
 
 ```json
-{"v":2,"type":"telemetry","fw":"v2-r0","seq":0,"ms":100,"imu_raw":null,"echo_us":null,"distance_mm":null,"flags":5}
+{"v":2,"type":"telemetry","fw":"v2-r1","seq":0,"ms":100,"imu_raw":null,"echo_us":null,"distance_mm":null,"flags":5}
 ```
 
 Default emission interval is 100 ms, checked with wrap-safe unsigned subtraction.

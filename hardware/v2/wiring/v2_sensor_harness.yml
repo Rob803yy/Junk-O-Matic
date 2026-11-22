@@ -1,8 +1,9 @@
 metadata:
-  title: v2_sensor_harness / DRAFT R0 - NOT AS BUILT
-  revision: R0
-  notes: All links proposed or untraced. Wire gauge, colour, length and physical pin
-    numbering TBD.
+  title: v2_sensor_harness / DRAFT R1 - NOT AS BUILT
+  revision: R1
+  notes: All links proposed or untraced. Physical details TBD. U5A separate 5V 3A
+    routing OPEN. RANGE1 historical HC-SR04 reported lost; replacement not selected.
+    A02YYUW UART is not a trigger/echo substitute.
 connectors:
   UNO1_I2C:
     type: Elegoo Uno R3 proposed I2C / DRAFT - physical connector TBD
@@ -32,7 +33,8 @@ connectors:
     pinlabels: *id003
     notes: Logical functions only; physical order/view, part number and ratings TBD.
   RANGE1:
-    type: HC-SR04 identity unverified / DRAFT - physical connector TBD
+    type: Historical HC-SR04 reported lost / NOT fitted claim / DRAFT - physical connector
+      TBD
     pins: &id004
     - TRIG
     - ECHO

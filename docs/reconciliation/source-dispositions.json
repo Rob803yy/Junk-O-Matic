@@ -1,0 +1,16 @@
+{
+  "S01": "Corrected editable scorecard. Candidate gates retained with scope notes; no physical completion or release inferred.",
+  "S02": "Annotated historical design review. Duplicate event analyses and subjective confidence are qualified; pavement travel does not establish current approval.",
+  "S03": "Annotated historical product specification. Simulated consensus and development payloads are proposals. Requirement IDs are source-qualified IPDS0.",
+  "S04": "Replaced for current use by normalized R1 BOM. Raw rows and original ambiguous symbols retained on Source catalog.",
+  "S05": "Corrected editable review system. Historical findings remain scoped to CFG-001. New current config has no fabricated test results or approval.",
+  "S06": "Annotated research report. Field observations remain report-attributed. Pi3B, lost sensor and replacement proposals are carried as conflicts/open decisions.",
+  "S07": "Original PDF unchanged per owner instruction. Reference overlap with S09 is not independent corroboration; this R1 correction record governs current use.",
+  "S08": "Annotated historical guide. Stock capacities, upgrades and generic common-ground directions are not approved as-built specifications.",
+  "S09": "Annotated local text copy. Generic payload, 3S/4S and fuse prescriptions are superseded by unverified current-state entries.",
+  "S10": "Annotated historical engineering reference. PCA9685/arm/closed-loop controls are proposals; purchased discussion is not installed inventory.",
+  "S11": "Annotated historical consolidated reference. RevB rail/cradle/trailer and third-party test-count claims do not establish current integration.",
+  "S12": "V1 concept poster: Mega, tool-pack brands, autonomy, dimensions, payload and environmental claims not established as current hardware.",
+  "S13": "V2 concept poster: Milwaukee M18, Mega, autonomy, encoders, RTK, runtime and payload remain concept claims; not the owner-confirmed Uno baseline.",
+  "S14": "V3 concept poster: Nano, mixed 18V/24V Kobalt label, dual bins, intake, backup rail and autonomous modes remain future concepts."
+}

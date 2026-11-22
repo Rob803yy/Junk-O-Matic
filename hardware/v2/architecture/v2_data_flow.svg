@@ -28,10 +28,12 @@
 <text x="1114" y="622" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Config hash and receive time</text>
 <text x="1114" y="642" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Export to CSV</text>
 <text x="1114" y="708" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
-<text x="40" y="560" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Existing firmware behaviour is not claimed to match this proposed protocol.</text>
-<text x="40" y="581" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Voltage, yaw, temperature and emergency-stop measurements are omitted</text>
-<text x="40" y="602" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">until fitted hardware and acquisition methods are established.</text>
-<text x="40" y="623" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">LED/buzzer thresholds default disabled; no motor commands exist.</text>
-<text x="40" y="644" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Optional camera is a separate capture tool; no measured synchronization claim.</text>
-<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
+<text x="40" y="560" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">New contract: JSON protocol 2, proposed 10Hz records; drivers default OFF.</text>
+<text x="40" y="581" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">S06 CSV D/H protocol and 20Hz IMU + 1Hz status remain source proposals.</text>
+<text x="40" y="602" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Legacy 50-100Hz IMU targets are not implemented or field-verified.</text>
+<text x="40" y="623" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Original running sketch / format has not been recovered.</text>
+<text x="40" y="644" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Raw MPU-6050 data does not provide validated absolute heading.</text>
+<text x="40" y="665" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No RC commands, motion watchdog, GPS, sorting or autonomous navigation.</text>
+<text x="40" y="686" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Optional camera capture is separate; no synchronization accuracy claim.</text>
+<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R1 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
 </svg>

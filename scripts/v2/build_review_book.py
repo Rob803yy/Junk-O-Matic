@@ -1,4 +1,7 @@
 """Assemble a portable review PDF from the checked subsystem exports."""
+import sys
+if "--acknowledge-pdf-regeneration" not in sys.argv:
+    raise SystemExit("PDF generation is held for owner review. Review R1 sources first.")
 from pathlib import Path
 from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Table,TableStyle,PageBreak
 from reportlab.lib.styles import getSampleStyleSheet

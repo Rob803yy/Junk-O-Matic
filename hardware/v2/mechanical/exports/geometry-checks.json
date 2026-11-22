@@ -63,7 +63,7 @@
       "document": "v2_electronics_enclosure",
       "object": "Enclosure",
       "valid": true,
-      "volume_mm3": 417000.0,
+      "volume_mm3": 866801.2900000019,
       "dimension_status": "illustrative"
     },
     {
@@ -231,7 +231,7 @@
       "document": "v2_assembly",
       "object": "Enclosure",
       "valid": true,
-      "volume_mm3": 417000.0,
+      "volume_mm3": 866801.2900000019,
       "dimension_status": "illustrative"
     },
     {

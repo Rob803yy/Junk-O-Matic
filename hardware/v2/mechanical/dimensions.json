@@ -1,29 +1,114 @@
 {
-  "revision": "R0",
+  "revision": "R1",
   "units": "mm",
   "dimension_status": "proposed",
-  "notice": "ALL numbers are illustrative layout values. measured_mm remains null. Not for fabrication, fit checking or load claims.",
+  "notice": "All measured_mm remain null. Layout proxies are not measured as-built dimensions or fabrication authority. Enclosure envelope uses an unverified source catalog specification; all other numbers are illustrative.",
   "datum": "Proposed: ground plane Z=0; assembly centre X=Y=0. +X towards labelled assembly front; owner must confirm handle/steering relationship.",
   "parameters": {
-    "wheelbase": {"layout_mm": 500, "measured_mm": null},
-    "track_centres": {"layout_mm": 380, "measured_mm": null},
-    "tyre_radius": {"layout_mm": 88, "measured_mm": null},
-    "tyre_width": {"layout_mm": 65, "measured_mm": null},
-    "rail_length": {"layout_mm": 620, "measured_mm": null},
-    "rail_spacing": {"layout_mm": 180, "measured_mm": null},
-    "chassis_z": {"layout_mm": 170, "measured_mm": null},
-    "mount_z": {"layout_mm": 285, "measured_mm": null},
-    "cart_length": {"layout_mm": 820, "measured_mm": null},
-    "cart_width": {"layout_mm": 500, "measured_mm": null},
-    "cart_height": {"layout_mm": 270, "measured_mm": null},
-    "wall": {"layout_mm": 5, "measured_mm": null},
-    "enclosure_length": {"layout_mm": 210, "measured_mm": null},
-    "enclosure_width": {"layout_mm": 130, "measured_mm": null},
-    "enclosure_height": {"layout_mm": 90, "measured_mm": null},
-    "dock_length": {"layout_mm": 110, "measured_mm": null},
-    "dock_width": {"layout_mm": 80, "measured_mm": null},
-    "dock_height": {"layout_mm": 25, "measured_mm": null}
+    "wheelbase": {
+      "layout_mm": 500,
+      "measured_mm": null
+    },
+    "track_centres": {
+      "layout_mm": 380,
+      "measured_mm": null
+    },
+    "tyre_radius": {
+      "layout_mm": 88,
+      "measured_mm": null
+    },
+    "tyre_width": {
+      "layout_mm": 65,
+      "measured_mm": null
+    },
+    "rail_length": {
+      "layout_mm": 620,
+      "measured_mm": null
+    },
+    "rail_spacing": {
+      "layout_mm": 180,
+      "measured_mm": null
+    },
+    "chassis_z": {
+      "layout_mm": 170,
+      "measured_mm": null
+    },
+    "mount_z": {
+      "layout_mm": 285,
+      "measured_mm": null
+    },
+    "cart_length": {
+      "layout_mm": 820,
+      "measured_mm": null
+    },
+    "cart_width": {
+      "layout_mm": 500,
+      "measured_mm": null
+    },
+    "cart_height": {
+      "layout_mm": 270,
+      "measured_mm": null
+    },
+    "wall": {
+      "layout_mm": 5,
+      "measured_mm": null
+    },
+    "enclosure_length": {
+      "layout_mm": 292.1,
+      "measured_mm": null,
+      "source_spec_mm": 292.1,
+      "source": "S04 V1.0 C16: 11.5 x 7.5 x 5.1 inches; nominal catalog claim, not measured",
+      "evidence_status": "unknown"
+    },
+    "enclosure_width": {
+      "layout_mm": 190.5,
+      "measured_mm": null,
+      "source_spec_mm": 190.5,
+      "source": "S04 V1.0 C16: 11.5 x 7.5 x 5.1 inches; nominal catalog claim, not measured",
+      "evidence_status": "unknown"
+    },
+    "enclosure_height": {
+      "layout_mm": 129.54,
+      "measured_mm": null,
+      "source_spec_mm": 129.54,
+      "source": "S04 V1.0 C16: 11.5 x 7.5 x 5.1 inches; nominal catalog claim, not measured",
+      "evidence_status": "unknown"
+    },
+    "dock_length": {
+      "layout_mm": 110,
+      "measured_mm": null
+    },
+    "dock_width": {
+      "layout_mm": 80,
+      "measured_mm": null
+    },
+    "dock_height": {
+      "layout_mm": 25,
+      "measured_mm": null
+    }
   },
-  "unknown_interfaces": ["all mounting hole centres/diameters", "cart moulded profile", "metal member cross-sections", "dock recess purpose", "battery slide and release clearance", "enclosure installed location", "sensor orientation", "steering and suspension travel", "spring rates/preload", "component mass and payload envelope"],
-  "evidence": ["Owner Uno R3 confirmation", "Historical photos 1000061963-1000061971: tub, metal frame and coilovers", "Photos 1000063718-1000063721: blue dock, guide rails and red/black leads", "Videos 1000062231/2233/2235: raised cart, lighting and loaded motion (sampled frames only)"]
+  "unknown_interfaces": [
+    "all mounting hole centres/diameters",
+    "cart moulded profile",
+    "metal member cross-sections",
+    "dock recess purpose",
+    "battery slide and release clearance",
+    "enclosure installed location",
+    "sensor orientation",
+    "steering and suspension travel",
+    "spring rates/preload",
+    "component mass and payload envelope",
+    "Pi 3B versus Pi 4 envelope and cable-entry fit",
+    "range sensor reported lost; final mount/sensor not selected",
+    "source-listed enclosure size versus actual orange enclosure identity"
+  ],
+  "evidence": [
+    "Owner Uno R3 confirmation",
+    "Historical photos 1000061963-1000061971: tub, metal frame and coilovers",
+    "Photos 1000063718-1000063721: blue dock, guide rails and red/black leads",
+    "Videos 1000062231/2233/2235: raised cart, lighting and loaded motion (sampled frames only)",
+    "S04 C16 nominal enclosure dimensions retained as source specification only",
+    "S06 reported HC-SR04 lost and Pi 3B reuse; source report not fresh physical inspection",
+    "S11 RevB cradle, closed ring and trailer concepts are future proposals, not this reconstruction"
+  ]
 }

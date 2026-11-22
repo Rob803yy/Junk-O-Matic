@@ -1,4 +1,6 @@
 [Unit]
+# R1 deployment draft. Pi model/OS and actual service paths remain unverified.
+# Restart behavior is not a motion watchdog or an emergency-stop function.
 Description=LitterBuggy V2 observational telemetry logger
 After=local-fs.target
 

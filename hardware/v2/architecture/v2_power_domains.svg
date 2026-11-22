@@ -46,9 +46,11 @@
 <text x="1114" y="802" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Pi / Uno / sensors / lights</text>
 <text x="1114" y="822" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">USB backfeed review required</text>
 <text x="1114" y="868" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<text x="40" y="740" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No shared ground is assumed.</text>
-<text x="40" y="761" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No electrical isolation claim is made.</text>
-<text x="40" y="782" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No fuse size, converter setting or wire gauge is invented.</text>
-<text x="40" y="803" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Detailed review drawing: ../electrical/v2_electrical.qet</text>
-<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
+<text x="40" y="740" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">U5: source-listed 5V 10A; U5A: separate source-listed 5V 3A.</text>
+<text x="40" y="761" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">U5A routing is OPEN; outputs are not paralleled.</text>
+<text x="40" y="782" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">12V converter is a proposal; fitted lighting voltage unknown.</text>
+<text x="40" y="803" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">KB624-03 is a battery designation, not a fuse/switch.</text>
+<text x="40" y="824" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No shared ground, isolation or selected fuse value is assumed.</text>
+<text x="40" y="845" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Detailed review drawing: ../electrical/v2_electrical.qet</text>
+<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R1 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
 </svg>

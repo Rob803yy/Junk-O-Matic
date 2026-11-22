@@ -32,7 +32,7 @@
         <mxCell id="e6" value="I/O mapping TBD" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="uno" target="sensors">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rc" value="RC drive system&#10;3S propulsion pack (owner scope)&#10;ESC / receiver / servos / motor&#10;Exact models and driven axles TBD&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
+        <mxCell id="rc" value="RC drive system&#10;3S propulsion pack (owner scope)&#10;Stock SCX6: 4WD / two-speed&#10;Installed modifications unverified&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
           <mxGeometry x="40" y="140" width="340" height="150" as="geometry" />
         </mxCell>
         <mxCell id="frame" value="SCX6 + cart mounting interface&#10;Raised tub and metal interface&#10;Visible in historical photos&#10;Dimensions and joints unmeasured&#10;[HISTORICAL]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#3978a8;" vertex="1" parent="1">
@@ -44,22 +44,22 @@
         <mxCell id="aux" value="Auxiliary power&#10;Kobalt pack / blue KBT adapter&#10;Red + black leads visible&#10;Polarity and cutoff unverified&#10;[HISTORICAL]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#3978a8;" vertex="1" parent="1">
           <mxGeometry x="40" y="410" width="340" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="rails" value="Converters / distribution&#10;5V and 12V rails in repository&#10;Fuse, switch and returns TBD&#10;Trace current build before wiring&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
+        <mxCell id="rails" value="Converters / distribution&#10;5V 10A + separate 5V 3A listed&#10;12V branch is a proposal&#10;Settings / routing unverified&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
           <mxGeometry x="560" y="410" width="360" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="pi" value="Raspberry Pi&#10;Model, power entry and OS TBD&#10;USB acquisition + local logger&#10;No drive-control interface planned&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
+        <mxCell id="pi" value="Raspberry Pi / model conflict&#10;Pi 3B in S06; Pi 4 elsewhere&#10;Power entry, OS and fitting TBD&#10;New draft: logging only&#10;[CONFLICTING]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b33a3a;" vertex="1" parent="1">
           <mxGeometry x="1100" y="410" width="350" height="170" as="geometry" />
         </mxCell>
         <mxCell id="uno" value="Elegoo Uno R3&#10;Board identity confirmed by owner&#10;Existing sketch not recovered&#10;New draft defaults to idle sensors&#10;[CONFIRMED]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#216e4e;" vertex="1" parent="1">
           <mxGeometry x="560" y="720" width="360" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="sensors" value="Sensors / local feedback&#10;MPU-6050 + HC-SR04 in history&#10;LED + buzzer in history&#10;OLED / camera fitting TBD&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
+        <mxCell id="sensors" value="Sensors / availability conflict&#10;HC-SR04 reported lost (S06)&#10;A02YYUW UART is proposed&#10;IMU / LED / buzzer fitting TBD&#10;[CONFLICTING]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b33a3a;" vertex="1" parent="1">
           <mxGeometry x="1100" y="720" width="350" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="n0" value="Evidence: owner Uno confirmation; historical photos.&#10;Photo IDs: 1963-1971 and 3718-3721.&#10;No stock dimensions are measured V2 facts.&#10;Enclosure and battery placement: measure first.&#10;No RC-to-auxiliary power tie is drawn.&#10;Physical isolation and grounds: unresolved." style="text;html=0;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="n0" value="Owner confirms Uno; other claims source-attributed.&#10;S01-S14: docs/reconciliation/source-inventory.json&#10;Version map is provisional: V2 reconstruction,&#10;V3 future capability concepts; owner review pending.&#10;Posters do not prove installation or performance.&#10;Grounds, mount dimensions and Pi remain unresolved." style="text;html=0;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="40" y="635" width="1400" height="138" as="geometry" />
         </mxCell>
-        <mxCell id="footer" value="DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending" style="text;html=0;align=left;verticalAlign=top;fontSize=13;" vertex="1" parent="1">
+        <mxCell id="footer" value="DRAFT R1 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending" style="text;html=0;align=left;verticalAlign=top;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="40" y="950" width="1420" height="35" as="geometry" />
         </mxCell>
       </root>

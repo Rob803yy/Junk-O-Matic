@@ -32,10 +32,10 @@
         <mxCell id="store" value="Run evidence&#10;SQLite + raw serial + metadata&#10;Config hash and receive time&#10;Export to CSV&#10;[PROPOSED]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#7251a3;" vertex="1" parent="1">
           <mxGeometry x="1100" y="550" width="350" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="n0" value="Existing firmware behaviour is not claimed to match this proposed protocol.&#10;Voltage, yaw, temperature and emergency-stop measurements are omitted&#10;until fitted hardware and acquisition methods are established.&#10;LED/buzzer thresholds default disabled; no motor commands exist.&#10;Optional camera is a separate capture tool; no measured synchronization claim." style="text;html=0;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="40" y="545" width="1400" height="115" as="geometry" />
+        <mxCell id="n0" value="New contract: JSON protocol 2, proposed 10Hz records; drivers default OFF.&#10;S06 CSV D/H protocol and 20Hz IMU + 1Hz status remain source proposals.&#10;Legacy 50-100Hz IMU targets are not implemented or field-verified.&#10;Original running sketch / format has not been recovered.&#10;Raw MPU-6050 data does not provide validated absolute heading.&#10;No RC commands, motion watchdog, GPS, sorting or autonomous navigation.&#10;Optional camera capture is separate; no synchronization accuracy claim." style="text;html=0;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="545" width="1400" height="161" as="geometry" />
         </mxCell>
-        <mxCell id="footer" value="DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending" style="text;html=0;align=left;verticalAlign=top;fontSize=13;" vertex="1" parent="1">
+        <mxCell id="footer" value="DRAFT R1 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending" style="text;html=0;align=left;verticalAlign=top;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="40" y="950" width="1420" height="35" as="geometry" />
         </mxCell>
       </root>

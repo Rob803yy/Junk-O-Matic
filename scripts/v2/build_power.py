@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'hardware/v2/electrical'
 def sub(p,tag,**a): return E.SubElement(p,tag,{k:str(v) for k,v in a.items()})
 def uid():return '{'+str(uuid.uuid4())+'}'
-project=E.Element('project',title='LitterBuggy V2 DRAFT R0 - NOT AS BUILT',version='0.90')
+project=E.Element('project',title='LitterBuggy V2 DRAFT R1 - NOT AS BUILT',version='0.90')
 collection=sub(project,'collection');cat=sub(collection,'category',name='v2')
 nextid=0
 def sheet(title,order):
@@ -38,10 +38,10 @@ def wire(cs,a,b,name):
     sub(cs,'conductor',terminal1=a,terminal2=b,uuid=uid(),type='multi',num=name+' / TBD',condsize=1,numsize=7,displaytext=1,text_color='#b26a00',color='#b26a00')
 def pair(cs,a,b,label):wire(cs,a['OUT+'],b['IN+'],label+' POS');wire(cs,a['OUT_RET'],b['IN_RET'],label+' RET')
 def header(inp,t):
-    text(inp,40,30,'DRAFT R0 | '+t,18)
+    text(inp,40,30,'DRAFT R1 | '+t,18)
     text(inp,40,70,'All drawn nets are PROPOSED / UNTRACED. Logical terminal labels are NOT physical connector pin numbers.',11)
     text(inp,40,100,'Confirm models, polarity, ratings, fuse locations, returns and power entry before wiring. No ratings are assigned.',11)
-    text(inp,40,700,'2026-11-21 | Owner confirms Elegoo Uno R3. Historical Nano references are superseded for this draft.',11)
+    text(inp,40,700,'2026-11-21 | Owner confirms Elegoo Uno R3. KB624-03 is a battery model, NOT an identified fuse/switch.',11)
 
 d,es,cs,inp=sheet('01 Auxiliary source and distribution - proposed trace',1);header(inp,'AUXILIARY SOURCE')
 b=block(es,'B2',40,220,'Kobalt pack',['24V designation','Range / cutoff TBD'])
@@ -56,8 +56,8 @@ text(inp,40,530,'No RC-to-auxiliary power or ground tie is assumed. Adapter lead
 
 d,es,cs,inp=sheet('02 Auxiliary conversion and load branches - proposed trace',2);header(inp,'CONVERTERS AND LOADS')
 t5=block(es,'XT5',40,190,'AUX feed ref',['From XT1 logically','No pin ID assigned'])
-u5=block(es,'U5',370,190,'5V converter',['24V to 5V per repo','Rating / setting TBD'])
-pi=block(es,'PI1',1040,190,'Raspberry Pi',['Model TBD','USB-C / GPIO TBD'])
+u5=block(es,'U5',370,190,'5V converter',['Source lists 5V 10A','Model / setting TBD'])
+pi=block(es,'PI1',1040,190,'Raspberry Pi',['Pi 3B / Pi 4 conflict','Power entry TBD'])
 pair(cs,t5,u5,'H05');pair(cs,u5,pi,'H06')
 t12=block(es,'XT12',40,400,'AUX feed ref',['From XT1 logically','Same source intended'])
 u12=block(es,'U12',370,400,'12V converter',['24V to 12V per repo','Rating / setting TBD'])
@@ -66,6 +66,8 @@ pair(cs,t12,u12,'H07');pair(cs,u12,l,'H08')
 text(inp,40,570,'UNO1 (Elegoo Uno R3): power entry unresolved. External buck supply and USB discussed historically.',12)
 text(inp,40,600,'No external 5V/VIN/barrel/USB power route is connected here until simultaneous-source review.',12)
 text(inp,40,630,'Sensor and camera power entries: TBD. 12V lighting feed is a hypothesis, not observed wiring.',12)
+u5a=block(es,'U5A',1040,560,'Separate 5V rail',['Source lists 5V 3A','OPEN: routing unknown'])
+text(inp,40,665,'U5A (S04 V1.0 C33): separate source-listed converter; no output paralleling or backup-power claim.',11)
 
 d,es,cs,inp=sheet('03 RC propulsion and control - proposed trace',3);header(inp,'RC PROPULSION')
 b1=block(es,'B1',40,190,'3S pack',['Owner scope','Chemistry / plug TBD'])
@@ -76,6 +78,8 @@ text(inp,620,225,'ESC-to-motor interface:',12);text(inp,620,255,'NOT CONNECTED; 
 text(inp,40,440,'RX1 receiver / steering / shift servo and BEC: record models, supply paths and channel assignments.',12)
 text(inp,40,480,'No PWM pins, receiver channel numbers, motor phase count, fuse rating or stock-drive claim is invented.',12)
 text(inp,40,520,'Pi and Uno firmware draft contains no steering, throttle or receiver output commands.',12)
+text(inp,40,560,'Stock SCX6 is 4WD with a two-speed transmission. High/low does not select 2WD/4WD.',12)
+text(inp,40,595,'Actual installed drivetrain modifications remain unverified; no stock configuration is certified.',12)
 OUT.mkdir(parents=True,exist_ok=True);E.indent(project);E.ElementTree(project).write(OUT/'v2_electrical.qet',encoding='utf-8',xml_declaration=True)
 ids={t.get('id') for t in project.findall('.//elements/element/terminals/terminal')}
 for c in project.findall('.//conductors/conductor'):

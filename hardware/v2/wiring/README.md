@@ -1,4 +1,4 @@
-# V2 harness draft R0
+# V2 harness draft R1
 
 Open the YAML in WireViz or read the generated HTML/SVG diagrams in `exports/`.
 Every connection is proposed/untraced. Logical names (including POS_TBD and
@@ -36,3 +36,17 @@ python scripts/v2/build_wiring.py
 wireviz -f hpst -o hardware/v2/wiring/exports hardware/v2/wiring/v2_power_harness.yml
 wireviz -f hpst -o hardware/v2/wiring/exports hardware/v2/wiring/v2_sensor_harness.yml
 ```
+
+## R1 source reconciliation
+
+S06 reports the historical HC-SR04 lost. H11 retains that historical review
+profile; it is not a fitted-hardware claim. A02YYUW/SEN0311 is a proposed 9600
+baud UART alternative with no selected Uno pins, software driver or adopted
+power route. Its separate RANGE2 register row remains OPEN. Do not connect it
+using trigger/echo. U5A (separate source-listed 5V 3A converter) also remains
+OPEN in the register rather than inventing a load or paralleling outputs.
+Source-listed converter ratings and quantities do not establish installed
+capability/counts. Use the normalized master BOM for evidence status.
+
+Current exports are HTML/SVG/PNG/TSV. The existing PDFs are stale R0 and held
+until the owner's content review. WireViz hpst does not generate PDFs.

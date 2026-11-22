@@ -1,0 +1,174 @@
+R1 CORRECTION AMENDMENT
+Annotated local text copy. Generic payload, 3S/4S and fuse prescriptions are superseded by unverified current-state entries.
+No current payload, fuse rating, 4S approval, common-ground topology or autonomy is verified. Current controller is Uno R3. See LitterBuggy_Version_Reconciliation_R1.docx and REC-001..038.
+
+PRESERVED HISTORICAL SOURCE FOLLOWS
+
+Master Engineering & Field Reference: Axial SCX6 Litterbuggy & Robotic Trash Picker
+Document Purpose: Comprehensive offline technical manual, design log, hardware specification, and troubleshooting guide for the Axial SCX6-based Litterbuggy and autonomous/teleoperated robotic trash-collection system.
+________________
+
+
+1. System Architecture & Platform Overview
+The Litterbuggy concept adapts heavy-duty 1/6-scale RC rock crawlers—specifically the Axial SCX6—into rugged, all-terrain utility vehicles capable of traversing parks, beaches, trails, and urban curbs to collect and haul litter. Adding a robotic trash-picking manipulator elevates the platform from a towed/pushed bin carrier into an active collection unit.
+Core Subsystems
+1. Mobility Base (Axial SCX6): Provides high-torque, four-wheel-drive locomotion, steep incline capability, and high payload capacity.
+2. Payload & Containment System: A rear-mounted or towed hopper/bucket designed to hold collected debris without shifting the center of gravity (CoG) dangerously high.
+3. Manipulator Arm & End-Effector: A multi-axis robotic arm or linear actuator mechanism fitted with a specialized gripper/claw capable of grasping irregular objects (cans, bottles, wrappers, cigarette butts).
+4. Power Distribution & Dual-Battery Architecture: Isolation between high-draw traction motors/servos and sensitive logic/compute electronics.
+5. Control & Telemetry: Long-range RC control (ELRS/Crossfire) paired with FPV video feed and optional companion computer (Raspberry Pi / Jetson) for computer vision and semi-autonomous picking.
+________________
+
+
+2. Base Platform: Axial SCX6 Technical Reference
+The Axial SCX6 (Jeep JLU Wrangler or Honcho variants) is chosen over 1/10-scale crawlers (like the SCX10 or TRX-4) due to its massive structural rigidity, 1/5-scale steering hardware, and superior payload tolerance.
+Key Stock Specifications & Limits
+* Scale: 1/6
+* Drivetrain: 4WD, 3-gear transmission with high/low two-speed mechanical shifting (operated via micro-servo).
+* Axles: AR90 straight axles with metal gears and locked differentials (spools).
+* Stock Motor/ESC: Spektrum Firma 120A Smart Brushless Crawler ESC + 1200Kv Sensored Brushless Motor.
+* Stock Steering Servo: Spektrum S905 High-Torque 1/5-scale metal gear servo (approx. $38\text{ kg}\cdot\text{cm}$ to $40\text{ kg}\cdot\text{cm}$ at $6\text{V}$).
+* Wheel Hex: $17\text{mm}$ heavy-duty hex hubs.
+* Stock Weight: $\approx 11.3\text{ kg}$ ($25\text{ lbs}$) without batteries.
+* Recommended Safe Continuous Payload: Up to $15\text{--}20\text{ kg}$ ($33\text{--}44\text{ lbs}$) additional cargo with proper suspension and cooling upgrades.
+Critical SCX6 Upgrades for Litterbuggy Duty
+1. Suspension Stiffening: Stock springs will sag immediately under a loaded trash bin and robotic arm.
+   * Solution: Upgrade to heavier-rate springs (e.g., stiff progressive springs or custom linear springs), increase shock oil viscosity to $50\text{wt--}70\text{wt}$, and add preload spacers.
+2. Steering Servo & BEC: Adding weight over the front axle (for the robotic arm) drastically increases scrubbing torque.
+   * Solution: Upgrade to a direct-power $7.4\text{V}$ or $8.4\text{V}$ servo rated at $\ge 70\text{ kg}\cdot\text{cm}$ (e.g., AGFRC, Reefs RC, or NSDRC 1/5-scale servos) with an aluminum servo horn. Do not rely on the stock ESC's internal BEC for heavy steering + arm loads.
+3. Tire Foams: Stock open-cell foams will fold and roll off the bead under heavy lateral loads.
+   * Solution: Install dual-stage closed-cell/open-cell heavy-duty foams (e.g., Crawler Innovations Deuce's Wild or 3D-printed TPU airless inserts).
+4. Transmission & Gearing: Always operate in Low Gear during trash collection operations to maximize torque, improve low-speed throttle resolution, and keep motor/ESC temperatures low. Consider dropping the pinion gear size by 2–3 teeth if running heavy payloads in warm weather.
+________________
+
+
+3. Robotic Trash Picker & End-Effector Design
+Designing a gripper for outdoor litter is uniquely challenging because targets vary wildly in geometry, rigidity, and weight—from flat paper wrappers and crushed aluminum cans to full glass bottles.
+Kinematic Configurations
+* Option A: 3-DOF or 4-DOF Articulated Arm (Front-Mounted)
+   * Pros: Can reach into bushes, ditches, and around obstacles; looks and operates like a true mobile manipulator.
+   * Cons: High moment arm stresses the front suspension; requires significant battery power and complex inverse kinematics (IK) or multi-channel mixing.
+* Option B: Gantry / Linear Z-Axis Drop Picker
+   * Pros: Simpler mechanics, lower power draw, extremely rigid, easier to automate with downward-facing computer vision.
+   * Cons: Vehicle must drive directly over or immediately adjacent to the trash item.
+* Option C: Sweeper / Paddle Drum (Continuous Collection)
+   * Pros: Fast collection of small items (bottle caps, butts, cans) on flat terrain (beaches, sidewalks).
+   * Cons: Struggles with tall grass, rocks, and large irregular debris.
+End-Effector (Gripper) Best Practices
+1. Compliant & High-Friction Fingertips: Rigid plastic or bare metal claws will drop glass and hard plastic bottles. Line the inner jaws with high-durometer silicone, EPDM rubber, or soft 3D-printed TPU pads (Shore 85A–95A) with ribbed tread patterns.
+2. Pinch + Scoop Geometry: Design the lower jaw with a thin, beveled leading edge (like a dustpan lip) so it can slide underneath flat objects (cardboard, wrappers, flattened cans) against pavement or dirt.
+3. Underactuated / Adaptive Fingers: Use linkage-driven or tendon-driven fingers that wrap around cylindrical objects (bottles/cans) rather than pinching at a single tangent point.
+4. Actuation Choice:
+   * High-Torque PWM Servos ($35\text{--}60\text{ kg}\cdot\text{cm}$): Easy to control, fast, built-in position feedback, but stall current can burn them out if jammed.
+   * Linear Actuators (12V micro-actuators): Self-locking when unpowered (zero hold current), very high force, immune to shock loads, but slower cycle times.
+________________
+
+
+4. Payload & Trash Containment Engineering
+* Center of Gravity (CoG) Management: Keep the trash bin mounted as low as possible between the frame rails or directly behind the rear shock towers. Avoid tall bins that cause tip-overs on side-hills ( camber).
+* Quick-Release Liner System: Design the rear hopper to accept standard 13-gallon or 30-gallon contractor trash bags secured via an elastic bungee loop or hinged clamping rim. Dumping should require zero tools.
+* Front-to-Rear Weight Balance: Ideal static weight distribution is 55% Front / 45% Rear when empty, shifting to roughly 45% Front / 55% Rear when the bin is full. If the robotic arm is mounted on the front bumper, mount the battery banks toward the rear to counterbalance.
+________________
+
+
+5. Electrical & Power Architecture
+Golden Rule: Never power your receiver, flight controller, or companion computer from the same voltage rail that drives high-torque servos or traction motors without heavy filtering and isolation. Brownouts from servo stall currents will reboot your logic board mid-operation.
+Recommended Dual-Bus Power System
+   1. Traction Bus (3S or 4S LiPo, $11.1\text{V--}14.8\text{V}$, $5000\text{mAh--}10000\text{mAh}$):
+   * Dedicated strictly to the Spektrum Firma 120A ESC and drive motor.
+   * Keep standard EC5/IC5 connectors; inspect for heat after long runs.
+   2. Auxiliary / Robotics Bus (3S or 4S LiPo, $5000\text{mAh}$, or Dedicated Step-Down Rail):
+   * Servo Rail ($7.4\text{V}$ or $8.4\text{V}$): Powered by a dedicated high-current UBEC (e.g., Castle Creations 20A BEC Pro) capable of handling simultaneous stall spikes from the steering servo and robotic arm actuators.
+   * Logic & Compute Rail ($5.1\text{V}$ Regulated): Isolated buck converter feeding the RC receiver, Raspberry Pi / Jetson, and cameras. Add a $1000\mu\text{F--}2200\mu\text{F}$ low-ESR electrolytic capacitor across the $5\text{V}$ rail to absorb transient voltage dips.
+   * VTX / FPV Camera Rail ($9\text{V}$ or $12\text{V}$ Filtered): LC-filtered power source to eliminate motor/PWM noise lines in the video feed.
+Wiring & Protection Checklist
+   * Place a master inline blade fuse or resettable breaker ($30\text{A}$ for aux bus, $60\text{A--}80\text{A}$ for main traction) near each battery positive terminal.
+   * Use braided PET expandable sleeving on all cables routed across the robotic arm joints to prevent chafing and snagging.
+   * Leave a generous service loop at every pivot axis (shoulder, elbow, wrist, and steering linkage).
+________________
+
+
+6. Control, FPV & Autonomy Stack
+Radio Control (Teleoperation)
+   * Protocol: ExpressLRS (ELRS) $915\text{MHz}$ or $2.4\text{GHz}$, or TBS Crossfire. Standard $2.4\text{GHz}$ surface radios often lose signal behind concrete walls, hills, or dense foliage at ground level.
+   * Channel Mapping Strategy (12–16 Channels):
+   * CH1: Steering
+   * CH2: Throttle (with exponential curve softened around center for precision crawling)
+   * CH3: 2-Speed Transmission (High/Low)
+   * CH4: Arm Base Pan (Yaw)
+   * CH5: Arm Shoulder (Pitch)
+   * CH6: Arm Elbow (Pitch)
+   * CH7: Wrist Roll / Pitch
+   * CH8: Gripper Open/Close (assigned to a self-centering switch or rotary potentiometer with current/end-point limits)
+   * CH9: Camera Gimbal / View Switcher (Drive Cam vs. Gripper Cam)
+   * CH10: Auxiliary Lights / Beacon / Hopper Dump
+Dual-Camera FPV Setup
+Operating a robotic arm remotely without depth perception is difficult. Use a dual-camera video switcher:
+   1. Navigation Camera (Wide FOV, $120^\circ\text{--}150^\circ$): Mounted high on the roll cage looking forward at a slight downward tilt () to see terrain hazards and spot litter at a distance.
+   2. End-Effector / Gripper Camera (Narrow/Medium FOV, $70^\circ\text{--}90^\circ$): Mounted directly on the wrist or forearm looking straight between the gripper jaws for precision alignment during pickup.
+Optional Computer Vision & Semi-Autonomy
+      * Hardware: Raspberry Pi 5 (with Hailo AI HAT) or NVIDIA Jetson Orin Nano running ROS 2 (Robot Operating System).
+      * Perception Pipeline: Lightweight object detection model (YOLOv8n / YOLOv11n) trained on the TACO (Trash Annotations in Context) dataset to classify cans, bottles, plastic bags, and cups.
+      * Visual Servoing: Rather than full autonomous navigation, implement "Assistive Visual Grab"—the operator drives the SCX6 near the trash, flips a switch, and the onboard computer uses the wrist camera to center the gripper over the detected bounding box and execute the grasp/deposit macro automatically.
+________________
+
+
+7. Key Lessons Learned & Field Best Practices
+      1. Ground-Level RF Attenuation is Severe: Antennas mounted low on an RC chassis lose range rapidly over wet grass and asphalt due to Fresnel zone interference. Mount the RC receiver and VTX antennas on a flexible mast at least $15\text{--}20\text{ cm}$ above the highest metal/carbon structural component.
+      2. Servo Stall is the #1 Killer: If the gripper tries to close on a rock or curb, a digital servo will pull maximum stall current until its MOSFETs burn out.
+      * Mitigation: Set strict mechanical end-points in your transmitter, integrate a mechanical spring-saver/compliant linkage in the gripper drive train, or monitor current via an inline shunt resistor to auto-cut power if current exceeds threshold for $>1.5\text{ seconds}$.
+      3. Thermal Management at Low Speeds: Crawling slowly with a heavy load generates high current with almost zero natural airflow over the motor and ESC.
+      * Mitigation: Install dual $30\text{mm}$ or $40\text{mm}$ high-RPM aluminum cooling fans directly onto the motor heatsink and ESC, wired to run continuously whenever the auxiliary bus is powered.
+      4. Failsafe Configuration is Mandatory: A $35\text{ lb}$ SCX6 running away at full throttle is a serious safety hazard.
+      * Mitigation: Program your receiver failsafe so that signal loss immediately sets Throttle to 0% (Neutral/Brake), Steering to Center, and freezes the Robotic Arm in its current position (do not command the arm to fold on failsafe, as it may crush an obstacle or itself).
+      5. Ingress Protection (Dust, Sand, Wet Trash): Outdoor litter is frequently wet, sticky, or sandy. Use conformal coating (e.g., MG Chemicals 422B) on all exposed PCBs, pack axle bearings with marine-grade waterproof grease, and avoid exposed lead-screws near ground level where sand will bind the threads.
+________________
+
+
+8. Offline Field Operations & Troubleshooting Checklists
+Pre-Run Inspection Checklist
+      * Verify main traction battery and auxiliary robotics battery voltages ($4.20\text{V/cell}$ full; never run below $3.50\text{V/cell}$ resting).
+      * Confirm transmission is locked in Low Gear before loading payload.
+      * Check wheel nuts ($17\text{mm}$ hex) and driveshaft set-screws (apply blue Loctite to all metal-to-metal fasteners).
+      * Test radio failsafe by powering off transmitter while wheels are elevated off the ground.
+      * Verify video feed clarity on both Navigation and Gripper cameras.
+      * Check gripper silicone/TPU pads for tears, oil, or debris buildup.
+Field Troubleshooting Matrix
+Symptom
+	Likely Cause
+	Immediate Offline Fix
+	Vehicle lurches or ESC cuts out when moving arm
+	Voltage sag / brownout on shared BEC rail
+	Isolate logic/receiver onto separate $5\text{V}$ BEC; reduce arm speed/acceleration rates in TX.
+	Steering fails to turn when loaded on high-grip pavement
+	Servo torque limit exceeded or servo horn stripped
+	Verify BEC voltage is set to $7.4\text{V}/8.4\text{V}$; inspect splines on servo horn; avoid dry-steering while stationary.
+	Motor or ESC thermal shutdown
+	Gearing too tall for payload weight, or binding drivetrain
+	Allow 15-min cooldown; check for grass/string wrapped around axle shafts; verify cooling fans are spinning.
+	Arm jitters or oscillates uncontrollably
+	Loose mechanical linkage, worn potentiometer, or insufficient BEC current
+	Tighten all pivot bolts; check servo wiring for loose signal pins; add ferrite ring to long servo extension leads.
+	Loss of video signal behind minor obstacles
+	Low antenna placement or VTX overheating at low speed
+	Elevate VTX antenna; lower VTX output power if sitting stationary for long periods without airflow.
+	________________
+
+
+9. Bill of Materials (BOM) & Spare Parts Field Kit
+Always carry the following offline repair kit during field deployments:
+      * Fasteners: Assorted M3 and M4 stainless steel socket-head cap screws, M4 locknuts, and medium-strength (Blue) threadlocker.
+      * Drivetrain Spares: Spare $17\text{mm}$ wheel nuts, axle cross-pins, driveshaft rebuild kit, and spare pinion gear.
+      * Electronics Spares: Spare high-torque servo (pre-centered), $30\text{A}$ blade fuses, XT60/EC5 adapters, zip ties, electrical tape, and heat-shrink tubing.
+      * Tools: $1.5\text{mm}$, $2.0\text{mm}$, $2.5\text{mm}$, and $3.0\text{mm}$ hex drivers, $7\text{mm}$ & $17\text{mm}$ nut drivers, needle-nose pliers, flush cutters, and a compact LiPo cell checker.
+________________
+
+
+10. Custom Project Notes & Iteration Log
+(Use this section in your offline editor to record your specific servo models, transmitter channel numbers, 3D-print filament settings, and field test dates.)
+      * Current Chassis Variant: Axial SCX6 (JLU / Honcho)
+      * Main Drive Motor / Pinion: [Enter Specs]
+      * Robotic Arm DOF & Servo Models: [Enter Specs]
+      * Battery Configuration: [Enter Specs]
+      * Latest Field Test Observations:
+      * Date: [YYYY-MM-DD] — [Notes]

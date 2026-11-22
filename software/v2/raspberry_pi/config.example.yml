@@ -1,5 +1,5 @@
 schema_version: 1
-configuration_revision: V2-R0-unverified
+configuration_revision: CFG-V2-R1
 output_root: runs
 serial:
   port: null  # Set actual /dev/serial/by-id/... after USB recognition; never guess ACM/USB index.
