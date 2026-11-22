@@ -18,6 +18,7 @@ backup-power and performance claims are not adopted by this narrower scope.
 | [Complete file impact JSON](file-impact-register.json) / [CSV](file-impact-register.csv) | One disposition per baseline tracked file; proposed target paths are plans, not existing files |
 | [BOM plan JSON](bom-plan.json) / [CSV](bom-plan.csv) | All 55 current and 23 future baseline items plus a camera-mount candidate; quantities remain source/fitted/proposed separately |
 | [Requirements](requirements.json) / [validation plan](validation-plan.md) | Tests/evidence and unresolved numeric acceptance limits; no passed V3 physical results |
+| [Offline USB camera benchmark](../../software/v3/camera_benchmark/README.md) | Recorded-footage prototype and USB camera test instructions |
 | [Interfaces/data proposal](interfaces-and-data.md) | Serial compatibility, vision/frame/alert/run contracts and transfer |
 | [Decisions and build sequence](decisions-and-sequence.md) | Choice dependencies and requested engineering review order |
 | [Scope record](scope.json) / [deliverable plan](deliverable-plan.json) | Owner mission decision, preserved facts and proposed future artifact names |
