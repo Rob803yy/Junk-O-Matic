@@ -1,38 +1,77 @@
 {
+  "revision": "CAD-R3",
   "native_files": [
     {
       "file": "v2_assembly.FCStd",
       "reopened": true,
       "all_shapes_valid": true,
-      "shape_objects": 31
+      "constrained_sketches": 24,
+      "checks": [
+        "wheel centre geometry",
+        "wheelbase edit moves tyres",
+        "tub centre/length and open interior",
+        "cart-length edit regenerates native loft/cut",
+        "case height edit in vertical orientation",
+        "limited draft clashes: case/tub, case/rim, case/pack",
+        "no bucket or historical ultrasonic in assembly",
+        "inner rail hollow profile",
+        "owner-confirmed longitudinal-below/transverse-above ordering, without rail/end-web penetration",
+        "frame-width edit propagates",
+        "rear-axis tub tipping with stationary outer frame",
+        "normal pose restored and shape validity at illustrative tip angle",
+        "red housing below axle centre; old bumper-top/vertical-strip interpretations removed"
+      ],
+      "step_readback_global_bounds_match": true,
+      "native_gui_state_saved": true,
+      "native_lid_transparency_verified": true
     },
     {
       "file": "v2_battery_mount.FCStd",
       "reopened": true,
       "all_shapes_valid": true,
-      "shape_objects": 3
+      "constrained_sketches": 0,
+      "checks": [],
+      "step_readback_global_bounds_match": true,
+      "native_gui_state_saved": true
     },
     {
       "file": "v2_cart_mount.FCStd",
       "reopened": true,
       "all_shapes_valid": true,
-      "shape_objects": 4
+      "constrained_sketches": 0,
+      "checks": [],
+      "step_readback_global_bounds_match": true,
+      "native_gui_state_saved": true
     },
     {
       "file": "v2_electronics_enclosure.FCStd",
       "reopened": true,
       "all_shapes_valid": true,
-      "shape_objects": 5
+      "constrained_sketches": 10,
+      "checks": [],
+      "step_readback_global_bounds_match": true,
+      "native_gui_state_saved": true,
+      "native_lid_transparency_verified": true
     },
     {
       "file": "v2_sensor_mounts.FCStd",
       "reopened": true,
       "all_shapes_valid": true,
-      "shape_objects": 4
+      "constrained_sketches": 0,
+      "checks": [],
+      "step_readback_global_bounds_match": true,
+      "native_gui_state_saved": true,
+      "historical_reference_hidden_verified": true
     }
   ],
   "step_readback_count": 5,
-  "parametric_wheelbase_test": "passed",
-  "tyre_centre_spacing_test": "passed",
-  "physical_fit_validation": "not performed"
+  "measured_dimensions_entered": 0,
+  "held_pdf_count": 13,
+  "physical_fit_validation": "not performed",
+  "limits": [
+    "Photo-informed proportions; no scale reference",
+    "Rear hinge/fixed frame confirmed; numeric axis/travel, latch and minor bracket moving membership unverified",
+    "Clash checks cover named draft parts only, not real wiring/fasteners/full moving travel",
+    "Tread/spring shape and dock angles regenerate from source; other principal profiles/placements and tub-tip angle edit natively"
+  ]
 }

@@ -1,0 +1,55 @@
+{
+  "revision": "R1",
+  "checks": [
+    {
+      "check": "xlsx-reopen-no-cached-errors",
+      "file": "LitterBuggy_BOM_R1.xlsx",
+      "sheets": 4,
+      "passed": true
+    },
+    {
+      "check": "xlsx-reopen-no-cached-errors",
+      "file": "LitterBuggy_Review_Data_System_R1.xlsx",
+      "sheets": 15,
+      "passed": true
+    },
+    {
+      "check": "xlsx-reopen-no-cached-errors",
+      "file": "LitterBuggy_Scorecard_R1.xlsx",
+      "sheets": 8,
+      "passed": true
+    },
+    {
+      "check": "bom-and-dimension-evidence-boundaries",
+      "passed": true
+    },
+    {
+      "check": "original-native-excel-parts-preserved",
+      "source": "S01",
+      "unchanged_zip_parts": 24,
+      "total_zip_parts": 29,
+      "passed": true
+    },
+    {
+      "check": "original-native-excel-parts-preserved",
+      "source": "S05",
+      "unchanged_zip_parts": 40,
+      "total_zip_parts": 51,
+      "passed": true
+    },
+    {
+      "check": "active-document-links",
+      "passed": true
+    },
+    {
+      "check": "all-prior-pdf-hashes-unchanged",
+      "files": 13,
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Current physical installation is unresolved",
+    "DOCX XML/ZIP checked; PDF/pagination proofing explicitly deferred",
+    "Source bodies in annotated copies remain historical evidence"
+  ]
+}

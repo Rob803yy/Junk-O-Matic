@@ -1,66 +1,380 @@
-<?xml version='1.0' encoding='utf-8'?>
-<mxfile host="app.diagrams.net" version="24.7.17">
-  <diagram id="v2_system_overview" name="LitterBuggy V2 / system overview">
-    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" page="1" pageWidth="1500" pageHeight="1000">
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="v2_system_overview" name="01 / LitterBuggy V2 — system overview">
+    <mxGraphModel dx="1900" dy="1540" grid="1" gridSize="10" page="1" pageWidth="1900" pageHeight="1540" background="#f8fafc">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="LitterBuggy V2 / system overview" style="text;html=0;align=left;verticalAlign=top;fontSize=28;" vertex="1" parent="1">
-          <mxGeometry x="40" y="20" width="1420" height="40" as="geometry" />
+        <mxCell id="mechanical" value="" style="rounded=1;arcSize=4;fillColor=#edf2f7;strokeColor=#d4dde7;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="170" width="1820" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="sub" value="Existing build reconstruction | component identities and interfaces have separate evidence status" style="text;html=0;align=left;verticalAlign=top;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="40" y="60" width="1420" height="30" as="geometry" />
+        <mxCell id="observation" value="" style="rounded=1;arcSize=4;fillColor=#edf2f7;strokeColor=#d4dde7;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="530" width="1820" height="590" as="geometry" />
         </mxCell>
-        <mxCell id="e0" value="drive / support: trace" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="rc" target="frame">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="review" value="" style="rounded=1;arcSize=4;fillColor=#fff7ed;strokeColor=#d4dde7;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1150" width="1820" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="e1" value="mechanical: dimensions TBD" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#3978a8;dashed=1;fontSize=12;" edge="1" parent="1" source="frame" target="cart">
-          <mxGeometry relative="1" as="geometry" />
+        <object id="SYS-CH1" label="" verification_status="unknown" evidence_scope="Photo + source scope; not an inspection" evidence_ids="CAD-P04, CAD-P06, REC-012, REC-013" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="245" width="440" height="195" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-FRAME" label="" verification_status="confirmed" evidence_scope="Owner relationship only; CAD-U03/U06/U07" evidence_ids="CAD-U03, CAD-U06, CAD-U07, CAD-P04, CAD-P06" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="710" y="225" width="470" height="240" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-TUB" label="" verification_status="confirmed" evidence_scope="Owner orientation + hinge relationship" evidence_ids="CAD-U01, CAD-U04, CAD-U05, CAD-U06" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1420" y="245" width="410" height="195" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-B2" label="" verification_status="unknown" evidence_scope="BOM / historical media; CAD appearance" evidence_ids="REC-004, REC-005, REC-009, CAD-P01, CAD-P02" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="600" width="440" height="205" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-RAILS" label="" verification_status="unknown" evidence_scope="Source ratings; not measured capability" evidence_ids="REC-007, REC-008, REC-009, REC-010" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="710" y="600" width="470" height="205" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-CASE" label="" verification_status="unknown" evidence_scope="Appearance in photos; internals unresolved" evidence_ids="CAD-P01, CAD-P02, CAD-P05, REC-022, REC-024" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1420" y="600" width="410" height="205" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-SENSORS" label="" verification_status="conflicting" evidence_scope="Historical availability vs proposed profiles" evidence_ids="REC-014, REC-015, REC-016, FW" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#b33a3a;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="880" width="440" height="200" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-UNO1" label="" verification_status="confirmed" evidence_scope="Board identity only; not pin/deployment proof" evidence_ids="OWNER-UNO, REC-011, REC-033, FW" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="710" y="880" width="470" height="200" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-PI1" label="" verification_status="conflicting" evidence_scope="Source conflict; source code != deployment" evidence_ids="REC-003, REC-033, REC-037, LOGGER" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#b33a3a;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1420" y="880" width="410" height="200" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-E01" label="mount joints: OPEN" verification_status="unknown" interface_type="mechanical">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#a45b00;dashed=1;dashPattern=7 5;endArrow=none;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#a45b00;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="SYS-CH1" target="SYS-FRAME">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry">
+              <Array as="points">
+                <mxPoint x="610.0" y="342.5" />
+                <mxPoint x="610.0" y="345.0" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="SYS-E02" label="rear hinge / fixed frame" verification_status="confirmed" interface_type="mechanical">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#216e4e;dashed=0;dashPattern=7 5;endArrow=none;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#216e4e;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="SYS-FRAME" target="SYS-TUB">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry">
+              <Array as="points">
+                <mxPoint x="1300.0" y="345.0" />
+                <mxPoint x="1300.0" y="342.5" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="SYS-E03" label="feed: trace" verification_status="unknown" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#a45b00;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#a45b00;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="SYS-B2" target="SYS-RAILS">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-E04" label="lighting feed: OPEN" verification_status="proposed" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#7251a3;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#7251a3;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="SYS-RAILS" target="SYS-CASE">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-E05" label="Pi power entry: OPEN" verification_status="unknown" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#a45b00;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=0.75;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#a45b00;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="SYS-RAILS" target="SYS-PI1">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry">
+              <Array as="points">
+                <mxPoint x="1062.5" y="840" />
+                <mxPoint x="1625" y="840" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="SYS-E06" label="I/O: OPEN" verification_status="proposed" interface_type="data">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#7251a3;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#7251a3;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="SYS-SENSORS" target="SYS-UNO1">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="SYS-E07" label="USB serial: proposed" verification_status="proposed" interface_type="data">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#7251a3;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#7251a3;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="SYS-UNO1" target="SYS-PI1">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="title" value="01 / LitterBuggy V2 — system overview" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=30;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="28" width="1820" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="e2" value="source feed: trace" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="aux" target="rails">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="subtitle" value="Physical reconstruction + proposed observation system | configuration CFG-V2-R1 | mechanical basis CAD-R3" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="76" width="1820" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="e3" value="power entry TBD" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="rails" target="pi">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="legend" value="CONFIRMED = stated scope only   |   CONFLICTING = evidence disagrees   |   PROPOSED = intent   |   UNKNOWN = insufficient evidence" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="114" width="1820" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="e4" value="Uno supply route TBD" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="rails" target="uno">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mechanical-title" value="MECHANICAL / OWNER-CONFIRMED RELATIONSHIPS; ALL NUMERIC DIMENSIONS UNMEASURED" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="62" y="190" width="1776" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="e5" value="USB / serial: confirm" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="uno" target="pi">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="observation-title" value="POWER + OBSERVATION / ROUTES ARE LOGICAL HYPOTHESES, NOT TRACED WIRES" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="62" y="550" width="1776" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="e6" value="I/O mapping TBD" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="uno" target="sensors">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="review-title" value="REVIEW BOUNDARY / PHYSICAL OBSERVATIONS, DESIGN INTENT AND CODE EVIDENCE STAY SEPARATE" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="62" y="1170" width="1776" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="rc" value="RC drive system&#10;3S propulsion pack (owner scope)&#10;ESC / receiver / servos / motor&#10;Exact models and driven axles TBD&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="40" y="140" width="340" height="150" as="geometry" />
+        <mxCell id="SYS-CH1-title" value="CH1 / SCX6 mobility base" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="SYS-CH1" connectable="0">
+          <mxGeometry x="14" y="14" width="412" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="frame" value="SCX6 + cart mounting interface&#10;Raised tub and metal interface&#10;Visible in historical photos&#10;Dimensions and joints unmeasured&#10;[HISTORICAL]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#3978a8;" vertex="1" parent="1">
-          <mxGeometry x="560" y="140" width="360" height="150" as="geometry" />
+        <mxCell id="SYS-CH1-line-0" value="SCX6 identified in project / photographs." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-CH1" connectable="0">
+          <mxGeometry x="14" y="49" width="412" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="cart" value="Gorilla Cart / payload&#10;Tub above chassis in photos&#10;Payload offset changes lean&#10;No validated load envelope&#10;[HISTORICAL]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#3978a8;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="140" width="350" height="150" as="geometry" />
+        <mxCell id="SYS-CH1-line-1" value="Stock reference: 4WD and two-speed." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-CH1" connectable="0">
+          <mxGeometry x="14" y="72" width="412" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="aux" value="Auxiliary power&#10;Kobalt pack / blue KBT adapter&#10;Red + black leads visible&#10;Polarity and cutoff unverified&#10;[HISTORICAL]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#3978a8;" vertex="1" parent="1">
-          <mxGeometry x="40" y="410" width="340" height="170" as="geometry" />
+        <mxCell id="SYS-CH1-line-2" value="Installed drive modifications unverified." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-CH1" connectable="0">
+          <mxGeometry x="14" y="95" width="412" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="rails" value="Converters / distribution&#10;5V and 12V rails in repository&#10;Fuse, switch and returns TBD&#10;Trace current build before wiring&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="560" y="410" width="360" height="170" as="geometry" />
+        <mxCell id="SYS-CH1-line-3" value="3S propulsion remains project scope." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-CH1" connectable="0">
+          <mxGeometry x="14" y="118" width="412" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="pi" value="Raspberry Pi&#10;Model, power entry and OS TBD&#10;USB acquisition + local logger&#10;No drive-control interface planned&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="410" width="350" height="170" as="geometry" />
+        <mxCell id="SYS-CH1-basis" value="Photo + source scope; not an inspection" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="SYS-CH1" connectable="0">
+          <mxGeometry x="14" y="153" width="412" height="19" as="geometry" />
         </mxCell>
-        <mxCell id="uno" value="Elegoo Uno R3&#10;Board identity confirmed by owner&#10;Existing sketch not recovered&#10;New draft defaults to idle sensors&#10;[CONFIRMED]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#216e4e;" vertex="1" parent="1">
-          <mxGeometry x="560" y="720" width="360" height="150" as="geometry" />
+        <mxCell id="SYS-CH1-status" value="UNKNOWN  /  SYS-CH1" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="SYS-CH1" connectable="0">
+          <mxGeometry x="14" y="173" width="412" height="18" as="geometry" />
         </mxCell>
-        <mxCell id="sensors" value="Sensors / local feedback&#10;MPU-6050 + HC-SR04 in history&#10;LED + buzzer in history&#10;OLED / camera fitting TBD&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="720" width="350" height="150" as="geometry" />
+        <mxCell id="SYS-FRAME-title" value="Mounting frame / member ordering" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="SYS-FRAME" connectable="0">
+          <mxGeometry x="14" y="14" width="442" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="n0" value="Evidence: owner Uno confirmation; historical photos.&#10;Photo IDs: 1963-1971 and 3718-3721.&#10;No stock dimensions are measured V2 facts.&#10;Enclosure and battery placement: measure first.&#10;No RC-to-auxiliary power tie is drawn.&#10;Physical isolation and grounds: unresolved." style="text;html=0;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="40" y="635" width="1400" height="138" as="geometry" />
+        <mxCell id="SYS-FRAME-line-0" value="Gray rectangular frame stays on chassis." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-FRAME" connectable="0">
+          <mxGeometry x="14" y="49" width="442" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="footer" value="DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending" style="text;html=0;align=left;verticalAlign=top;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="40" y="950" width="1420" height="35" as="geometry" />
+        <mxCell id="SYS-FRAME-line-1" value="Fore/aft members BELOW gray frame." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-FRAME" connectable="0">
+          <mxGeometry x="14" y="72" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-FRAME-line-2" value="Transverse member(s) ABOVE gray frame." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-FRAME" connectable="0">
+          <mxGeometry x="14" y="95" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-FRAME-line-3" value="Indoor / outdoor hardware is the same." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-FRAME" connectable="0">
+          <mxGeometry x="14" y="118" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-FRAME-line-4" value="Joint detail, sections and dimensions open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-FRAME" connectable="0">
+          <mxGeometry x="14" y="141" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-FRAME-basis" value="Owner relationship only; CAD-U03/U06/U07" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="SYS-FRAME" connectable="0">
+          <mxGeometry x="14" y="198" width="442" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-FRAME-status" value="CONFIRMED  /  SYS-FRAME" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="SYS-FRAME" connectable="0">
+          <mxGeometry x="14" y="218" width="442" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-TUB-title" value="Gorilla tub / attached tipping" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="SYS-TUB" connectable="0">
+          <mxGeometry x="14" y="14" width="382" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-TUB-line-0" value="Front = yellow-handle end (+X)." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-TUB" connectable="0">
+          <mxGeometry x="14" y="49" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-TUB-line-1" value="Normal hinge at opposite / rear end." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-TUB" connectable="0">
+          <mxGeometry x="14" y="72" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-TUB-line-2" value="Tub tips; outer frame stays stationary." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-TUB" connectable="0">
+          <mxGeometry x="14" y="95" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-TUB-line-3" value="Axis position, latch and travel open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-TUB" connectable="0">
+          <mxGeometry x="14" y="118" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-TUB-basis" value="Owner orientation + hinge relationship" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="SYS-TUB" connectable="0">
+          <mxGeometry x="14" y="153" width="382" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-TUB-status" value="CONFIRMED  /  SYS-TUB" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="SYS-TUB" connectable="0">
+          <mxGeometry x="14" y="173" width="382" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-B2-title" value="B2 + A1 / auxiliary source" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="SYS-B2" connectable="0">
+          <mxGeometry x="14" y="14" width="412" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-B2-line-0" value="Kobalt 24V family is project scope." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-B2" connectable="0">
+          <mxGeometry x="14" y="49" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-B2-line-1" value="Blue KBT adapter in historical media." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-B2" connectable="0">
+          <mxGeometry x="14" y="72" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-B2-line-2" value="Actual pack label / cutoff / polarity open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-B2" connectable="0">
+          <mxGeometry x="14" y="95" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-B2-line-3" value="Blue front-corner hardware not identified." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-B2" connectable="0">
+          <mxGeometry x="14" y="118" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-B2-basis" value="BOM / historical media; CAD appearance" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="SYS-B2" connectable="0">
+          <mxGeometry x="14" y="163" width="412" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-B2-status" value="UNKNOWN  /  SYS-B2" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="SYS-B2" connectable="0">
+          <mxGeometry x="14" y="183" width="412" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-RAILS-title" value="Converters / protection / distribution" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="SYS-RAILS" connectable="0">
+          <mxGeometry x="14" y="14" width="442" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-RAILS-line-0" value="U5: source-listed 5V 10A; route open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-RAILS" connectable="0">
+          <mxGeometry x="14" y="49" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-RAILS-line-1" value="U5A: separate 5V 3A; load unassigned." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-RAILS" connectable="0">
+          <mxGeometry x="14" y="72" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-RAILS-line-2" value="U12: proposed 12V 5A+ branch." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-RAILS" connectable="0">
+          <mxGeometry x="14" y="95" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-RAILS-line-3" value="Fuse / switch / returns require tracing." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-RAILS" connectable="0">
+          <mxGeometry x="14" y="118" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-RAILS-basis" value="Source ratings; not measured capability" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="SYS-RAILS" connectable="0">
+          <mxGeometry x="14" y="163" width="442" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-RAILS-status" value="UNKNOWN  /  SYS-RAILS" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="SYS-RAILS" connectable="0">
+          <mxGeometry x="14" y="183" width="442" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-CASE-title" value="External enclosure / visible lights" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="SYS-CASE" connectable="0">
+          <mxGeometry x="14" y="14" width="382" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-CASE-line-0" value="Orange case on enclosure-side wall." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-CASE" connectable="0">
+          <mxGeometry x="14" y="49" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-CASE-line-1" value="White front lights; red rim light strips." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-CASE" connectable="0">
+          <mxGeometry x="14" y="72" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-CASE-line-2" value="Case contents / light feeds untraced." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-CASE" connectable="0">
+          <mxGeometry x="14" y="95" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-CASE-line-3" value="No assembled IP rating established." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-CASE" connectable="0">
+          <mxGeometry x="14" y="118" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-CASE-basis" value="Appearance in photos; internals unresolved" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="SYS-CASE" connectable="0">
+          <mxGeometry x="14" y="163" width="382" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-CASE-status" value="UNKNOWN  /  SYS-CASE" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="SYS-CASE" connectable="0">
+          <mxGeometry x="14" y="183" width="382" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-SENSORS-title" value="IMU / range / feedback candidates" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#b33a3a;" vertex="1" parent="SYS-SENSORS" connectable="0">
+          <mxGeometry x="14" y="14" width="412" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-SENSORS-line-0" value="MPU-6050 fitting and wiring unknown." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-SENSORS" connectable="0">
+          <mxGeometry x="14" y="49" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-SENSORS-line-1" value="HC-SR04 reported lost in S06." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-SENSORS" connectable="0">
+          <mxGeometry x="14" y="72" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-SENSORS-line-2" value="A02YYUW UART alternative unselected." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-SENSORS" connectable="0">
+          <mxGeometry x="14" y="95" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-SENSORS-line-3" value="No validated heading or obstacle control." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-SENSORS" connectable="0">
+          <mxGeometry x="14" y="118" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-SENSORS-basis" value="Historical availability vs proposed profiles" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="SYS-SENSORS" connectable="0">
+          <mxGeometry x="14" y="158" width="412" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-SENSORS-status" value="CONFLICTING  /  SYS-SENSORS" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#b33a3a;" vertex="1" parent="SYS-SENSORS" connectable="0">
+          <mxGeometry x="14" y="178" width="412" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-UNO1-title" value="UNO1 / Elegoo Uno R3" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="SYS-UNO1" connectable="0">
+          <mxGeometry x="14" y="14" width="442" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-UNO1-line-0" value="Board identity confirmed by owner." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-UNO1" connectable="0">
+          <mxGeometry x="14" y="49" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-UNO1-line-1" value="Current pins / supply / sketch unknown." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-UNO1" connectable="0">
+          <mxGeometry x="14" y="72" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-UNO1-line-2" value="New draft: acquisition; defaults OFF." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-UNO1" connectable="0">
+          <mxGeometry x="14" y="95" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-UNO1-line-3" value="No vehicle motion commands in draft." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-UNO1" connectable="0">
+          <mxGeometry x="14" y="118" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-UNO1-basis" value="Board identity only; not pin/deployment proof" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="SYS-UNO1" connectable="0">
+          <mxGeometry x="14" y="158" width="442" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-UNO1-status" value="CONFIRMED  /  SYS-UNO1" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="SYS-UNO1" connectable="0">
+          <mxGeometry x="14" y="178" width="442" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-PI1-title" value="PI1 / Raspberry Pi + logger draft" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#b33a3a;" vertex="1" parent="SYS-PI1" connectable="0">
+          <mxGeometry x="14" y="14" width="382" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-PI1-line-0" value="Pi 3B (S06) vs Pi 4 elsewhere." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-PI1" connectable="0">
+          <mxGeometry x="14" y="49" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-PI1-line-1" value="Fitted board, OS and power entry open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-PI1" connectable="0">
+          <mxGeometry x="14" y="72" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-PI1-line-2" value="Draft preserves raw bytes + SQLite." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-PI1" connectable="0">
+          <mxGeometry x="14" y="95" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-PI1-line-3" value="Deployment / serial capture unverified." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="SYS-PI1" connectable="0">
+          <mxGeometry x="14" y="118" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-PI1-basis" value="Source conflict; source code != deployment" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="SYS-PI1" connectable="0">
+          <mxGeometry x="14" y="158" width="382" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="SYS-PI1-status" value="CONFLICTING  /  SYS-PI1" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#b33a3a;" vertex="1" parent="SYS-PI1" connectable="0">
+          <mxGeometry x="14" y="178" width="382" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="review-left-0" value="CONFIRMED SCOPE" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1220" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-left-1" value="Owner confirms Uno identity and mechanical" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1245" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-left-2" value="relationships above. Photo references support" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1270" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-left-3" value="appearance; they do not measure dimensions." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1295" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-left-4" value="Bucket omitted from CAD by display request;" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1320" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-left-5" value="this is not a claim it was absent in operation." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1345" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-mid-0" value="OPEN INTERFACES" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="710" y="1220" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-mid-1" value="Trace power entries, returns and connector views." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="710" y="1245" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-mid-2" value="Recover running sketch and sample its serial output." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="710" y="1270" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-mid-3" value="Identify Pi / sensor boards; inspect current fit." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="710" y="1295" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-mid-4" value="Measure mounts, hinge and moving clearances." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="710" y="1320" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-mid-5" value="No link from Pi / Uno to ESC is established." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="710" y="1345" width="570" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-right-0" value="V1 / V2 / V3 DISCIPLINE" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1360" y="1220" width="470" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-right-1" value="V2 reconstruction is the present review scope." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1360" y="1245" width="470" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-right-2" value="Posters are concepts, not installation evidence." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1360" y="1270" width="470" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-right-3" value="Autonomy, sorting, RTK and intake upgrades" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1360" y="1295" width="470" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-right-4" value="remain future / unverified; version allocation" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1360" y="1320" width="470" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="review-right-5" value="and performance claims are not validated." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1360" y="1345" width="470" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="ARCH-R2 | 2026-11-22 | Editable source + SVG/PNG | PDFs HELD | Scope and evidence: architecture-model.json / README.md" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="1498" width="1820" height="21" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

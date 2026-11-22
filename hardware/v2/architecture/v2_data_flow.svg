@@ -1,37 +1,155 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000"><rect width="1500" height="1000" fill="#f5f7fa"/>
-<text x="40" y="48" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#243347">LitterBuggy V2 / data flow</text>
-<text x="40" y="78" font-family="Arial,sans-serif" font-size="15" font-weight="400" fill="#243347">Proposed editable acquisition pipeline | actual old serial output remains to be captured</text>
-<polyline points="350,280.0 455.0,280.0 455.0,280.0 560,280.0" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="358" y="272.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#7251a3">I2C / echo TBD</text>
-<polyline points="900,280.0 1000.0,280.0 1000.0,280.0 1100,280.0" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="908" y="272.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#7251a3">USB, 115200 proposed</text>
-<polyline points="1275.0,360 1275.0,360 1275.0,550 1275.0,550" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="1283.0" y="447.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#7251a3">local disk / UTC</text>
-<rect x="40" y="200" width="310" height="160" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
-<text x="54" y="226" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">Sensor readings</text>
-<text x="54" y="252" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Raw IMU + distance</text>
-<text x="54" y="272" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No synthetic measurements</text>
-<text x="54" y="348" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
-<rect x="560" y="200" width="340" height="160" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
-<text x="574" y="226" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">Uno R3 firmware draft</text>
-<text x="574" y="252" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Versioned JSON lines</text>
-<text x="574" y="272" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Sequence + uptime + validity</text>
-<text x="574" y="348" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
-<rect x="1100" y="200" width="350" height="160" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
-<text x="1114" y="226" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">Pi logger draft</text>
-<text x="1114" y="252" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Validate / preserve raw bytes</text>
-<text x="1114" y="272" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Reconnect and record faults</text>
-<text x="1114" y="348" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
-<rect x="1100" y="550" width="350" height="170" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
-<text x="1114" y="576" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">Run evidence</text>
-<text x="1114" y="602" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">SQLite + raw serial + metadata</text>
-<text x="1114" y="622" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Config hash and receive time</text>
-<text x="1114" y="642" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Export to CSV</text>
-<text x="1114" y="708" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
-<text x="40" y="560" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Existing firmware behaviour is not claimed to match this proposed protocol.</text>
-<text x="40" y="581" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Voltage, yaw, temperature and emergency-stop measurements are omitted</text>
-<text x="40" y="602" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">until fitted hardware and acquisition methods are established.</text>
-<text x="40" y="623" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">LED/buzzer thresholds default disabled; no motor commands exist.</text>
-<text x="40" y="644" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Optional camera is a separate capture tool; no measured synchronization claim.</text>
-<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1670" viewBox="0 0 2100 1670" role="img">
+<title>03 / LitterBuggy V2 — acquisition and evidence flow</title><desc>Implemented draft behavior is identified as SOURCE ONLY | running sketch, installed devices and Pi deployment remain unverified. ARCH-R2; see README for scope.</desc>
+<rect width="2100" height="1670" fill="#f8fafc"/>
+<rect x="40" y="170" width="2020" height="800" rx="12" fill="#edf2f7" stroke="#d4dde7"/>
+<rect x="40" y="1000" width="2020" height="315" rx="12" fill="#edf2f7" stroke="#d4dde7"/>
+<rect x="40" y="1350" width="2020" height="230" rx="12" fill="#fff7ed" stroke="#d4dde7"/>
+<polyline id="DATA-E01" points="470,367.5 570,367.5" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="570,367.5 559.0,362.5 559.0,372.5" fill="#7251a3"/>
+<polyline id="DATA-E02" points="1010,367.5 1110,367.5" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1110,367.5 1099.0,362.5 1099.0,372.5" fill="#7251a3"/>
+<polyline id="DATA-E03" points="1550,367.5 1650,367.5" fill="none" stroke="#216e4e" stroke-width="2"/>
+<polygon points="1650,367.5 1639.0,362.5 1639.0,372.5" fill="#216e4e"/>
+<polyline id="DATA-E04" points="1840.0,490 1840.0,650" fill="none" stroke="#216e4e" stroke-width="2"/>
+<polygon points="1840.0,650 1845.0,639.0 1835.0,639.0" fill="#216e4e"/>
+<polyline id="DATA-E05" points="1650,785.0 1550,785.0" fill="none" stroke="#216e4e" stroke-width="2"/>
+<polygon points="1550,785.0 1561.0,790.0 1561.0,780.0" fill="#216e4e"/>
+<polyline id="DATA-E06" points="1110,731.0 1010,731.0" fill="none" stroke="#216e4e" stroke-width="2"/>
+<polygon points="1010,731.0 1021.0,736.0 1021.0,726.0" fill="#216e4e"/>
+<polyline id="DATA-E07" points="1110,855.2 1010,855.2" fill="none" stroke="#216e4e" stroke-width="2"/>
+<polygon points="1010,855.2 1021.0,860.2 1021.0,850.2" fill="#216e4e"/>
+<polyline id="DATA-E08" points="570,785.0 470,785.0" fill="none" stroke="#216e4e" stroke-width="2"/>
+<polygon points="470,785.0 481.0,790.0 481.0,780.0" fill="#216e4e"/>
+<rect id="DATA-SENSORS" x="70" y="245" width="400" height="245" rx="8" fill="white" stroke="#b33a3a" stroke-width="2"><title>Source candidates; physical mapping open | REC-014, REC-015, REC-016, FW</title></rect>
+<rect id="DATA-UNO1" x="570" y="245" width="440" height="245" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>SOURCE ONLY: config.h + sketch + protocol | FW, PROTOCOL, REC-033</title></rect>
+<rect id="DATA-INPUT" x="1110" y="245" width="440" height="245" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>SOURCE ONLY: logger.py; deployment OPEN | LOGGER, REC-037</title></rect>
+<rect id="DATA-RAW" x="1650" y="245" width="380" height="245" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>SOURCE ONLY: Recorder.consume | LOGGER</title></rect>
+<rect id="DATA-FRAMER" x="1650" y="650" width="380" height="270" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>SOURCE ONLY: protocol.py + session handling | PARSER, LOGGER, PROTOCOL</title></rect>
+<rect id="DATA-PARSE" x="1110" y="650" width="440" height="270" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>SOURCE ONLY: parse_line / SequenceTracker | PARSER, PROTOCOL</title></rect>
+<rect id="DATA-DB" x="570" y="650" width="440" height="270" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>SOURCE ONLY: logger.py + schema.sql | LOGGER, SQL, PROTOCOL</title></rect>
+<rect id="DATA-EXPORT" x="70" y="650" width="400" height="270" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>SOURCE ONLY: export.py + manifest counts | EXPORT, LOGGER</title></rect>
+<rect id="DATA-SESSIONS" x="70" y="1060" width="600" height="220" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>SOURCE ONLY: logger.py | LOGGER</title></rect>
+<rect id="DATA-HEALTH" x="750" y="1060" width="560" height="220" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>SOURCE ONLY: logger.py; service is draft | LOGGER, SERVICE, SQL</title></rect>
+<rect id="DATA-BUNDLE" x="1390" y="1060" width="640" height="220" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>SOURCE ONLY: Recorder init / close | LOGGER</title></rect>
+<text id="title" x="40" y="56" font-family="Arial,DejaVu Sans,sans-serif" font-size="30" font-weight="700" fill="#243347">03 / LitterBuggy V2 — acquisition and evidence flow</text>
+<text id="subtitle" x="40" y="91" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Implemented draft behavior is identified as SOURCE ONLY | running sketch, installed devices and Pi deployment remain unverified</text>
+<text id="legend" x="40" y="128" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#243347">CONFIRMED = stated scope only   |   CONFLICTING = evidence disagrees   |   PROPOSED = intent   |   UNKNOWN = insufficient evidence</text>
+<text id="pipeline-title" x="62" y="205" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="700" fill="#243347">PIPELINE / SOLID GREEN = CODE BEHAVIOR; DASHED = PROPOSED OR UNVERIFIED PHYSICAL INTERFACE</text>
+<text id="crosscutting-title" x="62" y="1035" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="700" fill="#243347">CROSS-CUTTING SOURCE BEHAVIOR / APPLIES TO THE PIPELINE ABOVE; NOT AN OPERATING ACCEPTANCE RECORD</text>
+<text id="data-review-title" x="62" y="1385" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="700" fill="#243347">DEPLOYMENT REVIEW / THE NEW CONTRACT DOES NOT PROVE THE RUNNING BUILD</text>
+<text id="DATA-SENSORS-title" x="84" y="276" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#b33a3a">Candidate inputs / availability conflict</text>
+<text id="DATA-SENSORS-line-0" x="84" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">MPU-6050: raw axes + internal die temp.</text>
+<text id="DATA-SENSORS-line-1" x="84" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">HC-SR04: optional trigger/echo driver.</text>
+<text id="DATA-SENSORS-line-2" x="84" y="355" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">S06 reports HC-SR04 lost; fit unknown.</text>
+<text id="DATA-SENSORS-line-3" x="84" y="378" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">A02YYUW UART has no driver here.</text>
+<text id="DATA-SENSORS-line-4" x="84" y="401" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No calibrated attitude / absolute heading.</text>
+<text id="DATA-SENSORS-basis" x="84" y="459" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Source candidates; physical mapping open</text>
+<text id="DATA-SENSORS-status" x="84" y="478" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#b33a3a">CONFLICTING  /  DATA-SENSORS</text>
+<text id="DATA-UNO1-title" x="584" y="276" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">Uno draft / protocol 2 producer</text>
+<text id="DATA-UNO1-line-0" x="584" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">115200, 8N1; UTF-8 JSON + CRLF.</text>
+<text id="DATA-UNO1-line-1" x="584" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">100ms record target (10Hz), unbenchmarked.</text>
+<text id="DATA-UNO1-line-2" x="584" y="355" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">v, type, fw, seq, ms, imu_raw,</text>
+<text id="DATA-UNO1-line-3" x="584" y="378" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">echo_us, distance_mm, flags.</text>
+<text id="DATA-UNO1-line-4" x="584" y="401" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">All drivers / feedback OFF by default.</text>
+<text id="DATA-UNO1-line-5" x="584" y="424" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Default flags=5; measurements=null.</text>
+<text id="DATA-UNO1-basis" x="584" y="459" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">SOURCE ONLY: config.h + sketch + protocol</text>
+<text id="DATA-UNO1-status" x="584" y="478" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  DATA-UNO1</text>
+<text id="DATA-INPUT-title" x="1124" y="276" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">Pi input / serial or labeled replay</text>
+<text id="DATA-INPUT-line-0" x="1124" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Physical USB port must be configured.</text>
+<text id="DATA-INPUT-line-1" x="1124" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">USB topology / deployed firmware open.</text>
+<text id="DATA-INPUT-line-2" x="1124" y="355" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Serial reads feed the same recorder.</text>
+<text id="DATA-INPUT-line-3" x="1124" y="378" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Replay is labeled, not physical evidence.</text>
+<text id="DATA-INPUT-line-4" x="1124" y="401" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No application command writes to Uno.</text>
+<text id="DATA-INPUT-line-5" x="1124" y="424" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Port opening may reset Uno via DTR.</text>
+<text id="DATA-INPUT-basis" x="1124" y="459" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">SOURCE ONLY: logger.py; deployment OPEN</text>
+<text id="DATA-INPUT-status" x="1124" y="478" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  DATA-INPUT</text>
+<text id="DATA-RAW-title" x="1664" y="276" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">01 / preserve bytes first</text>
+<text id="DATA-RAW-line-0" x="1664" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Append + flush chunk to serial.raw</text>
+<text id="DATA-RAW-line-1" x="1664" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">BEFORE framing and parsing.</text>
+<text id="DATA-RAW-line-2" x="1664" y="355" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Track global byte offsets.</text>
+<text id="DATA-RAW-line-3" x="1664" y="378" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Raw includes valid / invalid input.</text>
+<text id="DATA-RAW-line-4" x="1664" y="401" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Flush is not a power-loss guarantee.</text>
+<text id="DATA-RAW-basis" x="1664" y="459" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">SOURCE ONLY: Recorder.consume</text>
+<text id="DATA-RAW-status" x="1664" y="478" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  DATA-RAW</text>
+<text id="DATA-FRAMER-title" x="1664" y="681" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">02 / bounded line framing</text>
+<text id="DATA-FRAMER-line-0" x="1664" y="714" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Maximum line: 512 bytes incl. terminator.</text>
+<text id="DATA-FRAMER-line-1" x="1664" y="737" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Framing errors retain offset / length.</text>
+<text id="DATA-FRAMER-line-2" x="1664" y="760" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Partial line closed as error on session end.</text>
+<text id="DATA-FRAMER-line-3" x="1664" y="783" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Do not join bytes across reconnects.</text>
+<text id="DATA-FRAMER-line-4" x="1664" y="806" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Reset framer for each new session.</text>
+<text id="DATA-FRAMER-basis" x="1664" y="889" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">SOURCE ONLY: protocol.py + session handling</text>
+<text id="DATA-FRAMER-status" x="1664" y="908" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  DATA-FRAMER</text>
+<text id="DATA-PARSE-title" x="1124" y="681" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">03 / strict validation + tracking</text>
+<text id="DATA-PARSE-line-0" x="1124" y="714" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Exact keys, types, bounds and null flags.</text>
+<text id="DATA-PARSE-line-1" x="1124" y="737" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Check raw echo / distance consistency.</text>
+<text id="DATA-PARSE-line-2" x="1124" y="760" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Reject malformed / legacy CSV payloads.</text>
+<text id="DATA-PARSE-line-3" x="1124" y="783" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Track sequence gaps / duplicates; handle wraps</text>
+<text id="DATA-PARSE-line-4" x="1124" y="806" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">and flag reset_or_out_of_order.</text>
+<text id="DATA-PARSE-line-5" x="1124" y="829" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Sequence event is not proof of a reset.</text>
+<text id="DATA-PARSE-basis" x="1124" y="889" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">SOURCE ONLY: parse_line / SequenceTracker</text>
+<text id="DATA-PARSE-status" x="1124" y="908" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  DATA-PARSE</text>
+<text id="DATA-DB-title" x="584" y="681" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">04 / run.sqlite3 evidence store</text>
+<text id="DATA-DB-line-0" x="584" y="714" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">frames: every framed outcome, validity,</text>
+<text id="DATA-DB-line-1" x="584" y="737" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">error, raw offset/length, session ID,</text>
+<text id="DATA-DB-line-2" x="584" y="760" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">receive UTC + host monotonic time.</text>
+<text id="DATA-DB-line-3" x="584" y="783" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">telemetry: validated payloads only;</text>
+<text id="DATA-DB-line-4" x="584" y="806" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">null sensor values remain null.</text>
+<text id="DATA-DB-line-5" x="584" y="829" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">A valid frame can contain ZERO samples.</text>
+<text id="DATA-DB-basis" x="584" y="889" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">SOURCE ONLY: logger.py + schema.sql</text>
+<text id="DATA-DB-status" x="584" y="908" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  DATA-DB</text>
+<text id="DATA-EXPORT-title" x="84" y="681" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">05 / review export</text>
+<text id="DATA-EXPORT-line-0" x="84" y="714" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">export.py queries validated telemetry.</text>
+<text id="DATA-EXPORT-line-1" x="84" y="737" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">CSV is derived; preserve the run bundle.</text>
+<text id="DATA-EXPORT-line-2" x="84" y="760" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Output overwrite is refused.</text>
+<text id="DATA-EXPORT-line-3" x="84" y="783" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Receive time != synchronized capture time.</text>
+<text id="DATA-EXPORT-line-4" x="84" y="806" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Counts of valid frames, IMU samples and</text>
+<text id="DATA-EXPORT-line-5" x="84" y="829" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">range samples are separate measures.</text>
+<text id="DATA-EXPORT-basis" x="84" y="889" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">SOURCE ONLY: export.py + manifest counts</text>
+<text id="DATA-EXPORT-status" x="84" y="908" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  DATA-EXPORT</text>
+<text id="DATA-SESSIONS-title" x="84" y="1091" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">Session and fault record</text>
+<text id="DATA-SESSIONS-line-0" x="84" y="1124" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">sessions / events record open, close and disconnects.</text>
+<text id="DATA-SESSIONS-line-1" x="84" y="1147" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Open failure is recorded; retry uses configured delay.</text>
+<text id="DATA-SESSIONS-line-2" x="84" y="1170" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Sequence tracking starts fresh for each session.</text>
+<text id="DATA-SESSIONS-line-3" x="84" y="1193" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No hardware reset cause or stale-input watchdog inferred.</text>
+<text id="DATA-SESSIONS-basis" x="84" y="1249" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">SOURCE ONLY: logger.py</text>
+<text id="DATA-SESSIONS-status" x="84" y="1268" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  DATA-SESSIONS</text>
+<text id="DATA-HEALTH-title" x="764" y="1091" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">Host health / stopping behavior</text>
+<text id="DATA-HEALTH-line-0" x="764" y="1124" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">health: CPU temperature + disk free bytes.</text>
+<text id="DATA-HEALTH-line-1" x="764" y="1147" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">CPU temperature is not enclosure ambient.</text>
+<text id="DATA-HEALTH-line-2" x="764" y="1170" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Low disk stops run with failure status.</text>
+<text id="DATA-HEALTH-line-3" x="764" y="1193" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">SIGINT / SIGTERM close normally; no motion watchdog.</text>
+<text id="DATA-HEALTH-basis" x="764" y="1249" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">SOURCE ONLY: logger.py; service is draft</text>
+<text id="DATA-HEALTH-status" x="764" y="1268" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  DATA-HEALTH</text>
+<text id="DATA-BUNDLE-title" x="1404" y="1091" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">Run bundle / provenance</text>
+<text id="DATA-BUNDLE-line-0" x="1404" y="1124" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">serial.raw + run.sqlite3 + config_snapshot.yml + manifest.json.</text>
+<text id="DATA-BUNDLE-line-1" x="1404" y="1147" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Config / logger SHA256, mode, environment and counts.</text>
+<text id="DATA-BUNDLE-line-2" x="1404" y="1170" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Orderly close: fsync raw, raw SHA256, final status / counts.</text>
+<text id="DATA-BUNDLE-line-3" x="1404" y="1193" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Firmware correspondence stays unverified; fw is self-report.</text>
+<text id="DATA-BUNDLE-basis" x="1404" y="1249" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">SOURCE ONLY: Recorder init / close</text>
+<text id="DATA-BUNDLE-status" x="1404" y="1268" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  DATA-BUNDLE</text>
+<text id="data-review-left-0" x="70" y="1430" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">Recover original sketch and capture actual serial before adapting hardware.</text>
+<text id="data-review-left-1" x="70" y="1456" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">Confirm Pi model / OS / port / USB power, sensor boards and enabled pins.</text>
+<text id="data-review-left-2" x="70" y="1482" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">10Hz is a draft target. No field rate, loss limit or calibration is validated.</text>
+<text id="data-review-left-3" x="70" y="1508" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">Default null frames exercise transport; they are not physical sensor data.</text>
+<text id="data-review-right-0" x="1120" y="1430" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">Optional camera video + sidecar capture is separate; fitting is unknown.</text>
+<text id="data-review-right-1" x="1120" y="1456" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">No synchronized-video accuracy, voltage/GPS logging or cloud path exists here.</text>
+<text id="data-review-right-2" x="1120" y="1482" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">No motion commands, autonomy, E-stop or vehicle-control watchdog in draft.</text>
+<text id="data-review-right-3" x="1120" y="1508" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">Abrupt power-loss recovery and physical deployment remain untested.</text>
+<text id="footer" x="40" y="1641" font-family="Arial,DejaVu Sans,sans-serif" font-size="14" font-weight="400" fill="#243347">ARCH-R2 | 2026-11-22 | Editable source + SVG/PNG | PDFs HELD | Scope and evidence: architecture-model.json / README.md</text>
+<rect x="494.5" y="336.5" width="51" height="24" fill="#f8fafc"/>
+<text id="DATA-E01-label" x="501.5" y="351.5" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#7251a3">OPEN</text>
+<rect x="1035.5" y="336.5" width="49" height="24" fill="#f8fafc"/>
+<text id="DATA-E02-label" x="1042.5" y="351.5" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#7251a3">USB?</text>
+<rect x="1576.5" y="336.5" width="47" height="24" fill="#f8fafc"/>
+<text id="DATA-E03-label" x="1583.5" y="351.5" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#216e4e">bytes</text>
+<rect x="1850.0" y="558.0" width="80" height="24" fill="#f8fafc"/>
+<text id="DATA-E04-label" x="1857.0" y="573.0" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#216e4e">then frame</text>
+<rect x="1572.0" y="754.0" width="56" height="24" fill="#f8fafc"/>
+<text id="DATA-E05-label" x="1579.0" y="769.0" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#216e4e">frames</text>
+<rect x="1038.0" y="700.0" width="44" height="24" fill="#f8fafc"/>
+<text id="DATA-E06-label" x="1045.0" y="715.0" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#216e4e">valid</text>
+<rect x="1038.0" y="824.2" width="44" height="24" fill="#f8fafc"/>
+<text id="DATA-E07-label" x="1045.0" y="839.2" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#216e4e">error</text>
+<rect x="495.5" y="754.0" width="49" height="24" fill="#f8fafc"/>
+<text id="DATA-E08-label" x="502.5" y="769.0" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#216e4e">query</text>
 </svg>

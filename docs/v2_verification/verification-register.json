@@ -5,7 +5,7 @@
   "repository": "Rob803yy/Junk-O-Matic",
   "audited_commit": "b163861c78d02060da30a026469f19e3c1409d11",
   "physical_configuration_revision": "V2-current-unmeasured",
-  "scope": "Initial evidence review; no physical inspection, instrumentation, firmware readback, upload or execution on the buggy performed.",
+  "scope": "R1 attachment reconciliation added to the initial main-source audit. Historical R0 media checks are source-attributed in docs/v2/sources_and_decisions.md. No current physical inspection, measurements, firmware readback/upload or buggy execution performed.",
   "status_definitions": {
     "confirmed": "Supported bounded claim; evidence basis must be stated. Repository content and historical owner observations do not establish current physical condition.",
     "conflicting": "Sources disagree or project definitions diverge; resolution pending or historical documents still need reconciliation.",
@@ -181,6 +181,188 @@
         "bbb21f08-0d8d-4533-816e-514b0856ae7e",
         "bbb2195b-d2d1-406d-8991-72eb549feef4"
       ]
+    },
+    {
+      "id": "S01",
+      "type": "attached_reference",
+      "path": "Junk-O-Matic_V1_to_V2_Scorecard_Report.xlsx",
+      "sha256": "5baafd288e1ef5611205d945910f314ed1f92a970e69f2fdfa2f7b6a820e949d",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S02",
+      "type": "attached_reference",
+      "path": "Litterbuggy_V1.0_Design_Review (2).docx",
+      "sha256": "9437b02b2ce082d73d8c0adeed6f48fa3ecf21239d0c092508c9a10655351f60",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S03",
+      "type": "attached_reference",
+      "path": "Litterbuggy_SCX6_V1.0_Integrated_Product_Design_Specification_Rev0 (1) (2).docx",
+      "sha256": "8b5abe56fa371c492d050a60f6ffc02a3086972a17cf74554e205e97c3b0f04e",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S04",
+      "type": "attached_reference",
+      "path": "Bill Of Material (1).xlsx",
+      "sha256": "eb71ca82890561b8d41561bb43090e8efd8258eeb58f74f900e60010cde8611c",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S05",
+      "type": "attached_reference",
+      "path": "Litterbuggy_Design_Review_Data_System_Rev0 (2).xlsx",
+      "sha256": "c3616d51bdc123fe1b4e9d6bb2313f10f5c066a1165bfab912f21536e5304adc",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S06",
+      "type": "attached_reference",
+      "path": "LitterBuggy V2 Engineering Deep Research Report.docx",
+      "sha256": "7efca41534a959472139e83fbdb6c9c96225b61820a8a0ff76cbf3829b4cf3fa",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S07",
+      "type": "attached_reference",
+      "path": "SCX6 Litterbuggy & Robotic Trash Picker Master Reference.md.pdf",
+      "sha256": "9a2a942e46f77ab74f50c0f45f5bd9c1a73274aa5ceae6b192e5559c21590016",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S08",
+      "type": "attached_reference",
+      "path": "Litterbuggy & Axial SCX6 Offline Master Guide.docx",
+      "sha256": "c9ec6e1532a0e14a602dffd11b8cfa6bc406ab2e1661bc2e138f03dbd66462ea",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S09",
+      "type": "attached_reference",
+      "path": "SCX6 Litterbuggy & Robotic Trash Picker Master Reference.md.txt",
+      "sha256": "990ec2648ade11c60f71724da528b507ac29e9f9cfb7f41011e8b1bf08fef099",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S10",
+      "type": "attached_reference",
+      "path": "Download the Litterbuggy Robotic Trash Picker Offline Engineering Reference.docx",
+      "sha256": "6a13c0f55b4961ddaf811a896dceeed59e43dead79ee7301f6728fc10b789ab3",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S11",
+      "type": "attached_reference",
+      "path": "Litterbuggy_Consolidated_Reference.docx",
+      "sha256": "c376917af10f95c4e8093a0324fb14c8282f2dcde631851f75d45d0eaa14bf36",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S12",
+      "type": "attached_reference",
+      "path": "Attached concept poster V1",
+      "sha256": "d3a9da25656575f6110e2f244904a30a10246aa7a25fd4c5e1e915846d83f94d",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S13",
+      "type": "attached_reference",
+      "path": "Attached concept poster V2",
+      "sha256": "b15f6c9507111576aafdfe85e557f8a16fbe8686a4f439952e9038ef3ff49194",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "S14",
+      "type": "attached_reference",
+      "path": "Attached concept poster V3",
+      "sha256": "c69989f47e7ccb756c466df1b92d0226e18c2d1ee650429de535309d6d07078b",
+      "scope": "Source claim or concept only; see R1 reconciliation"
+    },
+    {
+      "id": "CAD-P01",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-e1f9543e-1265-4704-abef-dc206b5ebae2.png",
+      "sha256": "e044b85a135274628c61f65025aaf9a5d166503cf0d4aa56bfb5282e19d05280",
+      "scope": "Bounded visual observation; capture date and scale unknown; raw media excluded from Git"
+    },
+    {
+      "id": "CAD-P02",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-24bcfdf6-a407-43aa-8136-452083c0f02b.png",
+      "sha256": "da637917bc28ec9ebd16a85273b5da98c1a499c52fbacee0db3b78f8de8fbf22",
+      "scope": "Bounded visual observation; capture date and scale unknown; raw media excluded from Git"
+    },
+    {
+      "id": "CAD-P03",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-a7d49cec-6fe8-43b3-93a4-676971ab0c8c.png",
+      "sha256": "eddf94d83bc15b808e12c62bd537f379984fee7cd39e0da393a3b696a64ca517",
+      "scope": "Bounded visual observation; capture date and scale unknown; raw media excluded from Git"
+    },
+    {
+      "id": "CAD-U01",
+      "type": "owner_statement",
+      "scope": "Yellow-handle end is driving front, in current CAD feedback"
+    },
+    {
+      "id": "CAD-P04",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-510a7d87-88c8-4b69-b09f-53f1c565e230.png",
+      "sha256": "dc457959bcf7837aeed69074d097dca00293e2d8d6c3158bf9d9ef46cb4857b9",
+      "scope": "Raised tub exposes gray rectangular frame, silver longitudinal members, crosspiece, fasteners, ties and chassis. Capture date and scale unknown; raw media excluded."
+    },
+    {
+      "id": "CAD-P05",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-94309679-5e44-46b7-af4b-fb713287431f.png",
+      "sha256": "9126fec296caa2dd74b8390a498526c2d8ef698e9183ea924408f29f930df81f",
+      "scope": "Indoor assembled front view confirms component relationships without bucket. Capture date and scale unknown; raw media excluded."
+    },
+    {
+      "id": "CAD-P06",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-a53eb6b8-01f6-4462-bedb-a004fb7dba1e.png",
+      "sha256": "a8d83dba45f253b273efe817f7ed6e486f3f4bf054cce0e214ccbc86f41dc5c6",
+      "scope": "Low front view reveals tub brackets/bolt heads, thin transverse member, purple-marked tube ends, light-colored spacer, shocks/guards and red axle-center housing. Capture date and scale unknown; raw media excluded."
+    },
+    {
+      "id": "CAD-P07",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-7b04aba6-d965-4289-a9a4-66bffc6bbf33.png",
+      "sha256": "d3aae9006aab70d178a4819b8ec8019e64b552326b72e016c762c2380bbc5479",
+      "scope": "Outdoor view appears to repeat the CAD-P03 scene at different resolution/crop. Not counted as an independent build/test. Capture date and scale unknown; raw media excluded."
+    },
+    {
+      "id": "CAD-U02",
+      "type": "owner_statement",
+      "scope": "Show assembly without bucket."
+    },
+    {
+      "id": "CAD-U03",
+      "type": "owner_statement",
+      "scope": "Indoor under-frame and outdoor photos show the same mounting hardware."
+    },
+    {
+      "id": "CAD-U04",
+      "type": "owner_statement",
+      "scope": "Raised tub remains attached on its normal hinge."
+    },
+    {
+      "id": "CAD-U05",
+      "type": "owner_statement",
+      "scope": "Hinge is at the end opposite the yellow-handle/front end."
+    },
+    {
+      "id": "CAD-U06",
+      "type": "owner_statement",
+      "scope": "Gray rectangular outer frame stays on the chassis when tub tips."
+    },
+    {
+      "id": "CAD-U07",
+      "type": "owner_statement",
+      "scope": "CAD-P04 up/down longitudinal members below gray frame; left/right transverse member(s) above frame. Numerical dimensions/joints unmeasured."
     }
   ],
   "records": [
@@ -279,19 +461,21 @@
       "id": "V2-006",
       "category": "configuration",
       "subject": "Pi hardware identity",
-      "status": "unknown",
-      "recorded_value": "Repository specifies Raspberry Pi 4B; current board model and RAM unverified",
-      "evidence_basis": "repository_inspection",
+      "status": "conflicting",
+      "recorded_value": "S06 proposes reuse of Pi3B; S04/posters/repository name Pi4. Actual board identity remains unknown.",
+      "evidence_basis": "R1 source reconciliation; not current physical verification",
       "source_ids": [
         "R01",
-        "R07"
+        "R07",
+        "S04",
+        "S06"
       ],
       "supporting_evidence_ids": [],
       "next_verification": "Read board label and OS model output; capture RAM and board revision.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "REC-003"
     },
     {
       "id": "V2-007",
@@ -351,18 +535,19 @@
       "id": "V2-010",
       "category": "configuration",
       "subject": "Front and left/right convention",
-      "status": "proposed",
-      "recorded_value": "Use yellow-handle end as assembly front only after owner confirms; record steering axle separately",
+      "status": "confirmed",
+      "recorded_value": "Owner confirms yellow-handle end is driving front. CAD-R2 +X forward, +Z up; -Y enclosure side.",
       "evidence_basis": "historical_chat_summary",
       "source_ids": [
-        "C04"
+        "C04",
+        "CAD-U01"
       ],
       "supporting_evidence_ids": [],
-      "next_verification": "Photograph labelled front/rear/left/right and mark coordinate frame.",
+      "next_verification": "Record physical left/right from this datum before measuring.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "CAD-R2 owner photo feedback; no measured dimensions inferred."
     },
     {
       "id": "V2-011",
@@ -456,18 +641,19 @@
       "category": "installed_components",
       "subject": "5V converter",
       "status": "unknown",
-      "recorded_value": "Repository calls for 24V-to-5V buck; installed unit unverified",
-      "evidence_basis": "repository_inspection",
+      "recorded_value": "S04 lists a primary 24V-to-5V 10A converter. Actual model, continuous capability and load unverified.",
+      "evidence_basis": "R1 source reconciliation; not current physical verification",
       "source_ids": [
         "R02",
-        "R07"
+        "R07",
+        "S04"
       ],
       "supporting_evidence_ids": [],
       "next_verification": "Record model, labelled input/output ranges and current rating.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "REC-008"
     },
     {
       "id": "V2-017",
@@ -492,17 +678,18 @@
       "category": "installed_components",
       "subject": "Other converters",
       "status": "unknown",
-      "recorded_value": "Number of installed converters not established",
-      "evidence_basis": "repository_inspection",
+      "recorded_value": "S04 V1.0 C33 separately lists 24V-to-5V 3A converter U5A. Fitting and routing unverified; no parallel output assumed.",
+      "evidence_basis": "R1 source reconciliation; not current physical verification",
       "source_ids": [
-        "R02"
+        "R02",
+        "S04"
       ],
       "supporting_evidence_ids": [],
       "next_verification": "Inventory every converter and identify its source and loads.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "REC-007"
     },
     {
       "id": "V2-019",
@@ -647,18 +834,19 @@
       "id": "V2-027",
       "category": "installed_components",
       "subject": "Ultrasonic sensor",
-      "status": "unknown",
-      "recorded_value": "Prior assistant identifies HC-SR04; current installation not re-inspected",
-      "evidence_basis": "historical_chat_summary",
+      "status": "conflicting",
+      "recorded_value": "Historical HC-SR04; S06 reports it lost. A02YYUW UART is a proposal. Current installed/absent/replaced state unknown.",
+      "evidence_basis": "R1 source reconciliation; not current physical verification",
       "source_ids": [
-        "C02"
+        "C02",
+        "S06"
       ],
       "supporting_evidence_ids": [],
       "next_verification": "Photograph label and installed connector.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "REC-014; REC-015"
     },
     {
       "id": "V2-028",
@@ -1526,18 +1714,25 @@
       "category": "mechanical_dimensions",
       "subject": "Cart-to-chassis structure",
       "status": "unknown",
-      "recorded_value": "Prior reviews describe adapter/aluminium frame",
+      "recorded_value": "Rectangular gray frame, inner members and tub brackets exposed in CAD-P04/P06. Owner confirms same mounting hardware and fixed gray frame with normal rear-hinged tub. Sections, dimensions, joints and load capacity unverified. Owner clarifies longitudinal members beneath frame and transverse member(s) above it.",
       "evidence_basis": "historical_chat_summary",
       "source_ids": [
         "C03",
-        "C04"
+        "C04",
+        "CAD-P04",
+        "CAD-P06",
+        "CAD-U03",
+        "CAD-U04",
+        "CAD-U05",
+        "CAD-U06",
+        "CAD-U07"
       ],
       "supporting_evidence_ids": [],
       "next_verification": "Measure member sections, spans, attachment points and joint hardware.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "CAD-R3 corrects prior generic/vertical-strip interpretation; no fabrication dimensions released."
     },
     {
       "id": "V2-079",
@@ -1630,34 +1825,37 @@
       "category": "mechanical_dimensions",
       "subject": "Enclosure dimensions and layout",
       "status": "unknown",
-      "recorded_value": "No measured external/internal dimensions or component coordinates",
-      "evidence_basis": "repository_inspection",
+      "recorded_value": "Enclosure broad vertical face is visible outside long wall (CAD-P01/P02). Actual dimensions/internal layout unknown; source nominal size is not measured.",
+      "evidence_basis": "R1 source reconciliation; not current physical verification",
       "source_ids": [
-        "R10"
+        "R10",
+        "S04",
+        "CAD-P01"
       ],
       "supporting_evidence_ids": [],
-      "next_verification": "Measure walls, usable volume, standoffs, cable openings and component positions.",
+      "next_verification": "Measure actual case, mounting and internal clearances.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "CAD-R2 owner photo feedback; no measured dimensions inferred."
     },
     {
       "id": "V2-085",
       "category": "mechanical_dimensions",
       "subject": "Sensor positions and axes",
       "status": "unknown",
-      "recorded_value": "IMU orientation and ultrasonic beam direction unrecorded",
+      "recorded_value": "Two white front light points observed (CAD-P02); sensor installation/orientation unresolved. Historical ultrasonic excluded from CAD-R2 assembly.",
       "evidence_basis": "historical_chat_summary",
       "source_ids": [
-        "C02"
+        "C02",
+        "CAD-P02"
       ],
       "supporting_evidence_ids": [],
-      "next_verification": "Record position and orientation relative to confirmed assembly axes.",
+      "next_verification": "Inspect actual sensor module and mount; distinguish light hardware. ",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "CAD-R2 owner photo feedback; no measured dimensions inferred."
     },
     {
       "id": "V2-086",
@@ -1870,18 +2068,19 @@
       "category": "running_software",
       "subject": "Actual serial format",
       "status": "unknown",
-      "recorded_value": "Repository stub sends JSON lines at 115200; running firmware format unknown",
-      "evidence_basis": "repository_inspection",
+      "recorded_value": "Running serial format unknown. R1 new code uses JSON protocol2 at proposed115200/10Hz; S06 CSV D/H is a competing proposal, not recovered format.",
+      "evidence_basis": "R1 source reconciliation; not current physical verification",
       "source_ids": [
         "R08",
-        "C02"
+        "C02",
+        "S06"
       ],
       "supporting_evidence_ids": [],
       "next_verification": "Capture unedited serial bytes with port/baud/time; retain headers, malformed lines and startup output.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "REC-033"
     },
     {
       "id": "V2-099",
@@ -2203,19 +2402,20 @@
       "id": "V2-117",
       "category": "requirements_and_evidence",
       "subject": "Repository guidance mismatch",
-      "status": "conflicting",
-      "recorded_value": "AGENTS.md prioritises dataset/evaluation/Jetson work; current owner scope is V2 reconstruction",
-      "evidence_basis": "repository_inspection",
+      "status": "confirmed",
+      "recorded_value": "Current AGENTS.md now explicitly prioritizes owner-authorized V2 reconstruction, preserving historical dataset work separately.",
+      "evidence_basis": "R1 source reconciliation; not current physical verification",
       "source_ids": [
         "R11",
-        "U02"
+        "U02",
+        "U01"
       ],
       "supporting_evidence_ids": [],
       "next_verification": "Update guidance alongside later scope reconciliation; current owner instruction governs this work.",
       "acceptance_criteria": "Record the resolution and its evidence; reconcile affected references without erasing the historical claim.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "R0 repository change retained in R1"
     },
     {
       "id": "V2-118",
@@ -2234,5 +2434,9 @@
       "verification_date": null,
       "resolution_notes": ""
     }
-  ]
+  ],
+  "reconciliation_revision": "R1",
+  "current_configuration_id": "CFG-V2-R1",
+  "reconciliation_register": "../reconciliation/reconciliation-register.json",
+  "mechanical_evidence_revision": "CAD-R3"
 }

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000"><rect width="1500" height="1000" fill="#f5f7fa"/>
+<text x="40" y="48" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#243347">LitterBuggy V2 / digital connectivity</text>
+<text x="40" y="78" font-family="Arial,sans-serif" font-size="15" font-weight="400" fill="#243347">Review of logical interfaces | logical pin functions are not verified physical wiring</text>
+<polyline points="410,230.0 485.0,230.0 485.0,230.0 560,230.0" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="418" y="222.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#7251a3">USB / serial: trace</text>
+<polyline points="930,230.0 1015.0,230.0 1015.0,230.0 1100,230.0" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="938" y="222.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#7251a3">I2C: verify board</text>
+<polyline points="745.0,310 745.0,310 745.0,490 745.0,490" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="753.0" y="392.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#7251a3">Historical profile only</text>
+<rect x="40" y="150" width="370" height="160" rx="8" fill="white" stroke="#b33a3a" stroke-width="2"/>
+<text x="54" y="176" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b33a3a">Pi model unresolved</text>
+<text x="54" y="202" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Pi 3B vs Pi 4 source conflict</text>
+<text x="54" y="222" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">USB host serial proposed</text>
+<text x="54" y="242" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No GPIO or RC control assumed</text>
+<text x="54" y="298" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b33a3a">CONFLICTING</text>
+<rect x="560" y="150" width="370" height="160" rx="8" fill="white" stroke="#216e4e" stroke-width="2"/>
+<text x="574" y="176" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#216e4e">Elegoo Uno R3</text>
+<text x="574" y="202" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Owner confirms board identity</text>
+<text x="574" y="222" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">USB serial, 115200 proposed</text>
+<text x="574" y="242" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Existing running software unknown</text>
+<text x="574" y="298" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED</text>
+<rect x="1100" y="150" width="350" height="160" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
+<text x="1114" y="176" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">MPU-6050 candidate</text>
+<text x="1114" y="202" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">I2C SDA=A4 / SCL=A5 on Uno</text>
+<text x="1114" y="222" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Breakout / supply / pullups TBD</text>
+<text x="1114" y="242" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Driver default OFF</text>
+<text x="1114" y="298" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
+<rect x="560" y="490" width="370" height="170" rx="8" fill="white" stroke="#b33a3a" stroke-width="2"/>
+<text x="574" y="516" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b33a3a">Historical HC-SR04 profile</text>
+<text x="574" y="542" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Reported lost in S06</text>
+<text x="574" y="562" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Trigger / echo pins unassigned</text>
+<text x="574" y="582" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Driver default OFF</text>
+<text x="574" y="648" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b33a3a">CONFLICTING</text>
+<rect x="1100" y="490" width="350" height="170" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
+<text x="1114" y="516" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">Replacement candidate</text>
+<text x="1114" y="542" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">A02YYUW / SEN0311 proposed</text>
+<text x="1114" y="562" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">UART 9600; different protocol</text>
+<text x="1114" y="582" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">OPEN: no driver / pins selected</text>
+<text x="1114" y="648" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
+<rect x="40" y="490" width="370" height="170" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
+<text x="54" y="516" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">Local feedback candidate</text>
+<text x="54" y="542" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">LED resistor / buzzer drive TBD</text>
+<text x="54" y="562" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Pins / threshold unassigned</text>
+<text x="54" y="582" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Outputs default OFF</text>
+<text x="54" y="648" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
+<text x="40" y="760" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">OPEN: Pi power entry; USB power coexistence; sensor supply levels and physical connector views.</text>
+<text x="40" y="781" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">A02YYUW is not connected to HC-SR04 trigger/echo pins. Candidate replacement remains unselected.</text>
+<text x="40" y="802" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Camera path, OLED, encoders, PCA9685, GPS/RTK, LiDAR and motion-control interfaces: future / unresolved.</text>
+<text x="40" y="823" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">MPU-6050 has no magnetometer. No absolute yaw, odometry or obstacle-avoidance capability is established.</text>
+<text x="40" y="844" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Sources: S04 BOM; S06 research report; owner Uno confirmation; REC-001..038 discrepancy register.</text>
+<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R1 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
+</svg>

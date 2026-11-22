@@ -1,0 +1,17 @@
+{
+  "revision": "ARCH-R2",
+  "base_commit": "d50c8584649e8741f0ae95ef55d648cb3812b3cc",
+  "protected_files_compared": 86,
+  "method": "Compare Git blob hashes using repository filters / end-of-line normalization",
+  "protected_scopes": [
+    "all tracked PDFs",
+    "mechanical",
+    "wiring",
+    "electrical",
+    "software/v2",
+    "digital-connectivity R1"
+  ],
+  "result": "unchanged",
+  "preview_review": "Three PNG scenes visually reviewed; all three SVGs also read/rendered by independent Qt SVG renderer.",
+  "native_application_render": "Not exercised; native XML readback and graph/text/route validation completed."
+}

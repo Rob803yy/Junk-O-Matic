@@ -1,0 +1,1709 @@
+{
+  "schema_version": 1,
+  "revision": "ARCH-R2",
+  "review_date": "2026-11-22",
+  "configuration_id": "CFG-V2-R1",
+  "scope": "Three architecture diagrams only; digital connectivity remains R1; existing PDFs held unchanged.",
+  "status_definitions": {
+    "confirmed": "Only the explicitly stated claim and evidence scope are confirmed. Source-only green does not mean installed.",
+    "conflicting": "Sources disagree or historical availability conflicts with a candidate; current state remains open.",
+    "proposed": "New design intent or interface, not verified installed wiring or deployed behavior.",
+    "unknown": "Insufficient evidence for the named current physical detail."
+  },
+  "evidence": {
+    "OWNER-UNO": {
+      "path": "docs/v2/sources_and_decisions.md",
+      "scope": "Owner confirmation of Elegoo Uno R3 identity; not wiring or running code."
+    },
+    "BOM": {
+      "path": "docs/v2/bom.json",
+      "scope": "Source-listed versus installed inventory; unknown installed quantities retained."
+    },
+    "FW": {
+      "path": "software/v2/arduino/litterbuggy_v2",
+      "scope": "New draft source only; original deployed sketch not recovered."
+    },
+    "PROTOCOL": {
+      "path": "docs/v2/serial_protocol.md",
+      "scope": "New version-2 contract, not recovered legacy output."
+    },
+    "LOGGER": {
+      "path": "software/v2/raspberry_pi/logger.py",
+      "scope": "Implemented draft source, not deployment or physical data."
+    },
+    "PARSER": {
+      "path": "software/v2/raspberry_pi/protocol.py",
+      "scope": "Framing / strict validation / sequence tracking in source."
+    },
+    "SQL": {
+      "path": "software/v2/raspberry_pi/schema.sql",
+      "scope": "Implemented draft schema."
+    },
+    "EXPORT": {
+      "path": "software/v2/raspberry_pi/export.py",
+      "scope": "Derived validated telemetry CSV."
+    },
+    "SERVICE": {
+      "path": "software/v2/raspberry_pi/litterbuggy-logger.service",
+      "scope": "Uninstalled service draft; not a motion watchdog."
+    },
+    "CAD-U01": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-U01",
+      "scope": "Owner relationship / display decision; no numeric measurement."
+    },
+    "CAD-P01": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-P01",
+      "scope": "Photo appearance only; raw media not committed. P07 repeats P03 scene."
+    },
+    "CAD-U02": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-U02",
+      "scope": "Owner relationship / display decision; no numeric measurement."
+    },
+    "CAD-P02": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-P02",
+      "scope": "Photo appearance only; raw media not committed. P07 repeats P03 scene."
+    },
+    "CAD-U03": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-U03",
+      "scope": "Owner relationship / display decision; no numeric measurement."
+    },
+    "CAD-P03": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-P03",
+      "scope": "Photo appearance only; raw media not committed. P07 repeats P03 scene."
+    },
+    "CAD-U04": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-U04",
+      "scope": "Owner relationship / display decision; no numeric measurement."
+    },
+    "CAD-P04": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-P04",
+      "scope": "Photo appearance only; raw media not committed. P07 repeats P03 scene."
+    },
+    "CAD-U05": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-U05",
+      "scope": "Owner relationship / display decision; no numeric measurement."
+    },
+    "CAD-P05": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-P05",
+      "scope": "Photo appearance only; raw media not committed. P07 repeats P03 scene."
+    },
+    "CAD-U06": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-U06",
+      "scope": "Owner relationship / display decision; no numeric measurement."
+    },
+    "CAD-P06": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-P06",
+      "scope": "Photo appearance only; raw media not committed. P07 repeats P03 scene."
+    },
+    "CAD-U07": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-U07",
+      "scope": "Owner relationship / display decision; no numeric measurement."
+    },
+    "CAD-P07": {
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "record_id": "CAD-P07",
+      "scope": "Photo appearance only; raw media not committed. P07 repeats P03 scene."
+    },
+    "REC-001": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-001",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-002": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-002",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-003": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-003",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-004": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-004",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-005": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-005",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-006": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-006",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-007": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-007",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-008": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-008",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-009": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-009",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-010": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-010",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-011": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-011",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-012": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-012",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-013": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-013",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-014": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-014",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-015": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-015",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-016": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-016",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-017": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-017",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-018": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-018",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-019": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-019",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-020": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-020",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-021": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-021",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-022": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-022",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-023": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-023",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-024": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-024",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-025": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-025",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-026": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-026",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-027": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-027",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-028": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-028",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-029": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-029",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-030": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-030",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-031": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-031",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-032": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-032",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-033": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-033",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-034": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-034",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-035": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-035",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-036": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-036",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-037": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-037",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    },
+    "REC-038": {
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "record_id": "REC-038",
+      "scope": "Bounded reconciliation decision; consult record for source provenance."
+    }
+  },
+  "pages": [
+    {
+      "id": "v2_system_overview",
+      "title": "01 / LitterBuggy V2 — system overview",
+      "subtitle": "Physical reconstruction + proposed observation system | configuration CFG-V2-R1 | mechanical basis CAD-R3",
+      "width": 1900,
+      "height": 1540,
+      "panels": [
+        {
+          "id": "mechanical",
+          "x": 40,
+          "y": 170,
+          "w": 1820,
+          "h": 330,
+          "title": "MECHANICAL / OWNER-CONFIRMED RELATIONSHIPS; ALL NUMERIC DIMENSIONS UNMEASURED",
+          "fill": "#edf2f7"
+        },
+        {
+          "id": "observation",
+          "x": 40,
+          "y": 530,
+          "w": 1820,
+          "h": 590,
+          "title": "POWER + OBSERVATION / ROUTES ARE LOGICAL HYPOTHESES, NOT TRACED WIRES",
+          "fill": "#edf2f7"
+        },
+        {
+          "id": "review",
+          "x": 40,
+          "y": 1150,
+          "w": 1820,
+          "h": 300,
+          "title": "REVIEW BOUNDARY / PHYSICAL OBSERVATIONS, DESIGN INTENT AND CODE EVIDENCE STAY SEPARATE",
+          "fill": "#fff7ed"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "SYS-CH1",
+          "x": 70,
+          "y": 245,
+          "w": 440,
+          "h": 195,
+          "title": "CH1 / SCX6 mobility base",
+          "lines": [
+            "SCX6 identified in project / photographs.",
+            "Stock reference: 4WD and two-speed.",
+            "Installed drive modifications unverified.",
+            "3S propulsion remains project scope."
+          ],
+          "status": "unknown",
+          "basis": "Photo + source scope; not an inspection",
+          "evidence": [
+            "CAD-P04",
+            "CAD-P06",
+            "REC-012",
+            "REC-013"
+          ]
+        },
+        {
+          "id": "SYS-FRAME",
+          "x": 710,
+          "y": 225,
+          "w": 470,
+          "h": 240,
+          "title": "Mounting frame / member ordering",
+          "lines": [
+            "Gray rectangular frame stays on chassis.",
+            "Fore/aft members BELOW gray frame.",
+            "Transverse member(s) ABOVE gray frame.",
+            "Indoor / outdoor hardware is the same.",
+            "Joint detail, sections and dimensions open."
+          ],
+          "status": "confirmed",
+          "basis": "Owner relationship only; CAD-U03/U06/U07",
+          "evidence": [
+            "CAD-U03",
+            "CAD-U06",
+            "CAD-U07",
+            "CAD-P04",
+            "CAD-P06"
+          ]
+        },
+        {
+          "id": "SYS-TUB",
+          "x": 1420,
+          "y": 245,
+          "w": 410,
+          "h": 195,
+          "title": "Gorilla tub / attached tipping",
+          "lines": [
+            "Front = yellow-handle end (+X).",
+            "Normal hinge at opposite / rear end.",
+            "Tub tips; outer frame stays stationary.",
+            "Axis position, latch and travel open."
+          ],
+          "status": "confirmed",
+          "basis": "Owner orientation + hinge relationship",
+          "evidence": [
+            "CAD-U01",
+            "CAD-U04",
+            "CAD-U05",
+            "CAD-U06"
+          ]
+        },
+        {
+          "id": "SYS-B2",
+          "x": 70,
+          "y": 600,
+          "w": 440,
+          "h": 205,
+          "title": "B2 + A1 / auxiliary source",
+          "lines": [
+            "Kobalt 24V family is project scope.",
+            "Blue KBT adapter in historical media.",
+            "Actual pack label / cutoff / polarity open.",
+            "Blue front-corner hardware not identified."
+          ],
+          "status": "unknown",
+          "basis": "BOM / historical media; CAD appearance",
+          "evidence": [
+            "REC-004",
+            "REC-005",
+            "REC-009",
+            "CAD-P01",
+            "CAD-P02"
+          ]
+        },
+        {
+          "id": "SYS-RAILS",
+          "x": 710,
+          "y": 600,
+          "w": 470,
+          "h": 205,
+          "title": "Converters / protection / distribution",
+          "lines": [
+            "U5: source-listed 5V 10A; route open.",
+            "U5A: separate 5V 3A; load unassigned.",
+            "U12: proposed 12V 5A+ branch.",
+            "Fuse / switch / returns require tracing."
+          ],
+          "status": "unknown",
+          "basis": "Source ratings; not measured capability",
+          "evidence": [
+            "REC-007",
+            "REC-008",
+            "REC-009",
+            "REC-010"
+          ]
+        },
+        {
+          "id": "SYS-CASE",
+          "x": 1420,
+          "y": 600,
+          "w": 410,
+          "h": 205,
+          "title": "External enclosure / visible lights",
+          "lines": [
+            "Orange case on enclosure-side wall.",
+            "White front lights; red rim light strips.",
+            "Case contents / light feeds untraced.",
+            "No assembled IP rating established."
+          ],
+          "status": "unknown",
+          "basis": "Appearance in photos; internals unresolved",
+          "evidence": [
+            "CAD-P01",
+            "CAD-P02",
+            "CAD-P05",
+            "REC-022",
+            "REC-024"
+          ]
+        },
+        {
+          "id": "SYS-SENSORS",
+          "x": 70,
+          "y": 880,
+          "w": 440,
+          "h": 200,
+          "title": "IMU / range / feedback candidates",
+          "lines": [
+            "MPU-6050 fitting and wiring unknown.",
+            "HC-SR04 reported lost in S06.",
+            "A02YYUW UART alternative unselected.",
+            "No validated heading or obstacle control."
+          ],
+          "status": "conflicting",
+          "basis": "Historical availability vs proposed profiles",
+          "evidence": [
+            "REC-014",
+            "REC-015",
+            "REC-016",
+            "FW"
+          ]
+        },
+        {
+          "id": "SYS-UNO1",
+          "x": 710,
+          "y": 880,
+          "w": 470,
+          "h": 200,
+          "title": "UNO1 / Elegoo Uno R3",
+          "lines": [
+            "Board identity confirmed by owner.",
+            "Current pins / supply / sketch unknown.",
+            "New draft: acquisition; defaults OFF.",
+            "No vehicle motion commands in draft."
+          ],
+          "status": "confirmed",
+          "basis": "Board identity only; not pin/deployment proof",
+          "evidence": [
+            "OWNER-UNO",
+            "REC-011",
+            "REC-033",
+            "FW"
+          ]
+        },
+        {
+          "id": "SYS-PI1",
+          "x": 1420,
+          "y": 880,
+          "w": 410,
+          "h": 200,
+          "title": "PI1 / Raspberry Pi + logger draft",
+          "lines": [
+            "Pi 3B (S06) vs Pi 4 elsewhere.",
+            "Fitted board, OS and power entry open.",
+            "Draft preserves raw bytes + SQLite.",
+            "Deployment / serial capture unverified."
+          ],
+          "status": "conflicting",
+          "basis": "Source conflict; source code != deployment",
+          "evidence": [
+            "REC-003",
+            "REC-033",
+            "REC-037",
+            "LOGGER"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "SYS-E01",
+          "source": "SYS-CH1",
+          "target": "SYS-FRAME",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "mount joints: OPEN",
+          "status": "unknown",
+          "kind": "mechanical",
+          "arrow": false
+        },
+        {
+          "id": "SYS-E02",
+          "source": "SYS-FRAME",
+          "target": "SYS-TUB",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "rear hinge / fixed frame",
+          "status": "confirmed",
+          "kind": "mechanical",
+          "arrow": false
+        },
+        {
+          "id": "SYS-E03",
+          "source": "SYS-B2",
+          "target": "SYS-RAILS",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "feed: trace",
+          "status": "unknown",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "SYS-E04",
+          "source": "SYS-RAILS",
+          "target": "SYS-CASE",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "lighting feed: OPEN",
+          "status": "proposed",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "SYS-E05",
+          "source": "SYS-RAILS",
+          "target": "SYS-PI1",
+          "source_port": [
+            0.75,
+            1
+          ],
+          "target_port": [
+            0.5,
+            0
+          ],
+          "via": [
+            [
+              1062.5,
+              840
+            ],
+            [
+              1625,
+              840
+            ]
+          ],
+          "label": "Pi power entry: OPEN",
+          "status": "unknown",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "SYS-E06",
+          "source": "SYS-SENSORS",
+          "target": "SYS-UNO1",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "I/O: OPEN",
+          "status": "proposed",
+          "kind": "data",
+          "arrow": true
+        },
+        {
+          "id": "SYS-E07",
+          "source": "SYS-UNO1",
+          "target": "SYS-PI1",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "USB serial: proposed",
+          "status": "proposed",
+          "kind": "data",
+          "arrow": true
+        }
+      ],
+      "texts": [
+        {
+          "id": "review-left",
+          "x": 70,
+          "y": 1220,
+          "lines": [
+            "CONFIRMED SCOPE",
+            "Owner confirms Uno identity and mechanical",
+            "relationships above. Photo references support",
+            "appearance; they do not measure dimensions.",
+            "Bucket omitted from CAD by display request;",
+            "this is not a claim it was absent in operation."
+          ],
+          "size": 15,
+          "color": "#334155",
+          "bold": false,
+          "w": 570
+        },
+        {
+          "id": "review-mid",
+          "x": 710,
+          "y": 1220,
+          "lines": [
+            "OPEN INTERFACES",
+            "Trace power entries, returns and connector views.",
+            "Recover running sketch and sample its serial output.",
+            "Identify Pi / sensor boards; inspect current fit.",
+            "Measure mounts, hinge and moving clearances.",
+            "No link from Pi / Uno to ESC is established."
+          ],
+          "size": 15,
+          "color": "#334155",
+          "bold": false,
+          "w": 570
+        },
+        {
+          "id": "review-right",
+          "x": 1360,
+          "y": 1220,
+          "lines": [
+            "V1 / V2 / V3 DISCIPLINE",
+            "V2 reconstruction is the present review scope.",
+            "Posters are concepts, not installation evidence.",
+            "Autonomy, sorting, RTK and intake upgrades",
+            "remain future / unverified; version allocation",
+            "and performance claims are not validated."
+          ],
+          "size": 15,
+          "color": "#334155",
+          "bold": false,
+          "w": 470
+        }
+      ]
+    },
+    {
+      "id": "v2_power_domains",
+      "title": "02 / LitterBuggy V2 — power domains",
+      "subtitle": "Functional allocation only | every electrical path still requires trace, rating review and physical verification",
+      "width": 1900,
+      "height": 1660,
+      "panels": [
+        {
+          "id": "traction",
+          "x": 40,
+          "y": 170,
+          "w": 1820,
+          "h": 330,
+          "title": "B1 / RC PROPULSION DOMAIN — CURRENT 3S SCOPE; NO NEW MOTION-CONTROL INTERFACE",
+          "fill": "#edf2f7"
+        },
+        {
+          "id": "auxiliary",
+          "x": 40,
+          "y": 615,
+          "w": 1820,
+          "h": 770,
+          "title": "B2 / AUXILIARY DOMAIN — SOURCE-LISTED CONVERTERS; OUTPUT ASSIGNMENTS NOT VERIFIED",
+          "fill": "#edf2f7"
+        },
+        {
+          "id": "power-review",
+          "x": 40,
+          "y": 1420,
+          "w": 1820,
+          "h": 170,
+          "title": "NEXT PHYSICAL CHECKS / RETAIN UNKNOWN VALUES UNTIL MEASURED OR TRACED",
+          "fill": "#fff7ed"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "PWR-B1",
+          "x": 70,
+          "y": 245,
+          "w": 370,
+          "h": 195,
+          "title": "B1 / propulsion pack",
+          "lines": [
+            "3S is owner project scope.",
+            "Model / chemistry / label unknown.",
+            "Connector, polarity, cutoff and",
+            "installed protection unverified."
+          ],
+          "status": "unknown",
+          "basis": "Owner scope + historical source",
+          "evidence": [
+            "REC-012",
+            "BOM"
+          ]
+        },
+        {
+          "id": "PWR-RC",
+          "x": 710,
+          "y": 245,
+          "w": 470,
+          "h": 195,
+          "title": "ESC / BEC / receiver functions",
+          "lines": [
+            "Installed models and BEC routing open.",
+            "Receiver / manual RC path to be traced.",
+            "No receiver-channel / servo pin map set.",
+            "Manual override behavior not tested."
+          ],
+          "status": "unknown",
+          "basis": "Functional grouping; not verified topology",
+          "evidence": [
+            "REC-013",
+            "REC-010",
+            "BOM"
+          ]
+        },
+        {
+          "id": "PWR-DRIVE",
+          "x": 1420,
+          "y": 245,
+          "w": 410,
+          "h": 195,
+          "title": "Motor / steering / shift functions",
+          "lines": [
+            "Stock SCX6: 4WD and two-speed.",
+            "Installed modifications unverified.",
+            "Motor power vs servo/BEC feeds open.",
+            "No Pi / Uno actuation link in draft."
+          ],
+          "status": "unknown",
+          "basis": "Stock reference + untraced current drive",
+          "evidence": [
+            "REC-013",
+            "FW",
+            "LOGGER"
+          ]
+        },
+        {
+          "id": "PWR-B2A1",
+          "x": 70,
+          "y": 780,
+          "w": 370,
+          "h": 355,
+          "title": "B2 / A1 pack + adapter",
+          "lines": [
+            "Kobalt 24V family in project scope.",
+            "Exact pack / capacity / range open.",
+            "Historical blue KBT adapter.",
+            "Installed adapter count unknown.",
+            "Dock contacts / polarity untraced.",
+            "Cutoff / current rating unverified.",
+            "KB624-03 is a battery model,",
+            "not a switch identification."
+          ],
+          "status": "unknown",
+          "basis": "REC-004/005; source quantity != installed",
+          "evidence": [
+            "REC-004",
+            "REC-005",
+            "BOM",
+            "REC-006"
+          ]
+        },
+        {
+          "id": "PWR-PROTECT",
+          "x": 610,
+          "y": 740,
+          "w": 370,
+          "h": 530,
+          "title": "F1 / S1 / FB1 functions",
+          "lines": [
+            "F1 fuse + S1 switch: proposals.",
+            "FB1 fuse block: source-listed.",
+            "Fitted state and physical order open.",
+            "This box specifies no series order",
+            "or branch fuse hierarchy.",
+            "",
+            "Fuse values / wire gauge / contacts",
+            "and connector orientation unknown.",
+            "5/10/15A kit values are not choices.",
+            "No selected 30A auxiliary rating.",
+            "No cutoff / hot-swap claim adopted."
+          ],
+          "status": "unknown",
+          "basis": "Architecture hypotheses; no chosen ratings",
+          "evidence": [
+            "REC-009",
+            "REC-005",
+            "BOM"
+          ]
+        },
+        {
+          "id": "PWR-U5",
+          "x": 1100,
+          "y": 700,
+          "w": 330,
+          "h": 185,
+          "title": "U5 / primary converter",
+          "lines": [
+            "Source: 24V to 5V 10A.",
+            "Model / input range / setting open.",
+            "Installed loads untraced.",
+            "10A is not measured capability."
+          ],
+          "status": "unknown",
+          "basis": "S04 V1.0 C32; REC-008",
+          "evidence": [
+            "REC-008",
+            "BOM"
+          ]
+        },
+        {
+          "id": "PWR-U5A",
+          "x": 1100,
+          "y": 930,
+          "w": 330,
+          "h": 185,
+          "title": "U5A / separate converter",
+          "lines": [
+            "Source: 24V to 5V 3A.",
+            "Fitted state / setting open.",
+            "OUTPUT OPEN: no assigned load.",
+            "No parallel / backup function set."
+          ],
+          "status": "unknown",
+          "basis": "S04 V1.0 C33; REC-007",
+          "evidence": [
+            "REC-007",
+            "BOM"
+          ]
+        },
+        {
+          "id": "PWR-U12",
+          "x": 1100,
+          "y": 1160,
+          "w": 330,
+          "h": 185,
+          "title": "U12 / proposed converter",
+          "lines": [
+            "Source proposal: 12V 5A+.",
+            "Model / input range unselected.",
+            "Lighting voltage not established.",
+            "Fitted state / routing unknown."
+          ],
+          "status": "proposed",
+          "basis": "S04 V2.0 C10; REC-008",
+          "evidence": [
+            "REC-008",
+            "BOM"
+          ]
+        },
+        {
+          "id": "PWR-PI1",
+          "x": 1550,
+          "y": 700,
+          "w": 280,
+          "h": 185,
+          "title": "PI1 / power entry OPEN",
+          "lines": [
+            "Pi 3B vs Pi 4 conflict.",
+            "Connector / supply untraced.",
+            "Proposed U5 allocation only.",
+            "USB 5V coexistence open."
+          ],
+          "status": "conflicting",
+          "basis": "REC-003 / REC-011",
+          "evidence": [
+            "REC-003",
+            "REC-011"
+          ]
+        },
+        {
+          "id": "PWR-UNO1",
+          "x": 1550,
+          "y": 965,
+          "w": 280,
+          "h": 160,
+          "title": "UNO1 / supply OPEN",
+          "lines": [
+            "No external 5V feed selected.",
+            "USB power path unverified.",
+            "Sensor supply branches open."
+          ],
+          "status": "unknown",
+          "basis": "Owner Uno identity != power path",
+          "evidence": [
+            "REC-011",
+            "OWNER-UNO"
+          ]
+        },
+        {
+          "id": "PWR-LIGHTS",
+          "x": 1550,
+          "y": 1160,
+          "w": 280,
+          "h": 185,
+          "title": "Lights / other loads",
+          "lines": [
+            "Lights visible in photos.",
+            "Voltage / feed untraced.",
+            "U12 assignment proposed.",
+            "No 12V fitting claim."
+          ],
+          "status": "unknown",
+          "basis": "CAD-P01/P02; REC-008",
+          "evidence": [
+            "CAD-P01",
+            "CAD-P02",
+            "REC-008"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "PWR-E01",
+          "source": "PWR-B1",
+          "target": "PWR-RC",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "+ / return: trace",
+          "status": "unknown",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "PWR-E02",
+          "source": "PWR-RC",
+          "target": "PWR-DRIVE",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "power / signals: trace",
+          "status": "unknown",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "PWR-E03",
+          "source": "PWR-B2A1",
+          "target": "PWR-PROTECT",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [
+            [
+              525,
+              957.5
+            ],
+            [
+              525,
+              1005
+            ]
+          ],
+          "label": "trace",
+          "status": "unknown",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "PWR-E04",
+          "source": "PWR-PROTECT",
+          "target": "PWR-U5",
+          "source_port": [
+            1,
+            0.1
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [
+            [
+              1040,
+              793
+            ],
+            [
+              1040,
+              792.5
+            ]
+          ],
+          "label": "",
+          "status": "unknown",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "PWR-E05",
+          "source": "PWR-PROTECT",
+          "target": "PWR-U5A",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [
+            [
+              1040,
+              1005
+            ],
+            [
+              1040,
+              1022.5
+            ]
+          ],
+          "label": "",
+          "status": "unknown",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "PWR-E06",
+          "source": "PWR-PROTECT",
+          "target": "PWR-U12",
+          "source_port": [
+            1,
+            0.9
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [
+            [
+              1040,
+              1217
+            ],
+            [
+              1040,
+              1252.5
+            ]
+          ],
+          "label": "",
+          "status": "proposed",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "PWR-E07",
+          "source": "PWR-U5",
+          "target": "PWR-PI1",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "5V?",
+          "status": "proposed",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "PWR-E08",
+          "source": "PWR-U12",
+          "target": "PWR-LIGHTS",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "12V?",
+          "status": "proposed",
+          "kind": "power",
+          "arrow": true
+        },
+        {
+          "id": "PWR-E09",
+          "source": "PWR-PI1",
+          "target": "PWR-UNO1",
+          "source_port": [
+            0.5,
+            1
+          ],
+          "target_port": [
+            0.5,
+            0
+          ],
+          "via": [],
+          "label": "USB 5V?",
+          "status": "proposed",
+          "kind": "power",
+          "arrow": true
+        }
+      ],
+      "texts": [
+        {
+          "id": "domain-separation",
+          "x": 70,
+          "y": 548,
+          "lines": [
+            "NO COMMON 0V LINK IS ASSERTED BETWEEN B1 AND B2. Separate source boxes do not establish galvanic isolation.",
+            "All power arrows mean intended source-to-load allocation (+ and return unresolved), not a wiring or energization instruction."
+          ],
+          "size": 17,
+          "color": "#334155",
+          "bold": true
+        },
+        {
+          "id": "check-power-left",
+          "x": 70,
+          "y": 1485,
+          "lines": [
+            "PWR-O01  Read pack / dock / converter labels; trace both conductors and protection order.",
+            "PWR-O02  Confirm Pi power entry and Uno USB/external-power coexistence before choosing a route."
+          ],
+          "size": 16,
+          "color": "#334155",
+          "bold": false,
+          "w": 940
+        },
+        {
+          "id": "check-power-right",
+          "x": 1060,
+          "y": 1485,
+          "lines": [
+            "PWR-O03  Establish each light / sensor supply and converter load.",
+            "PWR-O04  Resolve returns / grounding; verify ratings under load."
+          ],
+          "size": 16,
+          "color": "#334155",
+          "bold": false,
+          "w": 760
+        }
+      ]
+    },
+    {
+      "id": "v2_data_flow",
+      "title": "03 / LitterBuggy V2 — acquisition and evidence flow",
+      "subtitle": "Implemented draft behavior is identified as SOURCE ONLY | running sketch, installed devices and Pi deployment remain unverified",
+      "width": 2100,
+      "height": 1670,
+      "panels": [
+        {
+          "id": "pipeline",
+          "x": 40,
+          "y": 170,
+          "w": 2020,
+          "h": 800,
+          "title": "PIPELINE / SOLID GREEN = CODE BEHAVIOR; DASHED = PROPOSED OR UNVERIFIED PHYSICAL INTERFACE",
+          "fill": "#edf2f7"
+        },
+        {
+          "id": "crosscutting",
+          "x": 40,
+          "y": 1000,
+          "w": 2020,
+          "h": 315,
+          "title": "CROSS-CUTTING SOURCE BEHAVIOR / APPLIES TO THE PIPELINE ABOVE; NOT AN OPERATING ACCEPTANCE RECORD",
+          "fill": "#edf2f7"
+        },
+        {
+          "id": "data-review",
+          "x": 40,
+          "y": 1350,
+          "w": 2020,
+          "h": 230,
+          "title": "DEPLOYMENT REVIEW / THE NEW CONTRACT DOES NOT PROVE THE RUNNING BUILD",
+          "fill": "#fff7ed"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "DATA-SENSORS",
+          "x": 70,
+          "y": 245,
+          "w": 400,
+          "h": 245,
+          "title": "Candidate inputs / availability conflict",
+          "lines": [
+            "MPU-6050: raw axes + internal die temp.",
+            "HC-SR04: optional trigger/echo driver.",
+            "S06 reports HC-SR04 lost; fit unknown.",
+            "A02YYUW UART has no driver here.",
+            "No calibrated attitude / absolute heading."
+          ],
+          "status": "conflicting",
+          "basis": "Source candidates; physical mapping open",
+          "evidence": [
+            "REC-014",
+            "REC-015",
+            "REC-016",
+            "FW"
+          ]
+        },
+        {
+          "id": "DATA-UNO1",
+          "x": 570,
+          "y": 245,
+          "w": 440,
+          "h": 245,
+          "title": "Uno draft / protocol 2 producer",
+          "lines": [
+            "115200, 8N1; UTF-8 JSON + CRLF.",
+            "100ms record target (10Hz), unbenchmarked.",
+            "v, type, fw, seq, ms, imu_raw,",
+            "echo_us, distance_mm, flags.",
+            "All drivers / feedback OFF by default.",
+            "Default flags=5; measurements=null."
+          ],
+          "status": "confirmed",
+          "basis": "SOURCE ONLY: config.h + sketch + protocol",
+          "evidence": [
+            "FW",
+            "PROTOCOL",
+            "REC-033"
+          ]
+        },
+        {
+          "id": "DATA-INPUT",
+          "x": 1110,
+          "y": 245,
+          "w": 440,
+          "h": 245,
+          "title": "Pi input / serial or labeled replay",
+          "lines": [
+            "Physical USB port must be configured.",
+            "USB topology / deployed firmware open.",
+            "Serial reads feed the same recorder.",
+            "Replay is labeled, not physical evidence.",
+            "No application command writes to Uno.",
+            "Port opening may reset Uno via DTR."
+          ],
+          "status": "confirmed",
+          "basis": "SOURCE ONLY: logger.py; deployment OPEN",
+          "evidence": [
+            "LOGGER",
+            "REC-037"
+          ]
+        },
+        {
+          "id": "DATA-RAW",
+          "x": 1650,
+          "y": 245,
+          "w": 380,
+          "h": 245,
+          "title": "01 / preserve bytes first",
+          "lines": [
+            "Append + flush chunk to serial.raw",
+            "BEFORE framing and parsing.",
+            "Track global byte offsets.",
+            "Raw includes valid / invalid input.",
+            "Flush is not a power-loss guarantee."
+          ],
+          "status": "confirmed",
+          "basis": "SOURCE ONLY: Recorder.consume",
+          "evidence": [
+            "LOGGER"
+          ]
+        },
+        {
+          "id": "DATA-FRAMER",
+          "x": 1650,
+          "y": 650,
+          "w": 380,
+          "h": 270,
+          "title": "02 / bounded line framing",
+          "lines": [
+            "Maximum line: 512 bytes incl. terminator.",
+            "Framing errors retain offset / length.",
+            "Partial line closed as error on session end.",
+            "Do not join bytes across reconnects.",
+            "Reset framer for each new session."
+          ],
+          "status": "confirmed",
+          "basis": "SOURCE ONLY: protocol.py + session handling",
+          "evidence": [
+            "PARSER",
+            "LOGGER",
+            "PROTOCOL"
+          ]
+        },
+        {
+          "id": "DATA-PARSE",
+          "x": 1110,
+          "y": 650,
+          "w": 440,
+          "h": 270,
+          "title": "03 / strict validation + tracking",
+          "lines": [
+            "Exact keys, types, bounds and null flags.",
+            "Check raw echo / distance consistency.",
+            "Reject malformed / legacy CSV payloads.",
+            "Track sequence gaps / duplicates; handle wraps",
+            "and flag reset_or_out_of_order.",
+            "Sequence event is not proof of a reset."
+          ],
+          "status": "confirmed",
+          "basis": "SOURCE ONLY: parse_line / SequenceTracker",
+          "evidence": [
+            "PARSER",
+            "PROTOCOL"
+          ]
+        },
+        {
+          "id": "DATA-DB",
+          "x": 570,
+          "y": 650,
+          "w": 440,
+          "h": 270,
+          "title": "04 / run.sqlite3 evidence store",
+          "lines": [
+            "frames: every framed outcome, validity,",
+            "error, raw offset/length, session ID,",
+            "receive UTC + host monotonic time.",
+            "telemetry: validated payloads only;",
+            "null sensor values remain null.",
+            "A valid frame can contain ZERO samples."
+          ],
+          "status": "confirmed",
+          "basis": "SOURCE ONLY: logger.py + schema.sql",
+          "evidence": [
+            "LOGGER",
+            "SQL",
+            "PROTOCOL"
+          ]
+        },
+        {
+          "id": "DATA-EXPORT",
+          "x": 70,
+          "y": 650,
+          "w": 400,
+          "h": 270,
+          "title": "05 / review export",
+          "lines": [
+            "export.py queries validated telemetry.",
+            "CSV is derived; preserve the run bundle.",
+            "Output overwrite is refused.",
+            "Receive time != synchronized capture time.",
+            "Counts of valid frames, IMU samples and",
+            "range samples are separate measures."
+          ],
+          "status": "confirmed",
+          "basis": "SOURCE ONLY: export.py + manifest counts",
+          "evidence": [
+            "EXPORT",
+            "LOGGER"
+          ]
+        },
+        {
+          "id": "DATA-SESSIONS",
+          "x": 70,
+          "y": 1060,
+          "w": 600,
+          "h": 220,
+          "title": "Session and fault record",
+          "lines": [
+            "sessions / events record open, close and disconnects.",
+            "Open failure is recorded; retry uses configured delay.",
+            "Sequence tracking starts fresh for each session.",
+            "No hardware reset cause or stale-input watchdog inferred."
+          ],
+          "status": "confirmed",
+          "basis": "SOURCE ONLY: logger.py",
+          "evidence": [
+            "LOGGER"
+          ]
+        },
+        {
+          "id": "DATA-HEALTH",
+          "x": 750,
+          "y": 1060,
+          "w": 560,
+          "h": 220,
+          "title": "Host health / stopping behavior",
+          "lines": [
+            "health: CPU temperature + disk free bytes.",
+            "CPU temperature is not enclosure ambient.",
+            "Low disk stops run with failure status.",
+            "SIGINT / SIGTERM close normally; no motion watchdog."
+          ],
+          "status": "confirmed",
+          "basis": "SOURCE ONLY: logger.py; service is draft",
+          "evidence": [
+            "LOGGER",
+            "SERVICE",
+            "SQL"
+          ]
+        },
+        {
+          "id": "DATA-BUNDLE",
+          "x": 1390,
+          "y": 1060,
+          "w": 640,
+          "h": 220,
+          "title": "Run bundle / provenance",
+          "lines": [
+            "serial.raw + run.sqlite3 + config_snapshot.yml + manifest.json.",
+            "Config / logger SHA256, mode, environment and counts.",
+            "Orderly close: fsync raw, raw SHA256, final status / counts.",
+            "Firmware correspondence stays unverified; fw is self-report."
+          ],
+          "status": "confirmed",
+          "basis": "SOURCE ONLY: Recorder init / close",
+          "evidence": [
+            "LOGGER"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "DATA-E01",
+          "source": "DATA-SENSORS",
+          "target": "DATA-UNO1",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "OPEN",
+          "status": "proposed",
+          "kind": "data",
+          "arrow": true
+        },
+        {
+          "id": "DATA-E02",
+          "source": "DATA-UNO1",
+          "target": "DATA-INPUT",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "USB?",
+          "status": "proposed",
+          "kind": "data",
+          "arrow": true
+        },
+        {
+          "id": "DATA-E03",
+          "source": "DATA-INPUT",
+          "target": "DATA-RAW",
+          "source_port": [
+            1,
+            0.5
+          ],
+          "target_port": [
+            0,
+            0.5
+          ],
+          "via": [],
+          "label": "bytes",
+          "status": "confirmed",
+          "kind": "data",
+          "arrow": true
+        },
+        {
+          "id": "DATA-E04",
+          "source": "DATA-RAW",
+          "target": "DATA-FRAMER",
+          "source_port": [
+            0.5,
+            1
+          ],
+          "target_port": [
+            0.5,
+            0
+          ],
+          "via": [],
+          "label": "then frame",
+          "status": "confirmed",
+          "kind": "data",
+          "arrow": true
+        },
+        {
+          "id": "DATA-E05",
+          "source": "DATA-FRAMER",
+          "target": "DATA-PARSE",
+          "source_port": [
+            0,
+            0.5
+          ],
+          "target_port": [
+            1,
+            0.5
+          ],
+          "via": [],
+          "label": "frames",
+          "status": "confirmed",
+          "kind": "data",
+          "arrow": true
+        },
+        {
+          "id": "DATA-E06",
+          "source": "DATA-PARSE",
+          "target": "DATA-DB",
+          "source_port": [
+            0,
+            0.3
+          ],
+          "target_port": [
+            1,
+            0.3
+          ],
+          "via": [],
+          "label": "valid",
+          "status": "confirmed",
+          "kind": "data",
+          "arrow": true
+        },
+        {
+          "id": "DATA-E07",
+          "source": "DATA-PARSE",
+          "target": "DATA-DB",
+          "source_port": [
+            0,
+            0.76
+          ],
+          "target_port": [
+            1,
+            0.76
+          ],
+          "via": [],
+          "label": "error",
+          "status": "confirmed",
+          "kind": "data",
+          "arrow": true
+        },
+        {
+          "id": "DATA-E08",
+          "source": "DATA-DB",
+          "target": "DATA-EXPORT",
+          "source_port": [
+            0,
+            0.5
+          ],
+          "target_port": [
+            1,
+            0.5
+          ],
+          "via": [],
+          "label": "query",
+          "status": "confirmed",
+          "kind": "data",
+          "arrow": true
+        }
+      ],
+      "texts": [
+        {
+          "id": "data-review-left",
+          "x": 70,
+          "y": 1415,
+          "lines": [
+            "Recover original sketch and capture actual serial before adapting hardware.",
+            "Confirm Pi model / OS / port / USB power, sensor boards and enabled pins.",
+            "10Hz is a draft target. No field rate, loss limit or calibration is validated.",
+            "Default null frames exercise transport; they are not physical sensor data."
+          ],
+          "size": 16,
+          "color": "#334155",
+          "bold": false,
+          "w": 1000
+        },
+        {
+          "id": "data-review-right",
+          "x": 1120,
+          "y": 1415,
+          "lines": [
+            "Optional camera video + sidecar capture is separate; fitting is unknown.",
+            "No synchronized-video accuracy, voltage/GPS logging or cloud path exists here.",
+            "No motion commands, autonomy, E-stop or vehicle-control watchdog in draft.",
+            "Abrupt power-loss recovery and physical deployment remain untested."
+          ],
+          "size": 16,
+          "color": "#334155",
+          "bold": false,
+          "w": 900
+        }
+      ]
+    }
+  ]
+}

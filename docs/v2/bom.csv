@@ -1,31 +1,56 @@
-id,item,quantity_for_review,status,evidence_or_basis,missing_details
-B1,3S propulsion pack,1,unknown,Owner scope,chemistry/model/capacity/connector
-B2,Kobalt auxiliary pack,1,unknown,Repository and historical dock discussion,model/capacity/voltage range/cutoff
-A1,Blue KBT-marked adapter,1,unknown,Photos 3718-3721 re-opened,model/polarity/ratings/mounting provisions
-F1,Main auxiliary fuse,1,proposed,Repository functional architecture,installation/rating/holder/location
-S1,Main auxiliary switch,1,proposed,Repository functional architecture,installation/poles/rating
-XT1,Auxiliary distribution interface,1,proposed,Functional drawing placeholder,physical terminal type and quantity
-U5,5V converter,1,unknown,Repository,installed model/settings/current rating
-U12,12V converter,1,unknown,Repository,installed model/settings/current rating
-PI1,Raspberry Pi,1,unknown,Repository specifies 4B,current model/RAM/power entry/OS
-UNO1,Elegoo Uno R3,1,confirmed,Owner confirmation 2026-11-21,serial identity/power entry/current firmware
-IMU1,MPU-6050 breakout,1,unknown,Historical assistant identification,actual module/pullups/supply/orientation
-RANGE1,HC-SR04 ultrasonic,1,unknown,Historical assistant identification,module identity/trigger/echo pins
-LED1,LED with resistor,1,unknown,Historical chat,colour/resistance/pin/polarity
-BZ1,Buzzer and driver,1,unknown,Historical chat,type/driver/pin/polarity
-OLED1,OLED display,TBD,unknown,Discussed addition,confirm fitted or absent
-CAM1,Camera,TBD,unknown,Optional repository capability,confirm fitted/model/interface
-L1,Lighting assembly,TBD,unknown,Sampled outdoor video frames,quantity/voltage/source/mounting
-ESC1,Propulsion ESC,1,unknown,Repository,actual model/BEC/LVC/settings
-RX1,RC receiver,1,unknown,Repository,model/channel/power paths
-M1,Traction motor,1,unknown,Repository,model/wiring/gearing
-SV1,Steering servo,1,unknown,Repository,model/supply/channel
-SV2,Shift or auxiliary servo,TBD,unknown,SCX6 functional scope,installed state/model/channel
-CH1,SCX6 chassis assembly,1,unknown,Historical photos,variant/drivetrain modifications
-TY1,Tyre and wheel,4,unknown,Historical assembly photos,current dimensions/condition
-SH1,Coilover,4,unknown,Historical suspension photos,spring IDs/preload/mounts/travel
-CT1,Gorilla Cart tub,1,unknown,Historical assembly photos,model/dimensions/mass
-MT1,Metal cart mounting structure,1,unknown,Photos 1963-1971 re-opened,sections/joints/fasteners/dimensions
-ENC1,Electronics enclosure,1,unknown,Historical descriptions,material/dimensions/placement/retention
-BM1,Battery mount and retention,TBD,unknown,Prior mounting question,actual bracket/strap/latch clearance
-SM1,Sensor mounting bracket,TBD,proposed,CAD envelope only,installed geometry and holes
+id,subsystem,item,source_listed_qty,verified_installed_qty,source_specification,status,evidence_basis,sources,current_resolution
+CH1,Mobility,Axial SCX6 chassis,1,,Exact variant TBD,unknown,Historical media,S04 V1.0!C2; photos,Current drive modifications must be inspected.
+B1,Power,Propulsion pack,,,3S project scope; chemistry/model TBD,unknown,Owner scope,Owner; S03 t20r2,No 4S change adopted; actual pack unverified.
+B2,Power,Kobalt auxiliary pack,,,24V family; exact label/capacity TBD,unknown,Owner scope and source catalog,Owner; S04 C30:C31,"KB624-03 is a battery model, not a switch identity."
+A1,Power,Kobalt-compatible adapter,2,,Blue KBT-marked adapter in historical photos,unknown,Source-listed quantity; photos show one adapter,S04 V1.0!C31; photos3718-3721,Installed count and polarity unknown; not two verified feeds.
+U5,Power,Primary 5V converter,1,,Source-listed 24V to 5V 10A,unknown,BOM claim,S04 V1.0!C32,"Model, continuous capability and loads unverified."
+U5A,Power,Secondary 5V converter,1,,Source-listed 24V to 5V 3A,unknown,BOM claim,S04 V1.0!C33,Separate candidate rail; no parallel output or backup function assumed.
+U12,Power,12V converter,1,,Source-listed 24V to 12V 5A+,proposed,BOM proposal,S04 V2.0!C10,Fitted state and lighting voltage unknown.
+F1,Protection,Main inline fuse and holder,,,Rating TBD,proposed,Source architecture,S04 V1.0!C35:C36,Fuse kit values are not selected circuit ratings.
+S1,Protection,Main power switch,,,Model/poles/rating TBD,proposed,Source architecture,S04 V1.0!C30,Remove KB624-03 switch misidentification.
+FB1,Protection,Six-way blade fuse block,1,,Model and installed fuse values TBD,unknown,BOM claim,S04 V1.0!C34,Installation and topology unverified.
+XT5,Distribution,5V distribution terminals,1,,12 positions claimed,proposed,BOM proposal,S04 V1.0!C37,No fitted position count or return topology verified.
+XT0,Distribution,Return distribution terminals,1,,12 positions claimed,proposed,BOM proposal,S04 V1.0!C38,No fitted position count or return topology verified.
+XT12,Distribution,12V distribution terminals,1,,8 positions claimed,proposed,BOM proposal,S04 V1.0!C39,No fitted position count or return topology verified.
+XTS,Distribution,Signal terminals,1,,16-20 positions claimed,proposed,BOM proposal,S04 V1.0!C40,No fitted position count or return topology verified.
+PI1,Compute,Raspberry Pi,1,,Pi 4 versus Pi 3B conflict,conflicting,Conflicting documents,S04 V1.0!C25; S06 p87,Read physical board label before supply/fit assumptions.
+UNO1,Compute,Elegoo Uno R3,1,1,ATmega328P Uno R3 target,confirmed,Owner confirmation,Owner 2026-11-21,Identity confirmed; pins/power/running firmware separate unknowns.
+ENC1,Packaging,Electronics enclosure,1,,11.5 x 7.5 x 5.1in source candidate,unknown,BOM dimensions; historical orange enclosure,S04 V1.0!C16,292.1 x190.5 x129.54mm conversion; actual identity/fit/IP unverified.
+CT1,Payload,Gorilla cart tub and removable bucket,,,Exact tub/bucket model TBD,unknown,Historical media and research report,"photos1963-1971; S06 p8,p72",No original cart payload rating transfers to this conversion.
+MT1,Structure,Existing metal mounting interface,,,"Sections, joints and hole patterns TBD",unknown,Historical photos,photos1963-1971,Raised existing interface is distinct from proposed Rev B cradle.
+IMU1,Sensors,MPU-6050 / GY-521 candidate,1,,Breakout identity and orientation TBD,unknown,Historical identification,S04 V1.0!C50; historical Pi chat,No absolute heading or enclosure temperature claim.
+RANGE1,Sensors,Historical HC-SR04,1,,Present state unknown; report says lost,conflicting,Historical chat versus research report,S06 p21-p26,Do not describe it as currently installed without confirmation.
+RANGE2,Sensors,A02YYUW SEN0311 replacement candidate,1,,UART 9600; manufacturer 3.3-5V,proposed,Research recommendation,S06 t3r3; DFRobot,"Not trigger/echo; not selected, purchased or installed by this record."
+LED1,Current inventory candidate,LED and series resistor,,,Exact model/configuration TBD,unknown,Historical/source claim,Historical Pi chat,Current inspection required; no upgrade inferred.
+BZ1,Current inventory candidate,Buzzer and drive components,,,Exact model/configuration TBD,unknown,Historical/source claim,Historical Pi chat,Current inspection required; no upgrade inferred.
+L1,Current inventory candidate,Front/rear lighting,,,Exact model/configuration TBD,unknown,Historical/source claim,Videos2231/2233/2235,Current inspection required; no upgrade inferred.
+RX1,Current inventory candidate,RC receiver,,,Exact model/configuration TBD,unknown,Historical/source claim,S03 t13r3,Current inspection required; no upgrade inferred.
+ESC1,Current inventory candidate,ESC / BEC,,,Exact model/configuration TBD,unknown,Historical/source claim,S03 t13r2,Current inspection required; no upgrade inferred.
+M1,Current inventory candidate,Traction motor / gearing,,,Exact model/configuration TBD,unknown,Historical/source claim,S03 t13r2,Current inspection required; no upgrade inferred.
+SV1,Current inventory candidate,Steering servo,,,Exact model/configuration TBD,unknown,Historical/source claim,S03 t13r3,Current inspection required; no upgrade inferred.
+SV2,Current inventory candidate,Shift servo,,,Exact model/configuration TBD,unknown,Historical/source claim,Stock baseline; physical install TBD,Current inspection required; no upgrade inferred.
+SH1,Current inventory candidate,Coilovers / springs,,,Exact model/configuration TBD,unknown,Historical/source claim,photos1963-1971,Current inspection required; no upgrade inferred.
+TY1,Current inventory candidate,Wheels / tyres,,,Exact model/configuration TBD,unknown,Historical/source claim,photos1963-1971,Current inspection required; no upgrade inferred.
+USB1,Connectivity,USB-A to USB-B data cable,1,,Length and installed identity TBD,proposed,Proposed Pi-to-Uno link,"S06 t3r2,p75",Old descriptor error unresolved; cable recommendation is not purchase proof.
+SUP7,Structural Frame,Rear crossbar,1,,Aluminum anti-sway brace,proposed,Historical BOM line,S04 V1.0!C7:F7,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP8,Structural Frame,Mount brackets,6–10,,Stainless L-brackets / corner braces,proposed,Historical BOM line,S04 V1.0!C8:F8,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP9,Structural Frame,Bolts / washers / nyloc nuts,Assorted,,M4–M6 hardware,proposed,Historical BOM line,S04 V1.0!C9:F9,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP10,Structural Frame,Fender washers,8–12,,HDPE reinforcement,proposed,Historical BOM line,S04 V1.0!C10:F10,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP11,Structural Frame,Rubber isolators,4–8,,Bin + enclosure vibration control,proposed,Historical BOM line,S04 V1.0!C11:F11,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP12,Payload Handling,Shock cord / bungee + tarp clips,1 set,,Bag retention,proposed,Historical BOM line,S04 V1.0!C12:F12,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP17,Internal Mounting,3mm HDPE/aluminum mounting tray,1,,Component mounting,proposed,Historical BOM line,S04 V1.0!C17:F17,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP18,Internal Mounting,M2.5/M3 standoff kit,1 kit,,Pi/Uno standoffs; exact pattern and height unverified,proposed,Historical BOM line,S04 V1.0!C18:F18,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP19,Cable Management,Cable glands PG7/PG9/PG11,5–8,,Waterproof cable exits,proposed,Historical BOM line,S04 V1.0!C19:F19,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP20,Cable Management,Heat shrink kit,1,,Wiring insulation,proposed,Historical BOM line,S04 V1.0!C20:F20,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP21,Cable Management,Ferrule kit + crimper,1,,Professional terminations,proposed,Historical BOM line,S04 V1.0!C21:F21,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP22,Cable Management,Zip tie mounts,1 pack,,Cable routing,proposed,Historical BOM line,S04 V1.0!C22:F22,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP23,Cable Management,Zip ties,Assorted,,General cable management,proposed,Historical BOM line,S04 V1.0!C23:F23,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP24,Cable Management,Rubber grommets,Assorted,,Strain relief,proposed,Historical BOM line,S04 V1.0!C24:F24,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP27,Thermal,Pi heatsink/fan,1,,Thermal control,proposed,Historical BOM line,S04 V1.0!C27:F27,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP28,Storage,MicroSD card 32–128GB,1,,OS + software,proposed,Historical BOM line,S04 V1.0!C28:F28,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP29,Expansion,Powered USB hub,1,,Camera/sensors if required,proposed,Historical BOM line,S04 V1.0!C29:F29,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP36,Distribution Protection,5A / 10A / 15A fuse assortment,1 kit,,Correct branch sizing,proposed,Historical BOM line,S04 V1.0!C36:F36,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP41,Wiring,18 AWG stranded wire,Assorted,,Main rails,proposed,Historical BOM line,S04 V1.0!C41:F41,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP42,Wiring,22–24 AWG wire,Assorted,,Sensors/signals,proposed,Historical BOM line,S04 V1.0!C42:F42,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP43,Wiring,Ring/spade/JST/XT60 connectors,Assorted,,Modular service,proposed,Historical BOM line,S04 V1.0!C43:F43,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.
+SUP49,Mounting,Light brackets / hardware,Assorted,,Mast + rear mounting,proposed,Historical BOM line,S04 V1.0!C49:F49,Source-listed quantity/specification only; fitted state and counts unknown. Wire/fuse sizes are not adopted circuit values.

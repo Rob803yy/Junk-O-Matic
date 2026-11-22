@@ -1,57 +1,440 @@
-<?xml version='1.0' encoding='utf-8'?>
-<mxfile host="app.diagrams.net" version="24.7.17">
-  <diagram id="v2_power_domains" name="LitterBuggy V2 / power domains">
-    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" page="1" pageWidth="1500" pageHeight="1000">
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="v2_power_domains" name="02 / LitterBuggy V2 — power domains">
+    <mxGraphModel dx="1900" dy="1660" grid="1" gridSize="10" page="1" pageWidth="1900" pageHeight="1660" background="#f8fafc">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="LitterBuggy V2 / power domains" style="text;html=0;align=left;verticalAlign=top;fontSize=28;" vertex="1" parent="1">
-          <mxGeometry x="40" y="20" width="1420" height="40" as="geometry" />
+        <mxCell id="traction" value="" style="rounded=1;arcSize=4;fillColor=#edf2f7;strokeColor=#d4dde7;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="170" width="1820" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="sub" value="Intended domain separation; all source paths and power entries require physical trace" style="text;html=0;align=left;verticalAlign=top;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="40" y="60" width="1420" height="30" as="geometry" />
+        <mxCell id="auxiliary" value="" style="rounded=1;arcSize=4;fillColor=#edf2f7;strokeColor=#d4dde7;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="615" width="1820" height="770" as="geometry" />
         </mxCell>
-        <mxCell id="e0" value="+ and return: trace" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="b1" target="esc">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="power-review" value="" style="rounded=1;arcSize=4;fillColor=#fff7ed;strokeColor=#d4dde7;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1420" width="1820" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="e1" value="power / signals TBD" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="esc" target="load">
-          <mxGeometry relative="1" as="geometry" />
+        <object id="PWR-B1" label="" verification_status="unknown" evidence_scope="Owner scope + historical source" evidence_ids="REC-012, BOM" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="245" width="370" height="195" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-RC" label="" verification_status="unknown" evidence_scope="Functional grouping; not verified topology" evidence_ids="REC-013, REC-010, BOM" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="710" y="245" width="470" height="195" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-DRIVE" label="" verification_status="unknown" evidence_scope="Stock reference + untraced current drive" evidence_ids="REC-013, FW, LOGGER" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1420" y="245" width="410" height="195" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-B2A1" label="" verification_status="unknown" evidence_scope="REC-004/005; source quantity != installed" evidence_ids="REC-004, REC-005, BOM, REC-006" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="780" width="370" height="355" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-PROTECT" label="" verification_status="unknown" evidence_scope="Architecture hypotheses; no chosen ratings" evidence_ids="REC-009, REC-005, BOM" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="610" y="740" width="370" height="530" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-U5" label="" verification_status="unknown" evidence_scope="S04 V1.0 C32; REC-008" evidence_ids="REC-008, BOM" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1100" y="700" width="330" height="185" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-U5A" label="" verification_status="unknown" evidence_scope="S04 V1.0 C33; REC-007" evidence_ids="REC-007, BOM" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1100" y="930" width="330" height="185" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-U12" label="" verification_status="proposed" evidence_scope="S04 V2.0 C10; REC-008" evidence_ids="REC-008, BOM" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#7251a3;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1100" y="1160" width="330" height="185" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-PI1" label="" verification_status="conflicting" evidence_scope="REC-003 / REC-011" evidence_ids="REC-003, REC-011" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#b33a3a;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1550" y="700" width="280" height="185" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-UNO1" label="" verification_status="unknown" evidence_scope="Owner Uno identity != power path" evidence_ids="REC-011, OWNER-UNO" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1550" y="965" width="280" height="160" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-LIGHTS" label="" verification_status="unknown" evidence_scope="CAD-P01/P02; REC-008" evidence_ids="CAD-P01, CAD-P02, REC-008" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#a45b00;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1550" y="1160" width="280" height="185" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-E01" label="+ / return: trace" verification_status="unknown" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#a45b00;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#a45b00;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="PWR-B1" target="PWR-RC">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-E02" label="power / signals: trace" verification_status="unknown" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#a45b00;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#a45b00;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="PWR-RC" target="PWR-DRIVE">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-E03" label="trace" verification_status="unknown" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#a45b00;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#a45b00;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="PWR-B2A1" target="PWR-PROTECT">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry">
+              <Array as="points">
+                <mxPoint x="525" y="957.5" />
+                <mxPoint x="525" y="1005" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="PWR-E04" label="" verification_status="unknown" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#a45b00;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.1;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#a45b00;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="PWR-PROTECT" target="PWR-U5">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry">
+              <Array as="points">
+                <mxPoint x="1040" y="793" />
+                <mxPoint x="1040" y="792.5" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="PWR-E05" label="" verification_status="unknown" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#a45b00;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#a45b00;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="PWR-PROTECT" target="PWR-U5A">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry">
+              <Array as="points">
+                <mxPoint x="1040" y="1005" />
+                <mxPoint x="1040" y="1022.5" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="PWR-E06" label="" verification_status="proposed" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#7251a3;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.9;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#7251a3;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="PWR-PROTECT" target="PWR-U12">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry">
+              <Array as="points">
+                <mxPoint x="1040" y="1217" />
+                <mxPoint x="1040" y="1252.5" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="PWR-E07" label="5V?" verification_status="proposed" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#7251a3;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#7251a3;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="PWR-U5" target="PWR-PI1">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-E08" label="12V?" verification_status="proposed" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#7251a3;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#7251a3;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="PWR-U12" target="PWR-LIGHTS">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="PWR-E09" label="USB 5V?" verification_status="proposed" interface_type="power">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#7251a3;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#7251a3;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="PWR-PI1" target="PWR-UNO1">
+            <mxGeometry relative="1" x="0" y="0" as="geometry">
+              <mxPoint x="44.5" y="0" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <mxCell id="title" value="02 / LitterBuggy V2 — power domains" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=30;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="28" width="1820" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="e2" value="polarity: verify" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="b2" target="prot">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="subtitle" value="Functional allocation only | every electrical path still requires trace, rating review and physical verification" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="76" width="1820" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="e3" value="feed / returns TBD" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="prot" target="buck">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="legend" value="CONFIRMED = stated scope only   |   CONFLICTING = evidence disagrees   |   PROPOSED = intent   |   UNKNOWN = insufficient evidence" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="114" width="1820" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="e4" value="branch feeds TBD" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#b26a00;dashed=1;fontSize=12;" edge="1" parent="1" source="buck" target="auxload">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="traction-title" value="B1 / RC PROPULSION DOMAIN — CURRENT 3S SCOPE; NO NEW MOTION-CONTROL INTERFACE" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="62" y="190" width="1776" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="b1" value="B1 / propulsion pack&#10;3S named in owner scope&#10;Chemistry / connector TBD&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="40" y="160" width="310" height="140" as="geometry" />
+        <mxCell id="auxiliary-title" value="B2 / AUXILIARY DOMAIN — SOURCE-LISTED CONVERTERS; OUTPUT ASSIGNMENTS NOT VERIFIED" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="62" y="635" width="1776" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="esc" value="ESC + BEC / receiver&#10;BEC topology unverified&#10;Steering, shift and motor&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="560" y="160" width="340" height="140" as="geometry" />
+        <mxCell id="power-review-title" value="NEXT PHYSICAL CHECKS / RETAIN UNKNOWN VALUES UNTIL MEASURED OR TRACED" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="62" y="1440" width="1776" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="load" value="Propulsion loads&#10;Motor + servos&#10;No Pi control in draft&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="160" width="350" height="140" as="geometry" />
+        <mxCell id="PWR-B1-title" value="B1 / propulsion pack" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-B1" connectable="0">
+          <mxGeometry x="14" y="14" width="342" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="b2" value="B2 / auxiliary pack&#10;Kobalt 24V designation&#10;Actual range / cutoff TBD&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="40" y="470" width="310" height="140" as="geometry" />
+        <mxCell id="PWR-B1-line-0" value="3S is owner project scope." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B1" connectable="0">
+          <mxGeometry x="14" y="49" width="342" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="prot" value="Adapter + protection&#10;Dock / fuse / switch&#10;Installed order and rating TBD&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="560" y="470" width="340" height="140" as="geometry" />
+        <mxCell id="PWR-B1-line-1" value="Model / chemistry / label unknown." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B1" connectable="0">
+          <mxGeometry x="14" y="72" width="342" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="buck" value="DC/DC converters&#10;5V / 12V from repository&#10;Input ratings / settings TBD&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="470" width="350" height="140" as="geometry" />
+        <mxCell id="PWR-B1-line-2" value="Connector, polarity, cutoff and" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B1" connectable="0">
+          <mxGeometry x="14" y="95" width="342" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="auxload" value="Auxiliary loads&#10;Pi / Uno / sensors / lights&#10;USB backfeed review required&#10;[UNKNOWN]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#b26a00;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="750" width="350" height="130" as="geometry" />
+        <mxCell id="PWR-B1-line-3" value="installed protection unverified." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B1" connectable="0">
+          <mxGeometry x="14" y="118" width="342" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="n0" value="No shared ground is assumed.&#10;No electrical isolation claim is made.&#10;No fuse size, converter setting or wire gauge is invented.&#10;Detailed review drawing: ../electrical/v2_electrical.qet" style="text;html=0;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="40" y="725" width="1400" height="92" as="geometry" />
+        <mxCell id="PWR-B1-basis" value="Owner scope + historical source" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-B1" connectable="0">
+          <mxGeometry x="14" y="153" width="342" height="19" as="geometry" />
         </mxCell>
-        <mxCell id="footer" value="DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending" style="text;html=0;align=left;verticalAlign=top;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="40" y="950" width="1420" height="35" as="geometry" />
+        <mxCell id="PWR-B1-status" value="UNKNOWN  /  PWR-B1" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-B1" connectable="0">
+          <mxGeometry x="14" y="173" width="342" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-RC-title" value="ESC / BEC / receiver functions" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-RC" connectable="0">
+          <mxGeometry x="14" y="14" width="442" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-RC-line-0" value="Installed models and BEC routing open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-RC" connectable="0">
+          <mxGeometry x="14" y="49" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-RC-line-1" value="Receiver / manual RC path to be traced." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-RC" connectable="0">
+          <mxGeometry x="14" y="72" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-RC-line-2" value="No receiver-channel / servo pin map set." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-RC" connectable="0">
+          <mxGeometry x="14" y="95" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-RC-line-3" value="Manual override behavior not tested." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-RC" connectable="0">
+          <mxGeometry x="14" y="118" width="442" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-RC-basis" value="Functional grouping; not verified topology" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-RC" connectable="0">
+          <mxGeometry x="14" y="153" width="442" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-RC-status" value="UNKNOWN  /  PWR-RC" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-RC" connectable="0">
+          <mxGeometry x="14" y="173" width="442" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-DRIVE-title" value="Motor / steering / shift functions" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-DRIVE" connectable="0">
+          <mxGeometry x="14" y="14" width="382" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-DRIVE-line-0" value="Stock SCX6: 4WD and two-speed." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-DRIVE" connectable="0">
+          <mxGeometry x="14" y="49" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-DRIVE-line-1" value="Installed modifications unverified." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-DRIVE" connectable="0">
+          <mxGeometry x="14" y="72" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-DRIVE-line-2" value="Motor power vs servo/BEC feeds open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-DRIVE" connectable="0">
+          <mxGeometry x="14" y="95" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-DRIVE-line-3" value="No Pi / Uno actuation link in draft." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-DRIVE" connectable="0">
+          <mxGeometry x="14" y="118" width="382" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-DRIVE-basis" value="Stock reference + untraced current drive" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-DRIVE" connectable="0">
+          <mxGeometry x="14" y="153" width="382" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-DRIVE-status" value="UNKNOWN  /  PWR-DRIVE" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-DRIVE" connectable="0">
+          <mxGeometry x="14" y="173" width="382" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-title" value="B2 / A1 pack + adapter" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="14" width="342" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-line-0" value="Kobalt 24V family in project scope." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="49" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-line-1" value="Exact pack / capacity / range open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="72" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-line-2" value="Historical blue KBT adapter." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="95" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-line-3" value="Installed adapter count unknown." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="118" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-line-4" value="Dock contacts / polarity untraced." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="141" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-line-5" value="Cutoff / current rating unverified." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="164" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-line-6" value="KB624-03 is a battery model," style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="187" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-line-7" value="not a switch identification." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="210" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-basis" value="REC-004/005; source quantity != installed" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="313" width="342" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-B2A1-status" value="UNKNOWN  /  PWR-B2A1" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-B2A1" connectable="0">
+          <mxGeometry x="14" y="333" width="342" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-title" value="F1 / S1 / FB1 functions" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="14" width="342" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-0" value="F1 fuse + S1 switch: proposals." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="49" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-1" value="FB1 fuse block: source-listed." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="72" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-2" value="Fitted state and physical order open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="95" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-3" value="This box specifies no series order" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="118" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-4" value="or branch fuse hierarchy." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="141" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-5" value="" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="164" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-6" value="Fuse values / wire gauge / contacts" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="187" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-7" value="and connector orientation unknown." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="210" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-8" value="5/10/15A kit values are not choices." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="233" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-9" value="No selected 30A auxiliary rating." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="256" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-line-10" value="No cutoff / hot-swap claim adopted." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="279" width="342" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-basis" value="Architecture hypotheses; no chosen ratings" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="488" width="342" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PROTECT-status" value="UNKNOWN  /  PWR-PROTECT" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-PROTECT" connectable="0">
+          <mxGeometry x="14" y="508" width="342" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5-title" value="U5 / primary converter" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-U5" connectable="0">
+          <mxGeometry x="14" y="14" width="302" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5-line-0" value="Source: 24V to 5V 10A." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U5" connectable="0">
+          <mxGeometry x="14" y="49" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5-line-1" value="Model / input range / setting open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U5" connectable="0">
+          <mxGeometry x="14" y="72" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5-line-2" value="Installed loads untraced." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U5" connectable="0">
+          <mxGeometry x="14" y="95" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5-line-3" value="10A is not measured capability." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U5" connectable="0">
+          <mxGeometry x="14" y="118" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5-basis" value="S04 V1.0 C32; REC-008" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-U5" connectable="0">
+          <mxGeometry x="14" y="143" width="302" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5-status" value="UNKNOWN  /  PWR-U5" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-U5" connectable="0">
+          <mxGeometry x="14" y="163" width="302" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5A-title" value="U5A / separate converter" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-U5A" connectable="0">
+          <mxGeometry x="14" y="14" width="302" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5A-line-0" value="Source: 24V to 5V 3A." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U5A" connectable="0">
+          <mxGeometry x="14" y="49" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5A-line-1" value="Fitted state / setting open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U5A" connectable="0">
+          <mxGeometry x="14" y="72" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5A-line-2" value="OUTPUT OPEN: no assigned load." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U5A" connectable="0">
+          <mxGeometry x="14" y="95" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5A-line-3" value="No parallel / backup function set." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U5A" connectable="0">
+          <mxGeometry x="14" y="118" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5A-basis" value="S04 V1.0 C33; REC-007" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-U5A" connectable="0">
+          <mxGeometry x="14" y="143" width="302" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U5A-status" value="UNKNOWN  /  PWR-U5A" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-U5A" connectable="0">
+          <mxGeometry x="14" y="163" width="302" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U12-title" value="U12 / proposed converter" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#7251a3;" vertex="1" parent="PWR-U12" connectable="0">
+          <mxGeometry x="14" y="14" width="302" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U12-line-0" value="Source proposal: 12V 5A+." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U12" connectable="0">
+          <mxGeometry x="14" y="49" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U12-line-1" value="Model / input range unselected." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U12" connectable="0">
+          <mxGeometry x="14" y="72" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U12-line-2" value="Lighting voltage not established." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U12" connectable="0">
+          <mxGeometry x="14" y="95" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U12-line-3" value="Fitted state / routing unknown." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-U12" connectable="0">
+          <mxGeometry x="14" y="118" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U12-basis" value="S04 V2.0 C10; REC-008" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-U12" connectable="0">
+          <mxGeometry x="14" y="143" width="302" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-U12-status" value="PROPOSED  /  PWR-U12" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#7251a3;" vertex="1" parent="PWR-U12" connectable="0">
+          <mxGeometry x="14" y="163" width="302" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PI1-title" value="PI1 / power entry OPEN" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#b33a3a;" vertex="1" parent="PWR-PI1" connectable="0">
+          <mxGeometry x="14" y="14" width="252" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PI1-line-0" value="Pi 3B vs Pi 4 conflict." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PI1" connectable="0">
+          <mxGeometry x="14" y="49" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PI1-line-1" value="Connector / supply untraced." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PI1" connectable="0">
+          <mxGeometry x="14" y="72" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PI1-line-2" value="Proposed U5 allocation only." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PI1" connectable="0">
+          <mxGeometry x="14" y="95" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PI1-line-3" value="USB 5V coexistence open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-PI1" connectable="0">
+          <mxGeometry x="14" y="118" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PI1-basis" value="REC-003 / REC-011" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-PI1" connectable="0">
+          <mxGeometry x="14" y="143" width="252" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-PI1-status" value="CONFLICTING  /  PWR-PI1" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#b33a3a;" vertex="1" parent="PWR-PI1" connectable="0">
+          <mxGeometry x="14" y="163" width="252" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-UNO1-title" value="UNO1 / supply OPEN" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-UNO1" connectable="0">
+          <mxGeometry x="14" y="14" width="252" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-UNO1-line-0" value="No external 5V feed selected." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-UNO1" connectable="0">
+          <mxGeometry x="14" y="49" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-UNO1-line-1" value="USB power path unverified." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-UNO1" connectable="0">
+          <mxGeometry x="14" y="72" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-UNO1-line-2" value="Sensor supply branches open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-UNO1" connectable="0">
+          <mxGeometry x="14" y="95" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-UNO1-basis" value="Owner Uno identity != power path" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-UNO1" connectable="0">
+          <mxGeometry x="14" y="118" width="252" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-UNO1-status" value="UNKNOWN  /  PWR-UNO1" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-UNO1" connectable="0">
+          <mxGeometry x="14" y="138" width="252" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-LIGHTS-title" value="Lights / other loads" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-LIGHTS" connectable="0">
+          <mxGeometry x="14" y="14" width="252" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-LIGHTS-line-0" value="Lights visible in photos." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-LIGHTS" connectable="0">
+          <mxGeometry x="14" y="49" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-LIGHTS-line-1" value="Voltage / feed untraced." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-LIGHTS" connectable="0">
+          <mxGeometry x="14" y="72" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-LIGHTS-line-2" value="U12 assignment proposed." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-LIGHTS" connectable="0">
+          <mxGeometry x="14" y="95" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-LIGHTS-line-3" value="No 12V fitting claim." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="PWR-LIGHTS" connectable="0">
+          <mxGeometry x="14" y="118" width="252" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-LIGHTS-basis" value="CAD-P01/P02; REC-008" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="PWR-LIGHTS" connectable="0">
+          <mxGeometry x="14" y="143" width="252" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="PWR-LIGHTS-status" value="UNKNOWN  /  PWR-LIGHTS" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#a45b00;" vertex="1" parent="PWR-LIGHTS" connectable="0">
+          <mxGeometry x="14" y="163" width="252" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="domain-separation-0" value="NO COMMON 0V LINK IS ASSERTED BETWEEN B1 AND B2. Separate source boxes do not establish galvanic isolation." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="548" width="1780" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="domain-separation-1" value="All power arrows mean intended source-to-load allocation (+ and return unresolved), not a wiring or energization instruction." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="575" width="1780" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="check-power-left-0" value="PWR-O01  Read pack / dock / converter labels; trace both conductors and protection order." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1485" width="940" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="check-power-left-1" value="PWR-O02  Confirm Pi power entry and Uno USB/external-power coexistence before choosing a route." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1511" width="940" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="check-power-right-0" value="PWR-O03  Establish each light / sensor supply and converter load." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1060" y="1485" width="760" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="check-power-right-1" value="PWR-O04  Resolve returns / grounding; verify ratings under load." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1060" y="1511" width="760" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="ARCH-R2 | 2026-11-22 | Editable source + SVG/PNG | PDFs HELD | Scope and evidence: architecture-model.json / README.md" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="1618" width="1820" height="21" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

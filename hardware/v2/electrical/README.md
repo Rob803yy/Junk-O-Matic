@@ -1,34 +1,25 @@
-# QElectroTech power draft R0
+# Three-sheet QElectroTech power draft / R1
 
-`v2_electrical.qet` is self-contained: module symbols are embedded in the project,
-and wires reference actual QET terminals. It has three sheets: auxiliary source,
-converter/load branches and propulsion. The checked PDF was exported by the native
-QElectroTech 0.200.1 Qt6 runtime after opening/re-saving the generated project.
+v2_electrical.qet is self-contained with embedded symbols and terminal-linked
+conductors. Sheets cover auxiliary source/distribution, converters/loads and RC
+propulsion. QElectroTech 0.200.1 opened/re-saved the project and produced current
+PNG previews in exports/. Native PNG previews were inspected.
 
-Every drawn net is proposed/untraced and labelled TBD. Module terminal names are
-logical functions, not connector pin numbers. F1/S1 boxes include functional
-return bypasses; this does not assert fuse/switch contacts on the return conductor.
-No internal converter isolation or shared ground is assumed. Source ratings,
-fuse values, protection placement and voltage settings are unresolved.
+U5A is the separate source-listed 5V 3A converter (S04 C33), shown OPEN; its input,
+load and any connection to U5 are not inferred. U5 10A and U12 5A are source
+specifications, not verified operating capabilities. The Pi model is conflicting.
+KB624-03 is a battery-model designation, not an identified fuse/switch. All fuse
+values, polarity, settings, actual protection order and returns remain unverified.
 
-Uno power entry, ESC/motor phases, receiver/BEC/servo channels and optional
-sensor/camera power entries remain open instead of guessed. The blue adapter's
-wire colours are visible; polarity and cutoff are not established by appearance.
-Treat this as a module-level electrical draft, not a released wiring instruction.
+Every drawn net is a proposed/untraced review hypothesis labelled TBD. Terminal
+functions are logical, not physical pin numbers. F1/S1 return paths depict bypass
+roles, not fuse/switch contacts on return. No common ground or isolation is
+asserted. Uno external supply and simultaneous USB power remain open. No motor
+phases, RC channels or new motion-control connections are invented.
 
-Generate with `python scripts/v2/build_power.py`. For application normalization:
-
-```text
-QElectroTech --resave v2_electrical.qet normalized.qet
-```
-
-After checking the normalized file, replace the generated file with it and export
-using the same application version:
-
-```text
-QElectroTech --export-pdf v2_electrical.qet v2_electrical.pdf
-```
-
-Older releases may not expose the headless switches; use their graphical open,
-save and PDF export instead. Native export validates compatibility and layout,
-not circuit correctness or the physical system.
+Generate with python scripts/v2/build_power.py, then open/re-save in QET. The
+native commands used here are --resave INPUT OUTPUT and --export-png INPUT DIR.
+The application's SVG export scaled symbol pictures by 0.75 while leaving wires
+unscaled in this runtime; those defective SVG derivatives are excluded. Native
+PNG and source are the current review materials. PDFs remain unchanged and stale
+for R1 until owner review. Native compatibility is not circuit verification.

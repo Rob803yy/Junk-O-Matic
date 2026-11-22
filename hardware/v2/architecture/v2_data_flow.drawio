@@ -1,42 +1,430 @@
-<?xml version='1.0' encoding='utf-8'?>
-<mxfile host="app.diagrams.net" version="24.7.17">
-  <diagram id="v2_data_flow" name="LitterBuggy V2 / data flow">
-    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" page="1" pageWidth="1500" pageHeight="1000">
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="v2_data_flow" name="03 / LitterBuggy V2 — acquisition and evidence flow">
+    <mxGraphModel dx="2100" dy="1670" grid="1" gridSize="10" page="1" pageWidth="2100" pageHeight="1670" background="#f8fafc">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="LitterBuggy V2 / data flow" style="text;html=0;align=left;verticalAlign=top;fontSize=28;" vertex="1" parent="1">
-          <mxGeometry x="40" y="20" width="1420" height="40" as="geometry" />
+        <mxCell id="pipeline" value="" style="rounded=1;arcSize=4;fillColor=#edf2f7;strokeColor=#d4dde7;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="170" width="2020" height="800" as="geometry" />
         </mxCell>
-        <mxCell id="sub" value="Proposed editable acquisition pipeline | actual old serial output remains to be captured" style="text;html=0;align=left;verticalAlign=top;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="40" y="60" width="1420" height="30" as="geometry" />
+        <mxCell id="crosscutting" value="" style="rounded=1;arcSize=4;fillColor=#edf2f7;strokeColor=#d4dde7;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1000" width="2020" height="315" as="geometry" />
         </mxCell>
-        <mxCell id="e0" value="I2C / echo TBD" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#7251a3;dashed=1;fontSize=12;" edge="1" parent="1" source="s" target="u">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="data-review" value="" style="rounded=1;arcSize=4;fillColor=#fff7ed;strokeColor=#d4dde7;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1350" width="2020" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="e1" value="USB, 115200 proposed" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#7251a3;dashed=1;fontSize=12;" edge="1" parent="1" source="u" target="p">
-          <mxGeometry relative="1" as="geometry" />
+        <object id="DATA-SENSORS" label="" verification_status="conflicting" evidence_scope="Source candidates; physical mapping open" evidence_ids="REC-014, REC-015, REC-016, FW" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#b33a3a;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="245" width="400" height="245" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-UNO1" label="" verification_status="confirmed" evidence_scope="SOURCE ONLY: config.h + sketch + protocol" evidence_ids="FW, PROTOCOL, REC-033" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="570" y="245" width="440" height="245" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-INPUT" label="" verification_status="confirmed" evidence_scope="SOURCE ONLY: logger.py; deployment OPEN" evidence_ids="LOGGER, REC-037" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1110" y="245" width="440" height="245" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-RAW" label="" verification_status="confirmed" evidence_scope="SOURCE ONLY: Recorder.consume" evidence_ids="LOGGER" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1650" y="245" width="380" height="245" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-FRAMER" label="" verification_status="confirmed" evidence_scope="SOURCE ONLY: protocol.py + session handling" evidence_ids="PARSER, LOGGER, PROTOCOL" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1650" y="650" width="380" height="270" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-PARSE" label="" verification_status="confirmed" evidence_scope="SOURCE ONLY: parse_line / SequenceTracker" evidence_ids="PARSER, PROTOCOL" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1110" y="650" width="440" height="270" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-DB" label="" verification_status="confirmed" evidence_scope="SOURCE ONLY: logger.py + schema.sql" evidence_ids="LOGGER, SQL, PROTOCOL" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="570" y="650" width="440" height="270" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-EXPORT" label="" verification_status="confirmed" evidence_scope="SOURCE ONLY: export.py + manifest counts" evidence_ids="EXPORT, LOGGER" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="650" width="400" height="270" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-SESSIONS" label="" verification_status="confirmed" evidence_scope="SOURCE ONLY: logger.py" evidence_ids="LOGGER" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="1060" width="600" height="220" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-HEALTH" label="" verification_status="confirmed" evidence_scope="SOURCE ONLY: logger.py; service is draft" evidence_ids="LOGGER, SERVICE, SQL" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="750" y="1060" width="560" height="220" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-BUNDLE" label="" verification_status="confirmed" evidence_scope="SOURCE ONLY: Recorder init / close" evidence_ids="LOGGER" architecture_revision="ARCH-R2">
+          <mxCell value="" style="rounded=1;arcSize=7;fillColor=#ffffff;strokeColor=#216e4e;strokeWidth=2;recursiveResize=0;container=1;collapsible=0;" vertex="1" parent="1">
+            <mxGeometry x="1390" y="1060" width="640" height="220" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-E01" label="OPEN" verification_status="proposed" interface_type="data">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#7251a3;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#7251a3;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="DATA-SENSORS" target="DATA-UNO1">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-E02" label="USB?" verification_status="proposed" interface_type="data">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#7251a3;dashed=1;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#7251a3;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="DATA-UNO1" target="DATA-INPUT">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-E03" label="bytes" verification_status="confirmed" interface_type="data">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#216e4e;dashed=0;dashPattern=7 5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#216e4e;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="DATA-INPUT" target="DATA-RAW">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-E04" label="then frame" verification_status="confirmed" interface_type="data">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#216e4e;dashed=0;dashPattern=7 5;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#216e4e;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="DATA-RAW" target="DATA-FRAMER">
+            <mxGeometry relative="1" x="0" y="0" as="geometry">
+              <mxPoint x="50.0" y="0" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="DATA-E05" label="frames" verification_status="confirmed" interface_type="data">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#216e4e;dashed=0;dashPattern=7 5;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitPerimeter=0;entryX=1;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#216e4e;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="DATA-FRAMER" target="DATA-PARSE">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-E06" label="valid" verification_status="confirmed" interface_type="data">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#216e4e;dashed=0;dashPattern=7 5;endArrow=block;endFill=1;exitX=0;exitY=0.3;exitPerimeter=0;entryX=1;entryY=0.3;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#216e4e;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="DATA-PARSE" target="DATA-DB">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-E07" label="error" verification_status="confirmed" interface_type="data">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#216e4e;dashed=0;dashPattern=7 5;endArrow=block;endFill=1;exitX=0;exitY=0.76;exitPerimeter=0;entryX=1;entryY=0.76;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#216e4e;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="DATA-PARSE" target="DATA-DB">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DATA-E08" label="query" verification_status="confirmed" interface_type="data">
+          <mxCell style="edgeStyle=none;rounded=0;html=0;strokeWidth=2;strokeColor=#216e4e;dashed=0;dashPattern=7 5;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitPerimeter=0;entryX=1;entryY=0.5;entryPerimeter=0;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#216e4e;labelBackgroundColor=#f8fafc;" edge="1" parent="1" source="DATA-DB" target="DATA-EXPORT">
+            <mxGeometry relative="1" x="0" y="-19" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="title" value="03 / LitterBuggy V2 — acquisition and evidence flow" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=30;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="28" width="2020" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="e2" value="local disk / UTC" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=none;strokeColor=#7251a3;dashed=1;fontSize=12;" edge="1" parent="1" source="p" target="store">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="subtitle" value="Implemented draft behavior is identified as SOURCE ONLY | running sketch, installed devices and Pi deployment remain unverified" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="76" width="2020" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="s" value="Sensor readings&#10;Raw IMU + distance&#10;No synthetic measurements&#10;[PROPOSED]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#7251a3;" vertex="1" parent="1">
-          <mxGeometry x="40" y="200" width="310" height="160" as="geometry" />
+        <mxCell id="legend" value="CONFIRMED = stated scope only   |   CONFLICTING = evidence disagrees   |   PROPOSED = intent   |   UNKNOWN = insufficient evidence" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="114" width="2020" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="u" value="Uno R3 firmware draft&#10;Versioned JSON lines&#10;Sequence + uptime + validity&#10;[PROPOSED]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#7251a3;" vertex="1" parent="1">
-          <mxGeometry x="560" y="200" width="340" height="160" as="geometry" />
+        <mxCell id="pipeline-title" value="PIPELINE / SOLID GREEN = CODE BEHAVIOR; DASHED = PROPOSED OR UNVERIFIED PHYSICAL INTERFACE" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="62" y="190" width="1976" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="p" value="Pi logger draft&#10;Validate / preserve raw bytes&#10;Reconnect and record faults&#10;[PROPOSED]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#7251a3;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="200" width="350" height="160" as="geometry" />
+        <mxCell id="crosscutting-title" value="CROSS-CUTTING SOURCE BEHAVIOR / APPLIES TO THE PIPELINE ABOVE; NOT AN OPERATING ACCEPTANCE RECORD" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="62" y="1020" width="1976" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="store" value="Run evidence&#10;SQLite + raw serial + metadata&#10;Config hash and receive time&#10;Export to CSV&#10;[PROPOSED]" style="rounded=1;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#7251a3;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="550" width="350" height="170" as="geometry" />
+        <mxCell id="data-review-title" value="DEPLOYMENT REVIEW / THE NEW CONTRACT DOES NOT PROVE THE RUNNING BUILD" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="62" y="1370" width="1976" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="n0" value="Existing firmware behaviour is not claimed to match this proposed protocol.&#10;Voltage, yaw, temperature and emergency-stop measurements are omitted&#10;until fitted hardware and acquisition methods are established.&#10;LED/buzzer thresholds default disabled; no motor commands exist.&#10;Optional camera is a separate capture tool; no measured synchronization claim." style="text;html=0;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="40" y="545" width="1400" height="115" as="geometry" />
+        <mxCell id="DATA-SENSORS-title" value="Candidate inputs / availability conflict" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#b33a3a;" vertex="1" parent="DATA-SENSORS" connectable="0">
+          <mxGeometry x="14" y="14" width="372" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="footer" value="DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending" style="text;html=0;align=left;verticalAlign=top;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="40" y="950" width="1420" height="35" as="geometry" />
+        <mxCell id="DATA-SENSORS-line-0" value="MPU-6050: raw axes + internal die temp." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-SENSORS" connectable="0">
+          <mxGeometry x="14" y="49" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SENSORS-line-1" value="HC-SR04: optional trigger/echo driver." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-SENSORS" connectable="0">
+          <mxGeometry x="14" y="72" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SENSORS-line-2" value="S06 reports HC-SR04 lost; fit unknown." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-SENSORS" connectable="0">
+          <mxGeometry x="14" y="95" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SENSORS-line-3" value="A02YYUW UART has no driver here." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-SENSORS" connectable="0">
+          <mxGeometry x="14" y="118" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SENSORS-line-4" value="No calibrated attitude / absolute heading." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-SENSORS" connectable="0">
+          <mxGeometry x="14" y="141" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SENSORS-basis" value="Source candidates; physical mapping open" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-SENSORS" connectable="0">
+          <mxGeometry x="14" y="203" width="372" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SENSORS-status" value="CONFLICTING  /  DATA-SENSORS" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#b33a3a;" vertex="1" parent="DATA-SENSORS" connectable="0">
+          <mxGeometry x="14" y="223" width="372" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-UNO1-title" value="Uno draft / protocol 2 producer" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-UNO1" connectable="0">
+          <mxGeometry x="14" y="14" width="412" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-UNO1-line-0" value="115200, 8N1; UTF-8 JSON + CRLF." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-UNO1" connectable="0">
+          <mxGeometry x="14" y="49" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-UNO1-line-1" value="100ms record target (10Hz), unbenchmarked." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-UNO1" connectable="0">
+          <mxGeometry x="14" y="72" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-UNO1-line-2" value="v, type, fw, seq, ms, imu_raw," style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-UNO1" connectable="0">
+          <mxGeometry x="14" y="95" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-UNO1-line-3" value="echo_us, distance_mm, flags." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-UNO1" connectable="0">
+          <mxGeometry x="14" y="118" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-UNO1-line-4" value="All drivers / feedback OFF by default." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-UNO1" connectable="0">
+          <mxGeometry x="14" y="141" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-UNO1-line-5" value="Default flags=5; measurements=null." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-UNO1" connectable="0">
+          <mxGeometry x="14" y="164" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-UNO1-basis" value="SOURCE ONLY: config.h + sketch + protocol" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-UNO1" connectable="0">
+          <mxGeometry x="14" y="203" width="412" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-UNO1-status" value="CONFIRMED  /  DATA-UNO1" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-UNO1" connectable="0">
+          <mxGeometry x="14" y="223" width="412" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-INPUT-title" value="Pi input / serial or labeled replay" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-INPUT" connectable="0">
+          <mxGeometry x="14" y="14" width="412" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-INPUT-line-0" value="Physical USB port must be configured." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-INPUT" connectable="0">
+          <mxGeometry x="14" y="49" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-INPUT-line-1" value="USB topology / deployed firmware open." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-INPUT" connectable="0">
+          <mxGeometry x="14" y="72" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-INPUT-line-2" value="Serial reads feed the same recorder." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-INPUT" connectable="0">
+          <mxGeometry x="14" y="95" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-INPUT-line-3" value="Replay is labeled, not physical evidence." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-INPUT" connectable="0">
+          <mxGeometry x="14" y="118" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-INPUT-line-4" value="No application command writes to Uno." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-INPUT" connectable="0">
+          <mxGeometry x="14" y="141" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-INPUT-line-5" value="Port opening may reset Uno via DTR." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-INPUT" connectable="0">
+          <mxGeometry x="14" y="164" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-INPUT-basis" value="SOURCE ONLY: logger.py; deployment OPEN" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-INPUT" connectable="0">
+          <mxGeometry x="14" y="203" width="412" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-INPUT-status" value="CONFIRMED  /  DATA-INPUT" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-INPUT" connectable="0">
+          <mxGeometry x="14" y="223" width="412" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-RAW-title" value="01 / preserve bytes first" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-RAW" connectable="0">
+          <mxGeometry x="14" y="14" width="352" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-RAW-line-0" value="Append + flush chunk to serial.raw" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-RAW" connectable="0">
+          <mxGeometry x="14" y="49" width="352" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-RAW-line-1" value="BEFORE framing and parsing." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-RAW" connectable="0">
+          <mxGeometry x="14" y="72" width="352" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-RAW-line-2" value="Track global byte offsets." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-RAW" connectable="0">
+          <mxGeometry x="14" y="95" width="352" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-RAW-line-3" value="Raw includes valid / invalid input." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-RAW" connectable="0">
+          <mxGeometry x="14" y="118" width="352" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-RAW-line-4" value="Flush is not a power-loss guarantee." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-RAW" connectable="0">
+          <mxGeometry x="14" y="141" width="352" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-RAW-basis" value="SOURCE ONLY: Recorder.consume" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-RAW" connectable="0">
+          <mxGeometry x="14" y="203" width="352" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-RAW-status" value="CONFIRMED  /  DATA-RAW" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-RAW" connectable="0">
+          <mxGeometry x="14" y="223" width="352" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-FRAMER-title" value="02 / bounded line framing" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-FRAMER" connectable="0">
+          <mxGeometry x="14" y="14" width="352" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-FRAMER-line-0" value="Maximum line: 512 bytes incl. terminator." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-FRAMER" connectable="0">
+          <mxGeometry x="14" y="49" width="352" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-FRAMER-line-1" value="Framing errors retain offset / length." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-FRAMER" connectable="0">
+          <mxGeometry x="14" y="72" width="352" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-FRAMER-line-2" value="Partial line closed as error on session end." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-FRAMER" connectable="0">
+          <mxGeometry x="14" y="95" width="352" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-FRAMER-line-3" value="Do not join bytes across reconnects." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-FRAMER" connectable="0">
+          <mxGeometry x="14" y="118" width="352" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-FRAMER-line-4" value="Reset framer for each new session." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-FRAMER" connectable="0">
+          <mxGeometry x="14" y="141" width="352" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-FRAMER-basis" value="SOURCE ONLY: protocol.py + session handling" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-FRAMER" connectable="0">
+          <mxGeometry x="14" y="228" width="352" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-FRAMER-status" value="CONFIRMED  /  DATA-FRAMER" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-FRAMER" connectable="0">
+          <mxGeometry x="14" y="248" width="352" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-PARSE-title" value="03 / strict validation + tracking" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-PARSE" connectable="0">
+          <mxGeometry x="14" y="14" width="412" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-PARSE-line-0" value="Exact keys, types, bounds and null flags." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-PARSE" connectable="0">
+          <mxGeometry x="14" y="49" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-PARSE-line-1" value="Check raw echo / distance consistency." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-PARSE" connectable="0">
+          <mxGeometry x="14" y="72" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-PARSE-line-2" value="Reject malformed / legacy CSV payloads." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-PARSE" connectable="0">
+          <mxGeometry x="14" y="95" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-PARSE-line-3" value="Track sequence gaps / duplicates; handle wraps" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-PARSE" connectable="0">
+          <mxGeometry x="14" y="118" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-PARSE-line-4" value="and flag reset_or_out_of_order." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-PARSE" connectable="0">
+          <mxGeometry x="14" y="141" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-PARSE-line-5" value="Sequence event is not proof of a reset." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-PARSE" connectable="0">
+          <mxGeometry x="14" y="164" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-PARSE-basis" value="SOURCE ONLY: parse_line / SequenceTracker" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-PARSE" connectable="0">
+          <mxGeometry x="14" y="228" width="412" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-PARSE-status" value="CONFIRMED  /  DATA-PARSE" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-PARSE" connectable="0">
+          <mxGeometry x="14" y="248" width="412" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-DB-title" value="04 / run.sqlite3 evidence store" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-DB" connectable="0">
+          <mxGeometry x="14" y="14" width="412" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-DB-line-0" value="frames: every framed outcome, validity," style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-DB" connectable="0">
+          <mxGeometry x="14" y="49" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-DB-line-1" value="error, raw offset/length, session ID," style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-DB" connectable="0">
+          <mxGeometry x="14" y="72" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-DB-line-2" value="receive UTC + host monotonic time." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-DB" connectable="0">
+          <mxGeometry x="14" y="95" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-DB-line-3" value="telemetry: validated payloads only;" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-DB" connectable="0">
+          <mxGeometry x="14" y="118" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-DB-line-4" value="null sensor values remain null." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-DB" connectable="0">
+          <mxGeometry x="14" y="141" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-DB-line-5" value="A valid frame can contain ZERO samples." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-DB" connectable="0">
+          <mxGeometry x="14" y="164" width="412" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-DB-basis" value="SOURCE ONLY: logger.py + schema.sql" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-DB" connectable="0">
+          <mxGeometry x="14" y="228" width="412" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-DB-status" value="CONFIRMED  /  DATA-DB" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-DB" connectable="0">
+          <mxGeometry x="14" y="248" width="412" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-EXPORT-title" value="05 / review export" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-EXPORT" connectable="0">
+          <mxGeometry x="14" y="14" width="372" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-EXPORT-line-0" value="export.py queries validated telemetry." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-EXPORT" connectable="0">
+          <mxGeometry x="14" y="49" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-EXPORT-line-1" value="CSV is derived; preserve the run bundle." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-EXPORT" connectable="0">
+          <mxGeometry x="14" y="72" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-EXPORT-line-2" value="Output overwrite is refused." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-EXPORT" connectable="0">
+          <mxGeometry x="14" y="95" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-EXPORT-line-3" value="Receive time != synchronized capture time." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-EXPORT" connectable="0">
+          <mxGeometry x="14" y="118" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-EXPORT-line-4" value="Counts of valid frames, IMU samples and" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-EXPORT" connectable="0">
+          <mxGeometry x="14" y="141" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-EXPORT-line-5" value="range samples are separate measures." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-EXPORT" connectable="0">
+          <mxGeometry x="14" y="164" width="372" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-EXPORT-basis" value="SOURCE ONLY: export.py + manifest counts" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-EXPORT" connectable="0">
+          <mxGeometry x="14" y="228" width="372" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-EXPORT-status" value="CONFIRMED  /  DATA-EXPORT" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-EXPORT" connectable="0">
+          <mxGeometry x="14" y="248" width="372" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SESSIONS-title" value="Session and fault record" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-SESSIONS" connectable="0">
+          <mxGeometry x="14" y="14" width="572" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SESSIONS-line-0" value="sessions / events record open, close and disconnects." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-SESSIONS" connectable="0">
+          <mxGeometry x="14" y="49" width="572" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SESSIONS-line-1" value="Open failure is recorded; retry uses configured delay." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-SESSIONS" connectable="0">
+          <mxGeometry x="14" y="72" width="572" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SESSIONS-line-2" value="Sequence tracking starts fresh for each session." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-SESSIONS" connectable="0">
+          <mxGeometry x="14" y="95" width="572" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SESSIONS-line-3" value="No hardware reset cause or stale-input watchdog inferred." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-SESSIONS" connectable="0">
+          <mxGeometry x="14" y="118" width="572" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SESSIONS-basis" value="SOURCE ONLY: logger.py" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-SESSIONS" connectable="0">
+          <mxGeometry x="14" y="178" width="572" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-SESSIONS-status" value="CONFIRMED  /  DATA-SESSIONS" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-SESSIONS" connectable="0">
+          <mxGeometry x="14" y="198" width="572" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-HEALTH-title" value="Host health / stopping behavior" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-HEALTH" connectable="0">
+          <mxGeometry x="14" y="14" width="532" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-HEALTH-line-0" value="health: CPU temperature + disk free bytes." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-HEALTH" connectable="0">
+          <mxGeometry x="14" y="49" width="532" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-HEALTH-line-1" value="CPU temperature is not enclosure ambient." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-HEALTH" connectable="0">
+          <mxGeometry x="14" y="72" width="532" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-HEALTH-line-2" value="Low disk stops run with failure status." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-HEALTH" connectable="0">
+          <mxGeometry x="14" y="95" width="532" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-HEALTH-line-3" value="SIGINT / SIGTERM close normally; no motion watchdog." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-HEALTH" connectable="0">
+          <mxGeometry x="14" y="118" width="532" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-HEALTH-basis" value="SOURCE ONLY: logger.py; service is draft" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-HEALTH" connectable="0">
+          <mxGeometry x="14" y="178" width="532" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-HEALTH-status" value="CONFIRMED  /  DATA-HEALTH" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-HEALTH" connectable="0">
+          <mxGeometry x="14" y="198" width="532" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-BUNDLE-title" value="Run bundle / provenance" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-BUNDLE" connectable="0">
+          <mxGeometry x="14" y="14" width="612" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-BUNDLE-line-0" value="serial.raw + run.sqlite3 + config_snapshot.yml + manifest.json." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-BUNDLE" connectable="0">
+          <mxGeometry x="14" y="49" width="612" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-BUNDLE-line-1" value="Config / logger SHA256, mode, environment and counts." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-BUNDLE" connectable="0">
+          <mxGeometry x="14" y="72" width="612" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-BUNDLE-line-2" value="Orderly close: fsync raw, raw SHA256, final status / counts." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-BUNDLE" connectable="0">
+          <mxGeometry x="14" y="95" width="612" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-BUNDLE-line-3" value="Firmware correspondence stays unverified; fw is self-report." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#243347;" vertex="1" parent="DATA-BUNDLE" connectable="0">
+          <mxGeometry x="14" y="118" width="612" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-BUNDLE-basis" value="SOURCE ONLY: Recorder init / close" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#475569;" vertex="1" parent="DATA-BUNDLE" connectable="0">
+          <mxGeometry x="14" y="178" width="612" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA-BUNDLE-status" value="CONFIRMED  /  DATA-BUNDLE" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#216e4e;" vertex="1" parent="DATA-BUNDLE" connectable="0">
+          <mxGeometry x="14" y="198" width="612" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="data-review-left-0" value="Recover original sketch and capture actual serial before adapting hardware." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1415" width="1000" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="data-review-left-1" value="Confirm Pi model / OS / port / USB power, sensor boards and enabled pins." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1441" width="1000" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="data-review-left-2" value="10Hz is a draft target. No field rate, loss limit or calibration is validated." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1467" width="1000" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="data-review-left-3" value="Default null frames exercise transport; they are not physical sensor data." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="70" y="1493" width="1000" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="data-review-right-0" value="Optional camera video + sidecar capture is separate; fitting is unknown." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1120" y="1415" width="900" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="data-review-right-1" value="No synchronized-video accuracy, voltage/GPS logging or cloud path exists here." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1120" y="1441" width="900" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="data-review-right-2" value="No motion commands, autonomy, E-stop or vehicle-control watchdog in draft." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1120" y="1467" width="900" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="data-review-right-3" value="Abrupt power-loss recovery and physical deployment remain untested." style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=16;fontStyle=0;fontColor=#334155;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="1120" y="1493" width="900" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="ARCH-R2 | 2026-11-22 | Editable source + SVG/PNG | PDFs HELD | Scope and evidence: architecture-model.json / README.md" style="text;html=0;align=left;verticalAlign=top;whiteSpace=nowrap;overflow=visible;spacing=0;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#243347;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="40" y="1628" width="2020" height="21" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

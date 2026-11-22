@@ -31,7 +31,7 @@ class Recorder:
         self.db=sqlite3.connect(self.run_dir/'run.sqlite3');self.db.executescript(Path(__file__).with_name('schema.sql').read_text())
         self.db.execute('PRAGMA synchronous=FULL')
         self.raw=(self.run_dir/'serial.raw').open('wb');self.offset=0;self.sid=None;self.tracker=SequenceTracker();self.framer=Framer();self.closed=False
-        self.manifest={'protocol':2,'stage':'V2-R0 draft','configuration_revision':config['configuration_revision'],'mode':mode,'replay_is_physical_evidence':False,'started_utc':utc(),'python':platform.python_version(),'platform':platform.platform(),'config':config,'config_sha256':hashlib.sha256(config_bytes).hexdigest(),'logger_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'firmware_correspondence':'unverified','status':'running'}
+        self.manifest={'protocol':2,'stage':'V2-R1 draft','configuration_revision':config['configuration_revision'],'mode':mode,'replay_is_physical_evidence':False,'started_utc':utc(),'python':platform.python_version(),'platform':platform.platform(),'config':config,'config_sha256':hashlib.sha256(config_bytes).hexdigest(),'logger_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'firmware_correspondence':'unverified','status':'running'}
         (self.run_dir/'config_snapshot.yml').write_bytes(config_bytes)
         self.save_manifest()
     def save_manifest(self):

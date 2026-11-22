@@ -1,0 +1,433 @@
+{
+  "revision": "CAD-R3",
+  "review_date": "2026-11-21",
+  "sources": [
+    {
+      "id": "CAD-P01",
+      "file_name": "codex-clipboard-e1f9543e-1265-4704-abef-dc206b5ebae2.png",
+      "sha256": "e044b85a135274628c61f65025aaf9a5d166503cf0d4aa56bfb5282e19d05280",
+      "type": "owner_supplied_photo",
+      "capture_date": null,
+      "scale_reference": null,
+      "scope": "Enclosure-side oblique: flared tub, three visible red strip groups, external orange case, blue front-corner hardware and low metal strip.",
+      "raw_media_in_git": false
+    },
+    {
+      "id": "CAD-P02",
+      "file_name": "codex-clipboard-24bcfdf6-a407-43aa-8136-452083c0f02b.png",
+      "sha256": "da637917bc28ec9ebd16a85273b5da98c1a499c52fbacee0db3b78f8de8fbf22",
+      "type": "owner_supplied_photo",
+      "capture_date": null,
+      "scale_reference": null,
+      "scope": "Yellow-handle end: tub width, molded end recess, yellow attachment, two white lights, blue side hardware, black bumper and red detail.",
+      "raw_media_in_git": false
+    },
+    {
+      "id": "CAD-P03",
+      "file_name": "codex-clipboard-a7d49cec-6fe8-43b3-93a4-676971ab0c8c.png",
+      "sha256": "eddf94d83bc15b808e12c62bd537f379984fee7cd39e0da393a3b696a64ca517",
+      "type": "owner_supplied_photo",
+      "capture_date": null,
+      "scale_reference": null,
+      "scope": "Opposite-side oblique: tapered tub and floor ribs, longer rear overhang, strip lights and low silver strip.",
+      "raw_media_in_git": false
+    },
+    {
+      "id": "CAD-P04",
+      "file_name": "codex-clipboard-510a7d87-88c8-4b69-b09f-53f1c565e230.png",
+      "sha256": "dc457959bcf7837aeed69074d097dca00293e2d8d6c3158bf9d9ef46cb4857b9",
+      "type": "owner_supplied_photo",
+      "capture_date": null,
+      "scale_reference": null,
+      "scope": "Raised tub exposes gray rectangular frame, silver longitudinal members, crosspiece, fasteners, ties and chassis.",
+      "raw_media_in_git": false
+    },
+    {
+      "id": "CAD-P05",
+      "file_name": "codex-clipboard-94309679-5e44-46b7-af4b-fb713287431f.png",
+      "sha256": "9126fec296caa2dd74b8390a498526c2d8ef698e9183ea924408f29f930df81f",
+      "type": "owner_supplied_photo",
+      "capture_date": null,
+      "scale_reference": null,
+      "scope": "Indoor assembled front view confirms component relationships without bucket.",
+      "raw_media_in_git": false
+    },
+    {
+      "id": "CAD-P06",
+      "file_name": "codex-clipboard-a53eb6b8-01f6-4462-bedb-a004fb7dba1e.png",
+      "sha256": "a8d83dba45f253b273efe817f7ed6e486f3f4bf054cce0e214ccbc86f41dc5c6",
+      "type": "owner_supplied_photo",
+      "capture_date": null,
+      "scale_reference": null,
+      "scope": "Low front view reveals tub brackets/bolt heads, thin transverse member, purple-marked tube ends, light-colored spacer, shocks/guards and red axle-center housing.",
+      "raw_media_in_git": false
+    },
+    {
+      "id": "CAD-P07",
+      "file_name": "codex-clipboard-7b04aba6-d965-4289-a9a4-66bffc6bbf33.png",
+      "sha256": "d3aae9006aab70d178a4819b8ec8019e64b552326b72e016c762c2380bbc5479",
+      "type": "owner_supplied_photo",
+      "capture_date": null,
+      "scale_reference": null,
+      "scope": "Outdoor view appears to repeat the CAD-P03 scene at different resolution/crop. Not counted as an independent build/test.",
+      "raw_media_in_git": false
+    }
+  ],
+  "owner_confirmations": [
+    {
+      "id": "CAD-U01",
+      "claim": "Yellow-handle end is driving front; +X points forward.",
+      "basis": "Owner answer in current CAD review"
+    },
+    {
+      "id": "CAD-U02",
+      "claim": "Show assembly without bucket.",
+      "basis": "Owner display preference; removable payload omitted"
+    },
+    {
+      "id": "CAD-U03",
+      "claim": "Indoor under-frame and outdoor photos show the same mounting hardware.",
+      "basis": "Owner answer in current under-frame CAD review"
+    },
+    {
+      "id": "CAD-U04",
+      "claim": "Raised tub remains attached on its normal hinge.",
+      "basis": "Owner answer in current under-frame CAD review"
+    },
+    {
+      "id": "CAD-U05",
+      "claim": "Hinge is at the end opposite the yellow-handle/front end.",
+      "basis": "Owner answer in current under-frame CAD review"
+    },
+    {
+      "id": "CAD-U06",
+      "claim": "Gray rectangular outer frame stays on the chassis when tub tips.",
+      "basis": "Owner answer in current under-frame CAD review"
+    },
+    {
+      "id": "CAD-U07",
+      "claim": "In CAD-P04, up/down fore-aft members are below the gray frame; left/right transverse member(s) are above it.",
+      "basis": "Owner clarification distinguishing member directions; refines earlier unqualified on-top answer"
+    }
+  ],
+  "observations": [
+    {
+      "id": "CAD-001",
+      "subject": "Tub profile",
+      "bounded_observation": "Rounded corners; upper opening wider and longer than the lower floor.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Rounded-profile tapered shell and thick rim.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-002",
+      "subject": "Floor molding",
+      "bounded_observation": "Longitudinal floor ribs are visible. Their exact count and section are unmeasured.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Stylized ribs; no mold tooling or manufacturing claim.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-003",
+      "subject": "Cart offset",
+      "bounded_observation": "The opposite/yellow-handle-rear end visibly overhangs the rear wheels farther.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Rear-biased tub; numeric offset is a layout estimate.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-004",
+      "subject": "Enclosure placement",
+      "bounded_observation": "Orange enclosure is outside a long tub wall near the yellow-handle end, with a broad vertical lid.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Vertical case outside wall; R1 horizontal tray interpretation replaced.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-005",
+      "subject": "Enclosure internals",
+      "bounded_observation": "Electronics are indistinct through the lid; boards and fasteners cannot be resolved.",
+      "source_ids": [
+        "CAD-P01"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Remove invented Pi/Uno internal placement. Native lid is translucent; internal layout open.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-006",
+      "subject": "Battery/dock appearance",
+      "bounded_observation": "Blue pack-like body and dark adapter/rail hardware project from the enclosure-side front corner.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Separate pack, adapter, slide rails and retention features; identity/polarity/rating still unresolved.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-007",
+      "subject": "Front attachment",
+      "bounded_observation": "Yellow molded attachment is on the short end.",
+      "source_ids": [
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Simplified yellow handle/attachment plus dark end panel; exact mechanism unknown.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-008",
+      "subject": "Rim lighting",
+      "bounded_observation": "Red/pink strip assemblies are visible on both long sides across supplied views.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Three stylized strip groups per side; actual total/channel wiring not established.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-009",
+      "subject": "Front lighting",
+      "bounded_observation": "Two bright white light points appear below the yellow attachment.",
+      "source_ids": [
+        "CAD-P02"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Two lamp proxies and a support; fasteners/routing remain open.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-010",
+      "subject": "Chassis and wheels",
+      "bounded_observation": "Four treaded wheels, a compact ladder-chassis region and broad front bumper are visible.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Tire shoulders, tread, rims, axle and bumper envelopes; no OEM part-level reverse engineering.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-011",
+      "subject": "Low metal strips",
+      "bounded_observation": "Silver members project below the tub in outdoor views; their world orientation and correspondence to individual frame members are not resolved.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Retract CAD-R2 vertical hanging-strip interpretation. Outdoor metal projections are not fully identified; do not force them into guessed vertical legs.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-012",
+      "subject": "Hidden supports",
+      "bounded_observation": "Earlier views obscure most supports. CAD-P04/P06 now expose the frame and several interfaces; exact joints and load path remain unverified.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "CAD-P04/P06 expose the frame and inner members; replace generic cross-supports. Exact sections, dimensions, joints and load path remain unverified.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-013",
+      "subject": "Sensor availability",
+      "bounded_observation": "These views do not identify an installed ultrasonic module.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Remove floating HC-SR04 from assembly; historical reference remains hidden and excluded from STEP.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-014",
+      "subject": "Payload display",
+      "bounded_observation": "Bucket is present in photographs.",
+      "source_ids": [
+        "CAD-P01",
+        "CAD-P02",
+        "CAD-P03"
+      ],
+      "observation_status": "confirmed",
+      "model_action": "Owner requests no bucket in assembly; this is a display decision, not a claim that bucket was absent.",
+      "dimension_status": "proposed",
+      "observation_scope": "Visible in supplied photographs only; capture date unknown."
+    },
+    {
+      "id": "CAD-015",
+      "subject": "Outer cart frame",
+      "bounded_observation": "Gray rectangular formed-member frame is visible with the tub raised.",
+      "source_ids": [
+        "CAD-P04",
+        "CAD-P06"
+      ],
+      "observation_status": "confirmed",
+      "observation_scope": "Visible feature / bounded owner statement; numeric geometry not measured.",
+      "model_action": "Replace generic support pieces with an open-section rectangular frame; precise profile/thickness unmeasured.",
+      "dimension_status": "proposed"
+    },
+    {
+      "id": "CAD-016",
+      "subject": "Inner members",
+      "bounded_observation": "Two silver longitudinal rectangular members have visible front ends, purple marking and fastener/tie features.",
+      "source_ids": [
+        "CAD-P04",
+        "CAD-P06"
+      ],
+      "observation_status": "confirmed",
+      "observation_scope": "Visible feature / bounded owner statement; numeric geometry not measured.",
+      "model_action": "Use hollow rectangular members and purple end markings; cap/plug state remains unknown.",
+      "dimension_status": "proposed"
+    },
+    {
+      "id": "CAD-017",
+      "subject": "Tub brackets and fasteners",
+      "bounded_observation": "Upturned brackets, upper flanges and gold-colored bolt/washer appearances are visible.",
+      "source_ids": [
+        "CAD-P06"
+      ],
+      "observation_status": "confirmed",
+      "observation_scope": "Visible feature / bounded owner statement; numeric geometry not measured.",
+      "model_action": "Model bracket/fastener appearance without specifying thread, grade, material or fabrication hole locations.",
+      "dimension_status": "proposed"
+    },
+    {
+      "id": "CAD-018",
+      "subject": "Slender transverse member",
+      "bounded_observation": "Thin metal member spans between the bracket regions.",
+      "source_ids": [
+        "CAD-P06"
+      ],
+      "observation_status": "confirmed",
+      "observation_scope": "Visible feature / bounded owner statement; numeric geometry not measured.",
+      "model_action": "Add a transverse member envelope; section, connections and structural function unresolved.",
+      "dimension_status": "proposed"
+    },
+    {
+      "id": "CAD-019",
+      "subject": "Light-colored spacer",
+      "bounded_observation": "Light-colored block/plate appears between the inner members and chassis.",
+      "source_ids": [
+        "CAD-P06"
+      ],
+      "observation_status": "confirmed",
+      "observation_scope": "Visible feature / bounded owner statement; numeric geometry not measured.",
+      "model_action": "Add spacer envelope. Material, exact footprint and attachment unknown.",
+      "dimension_status": "proposed"
+    },
+    {
+      "id": "CAD-020",
+      "subject": "Front axle red housing",
+      "bounded_observation": "Red feature is below the front axle-center region, behind/lower than the bumper.",
+      "source_ids": [
+        "CAD-P06"
+      ],
+      "observation_status": "confirmed",
+      "observation_scope": "Visible feature / bounded owner statement; numeric geometry not measured.",
+      "model_action": "Remove CAD-R2 red feature on bumper top; place a front axle-center housing envelope.",
+      "dimension_status": "proposed"
+    },
+    {
+      "id": "CAD-021",
+      "subject": "Front suspension",
+      "bounded_observation": "Front spring/damper and angled guard appearances are visible.",
+      "source_ids": [
+        "CAD-P06"
+      ],
+      "observation_status": "confirmed",
+      "observation_scope": "Visible feature / bounded owner statement; numeric geometry not measured.",
+      "model_action": "Add front spring/damper/guard envelopes; exact mounting and rear suspension remain unresolved.",
+      "dimension_status": "proposed"
+    },
+    {
+      "id": "CAD-022",
+      "subject": "Tipping state",
+      "bounded_observation": "Tub is raised above the horizontal frame. Owner confirms normal rear hinge and fixed outer frame.",
+      "source_ids": [
+        "CAD-P04",
+        "CAD-U04",
+        "CAD-U05",
+        "CAD-U06"
+      ],
+      "observation_status": "confirmed",
+      "observation_scope": "Visible feature / bounded owner statement; numeric geometry not measured.",
+      "model_action": "Add editable tipped pose with rear transverse datum. Numeric pivot, angle, travel/latch and clearances remain proposed.",
+      "dimension_status": "proposed"
+    },
+    {
+      "id": "CAD-023",
+      "subject": "Photo dependencies",
+      "bounded_observation": "CAD-P07 shows the same outdoor scene as CAD-P03 at different image presentation.",
+      "source_ids": [
+        "CAD-P03",
+        "CAD-P07"
+      ],
+      "observation_status": "confirmed",
+      "observation_scope": "Visible feature / bounded owner statement; numeric geometry not measured.",
+      "model_action": "Retain provenance but do not count as an independent physical configuration or test.",
+      "dimension_status": "proposed"
+    },
+    {
+      "id": "CAD-024",
+      "subject": "Ties and wiring",
+      "bounded_observation": "White ties and cables are visible around the longitudinal members.",
+      "source_ids": [
+        "CAD-P04"
+      ],
+      "observation_status": "confirmed",
+      "observation_scope": "Visible feature / bounded owner statement; numeric geometry not measured.",
+      "model_action": "Record routing appearance; no electrical endpoints, retention strength or power topology inferred.",
+      "dimension_status": "proposed"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "CAD-Q01",
+      "status": "confirmed",
+      "resolution": "Owner CAD-U07 distinguishes longitudinal members below frame from transverse members above. Numeric dimensions/joint details still unknown."
+    }
+  ]
+}

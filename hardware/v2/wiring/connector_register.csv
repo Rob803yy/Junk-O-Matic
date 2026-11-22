@@ -18,8 +18,10 @@ ESC1,ESC input / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,prop
 UNO1_I2C,Elegoo Uno R3 proposed I2C / DRAFT - physical connector TBD,SDA_A4;SCL_A5;SUPPLY_TBD;GND,TBD,TBD,TBD,proposed
 IMU1,MPU-6050 breakout identity unverified / DRAFT - physical connector TBD,SDA;SCL;VCC_TBD;GND,TBD,TBD,TBD,proposed
 UNO1_RANGE,Elegoo Uno R3 digital pins unresolved / DRAFT - physical connector TBD,TRIG_PIN_TBD;ECHO_PIN_TBD;SUPPLY_TBD;GND,TBD,TBD,TBD,proposed
-RANGE1,HC-SR04 identity unverified / DRAFT - physical connector TBD,TRIG;ECHO;VCC_TBD;GND,TBD,TBD,TBD,proposed
+RANGE1,Historical HC-SR04 reported lost / NOT fitted claim / DRAFT - physical connector TBD,TRIG;ECHO;VCC_TBD;GND,TBD,TBD,TBD,conflicting
 UNO1_LED,Uno LED output unresolved / DRAFT - physical connector TBD,LED_PIN_TBD;GND,TBD,TBD,TBD,proposed
 LED1,LED with series resistor TBD / DRAFT - physical connector TBD,RESISTOR_LED_PATH;GND,TBD,TBD,TBD,proposed
 UNO1_BUZZ,Uno buzzer output unresolved / DRAFT - physical connector TBD,BUZZ_PIN_TBD;GND,TBD,TBD,TBD,proposed
 BZ1,Buzzer drive interface TBD / DRAFT - physical connector TBD,CONTROL_TBD;GND,TBD,TBD,TBD,proposed
+U5A,Separate source-listed 5V 3A converter,INPUT_TBD;OUTPUT_TBD,TBD,TBD,TBD,"unknown - OPEN, not connected"
+RANGE2,A02YYUW / SEN0311 replacement candidate,UART_TX;RX_MODE;VCC;GND - manufacturer functions only,not selected,TBD,TBD,"proposed - OPEN, no driver"

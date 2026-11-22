@@ -1,0 +1,58 @@
+{
+  "revision": "ARCH-R2",
+  "review_date": "2026-11-22",
+  "configuration_id": "CFG-V2-R1",
+  "scene_sha256": "bec24bd967bd016c8bebbc4ce50266267793f7df99b4c11a0a687cdeb33bee7a",
+  "evidence_input_sha256_lf": {
+    "docs/v2/sources_and_decisions.md": "7cbf6864263c184a3f22834ac7991c724a5262b8a8fa16e824b700d579e2cb06",
+    "docs/v2/bom.json": "9d6d0c3369b3ffb75c8b77560c6e76ee2862e13847ed7e097c12d5fb11b39fa7",
+    "software/v2/arduino/litterbuggy_v2/config.h": "519bf00324bccd138461c1f016d73c87e065333676408e77c402440f52d63dfa",
+    "software/v2/arduino/litterbuggy_v2/litterbuggy_v2.ino": "0846f889cfa6f36f37f285d3c158f146b652cf4ebea2566f3161da3248981b85",
+    "docs/v2/serial_protocol.md": "5fa3ff988b2e119512d8aa797ed2a0a12d419ed2f0e507720bdd73140be749ab",
+    "software/v2/raspberry_pi/logger.py": "92e3b58dacf09f8a4a97470a0a9f2871e19d62f5fa4df9c625459985bc42bb14",
+    "software/v2/raspberry_pi/protocol.py": "b50358e969700c48c6ef12b90998a39bc84767ef220cd9d35e1bfd362d27f9db",
+    "software/v2/raspberry_pi/schema.sql": "8fa5d125ccc034b386231882c0a272680a7ea3a16114836b0dd99a3d22be7dda",
+    "software/v2/raspberry_pi/export.py": "3684d771902539a639b61384711dd2c8b18f36a258aee202d6d02120178a7459",
+    "software/v2/raspberry_pi/litterbuggy-logger.service": "7116c097287abaa5ec0468abde1df28b5b5e295cd482dc908cf1f722af7e342f",
+    "hardware/v2/mechanical/photo-observations.json": "b4f792fac3212e2110a5792b7364517f0eb8335d6a74655e47e839f055d8bff1",
+    "docs/reconciliation/reconciliation-register.json": "46afa718d83154ebd75f5450f7453496a5b0b660e7754b761363b034b910bde4"
+  },
+  "pages": [
+    {
+      "page": "v2_system_overview",
+      "nodes": 9,
+      "edges": 7,
+      "editable_text_rows": 89,
+      "result": "passed"
+    },
+    {
+      "page": "v2_power_domains",
+      "nodes": 11,
+      "edges": 9,
+      "editable_text_rows": 100,
+      "result": "passed"
+    },
+    {
+      "page": "v2_data_flow",
+      "nodes": 11,
+      "edges": 8,
+      "editable_text_rows": 105,
+      "result": "passed"
+    }
+  ],
+  "held_pdf_hashes_verified": 13,
+  "checks": [
+    "Evidence paths / claim scopes; four verification states",
+    "Measured text width; body/basis spacing; node bounds / non-overlap",
+    "Orthogonal routes; no unrelated node or label/node intersections",
+    "Native XML readback: unique IDs, editable text, endpoints / waypoints",
+    "Protocol keys / default null frame / line limit / firmware defaults match source",
+    "U5A output open; Uno external power open; no confirmed electrical trace",
+    "Held PDF SHA256 values match reconciliation register"
+  ],
+  "limits": [
+    "Native XML and shared-scene previews checked; diagrams.net application rendering not claimed.",
+    "No physical trace, measurement, hardware upload, deployment or field validation.",
+    "Digital connectivity R1 and PDFs outside regeneration scope."
+  ]
+}

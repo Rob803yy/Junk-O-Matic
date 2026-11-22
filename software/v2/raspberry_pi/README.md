@@ -70,3 +70,13 @@ by drafting these files. The unit uses SIGTERM for clean shutdown and does not
 depend on a keyboard, GUI or network connection.
 
 Test with `python -m pytest software/v2/tests -q` after installing pytest.
+
+## R1 configuration reconciliation
+
+The active example records CFG-V2-R1 and manifest stage V2-R1 draft. Pi3B versus
+Pi4 remains conflicting; software compatibility on the user's actual Pi/OS is
+not tested here. Source S06's CSV D/H messages and 20Hz/1Hz scheduling are not a
+compatibility mode. This logger accepts only the documented JSON protocol 2.
+The proposed firmware emits at 10Hz. SQL retains raw MPU die-temperature counts;
+Pi health CPU temperature does not measure enclosure ambient or battery state.
+Service restart is acquisition recovery, not a motion watchdog or E-stop.

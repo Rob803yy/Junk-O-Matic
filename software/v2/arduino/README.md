@@ -8,6 +8,13 @@ Defaults: all sensors/feedback disabled, pins -1, 100 ms emission, 115200 baud.
 The default sketch emits null measurements and flags=5; no sensor output pins
 are configured. It is buildable for review without claiming known wiring.
 
+R1: the historical HC-SR04 is reported lost in S06. No replacement is selected.
+Enabling that optional driver also requires `-DRANGE_PROFILE=1`; this identifies
+the HC-SR04 timing profile and does not confirm hardware availability. A02YYUW
+/ SEN0311 uses a different UART protocol and is not implemented here. Compile
+guards reject using an unselected or UART profile with the trigger/echo driver.
+Current firmware ID is `v2-r1`; the shared JSON protocol remains version 2.
+
 The optional drivers are implemented, not TODO sensor constants:
 
 - MPU-6050: identity check, wake/configure, bounded I2C transactions, raw 14-byte

@@ -1,17 +1,25 @@
 # Junk-O-Matic / LitterBuggy
 
-## Current engineering work: V2 draft R0
+## Current engineering work: reconciled V2 review R1
 
-[Start the V2 technical review](docs/v2/README.md): editable diagrams.net
-architecture, QElectroTech power schematic, WireViz harnesses, FreeCAD/STEP
-assembly and mounts, Uno R3 firmware, and a Pi serial/SQLite logger with tests.
-PDF/SVG/PNG exports accompany the native files for immediate review.
+[Start the engineering review](docs/v2/README.md): three editable architecture
+diagrams, digital connectivity, three-sheet QElectroTech power schematic, two
+WireViz harnesses, five FreeCAD/STEP models, Uno firmware and Pi logger/SQL/tests.
 
-The owner confirms an **Elegoo Uno R3**. Unverified wiring and all mechanical
-layout dimensions remain explicit. New software is a draft, not recovered
-original firmware. No hardware upload, installation, fabrication or field
-validation was performed. See the [validation report](docs/v2/validation.md)
-and [verification record](docs/v2_verification/README.md).
+[38 source discrepancies](docs/reconciliation/README.md) reconcile the supplied
+V1/V2/V3 references and concept posters. Corrected editable BOM, scorecard,
+review-data workbook and unified Word correction record are in
+[editable review documents](docs/reconciliation/editable).
+
+The owner confirms **Elegoo Uno R3**. Pi model, current range sensor, actual wiring
+and all measured dimensions remain unresolved. Future concept claims are not
+installed capabilities. No hardware upload, Pi deployment or field validation
+was performed. Version naming is proposed pending owner confirmation.
+
+Latest CAD feedback: [CAD-R3 photo-informed models and previews](hardware/v2/mechanical/README.md), with owner-confirmed front orientation and no bucket.
+
+**PDF generation is held for owner review.** Prior R0 PDFs remain historical and
+stale for R1. Current SVG/PNG previews accompany the editable sources.
 
 ## Historical V1.0A scope (preserved below)
 
