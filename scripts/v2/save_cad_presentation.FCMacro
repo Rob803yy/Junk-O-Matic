@@ -1,15 +1,22 @@
 import FreeCAD as App,FreeCADGui as Gui,json,traceback
 from pathlib import Path
 R=Path(__file__).resolve().parents[2]
-colors={'cart':(.13,.15,.16),'rim':(.20,.22,.23),'chassis':(.13,.16,.18),'tyre':(.075,.085,.09),'tread':(.11,.12,.13),'wheel':(.19,.20,.21),'metal':(.68,.70,.70),'orange':(.95,.31,.055),'lid':(.66,.72,.75),'blue':(.025,.22,.80),'yellow':(.98,.78,.035),'red':(.95,.04,.07),'white':(.89,.96,1.),'reference':(.50,.55,.57)}
+import importlib.util
+spec=importlib.util.spec_from_file_location('cad_components',R/'hardware/v2/mechanical/model_components.py');mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod);colors=mod.COL
 receipt=[]
 try:
     Gui.getMainWindow().hide()
     for p in (R/'hardware/v2/mechanical').glob('*.FCStd'):
         d=App.openDocument(str(p))
+        for row,(key,item) in enumerate(mod.CFG['parameters'].items(),3):d.Parameters.set('E'+str(row),item['source'])
+        frame=d.getObject('FixedCartFrame')
+        if frame:
+            if 'MemberOrdering' not in frame.PropertiesList:frame.addProperty('App::PropertyString','MemberOrdering','Review evidence')
+            frame.MemberOrdering='CAD-U07: fore/aft members below gray frame; transverse crossmember above. Numeric joint planes/sections/attachments unmeasured.'
+            frame.AppearanceEvidence='CAD-P04;CAD-P06;CAD-U06;CAD-U07'
         for o in d.Objects:
             if o.ViewObject and hasattr(o,'ReviewRole'):
-                if o.ReviewRole=='reference':o.AppearanceEvidence='S06 historical description; not observed in CAD-P01..03'
+                if o.Name.startswith('Historical') or o.Name=='UnselectedSensorReference':o.AppearanceEvidence='S06 historical description; not observed in CAD-P01..03'
                 o.ViewObject.Visibility=o.ReviewRole=='render'
                 if hasattr(o.ViewObject,'ShapeColor'):
                     o.ViewObject.ShapeColor=colors[o.DraftColor];o.ViewObject.LineColor=(.07,.08,.09)

@@ -9,7 +9,7 @@
 - WireViz 0.4.1 with Graphviz 13.1.2 generated both harnesses, diagrams, HTML,
   connector inventories and BOM tables. Rendered diagrams were inspected.
 - FreeCAD 1.1.4 generated five native files and five STEP exports; all reopened.
-  93 exported component records across the assembly/submodels passed validity checks. Additional native checks
+  139 exported component records across the current assembly/submodels passed validity checks. Additional native checks
   tested all saved shape objects, spreadsheet wheelbase propagation and tyre
   centre spacing. A centre/end placement inconsistency was corrected before
   the final model export. These are illustrative geometry checks, not fit tests.
@@ -81,3 +81,14 @@ colors, construction/reference visibility and lid translucency are saved. Fourte
 photo observations and two owner decisions are recorded. No measured dimensions,
 bucket, installed ultrasonic claim or new PDF was introduced. Software was unchanged
 in this CAD-only feedback pass; its earlier 32-test receipt remains scoped to R1.
+
+## CAD-R3 frame and pose checks
+
+Native/STEP readbacks, hollow inner-member section, live frame-width edit,
+rear-axis tub tipping with stationary outer frame, restored normal pose and
+red axle-center placement are checked. The former hanging-strip and bumper-top
+red feature are excluded. Seven photo references/24 bounded observations and
+seven owner decisions support this revision. The 55-degree pose is a layout view;
+numeric hinge placement, latch, moving bracket membership, maximum travel and
+real-world clearance are unverified. Software is unchanged in this CAD pass.
+All 13 prior PDFs remain held and unchanged.

@@ -1,5 +1,5 @@
 {
-  "revision": "CAD-R2",
+  "revision": "CAD-R3",
   "FreeCAD_version": [
     "1",
     "1",
@@ -13,34 +13,186 @@
   "checks": [
     {
       "document": "v2_cart_mount",
-      "object": "CrossSupport0",
+      "object": "FrameSideWeb0",
       "valid": true,
       "solid_count": 1,
-      "volume_mm3": 218400.0,
+      "volume_mm3": 68250.0,
       "dimension_status": "unmeasured layout"
     },
     {
       "document": "v2_cart_mount",
-      "object": "CrossSupport1",
+      "object": "FrameSideFlange0",
       "valid": true,
       "solid_count": 1,
-      "volume_mm3": 218400.0,
+      "volume_mm3": 48750.0,
       "dimension_status": "unmeasured layout"
     },
     {
       "document": "v2_cart_mount",
-      "object": "VisibleSideStrip0",
+      "object": "FrameEndWeb0",
       "valid": true,
       "solid_count": 1,
-      "volume_mm3": 29640.0,
+      "volume_mm3": 49350.0,
       "dimension_status": "unmeasured layout"
     },
     {
       "document": "v2_cart_mount",
-      "object": "VisibleSideStrip1",
+      "object": "FrameEndFlange0",
       "valid": true,
       "solid_count": 1,
-      "volume_mm3": 29640.0,
+      "volume_mm3": 35250.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "FrameSideWeb1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 68250.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "FrameSideFlange1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 48750.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "FrameEndWeb1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 49350.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "FrameEndFlange1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 35250.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "FrameCrosspiece",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 522000.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "InnerRail0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 119599.99999999997,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "PurpleEnd0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 147.19999999999743,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "InnerRail1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 119599.99999999997,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "PurpleEnd1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 147.19999999999743,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "LightSpacerEnvelope",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 185000.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "SlenderTransverseMember",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6538.282630651088,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "TubBracketWeb0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 10800.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "TubBracketFlange0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6075.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "TubWasher0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 628.3185307179583,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "TubFastener0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 763.834406137875,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "TubBracketWeb1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 10800.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "TubBracketFlange1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6075.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "TubWasher1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 628.3185307179583,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_cart_mount",
+      "object": "TubFastener1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 763.834406137875,
       "dimension_status": "unmeasured layout"
     },
     {
@@ -381,42 +533,258 @@
     },
     {
       "document": "v2_assembly",
-      "object": "BumperRedDetail",
+      "object": "FrontAxleRedHousing",
       "valid": true,
       "solid_count": 1,
-      "volume_mm3": 19759.999999999996,
+      "volume_mm3": 201435.49159388052,
       "dimension_status": "unmeasured layout"
     },
     {
       "document": "v2_assembly",
-      "object": "CrossSupport0",
+      "object": "FrontDamperBody0",
       "valid": true,
       "solid_count": 1,
-      "volume_mm3": 218400.0,
+      "volume_mm3": 10005.972601683492,
       "dimension_status": "unmeasured layout"
     },
     {
       "document": "v2_assembly",
-      "object": "CrossSupport1",
+      "object": "FrontDamperRod0",
       "valid": true,
       "solid_count": 1,
-      "volume_mm3": 218400.0,
+      "volume_mm3": 2686.061718819273,
       "dimension_status": "unmeasured layout"
     },
     {
       "document": "v2_assembly",
-      "object": "VisibleSideStrip0",
+      "object": "FrontSpring0",
       "valid": true,
       "solid_count": 1,
-      "volume_mm3": 29640.0,
+      "volume_mm3": 2724.131093654367,
       "dimension_status": "unmeasured layout"
     },
     {
       "document": "v2_assembly",
-      "object": "VisibleSideStrip1",
+      "object": "FrontGuard0",
       "valid": true,
       "solid_count": 1,
-      "volume_mm3": 29640.0,
+      "volume_mm3": 28800.000000000015,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrontDamperBody1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 10005.972601683492,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrontDamperRod1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2686.061718819273,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrontSpring1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2724.131093654367,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrontGuard1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 28800.000000000015,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrameSideWeb0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 68250.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrameSideFlange0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 48750.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrameEndWeb0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 49350.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrameEndFlange0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 35250.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrameSideWeb1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 68250.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrameSideFlange1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 48750.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrameEndWeb1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 49350.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrameEndFlange1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 35250.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "FrameCrosspiece",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 522000.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "InnerRail0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 119599.99999999997,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "PurpleEnd0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 147.19999999999743,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "InnerRail1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 119599.99999999997,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "PurpleEnd1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 147.19999999999743,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "LightSpacerEnvelope",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 185000.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "SlenderTransverseMember",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6538.282630651088,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "TubBracketWeb0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 10800.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "TubBracketFlange0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6075.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "TubWasher0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 628.3185307179583,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "TubFastener0",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 763.834406137875,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "TubBracketWeb1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 10800.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "TubBracketFlange1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 6075.0,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "TubWasher1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 628.3185307179583,
+      "dimension_status": "unmeasured layout"
+    },
+    {
+      "document": "v2_assembly",
+      "object": "TubFastener1",
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 763.834406137875,
       "dimension_status": "unmeasured layout"
     },
     {
@@ -424,7 +792,7 @@
       "object": "CartTub",
       "valid": true,
       "solid_count": 1,
-      "volume_mm3": 4282701.443329915,
+      "volume_mm3": 4282701.374853406,
       "dimension_status": "unmeasured layout"
     },
     {
@@ -756,5 +1124,5 @@
       "dimension_status": "unmeasured layout"
     }
   ],
-  "note": "Geometry/STEP checks only; dimensions, fit, hidden joints and load capacity unverified. Bucket omitted by owner. Raw photos excluded from Git."
+  "note": "Geometry/STEP checks only; dimensions, fit, joints, travel and load capacity unverified. Bucket omitted by owner. Gray frame fixed and normal rear hinge owner-confirmed. Raw photos excluded from Git."
 }

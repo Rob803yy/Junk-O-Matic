@@ -14,6 +14,8 @@ def font(size,bold=False):
 def project(v,view):
     x,y,z=v
     if view=='top':return x,-y,z
+    if view=='frame_top':return y,x,z
+    if view=='low_front':return y,-z-.2*x,x-.2*z
     if view=='side':return x,-z,-y
     if view=='front':return y,-z,x
     if view=='opposite':return (y-x)*.7071068,(x+y)*.3535534-z*.8660254,(x+y)*.6123724+z*.5
@@ -44,23 +46,24 @@ def picture(objects,view='iso',size=(1600,900)):
         if alpha>=.999:old[mask]=z[mask]
     return Image.fromarray(np.clip(rgb,0,255).astype('uint8'))
 def sheet(name,objects):
-    assembly=name=='v2_assembly';image=Image.new('RGB',(1800,1450),'white');draw=ImageDraw.Draw(image);labels=[];frames=[]
+    assembly=name=='v2_assembly';frame_doc=name=='v2_cart_mount';image=Image.new('RGB',(1800,1450),'white');draw=ImageDraw.Draw(image);labels=[];frames=[]
     def label(pos,t,font,fill):
         draw.text(pos,t,font=font,fill=fill);labels.append((pos,t,font.size,fill))
     def panel(im,pos):image.paste(im,pos);frames.append((im,pos))
     title='V2 assembly / photo review' if assembly else name.replace('v2_','').replace('_',' ')
     if name=='v2_sensor_mounts':title='Front lighting / reserved sensor interface'
     label((45,26),'LitterBuggy  |  '+title,font=font(32,True),fill='#203c54')
-    label((45,75),'CAD-R2  |  +X = yellow-handle FRONT  |  bucket omitted by owner' if assembly else 'CAD-R2  |  component local frame  |  assembly front = yellow-handle end',font=font(21,True),fill='#203c54')
+    label((45,75),'CAD-R3  |  +X = yellow-handle FRONT  |  fixed frame / rear tub hinge confirmed' if assembly or frame_doc else 'CAD-R3  |  component local frame  |  assembly front = yellow-handle end',font=font(21,True),fill='#203c54')
     label((45,110),'PHOTO-INFORMED SHAPE / PLACEMENT  —  NUMERIC DIMENSIONS UNMEASURED',font=font(21),fill='#a65d00')
     hero=picture(objects,'iso',(1710,800));panel(hero,(45,150));label((60,160),'ENCLOSURE-SIDE OBLIQUE' if assembly else 'COMPONENT LOCAL VIEW',font=font(18,True),fill='#203c54')
-    if assembly:
-        for view,x,caption in [('opposite',45,'OPPOSITE-SIDE OBLIQUE'),('side',635,'ENCLOSURE SIDE / +X FRONT →'),('front',1225,'FRONT / LOOKING TOWARD -X')]:
+    if assembly or frame_doc:
+        views=[('opposite',45,'OPPOSITE-SIDE OBLIQUE'),('side',635,'ENCLOSURE SIDE / +X FRONT →'),('front',1225,'FRONT / LOOKING TOWARD -X')] if assembly else [('frame_top',45,'TOP / +X FRONT DOWN'),('low_front',635,'LOW FRONT / BRACKETS & RAIL ENDS'),('side',1225,'SIDE / +X FRONT →')]
+        for view,x,caption in views:
             panel(picture(objects,view,(530,310)),(x,980));label((x,1295),caption,font=font(17,True),fill='#203c54')
     else:
-        for i,t in enumerate(['Appearance is reconstructed from CAD-P01/P02/P03; exact sections, holes and fasteners remain open.','Enclosure internals, battery identity and sensor fitting are not inferred from these photos.','Native document: editable Parameters, component groups and constrained profiles. STEP: visible geometry only.']):label((45,1000+i*38),t,font=font(20),fill='#33485a')
+        for i,t in enumerate(['Appearance is reconstructed from CAD-P01..07; exact sections, holes and fasteners remain open.','Enclosure internals, battery identity and sensor fitting are not inferred from these photos.','Native document: editable Parameters, component groups and constrained profiles. STEP: visible geometry only.']):label((45,1000+i*38),t,font=font(20),fill='#33485a')
     label((45,1340),'Source catalog enclosure size is unverified. Proportions, tilt and cosmetic details are layout choices.',font=font(20),fill='#33485a')
-    label((45,1380),'CAD-R2  |  Geometry checks do not establish physical fit, load capacity or fabrication dimensions.  |  PDFs held.',font=font(19),fill='#33485a')
+    label((45,1380),'CAD-R3  |  Geometry checks do not establish physical fit, load capacity, tip clearance or fabrication dimensions.  |  PDFs held.',font=font(19),fill='#33485a')
     image.save(OUT/(name+'.png'))
     # SVG retains editable annotation text, with native geometry raster preview embedded.
     svg=['<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1450" viewBox="0 0 1800 1450"><rect width="1800" height="1450" fill="white"/>']
@@ -76,7 +79,18 @@ for name,objects in M.items():
         picture(objects,'opposite',(1600,1000)).save(OUT/'v2_assembly_opposite.png')
         picture(objects,'front',(1200,1000)).save(OUT/'v2_assembly_front.png')
         # Service view: explicit hiding of cart/accessories reveals unresolved supports; no new physical fit claim.
-        hidden=('CartTub','RolledRim','FloorRib','StripHousing','RedStrip','MoldedEndPanel','Yellow','HandleArm')
-        picture([o for o in objects if not o['name'].startswith(hidden)],'iso',(1600,1000)).save(OUT/'v2_assembly_tub_hidden.png')
+        moving={'Cart','ElectronicsCase','BatteryCorner','TubAccessories','TubBrackets'}
+        underframe=[o for o in objects if o.get('assembly_group') not in moving]
+        picture(underframe,'iso',(1600,1000)).save(OUT/'v2_assembly_tub_hidden.png')
+        picture(underframe,'frame_top',(1300,1400)).save(OUT/'v2_mounting_frame_top.png')
+        picture(underframe,'low_front',(1600,1050)).save(OUT/'v2_mounting_frame_low_front.png')
+        poses=json.loads((OUT/'review-poses.json').read_text());pose=poses['v2_assembly_tipped'];posed=[]
+        for o in objects:
+            item=dict(o)
+            if o['name'] in pose['transforms']:
+                matrix=np.array(pose['transforms'][o['name']]).reshape(4,4);vs=np.array(o['vertices']);item['vertices']=(np.column_stack((vs,np.ones(len(vs))))@matrix.T)[:,:3].tolist()
+            posed.append(item)
+        tip=picture(posed,'iso',(1700,1200));draw=ImageDraw.Draw(tip)
+        draw.rectangle((0,1140,1700,1200),fill='white');draw.text((25,1152),str(pose['angle_deg'])+' deg ILLUSTRATIVE POSE | rear hinge + fixed frame confirmed; axis/travel/clearance unmeasured',font=font(21),fill='#203c54');tip.save(OUT/'v2_assembly_tipped.png')
     print('Rendered',name,flush=True)
-print('CAD-R2 sheets/oblique/front/service previews complete; no PDFs generated.')
+print('CAD-R3 sheets / frame views / illustrative tipped pose complete; no PDFs generated.')

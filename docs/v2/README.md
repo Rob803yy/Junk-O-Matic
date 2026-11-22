@@ -14,7 +14,7 @@ remain unresolved. Version allocation is proposed pending owner confirmation.
 | Digital connectivity | [Connectivity diagram](../../hardware/v2/architecture/v2_digital_connectivity.drawio) | [SVG](../../hardware/v2/architecture/v2_digital_connectivity.svg); open UART replacement and power interfaces |
 | Power schematic | [Three-sheet QElectroTech project](../../hardware/v2/electrical/v2_electrical.qet) | [Native PNG previews](../../hardware/v2/electrical/exports); all drawn nets untraced hypotheses |
 | Wiring | [Power YAML](../../hardware/v2/wiring/v2_power_harness.yml), [sensor YAML](../../hardware/v2/wiring/v2_sensor_harness.yml) | [Registers and HTML/SVG/PNG/BOM](../../hardware/v2/wiring); logical functions, physical pins TBD |
-| Mechanical assembly (CAD-R2) | [Assembly](../../hardware/v2/mechanical/v2_assembly.FCStd), [cart mount](../../hardware/v2/mechanical/v2_cart_mount.FCStd), [battery mount](../../hardware/v2/mechanical/v2_battery_mount.FCStd), [enclosure](../../hardware/v2/mechanical/v2_electronics_enclosure.FCStd), [sensor mounts](../../hardware/v2/mechanical/v2_sensor_mounts.FCStd) | [STEP/SVG/PNG](../../hardware/v2/mechanical/exports); [parameter provenance](../../hardware/v2/mechanical/dimensions.json) |
+| Mechanical assembly (CAD-R3) | [Assembly](../../hardware/v2/mechanical/v2_assembly.FCStd), [cart mount](../../hardware/v2/mechanical/v2_cart_mount.FCStd), [battery mount](../../hardware/v2/mechanical/v2_battery_mount.FCStd), [enclosure](../../hardware/v2/mechanical/v2_electronics_enclosure.FCStd), [sensor mounts](../../hardware/v2/mechanical/v2_sensor_mounts.FCStd) | [STEP/SVG/PNG](../../hardware/v2/mechanical/exports); [parameter provenance](../../hardware/v2/mechanical/dimensions.json) |
 | Firmware and Pi logger | [Uno source](../../software/v2/arduino/README.md), [Pi logger/SQL/service](../../software/v2/raspberry_pi/README.md) | [Shared serial protocol](serial_protocol.md), [tests](../../software/v2/tests), [validation](validation.md) |
 
 ## Workbook and evidence controls
@@ -36,7 +36,7 @@ diagrams indicates historical observation, not current installation verification
 Green confirms Uno identity only. Red exposes conflicts. Dashed links and QET
 TBD nets are unresolved/proposed; no physical pin numbering is implied.
 
-CAD-R2 follows the latest three owner photographs; [mechanical review guide](../../hardware/v2/mechanical/README.md) and [observation record](../../hardware/v2/mechanical/photo-observations.json) describe the changes. Yellow-handle end is owner-confirmed front; bucket is omitted by owner request.
+CAD-R3 uses seven photograph references, including under-frame/low-front views and owner confirmation of the rear hinge and fixed frame; [mechanical review guide](../../hardware/v2/mechanical/README.md) and [observation record](../../hardware/v2/mechanical/photo-observations.json) describe the changes. Yellow-handle end is owner-confirmed front; bucket is omitted by owner request.
 
 All CAD measured dimensions remain null. The enclosure layout uses an unverified
 source catalog size; the other layout numbers are illustrative. Native solid

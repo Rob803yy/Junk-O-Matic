@@ -64,5 +64,7 @@
     "No electrical polarity/rating/continuity verification",
     "Systemd and real camera not exercised on Pi",
     "PDF regeneration deferred pending owner review"
-  ]
+  ],
+  "latest_mechanical_revision": "CAD-R3",
+  "mechanical_report": "freecad-validation.json"
 }

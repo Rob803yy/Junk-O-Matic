@@ -305,6 +305,64 @@
       "id": "CAD-U01",
       "type": "owner_statement",
       "scope": "Yellow-handle end is driving front, in current CAD feedback"
+    },
+    {
+      "id": "CAD-P04",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-510a7d87-88c8-4b69-b09f-53f1c565e230.png",
+      "sha256": "dc457959bcf7837aeed69074d097dca00293e2d8d6c3158bf9d9ef46cb4857b9",
+      "scope": "Raised tub exposes gray rectangular frame, silver longitudinal members, crosspiece, fasteners, ties and chassis. Capture date and scale unknown; raw media excluded."
+    },
+    {
+      "id": "CAD-P05",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-94309679-5e44-46b7-af4b-fb713287431f.png",
+      "sha256": "9126fec296caa2dd74b8390a498526c2d8ef698e9183ea924408f29f930df81f",
+      "scope": "Indoor assembled front view confirms component relationships without bucket. Capture date and scale unknown; raw media excluded."
+    },
+    {
+      "id": "CAD-P06",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-a53eb6b8-01f6-4462-bedb-a004fb7dba1e.png",
+      "sha256": "a8d83dba45f253b273efe817f7ed6e486f3f4bf054cce0e214ccbc86f41dc5c6",
+      "scope": "Low front view reveals tub brackets/bolt heads, thin transverse member, purple-marked tube ends, light-colored spacer, shocks/guards and red axle-center housing. Capture date and scale unknown; raw media excluded."
+    },
+    {
+      "id": "CAD-P07",
+      "type": "owner_supplied_photo",
+      "path": "codex-clipboard-7b04aba6-d965-4289-a9a4-66bffc6bbf33.png",
+      "sha256": "d3aae9006aab70d178a4819b8ec8019e64b552326b72e016c762c2380bbc5479",
+      "scope": "Outdoor view appears to repeat the CAD-P03 scene at different resolution/crop. Not counted as an independent build/test. Capture date and scale unknown; raw media excluded."
+    },
+    {
+      "id": "CAD-U02",
+      "type": "owner_statement",
+      "scope": "Show assembly without bucket."
+    },
+    {
+      "id": "CAD-U03",
+      "type": "owner_statement",
+      "scope": "Indoor under-frame and outdoor photos show the same mounting hardware."
+    },
+    {
+      "id": "CAD-U04",
+      "type": "owner_statement",
+      "scope": "Raised tub remains attached on its normal hinge."
+    },
+    {
+      "id": "CAD-U05",
+      "type": "owner_statement",
+      "scope": "Hinge is at the end opposite the yellow-handle/front end."
+    },
+    {
+      "id": "CAD-U06",
+      "type": "owner_statement",
+      "scope": "Gray rectangular outer frame stays on the chassis when tub tips."
+    },
+    {
+      "id": "CAD-U07",
+      "type": "owner_statement",
+      "scope": "CAD-P04 up/down longitudinal members below gray frame; left/right transverse member(s) above frame. Numerical dimensions/joints unmeasured."
     }
   ],
   "records": [
@@ -1656,18 +1714,25 @@
       "category": "mechanical_dimensions",
       "subject": "Cart-to-chassis structure",
       "status": "unknown",
-      "recorded_value": "Prior reviews describe adapter/aluminium frame",
+      "recorded_value": "Rectangular gray frame, inner members and tub brackets exposed in CAD-P04/P06. Owner confirms same mounting hardware and fixed gray frame with normal rear-hinged tub. Sections, dimensions, joints and load capacity unverified. Owner clarifies longitudinal members beneath frame and transverse member(s) above it.",
       "evidence_basis": "historical_chat_summary",
       "source_ids": [
         "C03",
-        "C04"
+        "C04",
+        "CAD-P04",
+        "CAD-P06",
+        "CAD-U03",
+        "CAD-U04",
+        "CAD-U05",
+        "CAD-U06",
+        "CAD-U07"
       ],
       "supporting_evidence_ids": [],
       "next_verification": "Measure member sections, spans, attachment points and joint hardware.",
       "acceptance_criteria": "Record the requested verification result, configuration, method, date and supporting evidence; satisfy applicable measurement/connection/test completion rules in README.",
       "verified_by": "",
       "verification_date": null,
-      "resolution_notes": ""
+      "resolution_notes": "CAD-R3 corrects prior generic/vertical-strip interpretation; no fabrication dimensions released."
     },
     {
       "id": "V2-079",
@@ -2372,5 +2437,6 @@
   ],
   "reconciliation_revision": "R1",
   "current_configuration_id": "CFG-V2-R1",
-  "reconciliation_register": "../reconciliation/reconciliation-register.json"
+  "reconciliation_register": "../reconciliation/reconciliation-register.json",
+  "mechanical_evidence_revision": "CAD-R3"
 }

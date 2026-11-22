@@ -1,4 +1,4 @@
-"""CAD-R2: native constrained profiles, lofts and photo-informed component proxies.
+"""CAD-R3: photo-informed frame, native profiles and editable tub tipping pose.
 
 No custom FeaturePython dependency is needed to edit native geometry. Numeric
 layout values are unmeasured; cosmetic tread detail is regenerated from source.
@@ -11,8 +11,8 @@ BASE=Path(__file__).resolve().parent
 CFG=json.loads((BASE/'dimensions.json').read_text(encoding='utf-8'))
 OUT=BASE/'exports';OUT.mkdir(exist_ok=True)
 V={k:v.get('layout_mm',v.get('layout_deg')) for k,v in CFG['parameters'].items()}
-COL={'cart':(.13,.15,.16),'rim':(.20,.22,.23),'chassis':(.13,.16,.18),'tyre':(.075,.085,.09),'tread':(.11,.12,.13),'wheel':(.19,.20,.21),'metal':(.68,.70,.70),'orange':(.95,.31,.055),'lid':(.66,.72,.75),'blue':(.025,.22,.80),'yellow':(.98,.78,.035),'red':(.95,.04,.07),'white':(.89,.96,1.),'reference':(.50,.55,.57)}
-meshes={};checks=[]
+COL={'cart':(.13,.15,.16),'rim':(.20,.22,.23),'chassis':(.13,.16,.18),'tyre':(.075,.085,.09),'tread':(.11,.12,.13),'wheel':(.19,.20,.21),'metal':(.68,.70,.70),'orange':(.95,.31,.055),'lid':(.66,.72,.75),'blue':(.025,.22,.80),'yellow':(.98,.78,.035),'red':(.95,.04,.07),'white':(.89,.96,1.),'reference':(.50,.55,.57),'frame':(.36,.39,.40),'purple':(.46,.23,.61),'fastener':(.66,.49,.22),'spring':(.28,.30,.31)}
+meshes={};checks=[];poses={}
 def value(e):return eval(str(e).replace('Parameters.',''),{'__builtins__':{}},V)
 def ex(o,p,v):o.setExpression(p,str(v))
 def prop(o,k,v,t='App::PropertyString'):
@@ -25,8 +25,8 @@ def tag(o,c='cart',role='render',evidence='CAD-P01;CAD-P02;CAD-P03',note='Photo-
         o.ViewObject.Visibility=role=='render';o.ViewObject.ShapeColor=COL[c];o.ViewObject.LineColor=(.08,.09,.10);o.ViewObject.Transparency=int((1-alpha)*100)
     return o
 def newdoc(name,label):
-    d=App.newDocument(name);d.Label=label+' | CAD-R2 / unmeasured';s=d.addObject('Spreadsheet::Sheet','Parameters')
-    s.set('A1','CAD-R2 PHOTO-INFORMED LAYOUT - NO MEASURED DIMENSIONS')
+    d=App.newDocument(name);d.Label=label+' | CAD-R3 / unmeasured';s=d.addObject('Spreadsheet::Sheet','Parameters')
+    s.set('A1','CAD-R3 PHOTO-INFORMED LAYOUT - NO MEASURED DIMENSIONS')
     for cell,t in [('A2','parameter'),('B2','layout value'),('C2','measured'),('D2','unit'),('E2','source / qualification')]:s.set(cell,t)
     for row,(k,v) in enumerate(CFG['parameters'].items(),3):
         s.set('A'+str(row),k);s.set('B'+str(row),str(V[k]));s.setAlias('B'+str(row),k);s.set('C'+str(row),'UNKNOWN');s.set('D'+str(row),'deg' if k.endswith('_deg') else 'mm');s.set('E'+str(row),v['source'])
@@ -70,16 +70,44 @@ def ring(d,g,name,L,W,R,z,h,w,c='rim'):
     o=d.addObject('Part::Cut',name);g.addObject(o);o.Base=a;o.Tool=b;return tag(o,c)
 def worldshape(o):
     s=o.Shape.copy();s.Placement=o.getGlobalPlacement();return s
+def meshitem(o):
+    if o.Name.startswith('FrontSpring'):
+        # Display LOD only: avoid a very dense OCC NURBS mesh for the cosmetic
+        # sweep. The full native/STEP pipe solid remains the geometry authority.
+        vs=[];ts=[];steps=108;sides=8;h=V['front_shock_height'];length=math.sqrt((10*12*math.pi)**2+h*h)
+        placement=o.getGlobalPlacement()
+        for i in range(steps+1):
+            t=i/steps;a=12*math.pi*t;ca,sa=math.cos(a),math.sin(a)
+            for j in range(sides):
+                u=2*math.pi*j/sides;c,sn=math.cos(u),math.sin(u)
+                p=App.Vector(10*ca+1.5*(ca*c-h*sa/length*sn),10*sa+1.5*(sa*c+h*ca/length*sn),h*t-1.5*10*12*math.pi/length*sn)
+                vs.append(placement.multVec(p))
+        for i in range(steps):
+            for j in range(sides):
+                a=i*sides+j;b=i*sides+(j+1)%sides;c=(i+1)*sides+j;e=(i+1)*sides+(j+1)%sides;ts.extend([(a,c,b),(b,c,e)])
+    else:s=worldshape(o);vs,ts=s.tessellate(2)
+    parent=o.getParentGeoFeatureGroup()
+    return {'name':o.Name,'label':o.Label,'assembly_group':parent.Name if parent else '', 'color':COL[o.DraftColor],'opacity':o.ReviewOpacity,'vertices':[[v.x,v.y,v.z] for v in vs],'triangles':ts}
 def finish(d,objects):
     d.recompute();items=[]
     for o in objects:
         s=worldshape(o);assert not s.isNull() and s.isValid() and s.Volume>0,(d.Name,o.Name,o.State)
         checks.append({'document':d.Name,'object':o.Name,'valid':True,'solid_count':len(s.Solids),'volume_mm3':s.Volume,'dimension_status':'unmeasured layout'})
-        vs,ts=s.tessellate(2);items.append({'name':o.Name,'label':o.Label,'color':COL[o.DraftColor],'opacity':o.ReviewOpacity,'vertices':[[v.x,v.y,v.z] for v in vs],'triangles':ts})
+        items.append(meshitem(o))
     for o in d.Objects:
         if App.GuiUp and o.ViewObject and hasattr(o,'ReviewRole'):o.ViewObject.Visibility=o.ReviewRole=='render'
     if App.GuiUp:App.Gui.activeDocument().activeView().viewAxonometric();App.Gui.activeDocument().activeView().fitAll()
     name=d.Name;d.saveAs(str(BASE/(name+'.FCStd')))
+    if name=='v2_assembly':
+        cell='B'+str(list(CFG['parameters']).index('tub_tip_angle_deg')+3)
+        original={o.Name:o.getGlobalPlacement() for o in objects}
+        d.Parameters.set(cell,str(V['service_pose_angle_deg']));d.recompute()
+        transforms={}
+        for o in objects:
+            matrix=(o.getGlobalPlacement()*original[o.Name].inverse()).toMatrix()
+            if any(abs(a-b)>1e-7 for a,b in zip(matrix.A,App.Matrix().A)):transforms[o.Name]=matrix.A
+        poses['v2_assembly_tipped']={'angle_deg':V['service_pose_angle_deg'],'qualification':'Illustrative pose. Rear hinge/fixed frame confirmed by owner; pivot location, travel, latch, bracket membership and clearance unverified.','transforms':transforms}
+        d.Parameters.set(cell,str(V['tub_tip_angle_deg']));d.recompute()
     temp=App.newDocument('Export_'+name);leaves=[]
     for o in objects:
         leaf=temp.addObject('Part::Feature',o.Name);leaf.Label=o.Label;leaf.Shape=worldshape(o);leaves.append(leaf)
@@ -87,12 +115,53 @@ def finish(d,objects):
     stepfile.write_text('\n'.join(line.rstrip() for line in stepfile.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8')
     meshes[name]=items;App.closeDocument(name);r=App.openDocument(str(BASE/(name+'.FCStd')));assert r.Objects;App.closeDocument(r.Name)
     s=Part.Shape();s.read(str(OUT/(name+'.step')));assert s.isValid() and s.Volume>0,name
+def square_tube(d,g,name,L,W,H,x,y,z,wall,c='metal'):
+    a=box(d,g,name+'Outer',L,W,H,x,y,z,c,'construction')
+    b=box(d,g,name+'Void',f'({L})+2',f'({W})-2*({wall})',f'({H})-2*({wall})',f'({x})-1',f'({y})+({wall})',f'({z})+({wall})',c,'construction')
+    o=d.addObject('Part::Cut',name);g.addObject(o);o.Base=a;o.Tool=b
+    return tag(o,c,evidence='CAD-P04;CAD-P06',note='Rectangular member / visible end. Numeric wall and section are illustrative, not fabrication dimensions.')
 def mount(d):
-    g=group(d,'CartSupports','Visible strips / inferred under-tub supports');objects=[]
-    for i,x in enumerate([-170,170]):objects.append(box(d,g,'CrossSupport'+str(i),26,'Parameters.cart_bottom_width-30',20,x,'-Parameters.cart_bottom_width/2+15','Parameters.mount_z-20','metal',note='Occluded joint layout inferred; fastening and load path unknown.'))
-    for i,y in enumerate([-230,224]):
-        o=box(d,g,'VisibleSideStrip'+str(i),26,6,190,90,y,95,'metal',note='Strip visible in CAD-P01/P03; lower end and attachments unmeasured.');o.Placement.Rotation=App.Rotation(App.Vector(0,1,0),-8);objects.append(o)
+    g=group(d,'FixedCartFrame','Gray rectangular frame / remains on chassis','CAD-P04;CAD-P06;CAD-U06;CAD-U07');objects=[]
+    prop(g,'MemberOrdering','CAD-U07: fore/aft members below gray frame; transverse crossmember above. Numeric joint planes/sections/attachments unmeasured.')
+    for i,s in enumerate([-1,1]):
+        y=f'{s}*Parameters.frame_width/2'+('-Parameters.frame_wall' if s>0 else '')
+        yf='Parameters.frame_width/2-Parameters.frame_flange_width' if s>0 else '-Parameters.frame_width/2'
+        objects.append(box(d,g,'FrameSideWeb'+str(i),'Parameters.frame_length','Parameters.frame_wall','Parameters.frame_web_height','Parameters.frame_offset_x-Parameters.frame_length/2',y,'Parameters.frame_top_z-Parameters.frame_web_height','frame',note='Gray formed member observed. Open-section web/flange is a simplified profile; exact section unknown.'))
+        objects.append(box(d,g,'FrameSideFlange'+str(i),'Parameters.frame_length','Parameters.frame_flange_width','Parameters.frame_wall','Parameters.frame_offset_x-Parameters.frame_length/2',yf,'Parameters.frame_top_z-Parameters.frame_wall','frame'))
+        x=f'Parameters.frame_offset_x+{s}*Parameters.frame_length/2'+('-Parameters.frame_wall' if s>0 else '')
+        xf='Parameters.frame_offset_x+Parameters.frame_length/2-Parameters.frame_flange_width' if s>0 else 'Parameters.frame_offset_x-Parameters.frame_length/2'
+        objects.append(box(d,g,'FrameEndWeb'+str(i),'Parameters.frame_wall','Parameters.frame_width','Parameters.frame_web_height',x,'-Parameters.frame_width/2','Parameters.frame_top_z-Parameters.frame_web_height','frame'))
+        objects.append(box(d,g,'FrameEndFlange'+str(i),'Parameters.frame_flange_width','Parameters.frame_width','Parameters.frame_wall',xf,'-Parameters.frame_width/2','Parameters.frame_top_z-Parameters.frame_wall','frame'))
+    objects.append(box(d,g,'FrameCrosspiece',45,'Parameters.frame_width-2*Parameters.frame_wall',25,-150,'-Parameters.frame_width/2+Parameters.frame_wall','Parameters.frame_top_z','frame',note='Transverse crosspiece seen in CAD-P04. Section, exact location and connections unmeasured.'))
+    for i,s in enumerate([-1,1]):
+        y=f'{s}*Parameters.inner_spacing/2-Parameters.inner_section/2'
+        objects.append(square_tube(d,g,'InnerRail'+str(i),'Parameters.inner_length','Parameters.inner_section','Parameters.inner_section','Parameters.inner_offset_x-Parameters.inner_length/2',y,'Parameters.inner_z','Parameters.inner_wall'))
+        objects.append(square_tube(d,g,'PurpleEnd'+str(i),.8,'Parameters.inner_section','Parameters.inner_section','Parameters.inner_offset_x+Parameters.inner_length/2',y,'Parameters.inner_z','Parameters.inner_wall','purple'))
+        o=cylinder(d,g,'FrameFastenerFace'+str(i),7,3,'Parameters.frame_offset_x+Parameters.frame_length/2',f'{s}*Parameters.inner_spacing/2','Parameters.frame_top_z-13','fastener','x')
+        prop(o,'ReviewNote','Visible gold-colored fastener appearance only; no diameter, thread, grade or material identification.')
+    objects.append(box(d,g,'LightSpacerEnvelope',100,185,'Parameters.inner_z-Parameters.chassis_z-30',135,-92.5,'Parameters.chassis_z+30','white',note='Light-colored interface seen in CAD-P06; material, fasteners and load transfer unverified.'))
+    rod=cylinder(d,g,'SlenderTransverseMember',2.2,'Parameters.frame_width-40','Parameters.frame_offset_x+Parameters.frame_length/2-20','Parameters.frame_width/2-20','Parameters.frame_top_z+12','metal','y');prop(rod,'ReviewNote','Thin transverse member observed. Section and mechanical role unknown.');objects.append(rod)
+    brackets=group(d,'TubBrackets','Observed tub brackets / pose membership approximate','CAD-P06')
+    for i,s in enumerate([-1,1]):
+        y=f'{s}*(Parameters.frame_width/2-32)'
+        objects.append(box(d,brackets,'TubBracketWeb'+str(i),4,45,'Parameters.bracket_height','Parameters.frame_offset_x+Parameters.frame_length/2-4',f'({y})-22.5','Parameters.mount_z-Parameters.bracket_height','frame',note='Upturned bracket appearance. Exact release/hinge interfaces and moving membership not resolved.'))
+        objects.append(box(d,brackets,'TubBracketFlange'+str(i),45,45,3,'Parameters.frame_offset_x+Parameters.frame_length/2-30',f'({y})-22.5','Parameters.mount_z-3','frame'))
+        objects.append(cylinder(d,brackets,'TubWasher'+str(i),10,2,'Parameters.frame_offset_x+Parameters.frame_length/2-15',y,'Parameters.mount_z-5','fastener'))
+        h=d.addObject('Part::Prism','TubFastener'+str(i));brackets.addObject(h);h.Polygon=6;h.Circumradius=7;h.Height=6
+        ex(h,'Placement.Base.x','Parameters.frame_offset_x+Parameters.frame_length/2-15');ex(h,'Placement.Base.y',y);ex(h,'Placement.Base.z','Parameters.mount_z-11')
+        tag(h,'fastener',evidence='CAD-P06',note='Visible head/nut proxy only. No thread, grade, material, torque or drilling specification.');objects.append(h)
+    for o in objects:prop(o,'AppearanceEvidence','CAD-P04;CAD-P06;CAD-U03;CAD-U06')
     return objects
+def tipping(d):
+    pivot=group(d,'TubTipPivot','Rear tub hinge / editable visual pose','CAD-U04;CAD-U05;CAD-U06')
+    ex(pivot,'Placement.Base.x','Parameters.hinge_x');ex(pivot,'Placement.Base.z','Parameters.hinge_z')
+    pivot.Placement.Rotation=App.Rotation(App.Vector(0,-1,0),1);ex(pivot,'Placement.Rotation.Angle','Parameters.tub_tip_angle_deg*1 deg')
+    prop(pivot,'KinematicQualification','Rear hinge and fixed gray frame owner-confirmed. Numeric axis location, angle/travel, latch and minor bracket membership unmeasured; no clearance certification.')
+    rest=group(d,'TubRestOffset','Rest-position compensation');pivot.addObject(rest)
+    ex(rest,'Placement.Base.x','-Parameters.hinge_x');ex(rest,'Placement.Base.z','-Parameters.hinge_z')
+    for name in ['Cart','ElectronicsCase','BatteryCorner','TubAccessories','TubBrackets']:rest.addObject(d.getObject(name))
+    axis=d.addObject('Part::Feature','RearHingeAxisReference');axis.Shape=Part.makeLine(App.Vector(0,-180,0),App.Vector(0,180,0))
+    ex(axis,'Placement.Base.x','Parameters.hinge_x');ex(axis,'Placement.Base.z','Parameters.hinge_z');tag(axis,'reference','reference','CAD-U05','Rear transverse axis reference only; position unmeasured, actual hinge construction omitted.')
 def tub(d):
     g=group(d,'Cart','Flared Gorilla tub / molded-feature proxies');ex(g,'Placement.Base.x','Parameters.cart_offset_x')
     a=loft(d,g,'TubOuter','Parameters.cart_bottom_length','Parameters.cart_bottom_width','Parameters.cart_bottom_radius','Parameters.mount_z','Parameters.cart_length','Parameters.cart_width','Parameters.cart_corner_radius','Parameters.mount_z+Parameters.cart_height','cart','construction')
@@ -176,14 +245,28 @@ def chassis(d):
     bg=group(d,'FrontBumper','Photo-informed front bumper / skid envelope','CAD-P02');ex(bg,'Placement.Base.x','Parameters.wheelbase/2+67')
     objects.append(loft(d,bg,'BumperBody',145,385,22,65,115,340,16,126,'chassis'))
     for i,y in enumerate([-128,73]):objects.append(box(d,bg,'BumperPad'+str(i),70,55,6,-30,y,127,'reference',note='Gray pad appearance; material and part identity unverified.'))
-    objects.append(box(d,bg,'BumperRedDetail',26,38,20,20,-19,127,'red',note='Visible red feature; towing/lifting function not established.'))
+    objects.append(softbox(d,g,'FrontAxleRedHousing',58,68,52,'Parameters.wheelbase/2-29',-34,'Parameters.tyre_radius-52','red',r=5,note='Red front axle-center appearance from CAD-P06. Exact part identity/section unverified; not a bumper-top feature.'))
+    suspension=group(d,'FrontSuspension','Observed front coilovers / angled guard proxies','CAD-P06')
+    for i,s in enumerate([-1,1]):
+        objects.append(cylinder(d,suspension,'FrontDamperBody'+str(i),7,'Parameters.front_shock_height-15','Parameters.wheelbase/2-25',f'{s}*110','Parameters.front_shock_z+7','chassis'))
+        objects.append(cylinder(d,suspension,'FrontDamperRod'+str(i),3,'Parameters.front_shock_height+15','Parameters.wheelbase/2-25',f'{s}*110','Parameters.front_shock_z-10','metal'))
+        helix=Part.makeHelix(V['front_shock_height']/6,V['front_shock_height'],10)
+        section=Part.Wire([Part.makeCircle(1.5,App.Vector(10,0,0),App.Vector(0,10*2*math.pi/(V['front_shock_height']/6),1))])
+        o=d.addObject('Part::Feature','FrontSpring'+str(i));suspension.addObject(o);o.Shape=helix.makePipeShell([section],True,True)
+        ex(o,'Placement.Base.x','Parameters.wheelbase/2-25');ex(o,'Placement.Base.y',f'{s}*110');ex(o,'Placement.Base.z','Parameters.front_shock_z')
+        tag(o,'spring',evidence='CAD-P06',note='Cosmetic spring envelope. Pitch, wire, rate, travel and mount details unmeasured; regenerate after spring-height edits.');objects.append(o)
+        f=box(d,suspension,'FrontGuard'+str(i),120,60,4,'Parameters.wheelbase/2-85',f'{s}*145-30',190,'chassis',note='Angled guard appearance from CAD-P06; attachment/profile unmeasured.')
+        f.Placement.Rotation=App.Rotation(App.Vector(0,1,0),-25);objects.append(f)
+    for o in objects:
+        if o.Name.startswith(('FrontAxleRedHousing','FrontDamper','FrontSpring','FrontGuard')):prop(o,'AppearanceEvidence','CAD-P06')
     return objects
 def build():
     for name,label,builder in [('v2_cart_mount','Cart supports',mount),('v2_battery_mount','Blue pack / adapter corner',dock),('v2_electronics_enclosure','External enclosure',enclosure),('v2_sensor_mounts','Front lighting / reserved sensor interface',lighting)]:
         d=newdoc(name,label);finish(d,builder(d))
     d=newdoc('v2_assembly','LitterBuggy V2 photo-informed assembly')
-    finish(d,chassis(d)+mount(d)+tub(d)+enclosure(d,True)+dock(d,True)+accessories(d)+lighting(d,True))
+    objects=chassis(d)+mount(d)+tub(d)+enclosure(d,True)+dock(d,True)+accessories(d)+lighting(d,True);tipping(d);finish(d,objects)
     (OUT/'review-meshes.json').write_text(json.dumps(meshes,separators=(',',':')),encoding='utf-8')
-    (OUT/'geometry-checks.json').write_text(json.dumps({'revision':'CAD-R2','FreeCAD_version':App.Version(),'checks':checks,'note':'Geometry/STEP checks only; dimensions, fit, hidden joints and load capacity unverified. Bucket omitted by owner. Raw photos excluded from Git.'},indent=2),encoding='utf-8')
-    print('CAD-R2: five native/STEP documents saved and reopened;',len(checks),'component records')
+    (OUT/'review-poses.json').write_text(json.dumps(poses,separators=(',',':')),encoding='utf-8')
+    (OUT/'geometry-checks.json').write_text(json.dumps({'revision':'CAD-R3','FreeCAD_version':App.Version(),'checks':checks,'note':'Geometry/STEP checks only; dimensions, fit, joints, travel and load capacity unverified. Bucket omitted by owner. Gray frame fixed and normal rear hinge owner-confirmed. Raw photos excluded from Git.'},indent=2),encoding='utf-8')
+    print('CAD-R3: five native/STEP documents saved and reopened;',len(checks),'component records')
 if __name__=='__main__':build()

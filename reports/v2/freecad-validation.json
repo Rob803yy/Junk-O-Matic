@@ -1,5 +1,5 @@
 {
-  "revision": "CAD-R2",
+  "revision": "CAD-R3",
   "native_files": [
     {
       "file": "v2_assembly.FCStd",
@@ -13,7 +13,13 @@
         "cart-length edit regenerates native loft/cut",
         "case height edit in vertical orientation",
         "limited draft clashes: case/tub, case/rim, case/pack",
-        "no bucket or historical ultrasonic in assembly"
+        "no bucket or historical ultrasonic in assembly",
+        "inner rail hollow profile",
+        "owner-confirmed longitudinal-below/transverse-above ordering, without rail/end-web penetration",
+        "frame-width edit propagates",
+        "rear-axis tub tipping with stationary outer frame",
+        "normal pose restored and shape validity at illustrative tip angle",
+        "red housing below axle centre; old bumper-top/vertical-strip interpretations removed"
       ],
       "step_readback_global_bounds_match": true,
       "native_gui_state_saved": true,
@@ -64,7 +70,8 @@
   "physical_fit_validation": "not performed",
   "limits": [
     "Photo-informed proportions; no scale reference",
-    "Clash checks cover named draft parts only, not real wiring/fasteners/moving travel",
-    "Tread shape and dock angles regenerate from source; other principal profiles/placements edit natively"
+    "Rear hinge/fixed frame confirmed; numeric axis/travel, latch and minor bracket moving membership unverified",
+    "Clash checks cover named draft parts only, not real wiring/fasteners/full moving travel",
+    "Tread/spring shape and dock angles regenerate from source; other principal profiles/placements and tub-tip angle edit natively"
   ]
 }

@@ -94,3 +94,22 @@ yellow-handle end is front; CAD-U02 requests no bucket in the assembly. The new
 native models and CAD-R2 previews supersede the previous generic mechanical proxies.
 No Pi identity, battery electrical specification or ultrasonic installation is
 inferred from indistinct electronics or absent close-ups in these images.
+
+## CAD-R3 under-frame evidence
+
+CAD-P04..07 add raised-tub, indoor front, low-front and repeated outdoor views.
+CAD-U03..06 confirm the same mounting hardware, normal attached tub tipping,
+hinge opposite the yellow-handle/front end, and gray frame remaining on chassis.
+The support model now represents the observed rectangular frame, longitudinal
+rectangular members, purple end markings, brackets, fastener appearances,
+transverse member and spacer. The CAD-R2 vertical-strip interpretation is
+retracted. Red front hardware is relocated from bumper top to axle-center below.
+Front coilover/guard appearances are added. Dimensions, member sections, spacer
+material, fastener specification and hinge/latch details remain unmeasured.
+The native tub-tip parameter and illustrated 55-degree view demonstrate the
+confirmed direction/fixed-frame relationship, not verified travel or clearance.
+CAD-P07 is treated as a repeated scene, not an independent test. Indoor personal
+background/raw field media remain outside Git; only source hashes/observations
+are published. No electrical connection or battery rating is inferred here.
+
+CAD-U07 refines member ordering by photo direction: fore/aft up/down members beneath the gray frame; transverse left/right member(s) above it. This resolves the earlier ambiguous on-top answer without assigning measured joint planes.

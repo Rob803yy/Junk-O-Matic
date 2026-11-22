@@ -6,7 +6,7 @@ The owner confirms an Elegoo Uno R3. Version naming is proposed pending owner co
 
 ## Latest CAD feedback
 
-CAD-R2 refines the five models against three additional owner photographs. Yellow-handle end is confirmed front; bucket omitted by owner request. See [mechanical review guide](../../hardware/v2/mechanical/README.md). R1 documents below remain the earlier reconciliation baseline; current CAD-R2 geometry supersedes their older mechanical proxy descriptions. No PDFs were regenerated.
+CAD-R3 refines the five models against three additional owner photographs. Yellow-handle end is confirmed front; bucket omitted by owner request. See [mechanical review guide](../../hardware/v2/mechanical/README.md). R1 documents below remain the earlier reconciliation baseline; current CAD-R3 geometry supersedes their older mechanical proxy descriptions. No PDFs were regenerated.
 
 ## Review files
 

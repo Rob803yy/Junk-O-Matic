@@ -1,8 +1,8 @@
 {
-  "revision": "CAD-R2",
+  "revision": "CAD-R3",
   "units": "mm",
   "dimension_status": "proposed",
-  "notice": "All measured_mm are null. Shapes and locations follow supplied photos; numeric values remain layout estimates or unverified source specifications. Owner confirms yellow-handle end is front and requests no bucket. Not fabrication dimensions.",
+  "notice": "No measured dimensions. Photo-informed support structure with owner-confirmed fixed outer frame and rear tub hinge. Numeric sections, pivot position, pose angle, fasteners and fit remain layout estimates.",
   "datum": "Right-handed: ground Z=0; axle midpoint X=Y=0. +X=owner-confirmed yellow-handle/front end, +Z=up. Enclosure-side long wall is -Y; opposite wall +Y.",
   "parameters": {
     "wheelbase": {
@@ -241,6 +241,126 @@
       "measured_mm": null,
       "evidence_status": "proposed",
       "source": "Photo-informed layout estimate; no scale/calibrated measurement. CAD-P01..03."
+    },
+    "frame_length": {
+      "layout_mm": 650,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "frame_width": {
+      "layout_mm": 470,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "frame_offset_x": {
+      "layout_mm": -40,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "frame_top_z": {
+      "layout_mm": 260,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-U07 confirms transverse crossmember above gray frame; numeric planes/clearance remain unmeasured."
+    },
+    "frame_web_height": {
+      "layout_mm": 35,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "frame_flange_width": {
+      "layout_mm": 25,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "frame_wall": {
+      "layout_mm": 3,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "inner_length": {
+      "layout_mm": 650,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "inner_spacing": {
+      "layout_mm": 160,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "inner_section": {
+      "layout_mm": 25,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "inner_wall": {
+      "layout_mm": 2,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "inner_offset_x": {
+      "layout_mm": -10,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "inner_z": {
+      "layout_mm": 200,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-U07 confirms fore/aft members below gray frame; numeric height is an unmeasured layout estimate."
+    },
+    "bracket_height": {
+      "layout_mm": 60,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "hinge_x": {
+      "layout_mm": -365,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "hinge_z": {
+      "layout_mm": 285,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "tub_tip_angle_deg": {
+      "layout_deg": 0,
+      "measured_deg": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "service_pose_angle_deg": {
+      "layout_deg": 55,
+      "measured_deg": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "front_shock_height": {
+      "layout_mm": 80,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
+    },
+    "front_shock_z": {
+      "layout_mm": 105,
+      "measured_mm": null,
+      "evidence_status": "proposed",
+      "source": "CAD-P04/P06 appearance and CAD-U03..06 orientation/state; numeric value is an unmeasured layout estimate."
     }
   },
   "unknown_interfaces": [
@@ -251,12 +371,24 @@
     "Actual enclosure dimensions, mounting ears, seals and internal layout",
     "Steering/suspension movement and structural capacity",
     "Lighting housings, bracket geometry, power and wiring",
-    "Current range sensor fitting or absence; no ultrasonic inferred from photographs"
+    "Current range sensor fitting or absence; no ultrasonic inferred from photographs",
+    "Exact outer frame member section and gauge; open-section representation is approximate",
+    "Purple marking versus cap/plug state at inner member ends",
+    "Hinge axis exact position, latch mechanism, which minor brackets move, and maximum tip travel",
+    "Spacer material and exact chassis load-transfer/fastener interfaces",
+    "Correspondence of outdoor projecting metal to individual indoor frame members"
   ],
   "evidence": [
     "CAD-P01..CAD-P03: see photo-observations.json; raw media stays outside Git",
     "CAD-U01: owner confirms yellow-handle end is front",
     "CAD-U02: owner requests assembly without bucket",
-    "S04 V1.0 C16: unverified nominal enclosure specification"
-  ]
+    "S04 V1.0 C16: unverified nominal enclosure specification",
+    "CAD-P04..P07: under-frame/low-front/indoor and repeated outdoor view; see photo-observations.json",
+    "CAD-U03..06: same mounting hardware, normal rear hinge, gray outer frame fixed to chassis"
+  ],
+  "member_ordering": {
+    "longitudinal_members": "below gray frame - owner confirmed CAD-U07",
+    "transverse_crossmember": "above gray frame - owner confirmed CAD-U07",
+    "numerical_joint_geometry": "unmeasured"
+  }
 }

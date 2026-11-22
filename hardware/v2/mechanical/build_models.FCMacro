@@ -1,4 +1,4 @@
-"""Generate the five CAD-R2 review documents using native FreeCAD features."""
+"""Generate the five CAD-R3 review documents using native FreeCAD features."""
 from pathlib import Path
 import runpy
 runpy.run_path(str(Path(__file__).resolve().with_name('model_components.py')),run_name='__main__')

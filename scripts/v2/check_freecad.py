@@ -1,4 +1,4 @@
-"""Check native CAD-R2 geometry, actual parameter behavior and STEP placement."""
+"""Check native CAD-R3 geometry, frame/tipping parameters and STEP placement."""
 from pathlib import Path
 import json,hashlib,zipfile,xml.etree.ElementTree as ET
 import FreeCAD as App
@@ -34,7 +34,27 @@ for p in files:
         old=edit(d,'enclosure_height',10);close(world(d.EnclosureShell).BoundBox.ZLength,old+10);d.Parameters.set(rows['enclosure_height'],str(old));d.recompute()
         assert d.getObject('UnselectedSensorReference') is None
         assert all('Bucket' not in o.Name and 'HistoricalTransducer' not in o.Name for o in d.Objects)
+        assert d.getObject('VisibleSideStrip0') is None and d.getObject('BumperRedDetail') is None
+        rail=world(d.InnerRail0);cy=-v['inner_spacing']['layout_mm']/2;cz=v['inner_z']['layout_mm']+v['inner_section']['layout_mm']/2
+        assert not rail.isInside(App.Vector(0,cy,cz),1e-5,True),'Inner rail incorrectly filled'
+        assert rail.isInside(App.Vector(0,cy+v['inner_section']['layout_mm']/2-1,cz),1e-5,True),'Inner rail missing wall'
+        for inner in [d.InnerRail0,d.InnerRail1]:
+            for outer in [d.FrameEndWeb0,d.FrameEndWeb1]:assert world(inner).common(world(outer)).Volume<.001,'Inner member penetrates gray frame'
+        assert world(d.InnerRail0).BoundBox.ZMax<=world(d.FrameEndWeb0).BoundBox.ZMin+.001
+        assert world(d.FrameCrosspiece).BoundBox.ZMin>=world(d.FrameSideWeb0).BoundBox.ZMax-.001
+        width=v['frame_width']['layout_mm'];old=edit(d,'frame_width',20)
+        close(world(d.FrameSideWeb1).BoundBox.YMax-world(d.FrameSideWeb0).BoundBox.YMin,width+20);d.Parameters.set(rows['frame_width'],str(old));d.recompute()
+        frame_before=world(d.FrameSideWeb0).BoundBox;cart_before=world(d.CartTub).BoundBox
+        tipcell=rows['tub_tip_angle_deg'];d.Parameters.set(tipcell,str(v['service_pose_angle_deg']['layout_deg']));d.recompute()
+        frame_after=world(d.FrameSideWeb0).BoundBox
+        for name in ['XMin','YMin','ZMin','XMax','YMax','ZMax']:close(getattr(frame_before,name),getattr(frame_after,name))
+        assert world(d.CartTub).BoundBox.ZMax>cart_before.ZMax+100,'Tub failed to tip upward'
+        assert d.TubTipPivot.Placement.Base.x<0 and d.TubTipPivot.Placement.Rotation.Axis.y<0
+        assert all(world(d.getObject(o['name'])).isValid() for o in meshes[p.stem])
+        d.Parameters.set(tipcell,'0');d.recompute();close(world(d.CartTub).BoundBox.ZMax,cart_before.ZMax)
+        close(world(d.FrontAxleRedHousing).BoundBox.ZMax,v['tyre_radius']['layout_mm'])
         details['checks']=['wheel centre geometry','wheelbase edit moves tyres','tub centre/length and open interior','cart-length edit regenerates native loft/cut','case height edit in vertical orientation','limited draft clashes: case/tub, case/rim, case/pack','no bucket or historical ultrasonic in assembly']
+        details['checks']+=['inner rail hollow profile','owner-confirmed longitudinal-below/transverse-above ordering, without rail/end-web penetration','frame-width edit propagates','rear-axis tub tipping with stationary outer frame','normal pose restored and shape validity at illustrative tip angle','red housing below axle centre; old bumper-top/vertical-strip interpretations removed']
     leaves=[world(d.getObject(o['name'])) for o in meshes[p.stem]]
     native=Part.makeCompound(leaves);step=Part.Shape();step.read(str(OUT/(p.stem+'.step')))
     assert step.isValid() and step.Volume>0
@@ -55,6 +75,6 @@ for p in files:
 assert all(v.get('measured_mm',v.get('measured_deg')) is None for v in cfg['parameters'].values())
 held=json.loads((ROOT/'docs/reconciliation/export-status.json').read_text())
 for p in held['held_pdfs']:assert hashlib.sha256((ROOT/p['path']).read_bytes()).hexdigest()==p['sha256']
-summary={'revision':'CAD-R2','native_files':report,'step_readback_count':5,'measured_dimensions_entered':0,'held_pdf_count':len(held['held_pdfs']),'physical_fit_validation':'not performed','limits':['Photo-informed proportions; no scale reference','Clash checks cover named draft parts only, not real wiring/fasteners/moving travel','Tread shape and dock angles regenerate from source; other principal profiles/placements edit natively']}
+summary={'revision':'CAD-R3','native_files':report,'step_readback_count':5,'measured_dimensions_entered':0,'held_pdf_count':len(held['held_pdfs']),'physical_fit_validation':'not performed','limits':['Photo-informed proportions; no scale reference','Rear hinge/fixed frame confirmed; numeric axis/travel, latch and minor bracket moving membership unverified','Clash checks cover named draft parts only, not real wiring/fasteners/full moving travel','Tread/spring shape and dock angles regenerate from source; other principal profiles/placements and tub-tip angle edit natively']}
 (ROOT/'reports/v2/freecad-validation.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
-print('CAD-R2: five native/STEP readbacks, constrained profiles, parameter edits, named draft clashes and 13 held PDF hashes passed')
+print('CAD-R3: five native/STEP readbacks, frame edits, hollow members, fixed-frame tub tipping and 13 held PDF hashes passed')
