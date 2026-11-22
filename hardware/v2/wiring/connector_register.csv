@@ -1,0 +1,25 @@
+logical_id,description,logical_functions,physical_part,physical_pin_order,view_direction,status
+B2,Kobalt pack / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+A1_IN,Adapter contacts / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+A1_OUT,Adapter leads / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+F1_IN,Protection input / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+F1_OUT,Protection output / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+S1_IN,Switch input / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+S1_OUT,Switch output / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+XT1,Auxiliary distribution / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+U5_IN,5V converter input / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+U5_OUT,5V converter output / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+PI1,Pi power entry TBD / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+U12_IN,12V converter input / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+U12_OUT,12V converter output / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+L1,Lighting supply TBD / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+B1,3S propulsion pack / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+ESC1,ESC input / DRAFT - physical connector TBD,POS_TBD;RET_TBD,TBD,TBD,TBD,proposed
+UNO1_I2C,Elegoo Uno R3 proposed I2C / DRAFT - physical connector TBD,SDA_A4;SCL_A5;SUPPLY_TBD;GND,TBD,TBD,TBD,proposed
+IMU1,MPU-6050 breakout identity unverified / DRAFT - physical connector TBD,SDA;SCL;VCC_TBD;GND,TBD,TBD,TBD,proposed
+UNO1_RANGE,Elegoo Uno R3 digital pins unresolved / DRAFT - physical connector TBD,TRIG_PIN_TBD;ECHO_PIN_TBD;SUPPLY_TBD;GND,TBD,TBD,TBD,proposed
+RANGE1,HC-SR04 identity unverified / DRAFT - physical connector TBD,TRIG;ECHO;VCC_TBD;GND,TBD,TBD,TBD,proposed
+UNO1_LED,Uno LED output unresolved / DRAFT - physical connector TBD,LED_PIN_TBD;GND,TBD,TBD,TBD,proposed
+LED1,LED with series resistor TBD / DRAFT - physical connector TBD,RESISTOR_LED_PATH;GND,TBD,TBD,TBD,proposed
+UNO1_BUZZ,Uno buzzer output unresolved / DRAFT - physical connector TBD,BUZZ_PIN_TBD;GND,TBD,TBD,TBD,proposed
+BZ1,Buzzer drive interface TBD / DRAFT - physical connector TBD,CONTROL_TBD;GND,TBD,TBD,TBD,proposed

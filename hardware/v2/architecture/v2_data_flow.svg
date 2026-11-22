@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000"><rect width="1500" height="1000" fill="#f5f7fa"/>
+<text x="40" y="48" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#243347">LitterBuggy V2 / data flow</text>
+<text x="40" y="78" font-family="Arial,sans-serif" font-size="15" font-weight="400" fill="#243347">Proposed editable acquisition pipeline | actual old serial output remains to be captured</text>
+<polyline points="350,280.0 455.0,280.0 455.0,280.0 560,280.0" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="358" y="272.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#7251a3">I2C / echo TBD</text>
+<polyline points="900,280.0 1000.0,280.0 1000.0,280.0 1100,280.0" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="908" y="272.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#7251a3">USB, 115200 proposed</text>
+<polyline points="1275.0,360 1275.0,360 1275.0,550 1275.0,550" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1283.0" y="447.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#7251a3">local disk / UTC</text>
+<rect x="40" y="200" width="310" height="160" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
+<text x="54" y="226" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">Sensor readings</text>
+<text x="54" y="252" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Raw IMU + distance</text>
+<text x="54" y="272" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No synthetic measurements</text>
+<text x="54" y="348" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
+<rect x="560" y="200" width="340" height="160" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
+<text x="574" y="226" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">Uno R3 firmware draft</text>
+<text x="574" y="252" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Versioned JSON lines</text>
+<text x="574" y="272" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Sequence + uptime + validity</text>
+<text x="574" y="348" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
+<rect x="1100" y="200" width="350" height="160" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
+<text x="1114" y="226" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">Pi logger draft</text>
+<text x="1114" y="252" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Validate / preserve raw bytes</text>
+<text x="1114" y="272" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Reconnect and record faults</text>
+<text x="1114" y="348" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
+<rect x="1100" y="550" width="350" height="170" rx="8" fill="white" stroke="#7251a3" stroke-width="2"/>
+<text x="1114" y="576" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#7251a3">Run evidence</text>
+<text x="1114" y="602" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">SQLite + raw serial + metadata</text>
+<text x="1114" y="622" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Config hash and receive time</text>
+<text x="1114" y="642" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Export to CSV</text>
+<text x="1114" y="708" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED</text>
+<text x="40" y="560" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Existing firmware behaviour is not claimed to match this proposed protocol.</text>
+<text x="40" y="581" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Voltage, yaw, temperature and emergency-stop measurements are omitted</text>
+<text x="40" y="602" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">until fitted hardware and acquisition methods are established.</text>
+<text x="40" y="623" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">LED/buzzer thresholds default disabled; no motor commands exist.</text>
+<text x="40" y="644" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Optional camera is a separate capture tool; no measured synchronization claim.</text>
+<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R0 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
+</svg>

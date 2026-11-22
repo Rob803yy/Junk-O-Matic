@@ -1,0 +1,11 @@
+schema_version: 1
+configuration_revision: V2-R0-unverified
+output_root: runs
+serial:
+  port: null  # Set actual /dev/serial/by-id/... after USB recognition; never guess ACM/USB index.
+  baud: 115200
+  timeout_s: 0.25
+  reconnect_s: 2.0
+expected_interval_ms: 100
+health_interval_s: 5
+min_free_mb: 100

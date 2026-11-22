@@ -1,0 +1,11 @@
+Id	Description	Qty	Unit	Designators
+1	Cable, 2 wires	0	m	H12, H13
+2	Cable, 4 wires	0	m	H10, H11
+3	Connector, Buzzer drive interface TBD / DRAFT - physical connector TBD, 2 pins	1		BZ1
+4	Connector, Elegoo Uno R3 digital pins unresolved / DRAFT - physical connector TBD, 4 pins	1		UNO1_RANGE
+5	Connector, Elegoo Uno R3 proposed I2C / DRAFT - physical connector TBD, 4 pins	1		UNO1_I2C
+6	Connector, HC-SR04 identity unverified / DRAFT - physical connector TBD, 4 pins	1		RANGE1
+7	Connector, LED with series resistor TBD / DRAFT - physical connector TBD, 2 pins	1		LED1
+8	Connector, MPU-6050 breakout identity unverified / DRAFT - physical connector TBD, 4 pins	1		IMU1
+9	Connector, Uno LED output unresolved / DRAFT - physical connector TBD, 2 pins	1		UNO1_LED
+10	Connector, Uno buzzer output unresolved / DRAFT - physical connector TBD, 2 pins	1		UNO1_BUZZ

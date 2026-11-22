@@ -1,0 +1,112 @@
+metadata:
+  title: v2_sensor_harness / DRAFT R0 - NOT AS BUILT
+  revision: R0
+  notes: All links proposed or untraced. Wire gauge, colour, length and physical pin
+    numbering TBD.
+connectors:
+  UNO1_I2C:
+    type: Elegoo Uno R3 proposed I2C / DRAFT - physical connector TBD
+    pins: &id001
+    - SDA_A4
+    - SCL_A5
+    - SUPPLY_TBD
+    - GND
+    pinlabels: *id001
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  IMU1:
+    type: MPU-6050 breakout identity unverified / DRAFT - physical connector TBD
+    pins: &id002
+    - SDA
+    - SCL
+    - VCC_TBD
+    - GND
+    pinlabels: *id002
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  UNO1_RANGE:
+    type: Elegoo Uno R3 digital pins unresolved / DRAFT - physical connector TBD
+    pins: &id003
+    - TRIG_PIN_TBD
+    - ECHO_PIN_TBD
+    - SUPPLY_TBD
+    - GND
+    pinlabels: *id003
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  RANGE1:
+    type: HC-SR04 identity unverified / DRAFT - physical connector TBD
+    pins: &id004
+    - TRIG
+    - ECHO
+    - VCC_TBD
+    - GND
+    pinlabels: *id004
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  UNO1_LED:
+    type: Uno LED output unresolved / DRAFT - physical connector TBD
+    pins: &id005
+    - LED_PIN_TBD
+    - GND
+    pinlabels: *id005
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  LED1:
+    type: LED with series resistor TBD / DRAFT - physical connector TBD
+    pins: &id006
+    - RESISTOR_LED_PATH
+    - GND
+    pinlabels: *id006
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  UNO1_BUZZ:
+    type: Uno buzzer output unresolved / DRAFT - physical connector TBD
+    pins: &id007
+    - BUZZ_PIN_TBD
+    - GND
+    pinlabels: *id007
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  BZ1:
+    type: Buzzer drive interface TBD / DRAFT - physical connector TBD
+    pins: &id008
+    - CONTROL_TBD
+    - GND
+    pinlabels: *id008
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+cables:
+  H10:
+    wirecount: 4
+    notes: Proposed functional mapping only. Verify supplies, pullups, driver parts
+      and pin assignments.
+  H11:
+    wirecount: 4
+    notes: Proposed functional mapping only. Verify supplies, pullups, driver parts
+      and pin assignments.
+  H12:
+    wirecount: 2
+    notes: Proposed functional mapping only. Verify supplies, pullups, driver parts
+      and pin assignments.
+  H13:
+    wirecount: 2
+    notes: Proposed functional mapping only. Verify supplies, pullups, driver parts
+      and pin assignments.
+connections:
+- - UNO1_I2C: *id001
+  - H10:
+    - 1
+    - 2
+    - 3
+    - 4
+  - IMU1: *id002
+- - UNO1_RANGE: *id003
+  - H11:
+    - 1
+    - 2
+    - 3
+    - 4
+  - RANGE1: *id004
+- - UNO1_LED: *id005
+  - H12:
+    - 1
+    - 2
+  - LED1: *id006
+- - UNO1_BUZZ: *id007
+  - H13:
+    - 1
+    - 2
+  - BZ1: *id008

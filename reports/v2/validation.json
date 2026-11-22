@@ -1,0 +1,62 @@
+{
+  "revision": "V2-R0",
+  "review_date": "2026-11-21",
+  "checks": [
+    {
+      "check": "python-tests",
+      "passed": true,
+      "exit_code": 0,
+      "receipt": "python-tests.txt"
+    },
+    {
+      "check": "uno-default",
+      "passed": true,
+      "exit_code": 0,
+      "receipt": "uno-default.txt"
+    },
+    {
+      "check": "uno-drivers-feedback",
+      "passed": true,
+      "exit_code": 0,
+      "receipt": "uno-drivers-feedback.txt"
+    },
+    {
+      "check": "uno-reject-unassigned-pins",
+      "passed": true,
+      "exit_code": 1,
+      "receipt": "uno-reject-unassigned-pins.txt"
+    },
+    {
+      "check": "replay-cli",
+      "passed": true,
+      "exit_code": 0,
+      "receipt": "replay-cli.txt"
+    },
+    {
+      "check": "replay-raw-database-manifest",
+      "passed": true
+    },
+    {
+      "check": "drawio-xml",
+      "passed": true,
+      "files": 3
+    },
+    {
+      "check": "qet-xml",
+      "passed": true,
+      "files": 1
+    },
+    {
+      "check": "readable-pdf-containers-and-draft-labels",
+      "passed": true,
+      "files": 11,
+      "pages": 15
+    }
+  ],
+  "limits": [
+    "No hardware upload or sensor bench test",
+    "No measured mechanical dimensions or physical fit validation",
+    "No electrical polarity/rating/continuity verification",
+    "Systemd and real camera not exercised on Pi"
+  ]
+}

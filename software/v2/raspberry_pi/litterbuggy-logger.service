@@ -1,0 +1,24 @@
+[Unit]
+Description=LitterBuggy V2 observational telemetry logger
+After=local-fs.target
+
+[Service]
+Type=simple
+User=litterbuggy
+Group=litterbuggy
+SupplementaryGroups=dialout
+WorkingDirectory=/opt/litterbuggy
+ExecStart=/opt/litterbuggy/.venv/bin/python /opt/litterbuggy/software/v2/raspberry_pi/logger.py --config /etc/litterbuggy/config.yml --output-root /var/lib/litterbuggy/runs
+Restart=on-failure
+RestartSec=5
+StateDirectory=litterbuggy
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/litterbuggy
+TimeoutStopSec=15
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target
