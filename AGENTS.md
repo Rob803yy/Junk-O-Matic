@@ -14,8 +14,12 @@ docs/v2_verification/ record. New V2 source lives in hardware/v2 and software/v2
    measured dimensions, fuse ratings, calibration or passed field tests.
 
 ## Historical pipeline scope
-The existing dataset/taxonomy/evaluation/dashboard and Jetson work remains in
-its original paths. It does not override the owner's current V2 scope.
+The owner requested separation of historical data from current work. Older
+V1A and dataset/model scaffold material now lives under archive/. Use
+docs/repository-layout.md and archive/relocation-manifest.json to resolve old
+paths in dated evidence. Do not promote archived constants, sample metrics or
+old wiring assumptions into current V2 facts. Current working sources remain
+in hardware/v2, software/v2 and docs/v2; deployment is still unverified.
 
 ## Working Rules
 - Keep scripts idempotent where possible.

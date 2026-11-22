@@ -1,5 +1,6 @@
 # Python
 .venv/
+.venv-*/
 venv/
 env/
 __pycache__/
@@ -24,6 +25,7 @@ test_data/*
 !test_data/.gitkeep
 data/raw/
 data/interim/
+data/external/
 logs/
 *.log
 *.mp4
@@ -42,6 +44,7 @@ logs/
 # Keep generated reports intentional.
 reports/tmp/
 reports/raw/
+reports/local/
 
 # OS and editor files
 .DS_Store
@@ -69,3 +72,9 @@ runs/
 *.qet~
 *.qet.lck
 *.tmp
+
+# Archived workspaces remain opt-in; generated/raw data is never archive source.
+archive/dataset-model-scaffold/data/
+archive/dataset-model-scaffold/reports/local/
+archive/dataset-model-scaffold/.venv*/
+archive/v1a/test_data/

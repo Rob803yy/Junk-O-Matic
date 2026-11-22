@@ -1,0 +1,413 @@
+{
+  "schema_version": 1,
+  "revision": "LAYOUT-R1",
+  "date": "2026-11-22",
+  "baseline_main_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d",
+  "pre_tidy_local_snapshot_commit": "2bba9dbc841dd636a64429d81697e728f787a0fc",
+  "pre_tidy_snapshot_tree": "6736325790f364be32ed7c5a5bb84d9744c59625",
+  "interpretation": "Old paths in dated review records remain historical. Use this map to locate preserved files. Native V2 working paths remain stable.",
+  "moves": [
+    {
+      "old_path": "app/README.md",
+      "new_path": "archive/dataset-model-scaffold/app/README.md",
+      "source_blob_sha1": "5f5ee9937353db6c4ac55269bca3d4f0253aeaba",
+      "source_sha256": "b3b2d964f7e91046dd3c4cf0aa4df13ed8ff23ead9c7ee2eaacf209f2adb7c80",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "d5f19dd9634968b4897f6b45f42775b4df02ada5d4dbb4d2c8ca51c5044d0862"
+    },
+    {
+      "old_path": "app/streamlit_app.py",
+      "new_path": "archive/dataset-model-scaffold/app/streamlit_app.py",
+      "source_blob_sha1": "3e2eab790394da291e143767ccbf5f9d979858fd",
+      "source_sha256": "b1da8723ad6066e034a95394e4480c8ee1502ca6b8ed469f2ad8d48d96f284a5",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "b1da8723ad6066e034a95394e4480c8ee1502ca6b8ed469f2ad8d48d96f284a5"
+    },
+    {
+      "old_path": "configs/README.md",
+      "new_path": "archive/dataset-model-scaffold/configs/README.md",
+      "source_blob_sha1": "7d280d3d5a05601c10db9b672e40186b47a7bd8e",
+      "source_sha256": "b2cdcd1296be44f57ce89d3ad0277463c4f14c5fe81de8ff9e6c9d0f3a3c5ae5",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "355cf9141d6cdf7ef4bfa974bfd5f65e445dc114ab6f03d1b4e920db9e547517"
+    },
+    {
+      "old_path": "configs/classes.yaml",
+      "new_path": "archive/dataset-model-scaffold/configs/classes.yaml",
+      "source_blob_sha1": "4a6450f08cf80d08d31e9ae7e0bc76e44791385e",
+      "source_sha256": "81f859e5860327079614121c6b5de4b2152ff5070fb2fe8c5ca95dba7ce3e0e0",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "81f859e5860327079614121c6b5de4b2152ff5070fb2fe8c5ca95dba7ce3e0e0"
+    },
+    {
+      "old_path": "configs/datasets.yaml",
+      "new_path": "archive/dataset-model-scaffold/configs/datasets.yaml",
+      "source_blob_sha1": "aea244e8bdcb40f9e44229047f6984167e5bbe7e",
+      "source_sha256": "dff4de9499268a40fb1b71555510da529ea01f078fdfe64a4f1403169cc74100",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "dff4de9499268a40fb1b71555510da529ea01f078fdfe64a4f1403169cc74100"
+    },
+    {
+      "old_path": "docs/history/v1a-arduino-readme.md",
+      "new_path": "archive/reference-pages/v1a-arduino-readme.md",
+      "source_blob_sha1": "5924e336a3f1fd6d4d7e8db209cc13a4578ad521",
+      "source_sha256": "d5166989138e7a3823a40819079456a8146fc6dbd70018189de552e0758fa8f3",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "6bf7e8bf9a0d07ad1f47ef6df02b190827ef71407ae96c70a4f79e956fcf4298"
+    },
+    {
+      "old_path": "docs/history/v1a-data-dictionary.md",
+      "new_path": "archive/reference-pages/v1a-data-dictionary.md",
+      "source_blob_sha1": "e92bef1fdb487d2769946ac776ea85e8168c8fa0",
+      "source_sha256": "608220779ff493a3404018fa6c580660d4cca6ca062b10705f60084cf32cd912",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "dc4137176235c1338afa832a7498d6ee571fc4b55c928dbd9e2649510f7c3f1c"
+    },
+    {
+      "old_path": "docs/history/v1a-overview.md",
+      "new_path": "archive/reference-pages/v1a-overview.md",
+      "source_blob_sha1": "4ad4b5e52d476b2d38d4d0635c59e663e74ee8d3",
+      "source_sha256": "5ad7d4d068f31fb36b4006be15cb0d22bcbfa22c66586a7b6fdbdf54aced4399",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "cb602a94afb84c2ee5722394ce4fb8b6bcd0c5dbcb3ae220ad7cba042365c7fc"
+    },
+    {
+      "old_path": "docs/history/v1a-pi-readme.md",
+      "new_path": "archive/reference-pages/v1a-pi-readme.md",
+      "source_blob_sha1": "8229b9f598df9ef0f0792e08bcd28ab87ee9f3eb",
+      "source_sha256": "b86160720feb35d01315c9bd7e2234d6ca2ff0564f7eb103abf287c232ca857d",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "1b12d68981b44dc869ceabbd9c47dd5eee04565c2a0a1dea3c078e06fa363705"
+    },
+    {
+      "old_path": "docs/history/v1a-wiring-notes.md",
+      "new_path": "archive/reference-pages/v1a-wiring-notes.md",
+      "source_blob_sha1": "85b029b261f88152a98d19ed7de25ff34d1291e9",
+      "source_sha256": "b2eff4774efe6e26f8c6b21bc684e41740fabcc2afef24e8e49cdad11be64428",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "28bd24fc5789a11ba8b7e7a6afadf739b38e82a3fba3e39c05b94f94ab68151d"
+    },
+    {
+      "old_path": "docs/project_scope_v1a.md",
+      "new_path": "archive/v1a/docs/project_scope_v1a.md",
+      "source_blob_sha1": "e8661dd8e5699b74cb9bc0607c8b74aea9048bf2",
+      "source_sha256": "568daeac5780c9ba6901976c371288ffd867aa5a67b19c634f65a2f181d221fe",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "66ea169087315df6d895d606c529b64998ea476a3f42429e46fc62b1d00384dc"
+    },
+    {
+      "old_path": "docs/test_procedure_v1a.md",
+      "new_path": "archive/v1a/docs/test_procedure_v1a.md",
+      "source_blob_sha1": "daa5ca41c039e4137cbace943c485dc44df6a79a",
+      "source_sha256": "a7b8f180cb5388a20a9bf861d9128eca714e94c7550ed36af6ca9263a75751a5",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "b689f15d5a8f0876133e13cf77452d0da2b59475082e53a1fd17a05311e91d49"
+    },
+    {
+      "old_path": "docs/v1_to_v2_exit_criteria.md",
+      "new_path": "archive/v1a/docs/v1_to_v2_exit_criteria.md",
+      "source_blob_sha1": "fbbed0b1f21812731b89eb29dbe3a0aa8f946722",
+      "source_sha256": "1219550be782b2bd36935d9f136332e4ea81dfd4d9b446a9f3ef1a81b2bdd57c",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "f2b7fec318ff005de018ebd4c49ffd529c5386b1a46ee9ece45c3ba5ed3a90c2"
+    },
+    {
+      "old_path": "hardware/bom/README.md",
+      "new_path": "archive/v1a/hardware/bom/README.md",
+      "source_blob_sha1": "06385fcc59892c9b420aef7e5dd5bcd82891d791",
+      "source_sha256": "e5183cb3ba57ac3b1d527de0723bff8033e767d0d78a75fed216f6f797bdaf47",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "9e19e5c881133ddb2ce0197da0d9bc519dd9ad6280284ce620fac4bd2cc6935c"
+    },
+    {
+      "old_path": "hardware/enclosure_layout/README.md",
+      "new_path": "archive/v1a/hardware/enclosure_layout/README.md",
+      "source_blob_sha1": "3d5fc7a6ab1bc41455d611170ff5fd1c9a0b4bd2",
+      "source_sha256": "fb92b4f82c8076e886f06740dd5626b487fc15bc83a7ab8f1908cdd670318db2",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "a11694b863ae35bd6b896bb983f0d103cdab37d9417a57efc2c3dfe39013d715"
+    },
+    {
+      "old_path": "hardware/v2/architecture/v2_data_flow.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/architecture/v2_data_flow.pdf",
+      "source_blob_sha1": "0f2b4227ba5bd7769ab19ac6d57dfa1b9a3c5089",
+      "source_sha256": "54c648b2100074ab99d4be8947568fc1ad8a15f2fe1842bb7b5e8d6e3ff521d3",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "54c648b2100074ab99d4be8947568fc1ad8a15f2fe1842bb7b5e8d6e3ff521d3"
+    },
+    {
+      "old_path": "hardware/v2/architecture/v2_power_domains.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/architecture/v2_power_domains.pdf",
+      "source_blob_sha1": "eec9d48f59a0130b224d3e95c0ff64fd695d2188",
+      "source_sha256": "e913f2c76068d05c29184b95befa4bce8b5017264936a129dd2399ee53799a49",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "e913f2c76068d05c29184b95befa4bce8b5017264936a129dd2399ee53799a49"
+    },
+    {
+      "old_path": "hardware/v2/architecture/v2_system_overview.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/architecture/v2_system_overview.pdf",
+      "source_blob_sha1": "39591907c006a82a409f075522329a5387916b47",
+      "source_sha256": "d1601c697a66f611c0e0c164dece7031dab6f986233902c38222ff7b83d432e9",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "d1601c697a66f611c0e0c164dece7031dab6f986233902c38222ff7b83d432e9"
+    },
+    {
+      "old_path": "hardware/v2/electrical/v2_electrical.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/electrical/v2_electrical.pdf",
+      "source_blob_sha1": "18e9979060f37a02da0d3ce34d51ea2dcf619cff",
+      "source_sha256": "9ee68a5e8a967819101d8fb4de7607e539bf3bb45748b0adc8bc3968d5b45742",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "9ee68a5e8a967819101d8fb4de7607e539bf3bb45748b0adc8bc3968d5b45742"
+    },
+    {
+      "old_path": "hardware/v2/mechanical/exports/v2_assembly.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_assembly.pdf",
+      "source_blob_sha1": "54ce119471e1e430914cfbd8e8cb1c7e52d56dc8",
+      "source_sha256": "52d75b3472d72044b2356b51a8250f9e7ad8f9863e99743342d3e93614c777a8",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "52d75b3472d72044b2356b51a8250f9e7ad8f9863e99743342d3e93614c777a8"
+    },
+    {
+      "old_path": "hardware/v2/mechanical/exports/v2_battery_mount.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_battery_mount.pdf",
+      "source_blob_sha1": "e73bfd90baaaed4cf50a88ad4866119e2f7a50a1",
+      "source_sha256": "d82a41dc6efda8fd78f26dbd18359b51717b74e99270044961d9c462131a9d6b",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "d82a41dc6efda8fd78f26dbd18359b51717b74e99270044961d9c462131a9d6b"
+    },
+    {
+      "old_path": "hardware/v2/mechanical/exports/v2_cart_mount.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_cart_mount.pdf",
+      "source_blob_sha1": "5d45a11b787d9705c95cf93053f37fbfc7aa7f10",
+      "source_sha256": "a04916d7e3b1c971ad94c09e2916343c3421c8373782c6de1d3ff0dce6204009",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "a04916d7e3b1c971ad94c09e2916343c3421c8373782c6de1d3ff0dce6204009"
+    },
+    {
+      "old_path": "hardware/v2/mechanical/exports/v2_electronics_enclosure.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_electronics_enclosure.pdf",
+      "source_blob_sha1": "1741ca5635305db957a9e3ffffccf46d9cb70780",
+      "source_sha256": "6d568e09bf4033435f2eb52dc65abfebe12fee9de880111a35256ab76a105d44",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "6d568e09bf4033435f2eb52dc65abfebe12fee9de880111a35256ab76a105d44"
+    },
+    {
+      "old_path": "hardware/v2/mechanical/exports/v2_sensor_mounts.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_sensor_mounts.pdf",
+      "source_blob_sha1": "fdc2d8b86fd8bc2aceec0e599cf350ff41989d54",
+      "source_sha256": "7d8d9047528d84f9179ad67416e70dfb57948f6c32fcd319799c169c77de1066",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "7d8d9047528d84f9179ad67416e70dfb57948f6c32fcd319799c169c77de1066"
+    },
+    {
+      "old_path": "hardware/v2/wiring/exports/v2_power_harness.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/wiring/exports/v2_power_harness.pdf",
+      "source_blob_sha1": "e5aa7b6328aee6b103b32a4fd216e2a3aec74b28",
+      "source_sha256": "9a9abb54b687eecb00a790514e7b67983e326ad8d7d3f1a26688ffd0a5374ec3",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "9a9abb54b687eecb00a790514e7b67983e326ad8d7d3f1a26688ffd0a5374ec3"
+    },
+    {
+      "old_path": "hardware/v2/wiring/exports/v2_sensor_harness.pdf",
+      "new_path": "archive/exports-r0/hardware/v2/wiring/exports/v2_sensor_harness.pdf",
+      "source_blob_sha1": "0c1174fc7336a2db49bc26a2fd2ddf84913f00dd",
+      "source_sha256": "503e25dd3c58bc317da444e2dc7a45d2121133785481ab7b3734f0ea182f4b88",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "503e25dd3c58bc317da444e2dc7a45d2121133785481ab7b3734f0ea182f4b88"
+    },
+    {
+      "old_path": "hardware/wiring_diagrams/README.md",
+      "new_path": "archive/v1a/hardware/wiring_diagrams/README.md",
+      "source_blob_sha1": "b22fd81cb5084765e0744f6b4313d3999db5475d",
+      "source_sha256": "30a4f638711579cbe4514710c7943f57b46e34e196ef62c4c4e2db5352053c3c",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "39c2278daf3f757d0937542a8bc00b7326d8cdc7d6f23a195d592a256aa808c6"
+    },
+    {
+      "old_path": "reports/dataset_inventory.json",
+      "new_path": "archive/dataset-model-scaffold/reports/dataset_inventory.json",
+      "source_blob_sha1": "4d7090c0afbbfe27b8de1ccbd28aaf91e81c39d2",
+      "source_sha256": "f7b2b46a5e9f1d7a2884a03db8bd895125932db0d0f7d735c493893c3c749d01",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "f7b2b46a5e9f1d7a2884a03db8bd895125932db0d0f7d735c493893c3c749d01"
+    },
+    {
+      "old_path": "reports/model_runs/sample_run.json",
+      "new_path": "archive/dataset-model-scaffold/reports/model_runs/sample_run.json",
+      "source_blob_sha1": "c471ea36bc5c638003c0aac1ca8e8ca1a2218dcc",
+      "source_sha256": "299f8a54f14041d0d86bbbfb5d9dba34f92a85f2ecf78ec3e295c82656dfa59b",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "299f8a54f14041d0d86bbbfb5d9dba34f92a85f2ecf78ec3e295c82656dfa59b"
+    },
+    {
+      "old_path": "reports/v2/LitterBuggy-V2-review.pdf",
+      "new_path": "archive/exports-r0/reports/v2/LitterBuggy-V2-review.pdf",
+      "source_blob_sha1": "79c9092d5b49438ba1705c48b5d4f13f86344a10",
+      "source_sha256": "4f5c052c8dceb5f7136818a598f9c20ee71eee0e680e9485630d13b03ea81b15",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "4f5c052c8dceb5f7136818a598f9c20ee71eee0e680e9485630d13b03ea81b15"
+    },
+    {
+      "old_path": "reports/v2/review-introduction.pdf",
+      "new_path": "archive/exports-r0/reports/v2/review-introduction.pdf",
+      "source_blob_sha1": "e845ec02a069d1e8c1e003913c48140780464864",
+      "source_sha256": "caf1383ef834d2b27dd0380b11bbb8788669dbab9874fd1c3922a8d58759300c",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "caf1383ef834d2b27dd0380b11bbb8788669dbab9874fd1c3922a8d58759300c"
+    },
+    {
+      "old_path": "requirements.txt",
+      "new_path": "archive/dataset-model-scaffold/requirements.txt",
+      "source_blob_sha1": "782a7bfe1742b4985f26e766255ec1f89fd5753d",
+      "source_sha256": "56f8449403601daaf170abbe5151b9b203dfea5458ca60834d225ca305e43837",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "56f8449403601daaf170abbe5151b9b203dfea5458ca60834d225ca305e43837"
+    },
+    {
+      "old_path": "scripts/convert/build_inventory.py",
+      "new_path": "archive/dataset-model-scaffold/scripts/convert/build_inventory.py",
+      "source_blob_sha1": "f19a0635e69d41a515ffd9ba672832151fa0236e",
+      "source_sha256": "1f5ab46828dcfe27bd732388cc6b123bd9ac0692e6d5d7a4712a8dcee008906c",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "1f5ab46828dcfe27bd732388cc6b123bd9ac0692e6d5d7a4712a8dcee008906c"
+    },
+    {
+      "old_path": "scripts/download/bootstrap_datasets.py",
+      "new_path": "archive/dataset-model-scaffold/scripts/download/bootstrap_datasets.py",
+      "source_blob_sha1": "16b12762d4e4bc36bca95d1adac812194232a757",
+      "source_sha256": "a223163c5ec19d79741c572400f51946f476ee484d4641280b7b9f53c7c561f0",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "a223163c5ec19d79741c572400f51946f476ee484d4641280b7b9f53c7c561f0"
+    },
+    {
+      "old_path": "scripts/repository_review/tests/test_inventory.py",
+      "new_path": "archive/dataset-model-scaffold/scripts/repository_review/tests/test_inventory.py",
+      "source_blob_sha1": "7c2da895c66d4cd45d2fa57499f637c23dfab28c",
+      "source_sha256": "fe8f2b857771d2dad9576bb5c7503d64a8a4b1ded4a119dcde4966875fe264db",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "fe8f2b857771d2dad9576bb5c7503d64a8a4b1ded4a119dcde4966875fe264db"
+    },
+    {
+      "old_path": "software/arduino/README.md",
+      "new_path": "archive/v1a/software/arduino/README.md",
+      "source_blob_sha1": "fed0902fa36e089f3d025e656fe9477774ca7620",
+      "source_sha256": "2d62baf05e3f42af6af8556ffd356510222c5d4f03ceefa2630c0cf149d96504",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "1789af6db6d0e0a3a80959362eac17c691ed39c924d5754c8f7e6417a291bc47"
+    },
+    {
+      "old_path": "software/arduino/telemetry_logger_stub/telemetry_logger_stub.ino",
+      "new_path": "archive/v1a/software/arduino/telemetry_logger_stub/telemetry_logger_stub.ino",
+      "source_blob_sha1": "0277693689bf9db1c7000f69d477db8d2676d34e",
+      "source_sha256": "1f0060acee62b4b70a170d9afbc4b8a63aaa66bee38a592860ca0d3254685718",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "1f0060acee62b4b70a170d9afbc4b8a63aaa66bee38a592860ca0d3254685718"
+    },
+    {
+      "old_path": "software/raspberry_pi/README.md",
+      "new_path": "archive/v1a/software/raspberry_pi/README.md",
+      "source_blob_sha1": "ba94807389f89dc2761455df15bb88e70f1df91d",
+      "source_sha256": "a985f22ee2d375f69fd107f047e444f7f257b3890dc761f2fd17244e0e12854a",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "ccdf1b5546999d6d2f8a676e037c2f9417b0ef7f0ab43de8f2a1e753d7d5b85e"
+    },
+    {
+      "old_path": "software/raspberry_pi/config/data_logger_config.template.yaml",
+      "new_path": "archive/v1a/software/raspberry_pi/config/data_logger_config.template.yaml",
+      "source_blob_sha1": "c72c2048a4095b6572661eef115791971afd43e6",
+      "source_sha256": "248a3e0398c899216f001d4f8c1ca9946a1de69b451636f8fe297b460f78ccdf",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "248a3e0398c899216f001d4f8c1ca9946a1de69b451636f8fe297b460f78ccdf"
+    },
+    {
+      "old_path": "software/raspberry_pi/requirements.txt",
+      "new_path": "archive/v1a/software/raspberry_pi/requirements.txt",
+      "source_blob_sha1": "68c846887b20bd32c61e635cfc14fdabec94b0fd",
+      "source_sha256": "f6a53ebfd10898d23c95d258129c7a31fe2ee7f2e1309413c7b331f35d46a192",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "f6a53ebfd10898d23c95d258129c7a31fe2ee7f2e1309413c7b331f35d46a192"
+    },
+    {
+      "old_path": "software/raspberry_pi/src/jom_data_logger.py",
+      "new_path": "archive/v1a/software/raspberry_pi/src/jom_data_logger.py",
+      "source_blob_sha1": "00adba5218029427e2a6a74ad0e13776d03e81eb",
+      "source_sha256": "a7f30b6e3f425e723966cba1b3bf01b2ae971272465aecb1a45756cea2bfcca1",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "a7f30b6e3f425e723966cba1b3bf01b2ae971272465aecb1a45756cea2bfcca1"
+    },
+    {
+      "old_path": "src/README.md",
+      "new_path": "archive/dataset-model-scaffold/src/README.md",
+      "source_blob_sha1": "5cf1e39f05880fdc90b8f65b80bc995a92e273bc",
+      "source_sha256": "2900ef68578f1d149f3bd8f83e58e69a4f3cab47558086c16e636414d0ed627e",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "1f6cb094e9f30e32423f98f08d86e115d3d735288f75232cf61f5fc6d61bc553"
+    },
+    {
+      "old_path": "src/junkomatic/__init__.py",
+      "new_path": "archive/dataset-model-scaffold/src/junkomatic/__init__.py",
+      "source_blob_sha1": "30495556293b1573bbafb56e35d70f15271ac159",
+      "source_sha256": "93115ea7b66df76ab7bc7d88dc11dda1cf250487b01948f38a24fd88c1943cff",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "93115ea7b66df76ab7bc7d88dc11dda1cf250487b01948f38a24fd88c1943cff"
+    },
+    {
+      "old_path": "src/junkomatic/config.py",
+      "new_path": "archive/dataset-model-scaffold/src/junkomatic/config.py",
+      "source_blob_sha1": "c4416bcb33c8fa26c06a8fad349b9d067335b564",
+      "source_sha256": "863e90356cdb8c84df49a01be7ece72d6227c63855b17b471861e4d673cc0cfb",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "863e90356cdb8c84df49a01be7ece72d6227c63855b17b471861e4d673cc0cfb"
+    },
+    {
+      "old_path": "src/junkomatic/reporting.py",
+      "new_path": "archive/dataset-model-scaffold/src/junkomatic/reporting.py",
+      "source_blob_sha1": "eb840078a34f810cf06ca9600daca9a0acb1107f",
+      "source_sha256": "30ad0b4227d2eced9e994c7262a9ce1065a8423baf8afe5b7ce3d510b0322b49",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "30ad0b4227d2eced9e994c7262a9ce1065a8423baf8afe5b7ce3d510b0322b49"
+    },
+    {
+      "old_path": "validation/sample_data/README.md",
+      "new_path": "archive/v1a/validation/sample_data/README.md",
+      "source_blob_sha1": "a04d694128233b7acebd837b902206e7c760711e",
+      "source_sha256": "035fc3d122534957a2f45ed47117b504bb4a36372f61326d91a6122ae95b0270",
+      "preservation": "documentation_navigation_updated",
+      "destination_sha256_lf_or_binary": "91805f2bdb501120f3c34179e7e1d7f4b69e00dc0950e911df18d7a0ad97c833"
+    },
+    {
+      "old_path": "validation/sample_data/sample_arduino_telemetry.csv",
+      "new_path": "archive/v1a/validation/sample_data/sample_arduino_telemetry.csv",
+      "source_blob_sha1": "6f989c0e99ad1dbdbc8248f23e061c666b2a62de",
+      "source_sha256": "8064de56a3a5a70a37003b60fb724f67b7d7b3047516e39133d8c14b0f5a0e85",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "8064de56a3a5a70a37003b60fb724f67b7d7b3047516e39133d8c14b0f5a0e85"
+    },
+    {
+      "old_path": "validation/sample_data/sample_events.csv",
+      "new_path": "archive/v1a/validation/sample_data/sample_events.csv",
+      "source_blob_sha1": "67423ce5ff7d18c1e6a51a79deb5eff6f21d0605",
+      "source_sha256": "00e8626980c037d432bd3f3f0c2553042e4db998a2fa3f46de5bec00489e40e2",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "00e8626980c037d432bd3f3f0c2553042e4db998a2fa3f46de5bec00489e40e2"
+    },
+    {
+      "old_path": "validation/sample_data/sample_pi_health.csv",
+      "new_path": "archive/v1a/validation/sample_data/sample_pi_health.csv",
+      "source_blob_sha1": "5c6078a56aa11124bed0c873b7531d01c2167d94",
+      "source_sha256": "38743dfc83c1aa22271e47ebf7be3616bf4427dc24d0189134dae7fe60eb032c",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "38743dfc83c1aa22271e47ebf7be3616bf4427dc24d0189134dae7fe60eb032c"
+    },
+    {
+      "old_path": "validation/sample_data/sample_summary_for_scorecard.csv",
+      "new_path": "archive/v1a/validation/sample_data/sample_summary_for_scorecard.csv",
+      "source_blob_sha1": "253f23f738f099523991a57298bf529f7f2e988f",
+      "source_sha256": "ae986e638c1ce7ae90fb2e9ffab9386d11a73b44205c2770a05dad9e44c7e9db",
+      "preservation": "unchanged_git_content",
+      "destination_sha256_lf_or_binary": "ae986e638c1ce7ae90fb2e9ffab9386d11a73b44205c2770a05dad9e44c7e9db"
+    }
+  ],
+  "pre_tidy_repository_commit": "5dffbd71ae8d3454afc3ff7601badf2b1a72471e",
+  "pre_tidy_snapshot_note": "The published parent review snapshot has this same source tree; the local snapshot ID is retained only as local provenance."
+}

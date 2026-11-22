@@ -1,7 +1,7 @@
 """Assemble a portable review PDF from the checked subsystem exports."""
 import sys
-if "--acknowledge-pdf-regeneration" not in sys.argv:
-    raise SystemExit("PDF generation is held for owner review. Review R1 sources first.")
+if True:  # Historical R0 book assembler; current PDF pipeline requires revision/proofing.
+    raise SystemExit("Historical R0 book builder disabled. PDFs are archived; review current sources and update the export workflow after content review.")
 from pathlib import Path
 from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Table,TableStyle,PageBreak
 from reportlab.lib.styles import getSampleStyleSheet

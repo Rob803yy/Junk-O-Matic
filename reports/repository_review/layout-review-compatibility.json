@@ -1,0 +1,76 @@
+{
+  "revision": "LAYOUT-R1 / REPO-R1 compatibility",
+  "review_date": "2026-11-22",
+  "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d",
+  "baseline_files_excluding_license": 193,
+  "legacy_files_reviewed": 36,
+  "findings_by_severity": {
+    "high": 6,
+    "medium": 11,
+    "low": 3
+  },
+  "checks": [
+    {
+      "name": "Prioritized register, all six hats, baseline citations and deliverable paths",
+      "result": "passed",
+      "findings": 20
+    },
+    {
+      "name": "Revised/new Markdown local file links",
+      "result": "passed",
+      "links_checked": 222,
+      "documents_checked": 44
+    },
+    {
+      "name": "Preserved engineering/legacy/example sources (Git normalized blobs)",
+      "result": "passed",
+      "files": 131
+    },
+    {
+      "name": "Held PDF byte hashes",
+      "result": "passed",
+      "files": 13
+    },
+    {
+      "name": "Historical page bodies and root dependency declarations retained",
+      "result": "passed"
+    },
+    {
+      "name": "Changed Python AST syntax",
+      "result": "passed",
+      "files": [
+        "archive/dataset-model-scaffold/app/streamlit_app.py",
+        "archive/dataset-model-scaffold/scripts/convert/build_inventory.py",
+        "archive/dataset-model-scaffold/scripts/download/bootstrap_datasets.py",
+        "archive/dataset-model-scaffold/scripts/repository_review/tests/test_inventory.py",
+        "archive/dataset-model-scaffold/src/junkomatic/__init__.py",
+        "archive/dataset-model-scaffold/src/junkomatic/config.py",
+        "archive/dataset-model-scaffold/src/junkomatic/reporting.py",
+        "archive/v1a/software/raspberry_pi/src/jom_data_logger.py",
+        "scripts/repository_review/check_layout.py",
+        "scripts/repository_review/check_review.py",
+        "scripts/v2/build_review_book.py"
+      ]
+    },
+    {
+      "name": "Inventory behavior unit receipt and source correspondence",
+      "result": "passed",
+      "tests": 8
+    },
+    {
+      "name": "Legacy parser mismatch reproduced using fake serial only",
+      "result": "passed"
+    },
+    {
+      "name": "Local evidence/dataset/output/venv ignore rules",
+      "result": "passed"
+    }
+  ],
+  "limits": [
+    "License content/interpretation excluded as requested.",
+    "No physical test, serial hardware contact, software upload, Pi deployment, native-app or Streamlit/browser run.",
+    "External URL availability, dependency security/locking and full historical runtime hardening not tested.",
+    "Original engineering receipts remain historical; unrelated firmware/CAD test suites not rerun.",
+    "Original REPO-R1 records retain their historical paths/status; this compatibility check follows archive relocation."
+  ]
+}

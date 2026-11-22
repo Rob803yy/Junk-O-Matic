@@ -1,0 +1,13 @@
+folder,baseline_files,March_or_May_legacy_files,newer_files,last_content_commit,review_date,review_scope,finding_ids
+(root),5,1,4,2026-11-22T00:13:06-05:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-003;REV-006;REV-011;REV-015;REV-017;REV-020
+.github,2,2,0,2026-05-02T20:40:54-04:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-009;REV-018
+app,1,1,0,2026-03-06T22:11:22-05:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-005
+configs,2,2,0,2026-03-06T22:11:22-05:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-006;REV-012
+docs,38,5,33,2026-11-22T00:55:01-05:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-001;REV-002;REV-003;REV-004;REV-007;REV-010;REV-013;REV-019
+hardware,82,4,78,2026-11-22T00:55:01-05:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-001;REV-008;REV-019
+reports,16,2,14,2026-11-22T00:55:01-05:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-005;REV-013
+scripts,13,2,11,2026-11-22T00:55:01-05:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-006;REV-012;REV-014
+software,23,6,17,2026-11-21T22:09:43-05:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-002;REV-003;REV-007;REV-011
+src,3,3,0,2026-03-06T22:11:22-05:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-016
+test_data,2,2,0,2026-05-02T20:40:54-04:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-010
+validation,6,6,0,2026-05-02T20:40:54-04:00,2026-11-22,Legacy text/code read; selected current references compared; other native/Office/PDF artifacts metadata/prior disposition only,REV-004;REV-007;REV-010

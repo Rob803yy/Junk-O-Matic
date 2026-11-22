@@ -1,52 +1,31 @@
-# Wiring Notes
+# Wiring review entry / current V2
 
-## Architecture
+This page routes to the current review sources. The former instructions are
+[preserved as historical V1A notes](../archive/reference-pages/v1a-wiring-notes.md); they are not a
+current connection or grounding plan.
 
-V1.0A uses two separated electrical domains.
+Read [ARCH-R2 power domains](../hardware/v2/architecture/v2_power_domains.drawio),
+the [three-sheet QET source](../hardware/v2/electrical/README.md),
+[WireViz harnesses/registers](../hardware/v2/wiring/README.md) and
+[normalized BOM](v2/bom.json) together. All drawn electrical paths remain
+proposed/untraced. Functional terminal labels are not physical connector pins.
 
-## RC Drive System
+- Uno R3 identity is confirmed; external supply entry and simultaneous USB power
+  remain open. No buck-to-Uno feed is selected by the documentation.
+- Pi 3B/Pi 4 remains conflicting. Read its actual label/OS and power connector.
+- 3S propulsion and Kobalt 24V-family auxiliary power are project scope; exact
+  packs, cutoff, ratings, polarity and protection need physical evidence.
+- U5 5V/10A and separate U5A 5V/3A are source-listed ratings, not measured capacity.
+  U5A routing/load remains OPEN; no parallel or backup function is established.
+- U12-to-lights is a proposal; actual lighting voltage/fitting is unknown.
+- F1/S1/FB1 functions do not select physical order, fuse values or wire sizes.
+- No shared RC/auxiliary ground or galvanic isolation is asserted. Historical
+  single-point grounding language is a design proposal, not an observed net.
+- Sensor identity, supply/logic compatibility, pull-ups and pins remain open.
+  A02YYUW UART is not an HC-SR04 trigger/echo replacement in this code.
+- Source code issues no vehicle commands; this does not prove every existing
+  physical control interface has been inspected.
 
-- Stock SCX6 RC battery
-- Stock SCX6 ESC
-- Stock SCX6 receiver
-- Stock SCX6 steering servo
-- Stock SCX6 traction motor
-- Stock RC transmitter
-
-The RC drive system remains stock and independent. The Raspberry Pi and Arduino do not connect to ESC, steering, throttle, arming, deadman, or receiver control channels.
-
-## Auxiliary Electronics System
-
-- Kobalt 24V auxiliary battery
-- Main fuse: TODO select fuse rating after measured load current
-- Main switch
-- 24V-to-5V buck converter
-- 24V-to-12V buck converter
-- Raspberry Pi 4B on 5V rail
-- Arduino Nano on 5V rail
-- USB or 5V camera, unless a documented 12V camera is selected
-- Optional IMU, GPS, and environmental sensors
-- Optional 12V light bar, fan, or camera load
-
-## Grounding
-
-Use a single-point auxiliary ground architecture for the auxiliary electronics domain.
-
-Do not create a direct power tie between the RC battery and Kobalt auxiliary battery. Any future cross-domain connection must be documented as signal-only or observational before use.
-
-## Pre-Test Checks
-
-- Confirm the RC system drives normally with auxiliary electronics off.
-- Confirm auxiliary electronics boot normally with RC system off.
-- Confirm both systems can operate together without voltage drop, resets, or control anomalies.
-- Confirm the Pi has no wiring path to steering, throttle, ESC, or receiver control outputs.
-- Confirm all fuses and switches are accessible.
-
-## TODO Hardware Values
-
-- Main fuse rating
-- Buck converter model numbers
-- Wire gauge by segment
-- Camera model and mount location
-- Sensor part numbers and bus assignments
-- Enclosure airflow plan
+Use [the evidence plan](v2/verification-plan.md) to capture labels, contact views,
+continuity and measured source/load details. Retain unknowns until evidence closes
+the specific item; diagram arrows or lead colors are not polarity proof.

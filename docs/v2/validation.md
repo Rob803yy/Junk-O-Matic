@@ -1,22 +1,41 @@
 # Draft R1 validation and technical review boundary
 
-## Completed software/artifact checks
 
-- Four diagrams.net XML files parse: three architecture sources plus digital connectivity. Current SVG/PNG previews were inspected.
+## Current receipt map / REPO-R1 indexing
+
+Keep each result attached to the revision and method that produced it. Earlier
+counts are not retested or made current by this documentation edit. Current source
+is CFG-V2-R1 with ARCH-R2 and CAD-R3 extensions; physical evidence remains open.
+
+| Scope | Receipt / guide | What it does not establish |
+| --- | --- | --- |
+| Original R1 software/compile/replay | [validation.json](../../reports/v2/validation.json), [Python receipt](../../reports/v2/python-tests.txt) | Hardware sensing, timing, firmware upload or Pi deployment |
+| CAD-R3 | [FreeCAD receipt](../../reports/v2/freecad-validation.json), [mechanical guide](../../hardware/v2/mechanical/README.md) | Measured fit, full moving-clearance analysis, strength or payload |
+| ARCH-R2 | [Architecture checks](../../reports/v2/architecture-r2-validation.json), [scope check](../../reports/v2/architecture-r2-scope-check.json) | Physical trace or native diagrams.net application rendering |
+| REPO-R1 | [Repository review](../repository_review/README.md), [local check receipt](../../reports/repository_review/validation.json) | Physical qualification, legacy runtime repair or complete dashboard integration |
+
+The next evidence work is [the prioritized plan](verification-plan.md). All 13
+prior PDFs remain held/unchanged. No original engineering check receipt is
+overwritten or retimestamped in this repository-alignment review.
+
+
+## Original R0/R1 software/artifact checks / historical receipt scope
+
+- Four diagrams.net XML files parse: three architecture sources plus digital connectivity. The previews at that receipt revision were inspected.
 - QElectroTech 0.200.1 Qt6 opened and re-saved the embedded-symbol project, then
   exported its three sheets to PNG. Native PNG sheets were inspected; defective SVG scaling output was excluded. This checks
   file compatibility and layout, not electrical correctness.
 - WireViz 0.4.1 with Graphviz 13.1.2 generated both harnesses, diagrams, HTML,
   connector inventories and BOM tables. Rendered diagrams were inspected.
 - FreeCAD 1.1.4 generated five native files and five STEP exports; all reopened.
-  139 exported component records across the current assembly/submodels passed validity checks. Additional native checks
+  139 exported component records across the original R0/R1 assembly/submodels passed validity checks. Additional native checks
   tested all saved shape objects, spreadsheet wheelbase propagation and tyre
   centre spacing. A centre/end placement inconsistency was corrected before
   the final model export. These are illustrative geometry checks, not fit tests.
 - Uno R3 default build and compile-only enabled IMU/range/feedback build succeed
   on Arduino AVR Boards 1.8.8. Enabled test pins 6/7/8/9 and threshold 200 mm are
   compiler-test inputs only, not actual V2 assignments. A build enabling range
-  without pins must fail the compile guard. R1 also rejects UART profile selection with the HC-SR04 driver. R1 also rejects UART profile selection with the HC-SR04 driver.
+  without pins must fail the compile guard. R1 also rejects UART profile selection with the HC-SR04 driver.
 - 32 Python tests exercise strict parsing, null/fault consistency, invalid types,
   duplicate keys, raw byte offsets, chunked/overlong/incomplete frames, sequence
   wrap/gaps/reset indicators, SQLite/export behaviour, session boundaries,
