@@ -8,7 +8,10 @@ The owner confirms **Elegoo Uno R3** and the CAD-R3 mounting relationships. Pi
 model, current range hardware, power/return paths, installed pins, running sketch
 and measured dimensions remain open. Source-code checks and illustrative models
 do not establish deployment, physical fit, load capacity or operating reliability.
-V1/V2/V3 allocation remains an editorial scope map pending owner confirmation.
+The owner selected **assisted V3: camera detection, operator alerts and reliable
+logging, with manual RC controlling motion**. [V3 planning information](docs/v3/README.md)
+records carry-forward/change decisions; its hardware choices, implementation and
+numeric acceptance limits remain proposed. V2 remains the working runtime baseline.
 
 ## Current engineering sources
 

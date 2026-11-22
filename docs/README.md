@@ -7,6 +7,7 @@ does not date every file or prove a technical review.
 | --- | --- |
 | [Active/archive layout](repository-layout.md) | Current sources, historical areas and relocation record |
 | [V2 engineering index](v2/README.md) | Native source and current engineering review order |
+| [Assisted V3 planning](v3/README.md) | Owner-selected mission, complete file impact map, BOM dispositions and requirements; implementation remains proposed |
 | [Repository alignment review](repository_review/README.md) | Baseline inventory, severity order, Six Thinking Hats decisions, corrections and open evidence |
 | [Source reconciliation](reconciliation/README.md) | 38 V1/V2/V3 source discrepancies, editable corrections and original source disposition |
 | [V2 evidence plan](v2/verification-plan.md) | Next measurements/captures; targets remain pending, not passed |

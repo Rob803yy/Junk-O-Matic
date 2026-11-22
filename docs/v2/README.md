@@ -4,7 +4,10 @@ R1 reconciles the supplied V1/V2/V3 references on 2026-11-21. Start with the
 [38 discrepancy resolutions](../reconciliation/README.md) and
 [editable Word correction record](../reconciliation/editable/LitterBuggy_Version_Reconciliation_R1.docx).
 **Elegoo Uno R3 is owner-confirmed.** Pi 3B/Pi 4 and the current range sensor
-remain unresolved. Version allocation is proposed pending owner confirmation.
+remain unresolved. The original version allocation was proposed. The owner has
+since selected [assisted V3 planning](../v3/README.md): camera detection, operator
+alerts and reliable logging with manual RC motion authority. This leaves the V2
+physical evidence status and current runtime sources unchanged.
 
 [Repository alignment review](../repository_review/README.md) covers the March/May
 legacy folders; [next evidence plan](verification-plan.md) and

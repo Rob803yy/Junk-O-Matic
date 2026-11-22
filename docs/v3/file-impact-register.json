@@ -1,0 +1,3255 @@
+{
+  "revision": "V3-PLAN-R0",
+  "baseline_commit": "902b8baeac3b8d834a162f9c4661b4664d3f53da",
+  "scope": "Every baseline tracked file, including one explicitly unreviewed license entry. Proposed targets do not yet exist unless listed as planning documents.",
+  "files": [
+    {
+      "id": "FILE-001",
+      "path": ".gitattributes",
+      "git_blob_sha1": "cfe21710bfc951b63d9256a4b9bc2f2c0abbfe4c",
+      "bytes": 224,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        ".gitattributes"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-002",
+      "path": ".github/ISSUE_TEMPLATE/hardware_todo.md",
+      "git_blob_sha1": "0535ebef324d7fafaa68413132bfdb4cd47f4251",
+      "bytes": 1296,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        ".github/ISSUE_TEMPLATE/hardware_todo.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-003",
+      "path": ".github/ISSUE_TEMPLATE/validation_run.md",
+      "git_blob_sha1": "7c869f3d5e460c85711b6a6f28cb950bba1ad68f",
+      "bytes": 1653,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        ".github/ISSUE_TEMPLATE/validation_run.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-004",
+      "path": ".gitignore",
+      "git_blob_sha1": "69b36219ac042e177602de8d046f47163c88a469",
+      "bytes": 999,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        ".gitignore"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-005",
+      "path": "AGENTS.md",
+      "git_blob_sha1": "3d0608fa37e726050fa850cd5549d447200d5240",
+      "bytes": 1606,
+      "family": "Navigation",
+      "action": "add_separate_v3_planning_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "AGENTS.md"
+      ],
+      "target_status": "existing_navigation_update",
+      "reason": "Add the owner-confirmed assisted-V3 planning entry while retaining V2 as the working runtime baseline."
+    },
+    {
+      "id": "FILE-006",
+      "path": "LICENSE",
+      "git_blob_sha1": "724cddf0b15a9637fd3db23d1d4dccdf229ff74b",
+      "bytes": 1064,
+      "family": "Excluded",
+      "action": "preserve_unreviewed",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "LICENSE"
+      ],
+      "target_status": "unreviewed_unchanged",
+      "reason": "Owner excluded license-content review."
+    },
+    {
+      "id": "FILE-007",
+      "path": "README.md",
+      "git_blob_sha1": "f2163f927507a459a3c8a570f93383f67b0c4a1a",
+      "bytes": 4352,
+      "family": "Navigation",
+      "action": "add_separate_v3_planning_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "README.md"
+      ],
+      "target_status": "existing_navigation_update",
+      "reason": "Add the owner-confirmed assisted-V3 planning entry while retaining V2 as the working runtime baseline."
+    },
+    {
+      "id": "FILE-008",
+      "path": "archive/README.md",
+      "git_blob_sha1": "1fa79466599394f95e96c4cd419722de9587a2ef",
+      "bytes": 2041,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-009",
+      "path": "archive/dataset-model-scaffold/README.md",
+      "git_blob_sha1": "d449a57a6f04099e25c13c91b370efae2898482c",
+      "bytes": 1606,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-010",
+      "path": "archive/dataset-model-scaffold/app/README.md",
+      "git_blob_sha1": "7c3ff0b65807d6c08a5fd3cc4b34cd40c1af43da",
+      "bytes": 1612,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/app/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-011",
+      "path": "archive/dataset-model-scaffold/app/streamlit_app.py",
+      "git_blob_sha1": "3e2eab790394da291e143767ccbf5f9d979858fd",
+      "bytes": 2923,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/app/streamlit_app.py"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-012",
+      "path": "archive/dataset-model-scaffold/configs/README.md",
+      "git_blob_sha1": "9a9a96b312f7fa1bbbc398f61b18aba5af328ac3",
+      "bytes": 1423,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/configs/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-013",
+      "path": "archive/dataset-model-scaffold/configs/classes.yaml",
+      "git_blob_sha1": "4a6450f08cf80d08d31e9ae7e0bc76e44791385e",
+      "bytes": 98,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": "V3-F19",
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/configs/classes.yaml"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-014",
+      "path": "archive/dataset-model-scaffold/configs/datasets.yaml",
+      "git_blob_sha1": "aea244e8bdcb40f9e44229047f6984167e5bbe7e",
+      "bytes": 294,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/configs/datasets.yaml"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-015",
+      "path": "archive/dataset-model-scaffold/reports/dataset_inventory.json",
+      "git_blob_sha1": "4d7090c0afbbfe27b8de1ccbd28aaf91e81c39d2",
+      "bytes": 659,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/reports/dataset_inventory.json"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-016",
+      "path": "archive/dataset-model-scaffold/reports/model_runs/sample_run.json",
+      "git_blob_sha1": "c471ea36bc5c638003c0aac1ca8e8ca1a2218dcc",
+      "bytes": 1221,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/reports/model_runs/sample_run.json"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-017",
+      "path": "archive/dataset-model-scaffold/requirements.txt",
+      "git_blob_sha1": "782a7bfe1742b4985f26e766255ec1f89fd5753d",
+      "bytes": 428,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/requirements.txt"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-018",
+      "path": "archive/dataset-model-scaffold/scripts/convert/build_inventory.py",
+      "git_blob_sha1": "f19a0635e69d41a515ffd9ba672832151fa0236e",
+      "bytes": 4272,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/scripts/convert/build_inventory.py"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-019",
+      "path": "archive/dataset-model-scaffold/scripts/download/bootstrap_datasets.py",
+      "git_blob_sha1": "16b12762d4e4bc36bca95d1adac812194232a757",
+      "bytes": 814,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/scripts/download/bootstrap_datasets.py"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-020",
+      "path": "archive/dataset-model-scaffold/scripts/repository_review/tests/test_inventory.py",
+      "git_blob_sha1": "7c2da895c66d4cd45d2fa57499f637c23dfab28c",
+      "bytes": 3094,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/scripts/repository_review/tests/test_inventory.py"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-021",
+      "path": "archive/dataset-model-scaffold/src/README.md",
+      "git_blob_sha1": "f6a86e2243f27ef53c62fb3938bce56b8bcbb274",
+      "bytes": 812,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/src/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-022",
+      "path": "archive/dataset-model-scaffold/src/junkomatic/__init__.py",
+      "git_blob_sha1": "30495556293b1573bbafb56e35d70f15271ac159",
+      "bytes": 28,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/src/junkomatic/__init__.py"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-023",
+      "path": "archive/dataset-model-scaffold/src/junkomatic/config.py",
+      "git_blob_sha1": "c4416bcb33c8fa26c06a8fad349b9d067335b564",
+      "bytes": 233,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/src/junkomatic/config.py"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-024",
+      "path": "archive/dataset-model-scaffold/src/junkomatic/reporting.py",
+      "git_blob_sha1": "eb840078a34f810cf06ca9600daca9a0acb1107f",
+      "bytes": 391,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/dataset-model-scaffold/src/junkomatic/reporting.py"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-025",
+      "path": "archive/exports-r0/README.md",
+      "git_blob_sha1": "c29076264ab743b3ed17bd7539a6051393ffab32",
+      "bytes": 801,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-026",
+      "path": "archive/exports-r0/hardware/v2/architecture/v2_data_flow.pdf",
+      "git_blob_sha1": "0f2b4227ba5bd7769ab19ac6d57dfa1b9a3c5089",
+      "bytes": 3021,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/architecture/v2_data_flow.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-027",
+      "path": "archive/exports-r0/hardware/v2/architecture/v2_power_domains.pdf",
+      "git_blob_sha1": "eec9d48f59a0130b224d3e95c0ff64fd695d2188",
+      "bytes": 3353,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/architecture/v2_power_domains.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-028",
+      "path": "archive/exports-r0/hardware/v2/architecture/v2_system_overview.pdf",
+      "git_blob_sha1": "39591907c006a82a409f075522329a5387916b47",
+      "bytes": 4112,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/architecture/v2_system_overview.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-029",
+      "path": "archive/exports-r0/hardware/v2/electrical/v2_electrical.pdf",
+      "git_blob_sha1": "18e9979060f37a02da0d3ce34d51ea2dcf619cff",
+      "bytes": 35137,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/electrical/v2_electrical.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-030",
+      "path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_assembly.pdf",
+      "git_blob_sha1": "54ce119471e1e430914cfbd8e8cb1c7e52d56dc8",
+      "bytes": 100917,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/mechanical/exports/v2_assembly.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-031",
+      "path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_battery_mount.pdf",
+      "git_blob_sha1": "e73bfd90baaaed4cf50a88ad4866119e2f7a50a1",
+      "bytes": 28861,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/mechanical/exports/v2_battery_mount.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-032",
+      "path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_cart_mount.pdf",
+      "git_blob_sha1": "5d45a11b787d9705c95cf93053f37fbfc7aa7f10",
+      "bytes": 29986,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/mechanical/exports/v2_cart_mount.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-033",
+      "path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_electronics_enclosure.pdf",
+      "git_blob_sha1": "1741ca5635305db957a9e3ffffccf46d9cb70780",
+      "bytes": 23856,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/mechanical/exports/v2_electronics_enclosure.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-034",
+      "path": "archive/exports-r0/hardware/v2/mechanical/exports/v2_sensor_mounts.pdf",
+      "git_blob_sha1": "fdc2d8b86fd8bc2aceec0e599cf350ff41989d54",
+      "bytes": 34274,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/mechanical/exports/v2_sensor_mounts.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-035",
+      "path": "archive/exports-r0/hardware/v2/wiring/exports/v2_power_harness.pdf",
+      "git_blob_sha1": "e5aa7b6328aee6b103b32a4fd216e2a3aec74b28",
+      "bytes": 355571,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/wiring/exports/v2_power_harness.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-036",
+      "path": "archive/exports-r0/hardware/v2/wiring/exports/v2_sensor_harness.pdf",
+      "git_blob_sha1": "0c1174fc7336a2db49bc26a2fd2ddf84913f00dd",
+      "bytes": 203555,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/hardware/v2/wiring/exports/v2_sensor_harness.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-037",
+      "path": "archive/exports-r0/reports/v2/LitterBuggy-V2-review.pdf",
+      "git_blob_sha1": "79c9092d5b49438ba1705c48b5d4f13f86344a10",
+      "bytes": 820085,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/reports/v2/LitterBuggy-V2-review.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-038",
+      "path": "archive/exports-r0/reports/v2/review-introduction.pdf",
+      "git_blob_sha1": "e845ec02a069d1e8c1e003913c48140780464864",
+      "bytes": 5066,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/exports-r0/reports/v2/review-introduction.pdf"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-039",
+      "path": "archive/reference-pages/README.md",
+      "git_blob_sha1": "7f8ac1d94a167a620ef21cec9deb2d93e41d1ac2",
+      "bytes": 620,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/reference-pages/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-040",
+      "path": "archive/reference-pages/v1a-arduino-readme.md",
+      "git_blob_sha1": "3ff98cf0d45543e3953a8f7feaa9c15b1a85d143",
+      "bytes": 1218,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/reference-pages/v1a-arduino-readme.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-041",
+      "path": "archive/reference-pages/v1a-data-dictionary.md",
+      "git_blob_sha1": "7e59b4a5b46972ebcb85d68cdd0e9c342f47f994",
+      "bytes": 2831,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/reference-pages/v1a-data-dictionary.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-042",
+      "path": "archive/reference-pages/v1a-overview.md",
+      "git_blob_sha1": "256fb9eaa2370697ab834a959d46f44e0906bdf5",
+      "bytes": 6517,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/reference-pages/v1a-overview.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-043",
+      "path": "archive/reference-pages/v1a-pi-readme.md",
+      "git_blob_sha1": "e765bc97132ef3e7798d7bde6684a49fc310ba22",
+      "bytes": 1970,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/reference-pages/v1a-pi-readme.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-044",
+      "path": "archive/reference-pages/v1a-wiring-notes.md",
+      "git_blob_sha1": "9e66922bc72e868ec768f5a90acac123f54c72c2",
+      "bytes": 2195,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/reference-pages/v1a-wiring-notes.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-045",
+      "path": "archive/relocation-manifest.json",
+      "git_blob_sha1": "284cc2cabc46148b7dc53bfbfbb4da7047835cd1",
+      "bytes": 24090,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/relocation-manifest.json"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-046",
+      "path": "archive/v1a/README.md",
+      "git_blob_sha1": "00fc6e805de2068bc7e5946a03a7e863f70a6963",
+      "bytes": 1482,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-047",
+      "path": "archive/v1a/docs/project_scope_v1a.md",
+      "git_blob_sha1": "216c9a684b9b486e945199021787cf5fde852d04",
+      "bytes": 1671,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/docs/project_scope_v1a.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-048",
+      "path": "archive/v1a/docs/test_procedure_v1a.md",
+      "git_blob_sha1": "095849800aeb16444faa1c27b8339468483c00d2",
+      "bytes": 2153,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/docs/test_procedure_v1a.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-049",
+      "path": "archive/v1a/docs/v1_to_v2_exit_criteria.md",
+      "git_blob_sha1": "c28c47c6b7b9a58dbb14339fa6fe7ea471fe7f9e",
+      "bytes": 1738,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/docs/v1_to_v2_exit_criteria.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-050",
+      "path": "archive/v1a/hardware/bom/README.md",
+      "git_blob_sha1": "371c2f959f2064c0c9c8934c42ef3844db8a84d2",
+      "bytes": 814,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/hardware/bom/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-051",
+      "path": "archive/v1a/hardware/enclosure_layout/README.md",
+      "git_blob_sha1": "7716f3f71389781a6de1ed8eb0dfd689efd520cc",
+      "bytes": 856,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/hardware/enclosure_layout/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-052",
+      "path": "archive/v1a/hardware/wiring_diagrams/README.md",
+      "git_blob_sha1": "e5c53e9c5cefcfd0c955d10d0e34b9927a69ed64",
+      "bytes": 710,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/hardware/wiring_diagrams/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-053",
+      "path": "archive/v1a/software/arduino/README.md",
+      "git_blob_sha1": "2cbb3e2448d8bbc069ff41223830847a3a6d7777",
+      "bytes": 1106,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/software/arduino/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-054",
+      "path": "archive/v1a/software/arduino/telemetry_logger_stub/telemetry_logger_stub.ino",
+      "git_blob_sha1": "0277693689bf9db1c7000f69d477db8d2676d34e",
+      "bytes": 1875,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/software/arduino/telemetry_logger_stub/telemetry_logger_stub.ino"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-055",
+      "path": "archive/v1a/software/raspberry_pi/README.md",
+      "git_blob_sha1": "fd905d1ef0965fb2638f45cc78bb5106aefe0619",
+      "bytes": 1999,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/software/raspberry_pi/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-056",
+      "path": "archive/v1a/software/raspberry_pi/config/data_logger_config.template.yaml",
+      "git_blob_sha1": "c72c2048a4095b6572661eef115791971afd43e6",
+      "bytes": 583,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/software/raspberry_pi/config/data_logger_config.template.yaml"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-057",
+      "path": "archive/v1a/software/raspberry_pi/requirements.txt",
+      "git_blob_sha1": "68c846887b20bd32c61e635cfc14fdabec94b0fd",
+      "bytes": 140,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/software/raspberry_pi/requirements.txt"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-058",
+      "path": "archive/v1a/software/raspberry_pi/src/jom_data_logger.py",
+      "git_blob_sha1": "00adba5218029427e2a6a74ad0e13776d03e81eb",
+      "bytes": 15929,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/software/raspberry_pi/src/jom_data_logger.py"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-059",
+      "path": "archive/v1a/validation/sample_data/README.md",
+      "git_blob_sha1": "39499e66c4a7aa349609e4469b846f370957c0bf",
+      "bytes": 1125,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/validation/sample_data/README.md"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-060",
+      "path": "archive/v1a/validation/sample_data/sample_arduino_telemetry.csv",
+      "git_blob_sha1": "6f989c0e99ad1dbdbc8248f23e061c666b2a62de",
+      "bytes": 187,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/validation/sample_data/sample_arduino_telemetry.csv"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-061",
+      "path": "archive/v1a/validation/sample_data/sample_events.csv",
+      "git_blob_sha1": "67423ce5ff7d18c1e6a51a79deb5eff6f21d0605",
+      "bytes": 92,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/validation/sample_data/sample_events.csv"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-062",
+      "path": "archive/v1a/validation/sample_data/sample_pi_health.csv",
+      "git_blob_sha1": "5c6078a56aa11124bed0c873b7531d01c2167d94",
+      "bytes": 106,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/validation/sample_data/sample_pi_health.csv"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-063",
+      "path": "archive/v1a/validation/sample_data/sample_summary_for_scorecard.csv",
+      "git_blob_sha1": "253f23f738f099523991a57298bf529f7f2e988f",
+      "bytes": 398,
+      "family": "History",
+      "action": "preserve_history",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "archive/v1a/validation/sample_data/sample_summary_for_scorecard.csv"
+      ],
+      "target_status": "historical_reference_only",
+      "reason": "Keep historical examples/source/PDFs separate; do not promote them into V3 evidence."
+    },
+    {
+      "id": "FILE-064",
+      "path": "docs/README.md",
+      "git_blob_sha1": "f04aea9bfabd7b415cf5dd73dc859daef30833f6",
+      "bytes": 1941,
+      "family": "Navigation",
+      "action": "add_separate_v3_planning_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/README.md"
+      ],
+      "target_status": "existing_navigation_update",
+      "reason": "Add the owner-confirmed assisted-V3 planning entry while retaining V2 as the working runtime baseline."
+    },
+    {
+      "id": "FILE-065",
+      "path": "docs/data_dictionary.md",
+      "git_blob_sha1": "c23fcec822a18c25a1c9cd4878ba5a6b5adfc073",
+      "bytes": 4759,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/data_dictionary.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-066",
+      "path": "docs/environment-setup.md",
+      "git_blob_sha1": "1daf3632a1c4dd8818833ba8c9f4aaf9102d4ba8",
+      "bytes": 3041,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F23",
+      "proposed_target_paths": [
+        "docs/environment-setup.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-067",
+      "path": "docs/reconciliation/README.md",
+      "git_blob_sha1": "a1a0763baaa0cd655d2f6c90042ef100c0b58e89",
+      "bytes": 20602,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-068",
+      "path": "docs/reconciliation/editable/LitterBuggy_BOM_R1.xlsx",
+      "git_blob_sha1": "23557edeec6902487d9cacf8b8686d610ed23ad5",
+      "bytes": 26346,
+      "family": "Evidence and review",
+      "action": "preserve_baseline_derive_v3_document",
+      "plan_id": "V3-F20",
+      "proposed_target_paths": [
+        "docs/v3/editable/LitterBuggy_V3_BOM.xlsx"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep this baseline source unchanged. Create a separately identified V3 derivative with new scope/evidence, not copied old passes."
+    },
+    {
+      "id": "FILE-069",
+      "path": "docs/reconciliation/editable/LitterBuggy_Review_Data_System_R1.xlsx",
+      "git_blob_sha1": "0384b75c1c91db758239eb44ffeac2092a68304d",
+      "bytes": 197445,
+      "family": "Evidence and review",
+      "action": "preserve_baseline_derive_v3_document",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/v3/editable/LitterBuggy_V3_Review_Data_System.xlsx"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep this baseline source unchanged. Create a separately identified V3 derivative with new scope/evidence, not copied old passes."
+    },
+    {
+      "id": "FILE-070",
+      "path": "docs/reconciliation/editable/LitterBuggy_Scorecard_R1.xlsx",
+      "git_blob_sha1": "c09d93a682c9f07cc148d7d08c75287251419bdc",
+      "bytes": 33539,
+      "family": "Evidence and review",
+      "action": "preserve_baseline_derive_v3_document",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/v3/editable/LitterBuggy_V3_Readiness_Scorecard.xlsx"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep this baseline source unchanged. Create a separately identified V3 derivative with new scope/evidence, not copied old passes."
+    },
+    {
+      "id": "FILE-071",
+      "path": "docs/reconciliation/editable/LitterBuggy_Version_Reconciliation_R1.docx",
+      "git_blob_sha1": "2f9c5cf4bcb213b0fd9601d6698bd655748bd9a4",
+      "bytes": 48289,
+      "family": "Evidence and review",
+      "action": "preserve_baseline_derive_v3_document",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/v3/editable/LitterBuggy_V3_Engineering_Review.docx"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep this baseline source unchanged. Create a separately identified V3 derivative with new scope/evidence, not copied old passes."
+    },
+    {
+      "id": "FILE-072",
+      "path": "docs/reconciliation/export-status.json",
+      "git_blob_sha1": "03504e306c4163de300422b6a308e8b423d6288c",
+      "bytes": 4907,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/export-status.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-073",
+      "path": "docs/reconciliation/historical-editable/README.md",
+      "git_blob_sha1": "06b6448d32d5231ad1981557bafd41d6ba2ddda2",
+      "bytes": 733,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/historical-editable/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-074",
+      "path": "docs/reconciliation/historical-editable/S02_Litterbuggy_V1.0_Design_Review (2)_R1-annotated.docx",
+      "git_blob_sha1": "048b8018ef9e5109210fc6f8a96acda865e64e93",
+      "bytes": 41188,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/historical-editable/S02_Litterbuggy_V1.0_Design_Review (2)_R1-annotated.docx"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-075",
+      "path": "docs/reconciliation/historical-editable/S03_Litterbuggy_SCX6_V1.0_Integrated_Product_Design_Specification_Rev0 (1) (2)_R1-annotated.docx",
+      "git_blob_sha1": "dc904ec8e8e6f8e46cd2513d78d0088f7ada63dd",
+      "bytes": 79458,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/historical-editable/S03_Litterbuggy_SCX6_V1.0_Integrated_Product_Design_Specification_Rev0 (1) (2)_R1-annotated.docx"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-076",
+      "path": "docs/reconciliation/historical-editable/S06_LitterBuggy V2 Engineering Deep Research Report_R1-annotated.docx",
+      "git_blob_sha1": "d75dbec0a0598a75f159845db93f2e3a00177a7b",
+      "bytes": 39418,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/historical-editable/S06_LitterBuggy V2 Engineering Deep Research Report_R1-annotated.docx"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-077",
+      "path": "docs/reconciliation/historical-editable/S08_Litterbuggy & Axial SCX6 Offline Master Guide_R1-annotated.docx",
+      "git_blob_sha1": "baa7984e8fa4f1ca97a8b0882a2c1a01f035d48d",
+      "bytes": 223520,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/historical-editable/S08_Litterbuggy & Axial SCX6 Offline Master Guide_R1-annotated.docx"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-078",
+      "path": "docs/reconciliation/historical-editable/S09_Master_Reference_R1-annotated.txt",
+      "git_blob_sha1": "332774a7784f08d4d46b8cd2aaa9b8fab7fbd9c7",
+      "bytes": 16034,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/historical-editable/S09_Master_Reference_R1-annotated.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-079",
+      "path": "docs/reconciliation/historical-editable/S10_Download the Litterbuggy Robotic Trash Picker Offline Engineering Reference_R1-annotated.docx",
+      "git_blob_sha1": "926d852d058355951be6023aa55acb9ea50f4aa4",
+      "bytes": 62171,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/historical-editable/S10_Download the Litterbuggy Robotic Trash Picker Offline Engineering Reference_R1-annotated.docx"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-080",
+      "path": "docs/reconciliation/historical-editable/S11_Litterbuggy_Consolidated_Reference_R1-annotated.docx",
+      "git_blob_sha1": "b430753950efe7e653b68e8428ed60dd0061f870",
+      "bytes": 22688,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/historical-editable/S11_Litterbuggy_Consolidated_Reference_R1-annotated.docx"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-081",
+      "path": "docs/reconciliation/historical-editable/review-copy-manifest.json",
+      "git_blob_sha1": "c688e94ef4519b8e9874d8b1372977c2641e9449",
+      "bytes": 2110,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/historical-editable/review-copy-manifest.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-082",
+      "path": "docs/reconciliation/previews/bom-current-sample.png",
+      "git_blob_sha1": "0c270984e58bb2e1ded7340e1bcf521cbd9c89df",
+      "bytes": 97589,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/previews/bom-current-sample.png"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-083",
+      "path": "docs/reconciliation/previews/review-dashboard.png",
+      "git_blob_sha1": "d7e39eb6cd28dd7434a1156fadef03aa59fa8b8e",
+      "bytes": 88327,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/previews/review-dashboard.png"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-084",
+      "path": "docs/reconciliation/previews/scorecard-dashboard.png",
+      "git_blob_sha1": "18e9123628a67e5da53b1c493a492fc0fbfceafb",
+      "bytes": 91072,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/previews/scorecard-dashboard.png"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-085",
+      "path": "docs/reconciliation/reconciliation-register.json",
+      "git_blob_sha1": "653bef138ecdc2c6167b9c00ad9fdc5de474e149",
+      "bytes": 21735,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/reconciliation-register.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-086",
+      "path": "docs/reconciliation/source-dispositions.json",
+      "git_blob_sha1": "4c0115d04bfbe15a893bb57a54488dae22d17174",
+      "bytes": 2111,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/source-dispositions.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-087",
+      "path": "docs/reconciliation/source-inventory.json",
+      "git_blob_sha1": "346aa9280d36ce26be78b5d0b5e49057cac5548c",
+      "bytes": 6980,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/source-inventory.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-088",
+      "path": "docs/reconciliation/workbook-change-map.json",
+      "git_blob_sha1": "c9891fcd5ae9eb31e5bc4b74fe1337fb930b0c0a",
+      "bytes": 56470,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/reconciliation/workbook-change-map.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-089",
+      "path": "docs/repository-layout.md",
+      "git_blob_sha1": "3b9dfcd87d27d345f249c73636962f4cd0e79887",
+      "bytes": 2793,
+      "family": "Navigation",
+      "action": "add_separate_v3_planning_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/repository-layout.md"
+      ],
+      "target_status": "existing_navigation_update",
+      "reason": "Add the owner-confirmed assisted-V3 planning entry while retaining V2 as the working runtime baseline."
+    },
+    {
+      "id": "FILE-090",
+      "path": "docs/repository_review/PR_DESCRIPTION.md",
+      "git_blob_sha1": "68396558280a3b65fb6486e82212bdfb32252f28",
+      "bytes": 1990,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/repository_review/PR_DESCRIPTION.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-091",
+      "path": "docs/repository_review/README.md",
+      "git_blob_sha1": "532e5fbfe26042bb2223525693dd4dcad987ed4d",
+      "bytes": 9453,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/repository_review/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-092",
+      "path": "docs/repository_review/baseline-inventory.json",
+      "git_blob_sha1": "d2297ca00a428d856236997534ae9797697aefd4",
+      "bytes": 125197,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/repository_review/baseline-inventory.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-093",
+      "path": "docs/repository_review/folder-review.csv",
+      "git_blob_sha1": "a4e3ba1ed086b26b9ed5b6d852e697885783b7be",
+      "bytes": 2546,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/repository_review/folder-review.csv"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-094",
+      "path": "docs/repository_review/gap-register.json",
+      "git_blob_sha1": "6dd558f2b6289c12e93a020fe44bb0d48535de8a",
+      "bytes": 48365,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/repository_review/gap-register.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-095",
+      "path": "docs/repository_review/github-about.txt",
+      "git_blob_sha1": "880ae7c536f9a76587792c5d6e8adc2d454071d7",
+      "bytes": 263,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/repository_review/github-about.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-096",
+      "path": "docs/repository_review/six-hats-decisions.md",
+      "git_blob_sha1": "73e375f45f65598f1cf4776ac365cfd0fb67d627",
+      "bytes": 4793,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/repository_review/six-hats-decisions.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-097",
+      "path": "docs/v2/README.md",
+      "git_blob_sha1": "bd24917534dc417be2e3cc2c1ef658a7dc642194",
+      "bytes": 6314,
+      "family": "Navigation",
+      "action": "add_separate_v3_planning_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/v2/README.md"
+      ],
+      "target_status": "existing_navigation_update",
+      "reason": "Add the owner-confirmed assisted-V3 planning entry while retaining V2 as the working runtime baseline."
+    },
+    {
+      "id": "FILE-098",
+      "path": "docs/v2/assembly_and_operation.md",
+      "git_blob_sha1": "450dbbedfac0efb83687469c9fef6a6d2e2e66f5",
+      "bytes": 3111,
+      "family": "Documentation and metadata",
+      "action": "preserve_baseline_derive_v3_document",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/v3/operator-runbook.md"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep this baseline source unchanged. Create a separately identified V3 derivative with new scope/evidence, not copied old passes."
+    },
+    {
+      "id": "FILE-099",
+      "path": "docs/v2/bom.csv",
+      "git_blob_sha1": "f85a47573698a104a0eda9c7c4e340f97f078170",
+      "bytes": 11214,
+      "family": "BOM",
+      "action": "preserve_baseline_derive_v3_document",
+      "plan_id": "V3-F20",
+      "proposed_target_paths": [
+        "docs/v3/bom.csv"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep this baseline source unchanged. Create a separately identified V3 derivative with new scope/evidence, not copied old passes."
+    },
+    {
+      "id": "FILE-100",
+      "path": "docs/v2/bom.json",
+      "git_blob_sha1": "4bde365a76883b4a3544439f2d45156cd134f6a8",
+      "bytes": 56411,
+      "family": "BOM",
+      "action": "preserve_baseline_derive_v3_document",
+      "plan_id": "V3-F20",
+      "proposed_target_paths": [
+        "docs/v3/bom.json"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep this baseline source unchanged. Create a separately identified V3 derivative with new scope/evidence, not copied old passes."
+    },
+    {
+      "id": "FILE-101",
+      "path": "docs/v2/serial_protocol.md",
+      "git_blob_sha1": "45e4e4007fb2f07c89f8634e3d5567742e3c994c",
+      "bytes": 4798,
+      "family": "Serial contract",
+      "action": "reuse_canonical_reference",
+      "plan_id": "V3-F14",
+      "proposed_target_paths": [
+        "docs/v2/serial_protocol.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Vehicle V3 does not change serial protocol 2. Vision records are separate."
+    },
+    {
+      "id": "FILE-102",
+      "path": "docs/v2/sources_and_decisions.md",
+      "git_blob_sha1": "669eb7955d69142f9f591d4cb7204d56dc2f4e45",
+      "bytes": 8208,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/v2/sources_and_decisions.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-103",
+      "path": "docs/v2/validation.md",
+      "git_blob_sha1": "90fc5310ef1b9bc73572223a3096da7b416ad768",
+      "bytes": 7293,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/v2/validation.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-104",
+      "path": "docs/v2/verification-plan.md",
+      "git_blob_sha1": "04663e76336df1d97fbf5dfa48dbdcdc243c24bd",
+      "bytes": 5227,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/v2/verification-plan.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-105",
+      "path": "docs/v2_verification/README.md",
+      "git_blob_sha1": "dd7e0466936f874cd3e09c2a86f04fbf926899d8",
+      "bytes": 26644,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/v2_verification/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-106",
+      "path": "docs/v2_verification/capture-templates.json",
+      "git_blob_sha1": "1e69474230cd74d27fe9ef86f9b1e5045d7b9c62",
+      "bytes": 4768,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/v2_verification/capture-templates.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-107",
+      "path": "docs/v2_verification/verification-register.json",
+      "git_blob_sha1": "64370f4ef93c6583b32fe7d85dae3297e8a435b7",
+      "bytes": 109314,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/v2_verification/verification-register.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-108",
+      "path": "docs/v2_verification/verification-session.md",
+      "git_blob_sha1": "e812256927d020f87e31b74cbd50600f7fe50004",
+      "bytes": 10140,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "docs/v2_verification/verification-session.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-109",
+      "path": "docs/wiring_notes.md",
+      "git_blob_sha1": "6d2e3a62ff5742217f9d4cba9a1bbd8ab8b51ad2",
+      "bytes": 1995,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "docs/wiring_notes.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-110",
+      "path": "hardware/README.md",
+      "git_blob_sha1": "4b9829ff819aad35cb00b4ddeae1537a23fc08ca",
+      "bytes": 1166,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "hardware/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-111",
+      "path": "hardware/v2/architecture/README.md",
+      "git_blob_sha1": "f9e5d256a75d9a9e3d411359c46847b7d7dcca36",
+      "bytes": 6118,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F01",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/README.md"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-112",
+      "path": "hardware/v2/architecture/architecture-model.json",
+      "git_blob_sha1": "9ae3dd706d335f8cb147dc43d2d90f17ce770e1b",
+      "bytes": 50778,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F01",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/architecture-model.json"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-113",
+      "path": "hardware/v2/architecture/v2_data_flow.drawio",
+      "git_blob_sha1": "e81157bd8b949bd715bc4fdcdd4e7fabbefb5340",
+      "bytes": 51827,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F03",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_data_flow.drawio"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-114",
+      "path": "hardware/v2/architecture/v2_data_flow.png",
+      "git_blob_sha1": "5820e8f67b230d9d4478567f9786e9affc29f4bf",
+      "bytes": 245611,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F03",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_data_flow.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-115",
+      "path": "hardware/v2/architecture/v2_data_flow.svg",
+      "git_blob_sha1": "3fea70adb0118347c4be7e7e20313ec94298c14e",
+      "bytes": 25660,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F03",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_data_flow.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-116",
+      "path": "hardware/v2/architecture/v2_digital_connectivity.drawio",
+      "git_blob_sha1": "868f5c58b77a6e4138b9acf1f69db9ec0f84cf60",
+      "bytes": 5246,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F04",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_digital_connectivity.drawio"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-117",
+      "path": "hardware/v2/architecture/v2_digital_connectivity.png",
+      "git_blob_sha1": "34c3ef999b59c7b0a330a1eba0912f05cd94e20d",
+      "bytes": 216992,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F04",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_digital_connectivity.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-118",
+      "path": "hardware/v2/architecture/v2_digital_connectivity.svg",
+      "git_blob_sha1": "7dd4c227cc16860141f1242e8179335d81e13b8b",
+      "bytes": 7076,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F04",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_digital_connectivity.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-119",
+      "path": "hardware/v2/architecture/v2_power_domains.drawio",
+      "git_blob_sha1": "1d5336339240c7ffdaee2e396d2b178b02243c74",
+      "bytes": 49917,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F02",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_power_domains.drawio"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-120",
+      "path": "hardware/v2/architecture/v2_power_domains.png",
+      "git_blob_sha1": "df49a3b4747acd3b24c0b44d9a8a6ab305470fe0",
+      "bytes": 272482,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F02",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_power_domains.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-121",
+      "path": "hardware/v2/architecture/v2_power_domains.svg",
+      "git_blob_sha1": "3601862695ce4f7c5c422fe570b5520b3b27c0e0",
+      "bytes": 23743,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F02",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_power_domains.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-122",
+      "path": "hardware/v2/architecture/v2_system_overview.drawio",
+      "git_blob_sha1": "79b44bbf9816a80bae322c29167a9a74418c2fd4",
+      "bytes": 44029,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F01",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_system_overview.drawio"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-123",
+      "path": "hardware/v2/architecture/v2_system_overview.png",
+      "git_blob_sha1": "3440096c076091482cdb035121c5314d4eb50ec8",
+      "bytes": 226948,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F01",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_system_overview.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-124",
+      "path": "hardware/v2/architecture/v2_system_overview.svg",
+      "git_blob_sha1": "a0b1b9ed6a8d65a176f7dcc177b408eb05f4aa17",
+      "bytes": 21600,
+      "family": "Architecture",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F01",
+      "proposed_target_paths": [
+        "hardware/v3/architecture/v3_system_overview.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Keep V2 canonical files. Derive only the reviewed V3 diagrams and then regenerate their previews."
+    },
+    {
+      "id": "FILE-125",
+      "path": "hardware/v2/electrical/README.md",
+      "git_blob_sha1": "a944c7cb68d5b0a9859a614662569e4eec787456",
+      "bytes": 1617,
+      "family": "Electrical",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F05",
+      "proposed_target_paths": [
+        "hardware/v3/electrical/README.md"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Three-sheet V3 source/load review; source-derived exports follow technical review."
+    },
+    {
+      "id": "FILE-126",
+      "path": "hardware/v2/electrical/exports/01_01 Auxiliary source and distribution - proposed trace.png",
+      "git_blob_sha1": "88e28c3e7067dbfa2efbe31fc782ffc42b82402b",
+      "bytes": 64238,
+      "family": "Electrical",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F05",
+      "proposed_target_paths": [
+        "hardware/v3/electrical/exports/01_01 Auxiliary source and distribution - proposed trace.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Three-sheet V3 source/load review; source-derived exports follow technical review."
+    },
+    {
+      "id": "FILE-127",
+      "path": "hardware/v2/electrical/exports/02_02 Auxiliary conversion and load branches - proposed trace.png",
+      "git_blob_sha1": "6f797d897a3de4ee589ac2a4d7a6897975bc78d3",
+      "bytes": 81834,
+      "family": "Electrical",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F05",
+      "proposed_target_paths": [
+        "hardware/v3/electrical/exports/02_02 Auxiliary conversion and load branches - proposed trace.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Three-sheet V3 source/load review; source-derived exports follow technical review."
+    },
+    {
+      "id": "FILE-128",
+      "path": "hardware/v2/electrical/exports/03_03 RC propulsion and control - proposed trace.png",
+      "git_blob_sha1": "b393c6dcbc869227fc70a62c64ff215a2ad2038a",
+      "bytes": 70576,
+      "family": "Electrical",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F05",
+      "proposed_target_paths": [
+        "hardware/v3/electrical/exports/03_03 RC propulsion and control - proposed trace.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Three-sheet V3 source/load review; source-derived exports follow technical review."
+    },
+    {
+      "id": "FILE-129",
+      "path": "hardware/v2/electrical/v2_electrical.qet",
+      "git_blob_sha1": "3c11df6c43f5f7a7211860d87f9babd787999d4f",
+      "bytes": 81400,
+      "family": "Electrical",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F05",
+      "proposed_target_paths": [
+        "hardware/v3/electrical/v3_electrical.qet"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Three-sheet V3 source/load review; source-derived exports follow technical review."
+    },
+    {
+      "id": "FILE-130",
+      "path": "hardware/v2/mechanical/README.md",
+      "git_blob_sha1": "6df42a858a235df5d77a3bedf7b9b4eece3cb3f1",
+      "bytes": 6507,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/README.md"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-131",
+      "path": "hardware/v2/mechanical/build_models.FCMacro",
+      "git_blob_sha1": "784125ad78011c30734fb82e25ac2a4e100bde46",
+      "bytes": 216,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/build_models.FCMacro"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-132",
+      "path": "hardware/v2/mechanical/dimensions.json",
+      "git_blob_sha1": "e941548c9073fac72ed3b6e9475996d8422a13f3",
+      "bytes": 15501,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/dimensions.json"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-133",
+      "path": "hardware/v2/mechanical/exports/geometry-checks.json",
+      "git_blob_sha1": "e88f4403e95bca3504648f92c007c4e69728318b",
+      "bytes": 28926,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/geometry-checks.json"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-134",
+      "path": "hardware/v2/mechanical/exports/review-meshes.json",
+      "git_blob_sha1": "9a91eee5a6b4cdc87d61285f61076bf7504f0d00",
+      "bytes": 3073217,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/review-meshes.json"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-135",
+      "path": "hardware/v2/mechanical/exports/review-poses.json",
+      "git_blob_sha1": "db01ffcf4e6292e17f8b0e42ad21db58150cda1b",
+      "bytes": 8619,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/review-poses.json"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-136",
+      "path": "hardware/v2/mechanical/exports/v2_assembly.png",
+      "git_blob_sha1": "6801de47c18ef85607a132b40e6e811581c3c3c0",
+      "bytes": 111400,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_assembly.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-137",
+      "path": "hardware/v2/mechanical/exports/v2_assembly.step",
+      "git_blob_sha1": "d27fe8c16b810c3babb91fdaf7a22bffc9092f41",
+      "bytes": 1753888,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_assembly.step"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-138",
+      "path": "hardware/v2/mechanical/exports/v2_assembly.svg",
+      "git_blob_sha1": "ffa129f242e628ad64626a5fb1586972e0fa6c1d",
+      "bytes": 82669,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_assembly.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-139",
+      "path": "hardware/v2/mechanical/exports/v2_assembly_front.png",
+      "git_blob_sha1": "c4975a0199372f9de2dc2d41e8563046771b5fe8",
+      "bytes": 25914,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_assembly_front.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-140",
+      "path": "hardware/v2/mechanical/exports/v2_assembly_iso.png",
+      "git_blob_sha1": "ad983ad1d8c03c6b4bb265aea63413cf35d1b52f",
+      "bytes": 51126,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_assembly_iso.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-141",
+      "path": "hardware/v2/mechanical/exports/v2_assembly_opposite.png",
+      "git_blob_sha1": "3a9daaf8af6a8d3ec1e2c53b7e0b774467a0a55d",
+      "bytes": 52937,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_assembly_opposite.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-142",
+      "path": "hardware/v2/mechanical/exports/v2_assembly_tipped.png",
+      "git_blob_sha1": "169fb1b735993624001a378091e05b8e17ef0e77",
+      "bytes": 66827,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_assembly_tipped.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-143",
+      "path": "hardware/v2/mechanical/exports/v2_assembly_tub_hidden.png",
+      "git_blob_sha1": "63fbc9a97dea49fc396349d10568ce1441bb03ee",
+      "bytes": 54906,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_assembly_tub_hidden.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-144",
+      "path": "hardware/v2/mechanical/exports/v2_battery_mount.png",
+      "git_blob_sha1": "75d5a50ff04dd47873265c48027c461ee0f952d7",
+      "bytes": 75895,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F10",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_battery_mount.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-145",
+      "path": "hardware/v2/mechanical/exports/v2_battery_mount.step",
+      "git_blob_sha1": "d21d989c1d8e79edc35be66311677beff8cb7c6f",
+      "bytes": 53422,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F10",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_battery_mount.step"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-146",
+      "path": "hardware/v2/mechanical/exports/v2_battery_mount.svg",
+      "git_blob_sha1": "1d2b3eaf474c41060c9d75352f8e19cec79ebf6d",
+      "bytes": 20424,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F10",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_battery_mount.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-147",
+      "path": "hardware/v2/mechanical/exports/v2_cart_mount.png",
+      "git_blob_sha1": "5daf480886b3432a8f3c2c0e8232f6e71b106b55",
+      "bytes": 74460,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F09",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_cart_mount.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-148",
+      "path": "hardware/v2/mechanical/exports/v2_cart_mount.step",
+      "git_blob_sha1": "4762cf024113807fbde340b67e9472093f0a4e01",
+      "bytes": 150844,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F09",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_cart_mount.step"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-149",
+      "path": "hardware/v2/mechanical/exports/v2_cart_mount.svg",
+      "git_blob_sha1": "7c2068b3f0ce2385c33fad1e7bf1134ba178121e",
+      "bytes": 37718,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F09",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_cart_mount.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-150",
+      "path": "hardware/v2/mechanical/exports/v2_electronics_enclosure.png",
+      "git_blob_sha1": "e88be238fee7ad9552606b59080477472bfd6a6e",
+      "bytes": 75502,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F11",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_electronics_enclosure.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-151",
+      "path": "hardware/v2/mechanical/exports/v2_electronics_enclosure.step",
+      "git_blob_sha1": "a0836a716e78dee3d86c4a1d953f47168b570bd5",
+      "bytes": 84222,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F11",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_electronics_enclosure.step"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-152",
+      "path": "hardware/v2/mechanical/exports/v2_electronics_enclosure.svg",
+      "git_blob_sha1": "ebaa02cf1e35623ba56af50a02f4b757e031f856",
+      "bytes": 19140,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F11",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_electronics_enclosure.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-153",
+      "path": "hardware/v2/mechanical/exports/v2_mounting_frame_low_front.png",
+      "git_blob_sha1": "b9f8029cbf466ef193bfe1cefb2969437158a89c",
+      "bytes": 24224,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_mounting_frame_low_front.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-154",
+      "path": "hardware/v2/mechanical/exports/v2_mounting_frame_top.png",
+      "git_blob_sha1": "1224942d768faa79db40a9b51dfcf713dcdbda34",
+      "bytes": 17619,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_mounting_frame_top.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-155",
+      "path": "hardware/v2/mechanical/exports/v2_sensor_mounts.png",
+      "git_blob_sha1": "53f573334b6812b89281c283ab8882169fbfa99e",
+      "bytes": 83251,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F12",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_camera_sensor_mounts.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-156",
+      "path": "hardware/v2/mechanical/exports/v2_sensor_mounts.step",
+      "git_blob_sha1": "5d32cef5b807c35520be646f9193ec8221551ab1",
+      "bytes": 15435,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F12",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_camera_sensor_mounts.step"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-157",
+      "path": "hardware/v2/mechanical/exports/v2_sensor_mounts.svg",
+      "git_blob_sha1": "a437746d76a38b47ff9e4afd2c82782fd62f4784",
+      "bytes": 26753,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F12",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/exports/v3_camera_sensor_mounts.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-158",
+      "path": "hardware/v2/mechanical/model_components.py",
+      "git_blob_sha1": "1ae05c9f996e8a33e5ed075a185f83aba0270f21",
+      "bytes": 30419,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/model_components.py"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-159",
+      "path": "hardware/v2/mechanical/photo-observations.json",
+      "git_blob_sha1": "fd13a0677d46e03548d661569a64069b9722d2d5",
+      "bytes": 18041,
+      "family": "Mechanical",
+      "action": "preserve_cited_owner_photo_record",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v2/mechanical/photo-observations.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep original CAD-R3 owner/photo claims as a source. Add new camera observations separately, without retagging old photographs as V3 tests."
+    },
+    {
+      "id": "FILE-160",
+      "path": "hardware/v2/mechanical/v2_assembly.FCStd",
+      "git_blob_sha1": "7e8bfe2910fbe51f0f2634da6cbaaaff8bf87337",
+      "bytes": 438241,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F08",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/v3_assembly.FCStd"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-161",
+      "path": "hardware/v2/mechanical/v2_battery_mount.FCStd",
+      "git_blob_sha1": "3c70fe776921a47d77736805298b5cd923f2d1e6",
+      "bytes": 22740,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F10",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/v3_battery_mount.FCStd"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-162",
+      "path": "hardware/v2/mechanical/v2_cart_mount.FCStd",
+      "git_blob_sha1": "022a643c5c740efe035a45755a31b79baac9ea5e",
+      "bytes": 64944,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F09",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/v3_cart_mount.FCStd"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-163",
+      "path": "hardware/v2/mechanical/v2_electronics_enclosure.FCStd",
+      "git_blob_sha1": "f9315987120fe06fc521e925488b24c1a5452a41",
+      "bytes": 63642,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F11",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/v3_electronics_enclosure.FCStd"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-164",
+      "path": "hardware/v2/mechanical/v2_sensor_mounts.FCStd",
+      "git_blob_sha1": "a79bc9651f2a433067733eed317ff1750b66d17c",
+      "bytes": 21370,
+      "family": "Mechanical",
+      "action": "reuse_geometry_review_camera_changes",
+      "plan_id": "V3-F12",
+      "proposed_target_paths": [
+        "hardware/v3/mechanical/v3_camera_sensor_mounts.FCStd"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Preserve owner-confirmed relationships. Derive camera/affected-fit changes after measured interface selection."
+    },
+    {
+      "id": "FILE-165",
+      "path": "hardware/v2/wiring/README.md",
+      "git_blob_sha1": "91e7a1134aaac7c4b681f02c27e41b6b8ae4190c",
+      "bytes": 2741,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F06",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/README.md"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-166",
+      "path": "hardware/v2/wiring/connection_register.csv",
+      "git_blob_sha1": "7b342819ee1b45162adb9f3108fbd0d2542dfe05",
+      "bytes": 1747,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F06",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/connection_register.csv"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-167",
+      "path": "hardware/v2/wiring/connector_register.csv",
+      "git_blob_sha1": "0d8a85b9280b898979ae1cc694a36fd51d8780c5",
+      "bytes": 2784,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F06",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/connector_register.csv"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-168",
+      "path": "hardware/v2/wiring/exports/v2_power_harness.bom.tsv",
+      "git_blob_sha1": "e01b6fde21305cc8dff839848e0a6d3610405fc0",
+      "bytes": 1386,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F06",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/exports/v3_power_harness.bom.tsv"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-169",
+      "path": "hardware/v2/wiring/exports/v2_power_harness.html",
+      "git_blob_sha1": "d00ac28ab7f690fe8e5f83b04acbc307eda83b77",
+      "bytes": 84047,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F06",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/exports/v3_power_harness.html"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-170",
+      "path": "hardware/v2/wiring/exports/v2_power_harness.png",
+      "git_blob_sha1": "64c73de0c770e4acd70830bee06358d71addbb7a",
+      "bytes": 336237,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F06",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/exports/v3_power_harness.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-171",
+      "path": "hardware/v2/wiring/exports/v2_power_harness.svg",
+      "git_blob_sha1": "34d23e609076192cc5c04e2a87602fe2d3f7c50f",
+      "bytes": 78232,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F06",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/exports/v3_power_harness.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-172",
+      "path": "hardware/v2/wiring/exports/v2_sensor_harness.bom.tsv",
+      "git_blob_sha1": "98e46a166170963335024ed305a43f769d94abff",
+      "bytes": 879,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F07",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/exports/v3_sensor_harness.bom.tsv"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-173",
+      "path": "hardware/v2/wiring/exports/v2_sensor_harness.html",
+      "git_blob_sha1": "790386518f4bd1b53a2c56dee1a0bce7760c0a2f",
+      "bytes": 51765,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F07",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/exports/v3_sensor_harness.html"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-174",
+      "path": "hardware/v2/wiring/exports/v2_sensor_harness.png",
+      "git_blob_sha1": "0328e529accc63b9af1b7a89b500af14a626d751",
+      "bytes": 199507,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F07",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/exports/v3_sensor_harness.png"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-175",
+      "path": "hardware/v2/wiring/exports/v2_sensor_harness.svg",
+      "git_blob_sha1": "a3ed591870577c505c068a4757789fd19daca25c",
+      "bytes": 47827,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F07",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/exports/v3_sensor_harness.svg"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-176",
+      "path": "hardware/v2/wiring/v2_power_harness.yml",
+      "git_blob_sha1": "37482eedac0abbdfbdaca219c76f1e3776fb49c3",
+      "bytes": 5614,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F06",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/v3_power_harness.yml"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-177",
+      "path": "hardware/v2/wiring/v2_sensor_harness.yml",
+      "git_blob_sha1": "44ce95f180011b1e6235f5d7293e5366025de4d3",
+      "bytes": 3176,
+      "family": "Harnesses",
+      "action": "derive_selected_v3_sources",
+      "plan_id": "V3-F07",
+      "proposed_target_paths": [
+        "hardware/v3/wiring/v3_sensor_harness.yml"
+      ],
+      "target_status": "planned_derivative_not_created",
+      "reason": "Selected camera interface and affected power/data paths; preserve untraced details."
+    },
+    {
+      "id": "FILE-178",
+      "path": "reports/README.md",
+      "git_blob_sha1": "732676dbc8a2fb11f73aa346c5b9e3127d30b2e7",
+      "bytes": 1049,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-179",
+      "path": "reports/repository_review/inventory-tests.json",
+      "git_blob_sha1": "fe0702c705624b6de4c32f3169906a2348f1e04c",
+      "bytes": 756,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/repository_review/inventory-tests.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-180",
+      "path": "reports/repository_review/layout-r1-validation.json",
+      "git_blob_sha1": "c9a8371c75013f92dfb0a9c52690d6dad60ca2af",
+      "bytes": 1112,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/repository_review/layout-r1-validation.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-181",
+      "path": "reports/repository_review/layout-review-compatibility.json",
+      "git_blob_sha1": "e624c1bd9ea147d356f8d9113cef19499b771dcf",
+      "bytes": 2708,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/repository_review/layout-review-compatibility.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-182",
+      "path": "reports/repository_review/legacy-parser-reproduction.json",
+      "git_blob_sha1": "60ef96414a66efeff2fd2268f72882dc5c782885",
+      "bytes": 652,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/repository_review/legacy-parser-reproduction.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-183",
+      "path": "reports/repository_review/validation.json",
+      "git_blob_sha1": "e523d4e4f9d811b4d6a6af952574f3ea7eaf203a",
+      "bytes": 2107,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/repository_review/validation.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-184",
+      "path": "reports/v2/architecture-r2-scope-check.json",
+      "git_blob_sha1": "bbde6210f91ab116e0e37e98ecab2567921603b0",
+      "bytes": 629,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/architecture-r2-scope-check.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-185",
+      "path": "reports/v2/architecture-r2-validation.json",
+      "git_blob_sha1": "45ac16ab274851a0b3f878b65ec367959fbee897",
+      "bytes": 2861,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/architecture-r2-validation.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-186",
+      "path": "reports/v2/cad-presentation.json",
+      "git_blob_sha1": "4c7bd3629f9aa563b66a8c3fa809ca50ed140ad2",
+      "bytes": 447,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/cad-presentation.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-187",
+      "path": "reports/v2/freecad-validation.json",
+      "git_blob_sha1": "7c76f18e6ac2c42e4c3a8a80202054c768884330",
+      "bytes": 2760,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/freecad-validation.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-188",
+      "path": "reports/v2/python-tests.txt",
+      "git_blob_sha1": "58fdda1f749fbc074f8ab37f02f7cbbe070a0550",
+      "bytes": 99,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/python-tests.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-189",
+      "path": "reports/v2/reconciliation-validation.json",
+      "git_blob_sha1": "ad49e1af85b67e8324c650ef581d7914ac533e49",
+      "bytes": 1311,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/reconciliation-validation.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-190",
+      "path": "reports/v2/replay-cli.txt",
+      "git_blob_sha1": "edbcb71f7fd9457487c52813f349332889b690b3",
+      "bytes": 92,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/replay-cli.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-191",
+      "path": "reports/v2/uno-default.txt",
+      "git_blob_sha1": "97a8491ae998bb8e637450a033230f22ad6c9d23",
+      "bytes": 198,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/uno-default.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-192",
+      "path": "reports/v2/uno-drivers-feedback.txt",
+      "git_blob_sha1": "4588537d60bc4d161a8458d33dbe5b409c5622f3",
+      "bytes": 198,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/uno-drivers-feedback.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-193",
+      "path": "reports/v2/uno-reject-uart-as-trigger-echo.txt",
+      "git_blob_sha1": "291e5c34dc893aa5658ba1a126d4593700d921dc",
+      "bytes": 808,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/uno-reject-uart-as-trigger-echo.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-194",
+      "path": "reports/v2/uno-reject-unassigned-pins.txt",
+      "git_blob_sha1": "a75e89a9f0d30fcadf44790f4ac748f0eca518c2",
+      "bytes": 1356,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/uno-reject-unassigned-pins.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-195",
+      "path": "reports/v2/validation.json",
+      "git_blob_sha1": "2886244e8ec9b3071efa53c5522cd4b66b5d32a2",
+      "bytes": 1622,
+      "family": "Evidence and review",
+      "action": "preserve_scoped_evidence",
+      "plan_id": null,
+      "proposed_target_paths": [
+        "reports/v2/validation.json"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep dated source decisions/results unchanged. V3 gets new requirements/results and edited document copies."
+    },
+    {
+      "id": "FILE-196",
+      "path": "requirements.txt",
+      "git_blob_sha1": "2f3e051e28de2f3d6af2ffab81378c3d5da29bfb",
+      "bytes": 230,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "requirements.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-197",
+      "path": "scripts/README.md",
+      "git_blob_sha1": "11fe45c096593b2cc4844d45115200422e3a1f1e",
+      "bytes": 3934,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "scripts/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-198",
+      "path": "scripts/repository_review/check_layout.py",
+      "git_blob_sha1": "c10a6e1572a35d501fc0324d707bcfebb938e392",
+      "bytes": 7204,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "scripts/repository_review/check_layout.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-199",
+      "path": "scripts/repository_review/check_review.py",
+      "git_blob_sha1": "5a4fc2dd53fca0a3f6852ff2c3e2aef1d77e16c7",
+      "bytes": 9288,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "scripts/repository_review/check_review.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-200",
+      "path": "scripts/v2/architecture_diagrams.py",
+      "git_blob_sha1": "31fe17a6ffdc394a25ad967abe60222f98d0962b",
+      "bytes": 17389,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/architecture_diagrams.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-201",
+      "path": "scripts/v2/build_power.py",
+      "git_blob_sha1": "ea12a5aa666eaf7bccdc3a8647a1b9593f8b1b70",
+      "bytes": 6961,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/build_power.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-202",
+      "path": "scripts/v2/build_review_book.py",
+      "git_blob_sha1": "11f4482f5ac553984ae48340c55c5e4db5f09424",
+      "bytes": 5670,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/build_review_book.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-203",
+      "path": "scripts/v2/build_wiring.py",
+      "git_blob_sha1": "6828a32097a0a56d3fc91ab2ce8f00fda20c5fb1",
+      "bytes": 4317,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/build_wiring.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-204",
+      "path": "scripts/v2/cad_preview.py",
+      "git_blob_sha1": "daaf672dc931802c944021a2386c29984cb20f7b",
+      "bytes": 8078,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/cad_preview.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-205",
+      "path": "scripts/v2/check_freecad.py",
+      "git_blob_sha1": "55e6c1784c2cb5b6b0d6912b1b18f76c1252ad53",
+      "bytes": 7940,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/check_freecad.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-206",
+      "path": "scripts/v2/draft_drawings.py",
+      "git_blob_sha1": "daea7a72f217a5e6d9121a29bd7cfdc597278d4a",
+      "bytes": 218,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/draft_drawings.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-207",
+      "path": "scripts/v2/render_mechanical.py",
+      "git_blob_sha1": "e6d1f7827e0388b7e8ea2dfd746c8ce1b68ec22d",
+      "bytes": 209,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/render_mechanical.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-208",
+      "path": "scripts/v2/requirements-drafting.txt",
+      "git_blob_sha1": "b54c9dc0c7883e59e95c8f7427a6e45364c98be2",
+      "bytes": 290,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/requirements-drafting.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-209",
+      "path": "scripts/v2/run_checks.py",
+      "git_blob_sha1": "07bd5383173f2279c6e5e1b1b295fe25a8a7fc3e",
+      "bytes": 3940,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/run_checks.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-210",
+      "path": "scripts/v2/save_cad_presentation.FCMacro",
+      "git_blob_sha1": "f0da7568355558df864b344270eb72fd351507b7",
+      "bytes": 2242,
+      "family": "Engineering tooling",
+      "action": "preserve_baseline_add_v3_tools",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "scripts/v2/save_cad_presentation.FCMacro"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Do not point V2 generators at V3 or overwrite manual native edits. New changed derivatives require V3 paths."
+    },
+    {
+      "id": "FILE-211",
+      "path": "software/README.md",
+      "git_blob_sha1": "1ed66f1eb7a9ab31acfa610e432d34838e3d0d01",
+      "bytes": 712,
+      "family": "Documentation and metadata",
+      "action": "retain_or_extend_navigation",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "software/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 as the current runtime baseline while linking clearly separated V3 planning information."
+    },
+    {
+      "id": "FILE-212",
+      "path": "software/v2/arduino/README.md",
+      "git_blob_sha1": "03768c1f6f7945abf28fd10a70f15794a01a0c1a",
+      "bytes": 2682,
+      "family": "Uno firmware",
+      "action": "reuse_canonical_reference",
+      "plan_id": "V3-F13",
+      "proposed_target_paths": [
+        "software/v2/arduino/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "No new MCU vision/motion role; enabled-sensor build is separately recorded."
+    },
+    {
+      "id": "FILE-213",
+      "path": "software/v2/arduino/litterbuggy_v2/config.h",
+      "git_blob_sha1": "db804a8027e889d4823764f0aa569a23b7d96821",
+      "bytes": 2022,
+      "family": "Uno firmware",
+      "action": "reuse_canonical_reference",
+      "plan_id": "V3-F13",
+      "proposed_target_paths": [
+        "software/v2/arduino/litterbuggy_v2/config.h"
+      ],
+      "target_status": "existing_reference",
+      "reason": "No new MCU vision/motion role; enabled-sensor build is separately recorded."
+    },
+    {
+      "id": "FILE-214",
+      "path": "software/v2/arduino/litterbuggy_v2/litterbuggy_v2.ino",
+      "git_blob_sha1": "cc91f49dc93cfa22a44abf9c36f6dc25aa7816b6",
+      "bytes": 3748,
+      "family": "Uno firmware",
+      "action": "reuse_canonical_reference",
+      "plan_id": "V3-F13",
+      "proposed_target_paths": [
+        "software/v2/arduino/litterbuggy_v2/litterbuggy_v2.ino"
+      ],
+      "target_status": "existing_reference",
+      "reason": "No new MCU vision/motion role; enabled-sensor build is separately recorded."
+    },
+    {
+      "id": "FILE-215",
+      "path": "software/v2/raspberry_pi/README.md",
+      "git_blob_sha1": "42727dcae599f8fd76d93da45dd231764aaee25f",
+      "bytes": 4236,
+      "family": "Pi acquisition",
+      "action": "reuse_core_add_v3_runtime",
+      "plan_id": "V3-F15",
+      "proposed_target_paths": [
+        "software/v2/raspberry_pi/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Reuse strict telemetry archive; V3 camera/perception/viewer and context are additional work."
+    },
+    {
+      "id": "FILE-216",
+      "path": "software/v2/raspberry_pi/capture_video.py",
+      "git_blob_sha1": "0c2301bec8dd2b6b14311336d97f2d7f307637a0",
+      "bytes": 2338,
+      "family": "Pi acquisition",
+      "action": "reuse_core_add_v3_runtime",
+      "plan_id": "V3-F16",
+      "proposed_target_paths": [
+        "software/v2/raspberry_pi/capture_video.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Reuse strict telemetry archive; V3 camera/perception/viewer and context are additional work."
+    },
+    {
+      "id": "FILE-217",
+      "path": "software/v2/raspberry_pi/config.example.yml",
+      "git_blob_sha1": "70bc8c1a588ceb6651703eb02dd9d8bfaa8c1632",
+      "bytes": 293,
+      "family": "Pi acquisition",
+      "action": "reuse_core_add_v3_runtime",
+      "plan_id": "V3-F15",
+      "proposed_target_paths": [
+        "software/v2/raspberry_pi/config.example.yml"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Reuse strict telemetry archive; V3 camera/perception/viewer and context are additional work."
+    },
+    {
+      "id": "FILE-218",
+      "path": "software/v2/raspberry_pi/export.py",
+      "git_blob_sha1": "ec41eb61b3629803b501a1ca8a6ac4df27647d7d",
+      "bytes": 875,
+      "family": "Pi acquisition",
+      "action": "reuse_core_add_v3_runtime",
+      "plan_id": "V3-F15",
+      "proposed_target_paths": [
+        "software/v2/raspberry_pi/export.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Reuse strict telemetry archive; V3 camera/perception/viewer and context are additional work."
+    },
+    {
+      "id": "FILE-219",
+      "path": "software/v2/raspberry_pi/litterbuggy-logger.service",
+      "git_blob_sha1": "fc4e8c8eede3905999947fe4f4f717b51f0cd0ef",
+      "bytes": 774,
+      "family": "Pi acquisition",
+      "action": "reuse_core_add_v3_runtime",
+      "plan_id": "V3-F23",
+      "proposed_target_paths": [
+        "software/v2/raspberry_pi/litterbuggy-logger.service"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Reuse strict telemetry archive; V3 camera/perception/viewer and context are additional work."
+    },
+    {
+      "id": "FILE-220",
+      "path": "software/v2/raspberry_pi/logger.py",
+      "git_blob_sha1": "deddaa0d9abea138e5b80e14058d023460e10a2a",
+      "bytes": 9715,
+      "family": "Pi acquisition",
+      "action": "reuse_core_add_v3_runtime",
+      "plan_id": "V3-F15",
+      "proposed_target_paths": [
+        "software/v2/raspberry_pi/logger.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Reuse strict telemetry archive; V3 camera/perception/viewer and context are additional work."
+    },
+    {
+      "id": "FILE-221",
+      "path": "software/v2/raspberry_pi/protocol.py",
+      "git_blob_sha1": "2dcc0014c2043a67a7aa49c412c54048b0f1703f",
+      "bytes": 3650,
+      "family": "Serial contract",
+      "action": "reuse_canonical_reference",
+      "plan_id": "V3-F14",
+      "proposed_target_paths": [
+        "software/v2/raspberry_pi/protocol.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Vehicle V3 does not change serial protocol 2. Vision records are separate."
+    },
+    {
+      "id": "FILE-222",
+      "path": "software/v2/raspberry_pi/requirements.txt",
+      "git_blob_sha1": "5e3c40d3a8f400c487a35648e66cdbbdb7774fdc",
+      "bytes": 125,
+      "family": "Pi acquisition",
+      "action": "reuse_core_add_v3_runtime",
+      "plan_id": "V3-F15",
+      "proposed_target_paths": [
+        "software/v2/raspberry_pi/requirements.txt"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Reuse strict telemetry archive; V3 camera/perception/viewer and context are additional work."
+    },
+    {
+      "id": "FILE-223",
+      "path": "software/v2/raspberry_pi/schema.sql",
+      "git_blob_sha1": "3ee9316ae1cf84e7733468ddc03a5d6fbca940b7",
+      "bytes": 1267,
+      "family": "Pi acquisition",
+      "action": "reuse_core_add_v3_runtime",
+      "plan_id": "V3-F15",
+      "proposed_target_paths": [
+        "software/v2/raspberry_pi/schema.sql"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Reuse strict telemetry archive; V3 camera/perception/viewer and context are additional work."
+    },
+    {
+      "id": "FILE-224",
+      "path": "software/v2/tests/conftest.py",
+      "git_blob_sha1": "c03a9f39aa3db112e5bbf62af8743b6c67f2cf12",
+      "bytes": 111,
+      "family": "Software tests",
+      "action": "preserve_baseline_add_v3_tests",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "software/v2/tests/conftest.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 regression tests and synthetic labels. Add V3 cases without retagging old results."
+    },
+    {
+      "id": "FILE-225",
+      "path": "software/v2/tests/fixtures/README.md",
+      "git_blob_sha1": "d921e614be9f1412fd0bf154b670b19380333e17",
+      "bytes": 243,
+      "family": "Software tests",
+      "action": "preserve_baseline_add_v3_tests",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "software/v2/tests/fixtures/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 regression tests and synthetic labels. Add V3 cases without retagging old results."
+    },
+    {
+      "id": "FILE-226",
+      "path": "software/v2/tests/fixtures/disabled.ndjson",
+      "git_blob_sha1": "30db2682a502704af9ef4ba7b130956d4700eedd",
+      "bytes": 232,
+      "family": "Software tests",
+      "action": "preserve_baseline_add_v3_tests",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "software/v2/tests/fixtures/disabled.ndjson"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 regression tests and synthetic labels. Add V3 cases without retagging old results."
+    },
+    {
+      "id": "FILE-227",
+      "path": "software/v2/tests/test_logger.py",
+      "git_blob_sha1": "dda5babc9dea0ba728594b1fbf8d3ba123858900",
+      "bytes": 3612,
+      "family": "Software tests",
+      "action": "preserve_baseline_add_v3_tests",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "software/v2/tests/test_logger.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 regression tests and synthetic labels. Add V3 cases without retagging old results."
+    },
+    {
+      "id": "FILE-228",
+      "path": "software/v2/tests/test_protocol.py",
+      "git_blob_sha1": "b400d37f3c3f3504d46b7a942638114f9ca07299",
+      "bytes": 2045,
+      "family": "Software tests",
+      "action": "preserve_baseline_add_v3_tests",
+      "plan_id": "V3-F22",
+      "proposed_target_paths": [
+        "software/v2/tests/test_protocol.py"
+      ],
+      "target_status": "existing_reference",
+      "reason": "Keep V2 regression tests and synthetic labels. Add V3 cases without retagging old results."
+    },
+    {
+      "id": "FILE-229",
+      "path": "test_data/.gitkeep",
+      "git_blob_sha1": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "bytes": 1,
+      "family": "Operator/evidence guidance",
+      "action": "extend_guidance_when_implemented",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "test_data/.gitkeep"
+      ],
+      "target_status": "existing_reference",
+      "reason": "V3 context/vision/alert/transfer evidence will supplement current guidance; raw data remains private."
+    },
+    {
+      "id": "FILE-230",
+      "path": "test_data/README.md",
+      "git_blob_sha1": "4d384baac6e128836d1f09e780045f705565a7c4",
+      "bytes": 1652,
+      "family": "Operator/evidence guidance",
+      "action": "extend_guidance_when_implemented",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "test_data/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "V3 context/vision/alert/transfer evidence will supplement current guidance; raw data remains private."
+    },
+    {
+      "id": "FILE-231",
+      "path": "validation/README.md",
+      "git_blob_sha1": "6dedb3f616815c6602727db0783c53100dda7f9f",
+      "bytes": 2272,
+      "family": "Operator/evidence guidance",
+      "action": "extend_guidance_when_implemented",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "validation/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "V3 context/vision/alert/transfer evidence will supplement current guidance; raw data remains private."
+    },
+    {
+      "id": "FILE-232",
+      "path": "validation/scorecard/README.md",
+      "git_blob_sha1": "dc902f779f9f66425737b0d2609aa9a8000be723",
+      "bytes": 1933,
+      "family": "Operator/evidence guidance",
+      "action": "extend_guidance_when_implemented",
+      "plan_id": "V3-F21",
+      "proposed_target_paths": [
+        "validation/scorecard/README.md"
+      ],
+      "target_status": "existing_reference",
+      "reason": "V3 context/vision/alert/transfer evidence will supplement current guidance; raw data remains private."
+    }
+  ]
+}

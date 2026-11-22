@@ -8,6 +8,7 @@ configuration or the deployed program.
 README.md                  Current entry and evidence boundary
 requirements.txt           V2 logger dependency entry only
 docs/v2/                   Current source index, protocol, BOM, evidence plan
+docs/v3/                   Assisted V3 planning only; no deployed V3 runtime
 docs/reconciliation/       Current source decisions and editable corrections
 docs/v2_verification/      Original evidence claims / still applicable unknowns
 docs/repository_review/    Dated review, findings and Six Thinking Hats decisions

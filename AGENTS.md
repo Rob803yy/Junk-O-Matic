@@ -21,10 +21,20 @@ paths in dated evidence. Do not promote archived constants, sample metrics or
 old wiring assumptions into current V2 facts. Current working sources remain
 in hardware/v2, software/v2 and docs/v2; deployment is still unverified.
 
+## Assisted V3 planning
+The owner selected camera detection, operator alerts and reliable logging with
+manual RC controlling motion. Planning information lives in docs/v3. The mission
+scope is confirmed; hardware choices, numeric limits and implementation remain
+proposed. Preserve V2 canonical sources and old evidence. Do not add autonomous
+motion, pickup/sorting, a vision-to-Uno command channel or poster hardware by
+inference. Vehicle V3, Uno R3 hardware, firmware ID and protocol 2 are independent.
+
 ## Working Rules
 - Keep scripts idempotent where possible.
 - Write validation receipts to reports/v2; keep native engineering sources and
   intentional review exports beside their subsystem under hardware/v2.
+- Keep V3 planning receipts separate in reports/v3. These are document checks,
+  not evidence of commissioned hardware or validated V3 runtime behavior.
 - Keep raw field media/logs and private configs out of Git.
 - Favor explicit JSON/YAML schemas over ad-hoc dicts.
 - Do not add heavyweight dependencies without justification.
