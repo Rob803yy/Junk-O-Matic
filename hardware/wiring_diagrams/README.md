@@ -1,15 +1,11 @@
-# Wiring Diagrams
+# Wiring entry point
 
-Add wiring diagrams for the auxiliary electronics domain here.
+Maintained editable sources: [ARCH-R2 domains](../v2/architecture/README.md),
+[three-sheet QET](../v2/electrical/README.md) and
+[two WireViz harnesses / connector and connection registers](../v2/wiring/README.md).
+The [current wiring review notes](../../docs/wiring_notes.md) list unresolved items.
 
-Required diagrams before field testing:
-
-- Auxiliary power distribution from Kobalt 24V battery
-- Main fuse and main switch placement
-- 24V-to-5V buck wiring
-- 24V-to-12V buck wiring
-- Raspberry Pi and Arduino 5V rail wiring
-- Camera wiring
-- Optional sensor wiring
-
-Do not include a Pi-to-ESC, Pi-to-steering, or Pi-to-receiver control wiring path for V1.0A.
+This former V1A placeholder folder does not establish Pi/Uno 5V entry, a fitted
+12V branch, common ground, fuse order or physical pin numbering. Logical functions
+and dashed links are review hypotheses. Use native files and current previews;
+PDFs remain stale/held. Record both supply and return evidence before changing a net.

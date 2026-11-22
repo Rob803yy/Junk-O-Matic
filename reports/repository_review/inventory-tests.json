@@ -1,0 +1,20 @@
+{
+  "revision": "REPO-R1",
+  "command": "python -m unittest discover -s scripts/repository_review/tests -v",
+  "tests_run": 8,
+  "passed": true,
+  "hardware_access": false,
+  "source_sha256_lf": {
+    "scripts/convert/build_inventory.py": "1f5ab46828dcfe27bd732388cc6b123bd9ac0692e6d5d7a4712a8dcee008906c",
+    "scripts/repository_review/tests/test_inventory.py": "fe8f2b857771d2dad9576bb5c7503d64a8a4b1ded4a119dcde4966875fe264db"
+  },
+  "cases": [
+    "missing versus empty roots",
+    "disabled roots excluded",
+    "recursive case-insensitive filename suffix counts",
+    "configured versus observed classes / unchecked annotations",
+    "refuse overwrite and explicit replacement",
+    "invalid enabled string",
+    "non-directory root rejected"
+  ]
+}

@@ -1,3 +1,6 @@
+> REPO-R1 review 2026-11-22: Historical procedure only. Do not use it as the current V2 run checklist: source/output names differ, the legacy stub emits constants, and legacy row counts/video request flags/CPU health do not prove acquisition quality or no resets.
+> Use the [current V2 evidence plan](v2/verification-plan.md) and [current engineering index](v2/README.md).
+
 # Test Procedure V1.0A
 
 ## Objective

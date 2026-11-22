@@ -1,3 +1,6 @@
+> REPO-R1 review 2026-11-22: Historical target list only. These V1.0A-to-V1.0B/V1.5 gates have not been adopted or passed for current V2. Filename/version labels are retained for traceability; required evidence and thresholds must be reviewed for the actual configuration.
+> Use the [current V2 evidence plan](v2/verification-plan.md) and [current engineering index](v2/README.md).
+
 # V1.0A to V1.0B/V1.5 Exit Criteria
 
 V1.0A must remain an instrumented RC platform until evidence shows that data collection is reliable and does not affect vehicle control.

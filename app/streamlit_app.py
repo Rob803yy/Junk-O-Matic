@@ -28,6 +28,12 @@ def load_runs(path: str = "reports/model_runs"):
 
 st.set_page_config(page_title="Junk-O-Matic Review", layout="wide")
 st.title("Junk-O-Matic: Dataset + Model Review")
+st.warning(
+    "Historical dataset/model workspace. The committed inventory and sample run "
+    "are bootstrap examples, not verified training, evaluation or vehicle evidence. "
+    "Imported run metrics also require model, dataset, split and method provenance."
+)
+st.caption("Current V2 engineering review: docs/v2/README.md. This page does not control the buggy.")
 
 classes_cfg = load_yaml("configs/classes.yaml")
 datasets_cfg = load_yaml("configs/datasets.yaml")
@@ -53,6 +59,10 @@ else:
     run_ids = [r.get("run_id", f"run_{i}") for i, r in enumerate(runs)]
     selected = st.selectbox("Select run", options=run_ids, index=0)
     selected_run = runs[run_ids.index(selected)]
+    st.info(
+        "Evidence status is unverified in this viewer. sample_run_0001 is a placeholder; "
+        "its metrics and confusion matrix must not be cited as measured performance."
+    )
 
     summary = selected_run.get("summary", {})
     s1, s2, s3, s4 = st.columns(4)

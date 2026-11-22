@@ -1,0 +1,786 @@
+{
+  "schema_version": 1,
+  "revision": "REPO-R1",
+  "review_date": "2026-11-22",
+  "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d",
+  "method": "Identify baseline gaps, order by severity, then apply Six Thinking Hats to select bounded corrections; no simulated reviewer approvals.",
+  "severity_definitions": {
+    "critical": "Immediate demonstrated severe harm/data loss requiring stop; none established by this document review.",
+    "high": "Can mislead physical configuration, acquisition validity, evidence acceptance or capability claims; address before relying on the affected path.",
+    "medium": "Impairs source selection, reproducibility, provenance or review completeness.",
+    "low": "Maintenance/navigation efficiency with bounded current impact."
+  },
+  "exclusion": "LICENSE / license.md content and legal interpretation excluded by owner request.",
+  "findings": [
+    {
+      "id": "REV-001",
+      "severity": "high",
+      "title": "Old wiring and component descriptions compete with current V2",
+      "evidence": [
+        {
+          "path": "docs/wiring_notes.md",
+          "line": 26,
+          "observed": "Old wiring instructions assign Nano/Pi4, common auxiliary grounding and a 12V branch without current trace.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "hardware/bom/README.md",
+          "line": 9,
+          "observed": "Placeholder BOM implies current component quantities/models.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "hardware/v2/architecture/README.md",
+          "line": 30,
+          "observed": "Current architecture retains unresolved entries and an unassigned converter.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Following the old page as a wiring plan could select the wrong board or duplicate an unverified supply path.",
+      "resolution_status": "document_corrected_physical_open",
+      "decision": "Replace the generic wiring entry with current evidence constraints and links; retain the old text as explicitly historical. Route old BOM/layout/wiring placeholders to authoritative current sources.",
+      "changed_paths": [
+        "docs/wiring_notes.md",
+        "docs/history/v1a-wiring-notes.md",
+        "hardware/README.md",
+        "hardware/bom/README.md",
+        "hardware/enclosure_layout/README.md",
+        "hardware/wiring_diagrams/README.md"
+      ],
+      "remaining_action": "Owner physical trace still needed for polarity, returns, protection, USB coexistence and sensor supply.",
+      "six_hats": {
+        "white": "Old wiring instructions assign Nano/Pi4, common auxiliary grounding and a 12V branch without current trace.; Placeholder BOM implies current component quantities/models.; Current architecture retains unresolved entries and an unassigned converter.",
+        "red": "Anticipated reviewer concern: a reader could mistake this for operating evidence.",
+        "black": "Following the old page as a wiring plan could select the wrong board or duplicate an unverified supply path.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Replace the generic wiring entry with current evidence constraints and links; retain the old text as explicitly historical. Route old BOM/layout/wiring placeholders to authoritative current sources. Residual: Owner physical trace still needed for polarity, returns, protection, USB coexistence and sensor supply."
+      },
+      "priority_rank": 1
+    },
+    {
+      "id": "REV-002",
+      "severity": "high",
+      "title": "Historical Arduino constants can resemble physical readings",
+      "evidence": [
+        {
+          "path": "software/arduino/telemetry_logger_stub/telemetry_logger_stub.ino",
+          "line": 25,
+          "observed": "Stub emits fixed voltages, attitude and temperature at 1Hz.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "software/arduino/README.md",
+          "line": 23,
+          "observed": "Readme presents plausible data without a prominent current/historical distinction.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Stub rows or example CSVs could be scored as actual voltage, temperature, attitude or E-stop measurements.",
+      "resolution_status": "contained_legacy_not_qualified",
+      "decision": "Prominently label the legacy stub and its contract as examples; direct current work to the Uno draft with disabled/null defaults. Preserve the original sketch byte-for-byte.",
+      "changed_paths": [
+        "software/arduino/README.md",
+        "validation/sample_data/README.md",
+        "docs/data_dictionary.md"
+      ],
+      "remaining_action": "Original running sketch and real sensor/calibration evidence remain unrecovered.",
+      "six_hats": {
+        "white": "Stub emits fixed voltages, attitude and temperature at 1Hz.; Readme presents plausible data without a prominent current/historical distinction.",
+        "red": "Anticipated reviewer concern: a reader could mistake this for operating evidence.",
+        "black": "Stub rows or example CSVs could be scored as actual voltage, temperature, attitude or E-stop measurements.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Prominently label the legacy stub and its contract as examples; direct current work to the Uno draft with disabled/null defaults. Preserve the original sketch byte-for-byte. Residual: Original running sketch and real sensor/calibration evidence remain unrecovered."
+      },
+      "priority_rank": 2
+    },
+    {
+      "id": "REV-003",
+      "severity": "high",
+      "title": "Legacy logger silently miscounts V2 records",
+      "evidence": [
+        {
+          "path": "software/raspberry_pi/src/jom_data_logger.py",
+          "line": 270,
+          "observed": "Legacy parser accepts arbitrary dictionaries and fills missing legacy fields with blanks.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "software/v2/raspberry_pi/protocol.py",
+          "line": 24,
+          "observed": "New parser requires the exact version-2 contract.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "A protocol mismatch can produce apparently successful telemetry counts with no measurements.",
+      "resolution_status": "contained_legacy_not_qualified",
+      "decision": "Record the fake-port reproduction, publish a compatibility matrix, and remove legacy invocation from current quick-start guidance; keep original code intact.",
+      "changed_paths": [
+        "software/raspberry_pi/README.md",
+        "docs/data_dictionary.md",
+        "README.md",
+        "reports/repository_review/legacy-parser-reproduction.json"
+      ],
+      "remaining_action": "If the legacy logger is ever revived, add strict validation, raw preservation and fault/session tests before relying on it.",
+      "six_hats": {
+        "white": "Legacy parser accepts arbitrary dictionaries and fills missing legacy fields with blanks.; New parser requires the exact version-2 contract.",
+        "red": "Anticipated reviewer concern: a reader could mistake this for operating evidence.",
+        "black": "A protocol mismatch can produce apparently successful telemetry counts with no measurements.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Record the fake-port reproduction, publish a compatibility matrix, and remove legacy invocation from current quick-start guidance; keep original code intact. Residual: If the legacy logger is ever revived, add strict validation, raw preservation and fault/session tests before relying on it."
+      },
+      "priority_rank": 3
+    },
+    {
+      "id": "REV-004",
+      "severity": "high",
+      "title": "Validation percentages and examples can imply passed gates",
+      "evidence": [
+        {
+          "path": "docs/v1_to_v2_exit_criteria.md",
+          "line": 8,
+          "observed": "Legacy targets are listed as required gates without current adoption/evidence status.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "validation/scorecard/README.md",
+          "line": 3,
+          "observed": "Guidance assumes the old summary export exists for the active logger.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "validation/sample_data/sample_summary_for_scorecard.csv",
+          "line": 2,
+          "observed": "Sample shows a 45-minute run and counts without raw provenance.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Sample counts, default null records or historical targets could be mistaken for completed V2 validation.",
+      "resolution_status": "document_corrected_evidence_open",
+      "decision": "Mark old gates and sample CSVs historical/examples; add a V2 evidence plan and explicit scorecard/missing-data rules without inventing pass thresholds or results.",
+      "changed_paths": [
+        "validation/README.md",
+        "validation/scorecard/README.md",
+        "validation/sample_data/README.md",
+        "docs/v1_to_v2_exit_criteria.md",
+        "docs/v2/verification-plan.md"
+      ],
+      "remaining_action": "Physical tests, agreed thresholds and supporting run evidence remain open.",
+      "six_hats": {
+        "white": "Legacy targets are listed as required gates without current adoption/evidence status.; Guidance assumes the old summary export exists for the active logger.; Sample shows a 45-minute run and counts without raw provenance.",
+        "red": "Anticipated reviewer concern: a reader could mistake this for operating evidence.",
+        "black": "Sample counts, default null records or historical targets could be mistaken for completed V2 validation.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Mark old gates and sample CSVs historical/examples; add a V2 evidence plan and explicit scorecard/missing-data rules without inventing pass thresholds or results. Residual: Physical tests, agreed thresholds and supporting run evidence remain open."
+      },
+      "priority_rank": 4
+    },
+    {
+      "id": "REV-005",
+      "severity": "high",
+      "title": "Dashboard renders placeholder model metrics as ordinary results",
+      "evidence": [
+        {
+          "path": "reports/model_runs/sample_run.json",
+          "line": 5,
+          "observed": "Committed model result identifies a placeholder but carries plausible nonzero metrics.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "app/streamlit_app.py",
+          "line": 59,
+          "observed": "Dashboard displays these metrics without a persistent evidence warning.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "A demo mAP or confusion matrix could be cited as trained-model or deployed perception performance.",
+      "resolution_status": "corrected_labeling_only",
+      "decision": "Add an always-visible provenance warning and selected-run warning; document both committed report fixtures. Preserve the original JSON examples.",
+      "changed_paths": [
+        "app/streamlit_app.py",
+        "app/README.md",
+        "reports/README.md"
+      ],
+      "remaining_action": "Real training/evaluation dataset hashes, split, procedure and run provenance are still absent.",
+      "six_hats": {
+        "white": "Committed model result identifies a placeholder but carries plausible nonzero metrics.; Dashboard displays these metrics without a persistent evidence warning.",
+        "red": "Anticipated reviewer concern: a reader could mistake this for operating evidence.",
+        "black": "A demo mAP or confusion matrix could be cited as trained-model or deployed perception performance.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Add an always-visible provenance warning and selected-run warning; document both committed report fixtures. Preserve the original JSON examples. Residual: Real training/evaluation dataset hashes, split, procedure and run provenance are still absent."
+      },
+      "priority_rank": 5
+    },
+    {
+      "id": "REV-019",
+      "severity": "high",
+      "title": "Physical V2 evidence gaps remain open after document reconciliation",
+      "evidence": [
+        {
+          "path": "docs/v2/README.md",
+          "line": 7,
+          "observed": "Current record still lacks physical wiring/dimension verification.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "hardware/v2/mechanical/photo-observations.json",
+          "line": 11,
+          "observed": "Photos provide relationships but no measured scale reference.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Document consistency cannot establish power protection, sensor compatibility, dimensions, payload, moving clearance or operating reliability.",
+      "resolution_status": "open_physical_evidence",
+      "decision": "Retain unknown/conflicting hardware values and produce a prioritized evidence-collection plan; do not substitute historical examples or software checks for measurements.",
+      "changed_paths": [
+        "docs/v2/verification-plan.md",
+        "docs/repository_review/README.md"
+      ],
+      "remaining_action": "Owner measurements/labels/continuity, original software capture and controlled bench/field evidence are required to close these items.",
+      "six_hats": {
+        "white": "Current record still lacks physical wiring/dimension verification.; Photos provide relationships but no measured scale reference.",
+        "red": "Anticipated reviewer concern: a reader could mistake this for operating evidence.",
+        "black": "Document consistency cannot establish power protection, sensor compatibility, dimensions, payload, moving clearance or operating reliability.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Retain unknown/conflicting hardware values and produce a prioritized evidence-collection plan; do not substitute historical examples or software checks for measurements. Residual: Owner measurements/labels/continuity, original software capture and controlled bench/field evidence are required to close these items."
+      },
+      "priority_rank": 6
+    },
+    {
+      "id": "REV-006",
+      "severity": "medium",
+      "title": "Inventory generator calls configured classes observed and unchecked annotations zero",
+      "evidence": [
+        {
+          "path": "scripts/convert/build_inventory.py",
+          "line": 32,
+          "observed": "Generator copies the entire configured taxonomy into each observed-class field.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "scripts/convert/build_inventory.py",
+          "line": 31,
+          "observed": "No annotation parser is implemented, yet zero is emitted.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "configs/datasets.yaml",
+          "line": 3,
+          "observed": "Configured enable flags are not proof of downloaded/parsed content.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Downstream summaries can report observed classes or annotation absence without inspecting annotations, and regeneration can overwrite a historical fixture.",
+      "resolution_status": "corrected_tool_semantics",
+      "decision": "Make missing and disabled roots explicit, keep observed classes/annotation counts null until parsed, separate configured taxonomy, and write a new local output that refuses overwrite by default.",
+      "changed_paths": [
+        "scripts/convert/build_inventory.py",
+        "scripts/README.md",
+        "configs/README.md",
+        ".gitignore",
+        "scripts/repository_review/tests/test_inventory.py"
+      ],
+      "remaining_action": "Annotation parsing, taxonomy mapping and source dataset acquisition remain future work.",
+      "six_hats": {
+        "white": "Generator copies the entire configured taxonomy into each observed-class field.; No annotation parser is implemented, yet zero is emitted.; Configured enable flags are not proof of downloaded/parsed content.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "Downstream summaries can report observed classes or annotation absence without inspecting annotations, and regeneration can overwrite a historical fixture.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: add full annotation ingestion now; retain false zero/class claims; report only scanned images and explicit unknowns. Choose bounded truthful reporting.",
+        "blue": "Make missing and disabled roots explicit, keep observed classes/annotation counts null until parsed, separate configured taxonomy, and write a new local output that refuses overwrite by default. Residual: Annotation parsing, taxonomy mapping and source dataset acquisition remain future work."
+      },
+      "priority_rank": 7
+    },
+    {
+      "id": "REV-007",
+      "severity": "medium",
+      "title": "Historical logger failure limits are not documented",
+      "evidence": [
+        {
+          "path": "software/raspberry_pi/src/jom_data_logger.py",
+          "line": 241,
+          "observed": "Serial open failures return; there is no reconnect/session implementation.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "software/raspberry_pi/src/jom_data_logger.py",
+          "line": 377,
+          "observed": "Summary reports camera requested state, not a measured usable-video result.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "software/raspberry_pi/src/jom_data_logger.py",
+          "line": 491,
+          "observed": "Main success is not a guarantee all worker threads captured valid evidence.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "A clean exit or requested camera setting can be mistaken for successful recording or reset-free operation.",
+      "resolution_status": "contained_legacy_not_qualified",
+      "decision": "Document the legacy limitations and mark it an unqualified historical code path. Preserve source; use current source-specific checks and explicit evidence review.",
+      "changed_paths": [
+        "software/raspberry_pi/README.md",
+        "docs/test_procedure_v1a.md",
+        "validation/README.md"
+      ],
+      "remaining_action": "Legacy runtime hardening is deferred unless that code path is selected again.",
+      "six_hats": {
+        "white": "Serial open failures return; there is no reconnect/session implementation.; Summary reports camera requested state, not a measured usable-video result.; Main success is not a guarantee all worker threads captured valid evidence.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "A clean exit or requested camera setting can be mistaken for successful recording or reset-free operation.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Document the legacy limitations and mark it an unqualified historical code path. Preserve source; use current source-specific checks and explicit evidence review. Residual: Legacy runtime hardening is deferred unless that code path is selected again."
+      },
+      "priority_rank": 8
+    },
+    {
+      "id": "REV-008",
+      "severity": "medium",
+      "title": "Hardware parent folders still describe placeholders only",
+      "evidence": [
+        {
+          "path": "hardware/README.md",
+          "line": 9,
+          "observed": "Folder entry does not route to the QET, WireViz, CAD or normalized BOM now available.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Reviewers can edit a placeholder instead of the maintained engineering source.",
+      "resolution_status": "corrected",
+      "decision": "Turn each parent/placeholder readme into an explicit current-source index while retaining the historical role.",
+      "changed_paths": [
+        "hardware/README.md",
+        "hardware/bom/README.md",
+        "hardware/wiring_diagrams/README.md",
+        "hardware/enclosure_layout/README.md"
+      ],
+      "remaining_action": "None for this document correction.",
+      "six_hats": {
+        "white": "Folder entry does not route to the QET, WireViz, CAD or normalized BOM now available.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "Reviewers can edit a placeholder instead of the maintained engineering source.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Turn each parent/placeholder readme into an explicit current-source index while retaining the historical role. Residual: None for this document correction."
+      },
+      "priority_rank": 9
+    },
+    {
+      "id": "REV-009",
+      "severity": "medium",
+      "title": "Issue templates hardcode V1A and incompatible evidence files",
+      "evidence": [
+        {
+          "path": ".github/ISSUE_TEMPLATE/validation_run.md",
+          "line": 4,
+          "observed": "Template expects only legacy run IDs and CSVs.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/hardware_todo.md",
+          "line": 14,
+          "observed": "Template lacks four-state status, configuration and bounded evidence fields.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "New findings can be filed under the wrong configuration or treat replay as field evidence.",
+      "resolution_status": "corrected",
+      "decision": "Require configuration, source revision, mode, evidence type and four-state status; distinguish V2 and legacy outputs without asserting a passed test.",
+      "changed_paths": [
+        ".github/ISSUE_TEMPLATE/validation_run.md",
+        ".github/ISSUE_TEMPLATE/hardware_todo.md"
+      ],
+      "remaining_action": "None for this document correction.",
+      "six_hats": {
+        "white": "Template expects only legacy run IDs and CSVs.; Template lacks four-state status, configuration and bounded evidence fields.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "New findings can be filed under the wrong configuration or treat replay as field evidence.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Require configuration, source revision, mode, evidence type and four-state status; distinguish V2 and legacy outputs without asserting a passed test. Residual: None for this document correction."
+      },
+      "priority_rank": 10
+    },
+    {
+      "id": "REV-010",
+      "severity": "medium",
+      "title": "Run schemas, serial fields and scorecard import are not cross-mapped",
+      "evidence": [
+        {
+          "path": "docs/data_dictionary.md",
+          "line": 8,
+          "observed": "Data dictionary does not distinguish the current schema.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "test_data/README.md",
+          "line": 11,
+          "observed": "Only the legacy archive shape is shown.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Users can pair the wrong logger/firmware, invent voltage or attitude fields, or expect a V2 scorecard summary that is not implemented.",
+      "resolution_status": "corrected",
+      "decision": "Publish a contract/output comparison and current artifact dictionary; show both archive layouts and explicitly keep V2 scorecard mapping manual/unimplemented.",
+      "changed_paths": [
+        "docs/data_dictionary.md",
+        "test_data/README.md",
+        "validation/scorecard/README.md"
+      ],
+      "remaining_action": "None for this document correction.",
+      "six_hats": {
+        "white": "Data dictionary does not distinguish the current schema.; Only the legacy archive shape is shown.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "Users can pair the wrong logger/firmware, invent voltage or attitude fields, or expect a V2 scorecard summary that is not implemented.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Publish a contract/output comparison and current artifact dictionary; show both archive layouts and explicitly keep V2 scorecard mapping manual/unimplemented. Residual: None for this document correction."
+      },
+      "priority_rank": 11
+    },
+    {
+      "id": "REV-011",
+      "severity": "medium",
+      "title": "Root dependency/setup instructions mix separate tools",
+      "evidence": [
+        {
+          "path": "requirements.txt",
+          "line": 1,
+          "observed": "Root dependency list mixes the dashboard and historical logger.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "README.md",
+          "line": 90,
+          "observed": "Top-level setup routes to the historical logger.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "software/v2/raspberry_pi/requirements.txt",
+          "line": 1,
+          "observed": "Current logger has its own dependency list.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Installing or running the old default can select the wrong acquisition stack; no single tested lock/environment is declared.",
+      "resolution_status": "document_corrected_environment_open",
+      "decision": "Add a task-based environment matrix using existing subsystem requirements; annotate the root list and leave dependency versions unchanged.",
+      "changed_paths": [
+        "README.md",
+        "docs/environment-setup.md",
+        "requirements.txt",
+        "software/raspberry_pi/README.md",
+        ".gitignore"
+      ],
+      "remaining_action": "A portable locked dependency environment and actual Pi/OS compatibility remain unverified.",
+      "six_hats": {
+        "white": "Root dependency list mixes the dashboard and historical logger.; Top-level setup routes to the historical logger.; Current logger has its own dependency list.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "Installing or running the old default can select the wrong acquisition stack; no single tested lock/environment is declared.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Add a task-based environment matrix using existing subsystem requirements; annotate the root list and leave dependency versions unchanged. Residual: A portable locked dependency environment and actual Pi/OS compatibility remain unverified."
+      },
+      "priority_rank": 12
+    },
+    {
+      "id": "REV-012",
+      "severity": "medium",
+      "title": "Dataset bootstrap and taxonomy are scaffold, not perception capability",
+      "evidence": [
+        {
+          "path": "scripts/download/bootstrap_datasets.py",
+          "line": 3,
+          "observed": "Bootstrap only creates directories; no downloader or ingestion is implemented.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "configs/classes.yaml",
+          "line": 1,
+          "observed": "Taxonomy is seven project labels with no dataset mapping definition.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Enabled datasets and class names can be read as downloaded, mapped, trained or integrated perception.",
+      "resolution_status": "corrected",
+      "decision": "Document dataset/config status, missing ingestion/mapping and the absence of a control/deployment interface. Preserve labels and source URLs.",
+      "changed_paths": [
+        "configs/README.md",
+        "scripts/README.md",
+        "app/README.md",
+        ".gitignore"
+      ],
+      "remaining_action": "None for this document correction.",
+      "six_hats": {
+        "white": "Bootstrap only creates directories; no downloader or ingestion is implemented.; Taxonomy is seven project labels with no dataset mapping definition.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "Enabled datasets and class names can be read as downloaded, mapped, trained or integrated perception.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Document dataset/config status, missing ingestion/mapping and the absence of a control/deployment interface. Preserve labels and source URLs. Residual: None for this document correction."
+      },
+      "priority_rank": 13
+    },
+    {
+      "id": "REV-013",
+      "severity": "medium",
+      "title": "Validation overview mixes historical and current revision claims",
+      "evidence": [
+        {
+          "path": "docs/v2/validation.md",
+          "line": 12,
+          "observed": "Old R1 counts appear as current beside later CAD extensions.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "docs/v2/validation.md",
+          "line": 19,
+          "observed": "The same guard statement appears twice.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "reports/v2/architecture-r2-validation.json",
+          "line": 2,
+          "observed": "Architecture has a later scoped receipt not indexed by the validation overview.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Old check counts can look current, and new document checks can be mistaken for hardware or deployment validation.",
+      "resolution_status": "corrected",
+      "decision": "Add revision-specific receipt indexing and correct duplicate/current wording; retain original receipts and their dates unchanged.",
+      "changed_paths": [
+        "docs/v2/validation.md",
+        "docs/v2/README.md",
+        "docs/repository_review/README.md"
+      ],
+      "remaining_action": "None for this document correction.",
+      "six_hats": {
+        "white": "Old R1 counts appear as current beside later CAD extensions.; The same guard statement appears twice.; Architecture has a later scoped receipt not indexed by the validation overview.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "Old check counts can look current, and new document checks can be mistaken for hardware or deployment validation.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Add revision-specific receipt indexing and correct duplicate/current wording; retain original receipts and their dates unchanged. Residual: None for this document correction."
+      },
+      "priority_rank": 14
+    },
+    {
+      "id": "REV-014",
+      "severity": "medium",
+      "title": "Regeneration commands can replace reviewed sources; PDF book is frozen R0",
+      "evidence": [
+        {
+          "path": "scripts/v2/build_review_book.py",
+          "line": 13,
+          "observed": "Acknowledged PDF regeneration still compiles stale R0 subsystem PDFs.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "scripts/v2/build_power.py",
+          "line": 83,
+          "observed": "Builder overwrites the native QET source and creates new UUIDs.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "scripts/v2/build_wiring.py",
+          "line": 9,
+          "observed": "Harness generation replaces native/register files.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "A routine rebuild can erase later manual source edits or repackage stale PDFs as current.",
+      "resolution_status": "document_corrected_export_open",
+      "decision": "Publish a generator input/output/overwrite matrix and mark the R0 PDF builder historical. Require source-diff review in an isolated checkout before replacing reviewed files; keep PDF hold active.",
+      "changed_paths": [
+        "scripts/README.md",
+        "docs/environment-setup.md"
+      ],
+      "remaining_action": "A future PDF workflow must regenerate/proof all current subsystem derivatives and update the hold manifest after owner content review.",
+      "six_hats": {
+        "white": "Acknowledged PDF regeneration still compiles stale R0 subsystem PDFs.; Builder overwrites the native QET source and creates new UUIDs.; Harness generation replaces native/register files.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "A routine rebuild can erase later manual source edits or repackage stale PDFs as current.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Publish a generator input/output/overwrite matrix and mark the R0 PDF builder historical. Require source-diff review in an isolated checkout before replacing reviewed files; keep PDF hold active. Residual: A future PDF workflow must regenerate/proof all current subsystem derivatives and update the hold manifest after owner content review."
+      },
+      "priority_rank": 15
+    },
+    {
+      "id": "REV-015",
+      "severity": "medium",
+      "title": "No cross-folder review record distinguishes last commit from actual review",
+      "evidence": [
+        {
+          "path": "AGENTS.md",
+          "line": 4,
+          "observed": "Repository guidance defines evidence standards but no per-folder freshness register existed.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "README.md",
+          "line": 68,
+          "observed": "Old folder map did not show mixed generations or review coverage.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "A recently changed directory can hide untouched old files, while old timestamps alone can falsely imply defects.",
+      "resolution_status": "corrected",
+      "decision": "Add a baseline file inventory, folder coverage table, ordered findings, dispositions and dated check receipt. Distinguish full legacy text review from current-reference/metadata-only inspection.",
+      "changed_paths": [
+        "docs/repository_review/baseline-inventory.json",
+        "docs/repository_review/folder-review.csv",
+        "docs/repository_review/gap-register.json",
+        "docs/repository_review/README.md",
+        "reports/repository_review/validation.json"
+      ],
+      "remaining_action": "None for this document correction.",
+      "six_hats": {
+        "white": "Repository guidance defines evidence standards but no per-folder freshness register existed.; Old folder map did not show mixed generations or review coverage.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "A recently changed directory can hide untouched old files, while old timestamps alone can falsely imply defects.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Add a baseline file inventory, folder coverage table, ordered findings, dispositions and dated check receipt. Distinguish full legacy text review from current-reference/metadata-only inspection. Residual: None for this document correction."
+      },
+      "priority_rank": 16
+    },
+    {
+      "id": "REV-020",
+      "severity": "medium",
+      "title": "GitHub sidebar capability wording exceeds the reconstruction evidence",
+      "evidence": [
+        {
+          "path": "README.md",
+          "line": 15,
+          "observed": "Current authoritative scope treats future capabilities as concepts, not installed features.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "The owner screenshot sidebar describes autonomous collection/sorting while current V2 evidence does not establish those capabilities.",
+      "resolution_status": "prepared_remote_setting_pending",
+      "decision": "Prepare concise replacement About text for the posting step; do not change remote repository settings in this local preparation pass.",
+      "changed_paths": [
+        "docs/repository_review/github-about.txt"
+      ],
+      "remaining_action": "Apply prepared About text in repository settings when publishing the reviewed package.",
+      "six_hats": {
+        "white": "Current authoritative scope treats future capabilities as concepts, not installed features.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "The owner screenshot sidebar describes autonomous collection/sorting while current V2 evidence does not establish those capabilities.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: leave autonomous wording; remove future ambition; describe current reconstruction and mark future perception/autonomy as unverified. Choose evidence-bounded wording.",
+        "blue": "Prepare concise replacement About text for the posting step; do not change remote repository settings in this local preparation pass. Residual: Apply prepared About text in repository settings when publishing the reviewed package."
+      },
+      "priority_rank": 17,
+      "additional_evidence": {
+        "type": "owner_supplied_screenshot",
+        "file_name": "codex-clipboard-4b584f78-6805-4921-8726-24198969d49b.png",
+        "claim_scope": "Visible GitHub main sidebar capability wording in owner screenshot; live About value not returned by connected metadata tool. Replacement is prepared, not applied."
+      }
+    },
+    {
+      "id": "REV-016",
+      "severity": "low",
+      "title": "Duplicate loaders and src package have no integration contract",
+      "evidence": [
+        {
+          "path": "src/junkomatic/config.py",
+          "line": 6,
+          "observed": "Small generic loaders are duplicated in app.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        },
+        {
+          "path": "src/junkomatic/reporting.py",
+          "line": 14,
+          "observed": "Malformed run files are silently skipped and no provenance/schema validation exists.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Future maintainers may assume a packaged, validated API or overlook skipped inputs.",
+      "resolution_status": "document_corrected_implementation_deferred",
+      "decision": "Document src as an uninstalled historical helper scaffold, duplicate consumers and missing schema/error-reporting work; do not refactor an unused API in this document pass.",
+      "changed_paths": [
+        "src/README.md",
+        "app/README.md"
+      ],
+      "remaining_action": "Package consolidation and robust run ingestion remain optional future implementation work.",
+      "six_hats": {
+        "white": "Small generic loaders are duplicated in app.; Malformed run files are silently skipped and no provenance/schema validation exists.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "Future maintainers may assume a packaged, validated API or overlook skipped inputs.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Document src as an uninstalled historical helper scaffold, duplicate consumers and missing schema/error-reporting work; do not refactor an unused API in this document pass. Residual: Package consolidation and robust run ingestion remain optional future implementation work."
+      },
+      "priority_rank": 18
+    },
+    {
+      "id": "REV-017",
+      "severity": "low",
+      "title": "Root page is dominated by historical setup and stage claims",
+      "evidence": [
+        {
+          "path": "README.md",
+          "line": 24,
+          "observed": "Most of the root page repeats an old operating guide, with broad stock/separation claims.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Readers may choose historical defaults despite the short current banner.",
+      "resolution_status": "corrected",
+      "decision": "Keep a concise current front door, environment/review links and full folder map; preserve the old root overview in a clearly historical reference.",
+      "changed_paths": [
+        "README.md",
+        "docs/history/v1a-overview.md",
+        "docs/README.md"
+      ],
+      "remaining_action": "None for this document correction.",
+      "six_hats": {
+        "white": "Most of the root page repeats an old operating guide, with broad stock/separation claims.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "Readers may choose historical defaults despite the short current banner.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Keep a concise current front door, environment/review links and full folder map; preserve the old root overview in a clearly historical reference. Residual: None for this document correction."
+      },
+      "priority_rank": 19
+    },
+    {
+      "id": "REV-018",
+      "severity": "low",
+      "title": "No automated review freshness/link workflow exists",
+      "evidence": [
+        {
+          "path": ".github/ISSUE_TEMPLATE/validation_run.md",
+          "line": 20,
+          "observed": "Git-tracked .github contents contain issue templates only, no CI workflows.",
+          "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d"
+        }
+      ],
+      "impact": "Documentation regressions can remain unnoticed until a manual review.",
+      "resolution_status": "manual_check_implemented_ci_deferred",
+      "decision": "Provide a runnable offline documentation/scope checker and receipt; describe automation as a future integration rather than claim CI is installed.",
+      "changed_paths": [
+        "scripts/repository_review/check_review.py",
+        "scripts/README.md"
+      ],
+      "remaining_action": "Optional future CI integration, with its own environment/tool choices, is not installed.",
+      "six_hats": {
+        "white": "Git-tracked .github contents contain issue templates only, no CI workflows.",
+        "red": "Anticipated reviewer concern: a reader could lose confidence or choose the wrong starting point.",
+        "black": "Documentation regressions can remain unnoticed until a manual review.",
+        "yellow": "Preserve useful prior work while making the current decision and evidence limits explicit.",
+        "green": "Options: silently replace history; leave competing instructions; preserve the original and add an explicit current route. Choose the last.",
+        "blue": "Provide a runnable offline documentation/scope checker and receipt; describe automation as a future integration rather than claim CI is installed. Residual: Optional future CI integration, with its own environment/tool choices, is not installed."
+      },
+      "priority_rank": 20
+    }
+  ]
+}

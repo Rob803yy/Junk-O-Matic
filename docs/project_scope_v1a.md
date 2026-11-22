@@ -1,3 +1,6 @@
+> REPO-R1 review 2026-11-22: Historical design intent only. Uno R3 supersedes the Nano references elsewhere; current hardware/drive modifications, data synchronization and power topology are not established by this scope.
+> Use the [current V2 evidence plan](v2/verification-plan.md) and [current engineering index](v2/README.md).
+
 # V1.0A - Instrumented RC Platform Scope
 
 ## Purpose

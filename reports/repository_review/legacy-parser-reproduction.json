@@ -1,0 +1,18 @@
+{
+  "test": "Feed a valid protocol-2 default frame into legacy V1A telemetry worker through an in-memory fake serial port",
+  "result": "Incompatible: counted one telemetry row with every measurement column blank",
+  "legacy_counted_rows": 1,
+  "blank_measurement_columns": [
+    "aux_battery_voltage",
+    "rail_12v",
+    "rail_5v",
+    "imu_roll_deg",
+    "imu_pitch_deg",
+    "imu_yaw_deg",
+    "enclosure_temp_c",
+    "estop",
+    "fault_code"
+  ],
+  "real_serial_opened": false,
+  "interpretation": "Legacy row count cannot establish V2 acquisition completeness. Preserve original code as historical; use V2 strict parser for the new contract."
+}

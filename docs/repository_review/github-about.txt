@@ -1,0 +1,1 @@
+LitterBuggy: engineering reconstruction of an SCX6-based RC litter hauler. Editable V2 CAD, power/wiring drafts and Uno/Pi acquisition code. Installed wiring, dimensions and deployment remain under verification; autonomous collection/sorting are future concepts.

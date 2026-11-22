@@ -1,5 +1,6 @@
 # Python
 .venv/
+.venv-*/
 venv/
 env/
 __pycache__/
@@ -24,6 +25,7 @@ test_data/*
 !test_data/.gitkeep
 data/raw/
 data/interim/
+data/external/
 logs/
 *.log
 *.mp4
@@ -42,6 +44,7 @@ logs/
 # Keep generated reports intentional.
 reports/tmp/
 reports/raw/
+reports/local/
 
 # OS and editor files
 .DS_Store

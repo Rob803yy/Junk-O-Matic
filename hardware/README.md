@@ -1,13 +1,18 @@
-# Hardware
+# Hardware documentation / current V2 and historical placeholders
 
-Hardware documentation for Junk-O-Matic V1.0A.
+Use [hardware/v2](v2/) for the current engineering drafts and
+[the engineering index](../docs/v2/README.md) for review order.
 
-V1.0A is an instrumented RC platform. The SCX6 RC system remains the only drive-control authority, and the Raspberry Pi only records data and evidence.
+| Source | Current material |
+| --- | --- |
+| [Architecture](v2/architecture/README.md) | ARCH-R2 system/power/data diagrams; R1 digital connectivity |
+| [Electrical](v2/electrical/README.md) | Three-sheet QElectroTech draft; all nets untraced |
+| [Wiring](v2/wiring/README.md) | Two WireViz harnesses, functional registers and diagram BOMs |
+| [Mechanical](v2/mechanical/README.md) | CAD-R3 native files, STEP and previews; numeric dimensions unmeasured |
+| [Master BOM](../docs/v2/bom.json) | Normalized evidence/status/quantity record; editable workbook in reconciliation |
 
-## Contents
-
-- `wiring_diagrams/` - wiring diagram placeholders
-- `bom/` - bill of materials placeholders
-- `enclosure_layout/` - Pi, Arduino, buck converter, fuse, switch, and cable layout placeholders
-
-Keep hardware notes practical and testable. Mark only hardware-specific unknowns with TODO.
+The older `bom`, `wiring_diagrams` and `enclosure_layout` folders are retained
+entry points, not competing build definitions. Uno R3 is owner-confirmed; Pi model,
+sensor fitting, installed wiring and operating ratings remain open. No physical
+control isolation, payload or assembled ingress rating is established. PDFs remain
+held; use current native/SVG/PNG/STEP sources.

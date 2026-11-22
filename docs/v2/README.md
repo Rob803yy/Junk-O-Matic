@@ -6,6 +6,10 @@ R1 reconciles the supplied V1/V2/V3 references on 2026-11-21. Start with the
 **Elegoo Uno R3 is owner-confirmed.** Pi 3B/Pi 4 and the current range sensor
 remain unresolved. Version allocation is proposed pending owner confirmation.
 
+[Repository alignment review](../repository_review/README.md) covers the March/May
+legacy folders; [next evidence plan](verification-plan.md) and
+[environment setup](../environment-setup.md) distinguish current versus historical paths.
+
 ## Review in requested order
 
 | Stage | Editable source | Current review material |

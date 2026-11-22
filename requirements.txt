@@ -1,3 +1,6 @@
+# Historical dashboard + V1A helper dependencies. Current V2 logger and drafting
+# use separate requirement files; see docs/environment-setup.md. No version update
+# or locked portable environment is implied by this REPO-R1 clarification.
 streamlit>=1.32.0
 pandas>=2.2.0
 PyYAML>=6.0.1

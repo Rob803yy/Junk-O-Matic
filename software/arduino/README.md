@@ -1,34 +1,17 @@
-# Arduino Telemetry
+# Historical V1A Arduino stub / not current V2 acquisition
 
-The Arduino publishes JSON-lines telemetry over USB serial for the Raspberry Pi logger.
+`telemetry_logger_stub/telemetry_logger_stub.ino` is preserved unchanged. It emits
+fixed example battery/rail voltages, roll/pitch/yaw, temperature and fault fields
+at a 1000ms target interval. **Those constants are not physical measurements,
+calibration or E-stop evidence.** Do not use its rows to pass validation gates.
 
-In V1.0A, Arduino telemetry is observational. It does not command steering, throttle, ESC, arming, deadman, or vehicle motion.
+For current work use [Uno R3 acquisition source](../v2/arduino/README.md) and
+[protocol 2](../../docs/v2/serial_protocol.md). The current sketch starts with
+drivers/feedback disabled and null measurements. Its physical pin map, supplies
+and deployment remain open; it is separate from the unrecovered running sketch.
 
-## Expected JSON-Line Format
-
-```json
-{
-  "aux_battery_voltage": 23.7,
-  "rail_12v": 12.1,
-  "rail_5v": 5.05,
-  "imu_roll_deg": 1.2,
-  "imu_pitch_deg": -0.7,
-  "imu_yaw_deg": 85.4,
-  "enclosure_temp_c": 34.2,
-  "estop": false,
-  "fault_code": 0
-}
-```
-
-## Minimum Format
-
-```json
-{
-  "aux_battery_voltage": 23.7,
-  "rail_12v": 12.1,
-  "rail_5v": 5.05,
-  "enclosure_temp_c": 34.2
-}
-```
-
-Replace the stub constants with calibrated sensor reads before using telemetry for validation gates.
+The legacy wire contract is incompatible with V2. See the
+[contract/output comparison](../../docs/data_dictionary.md). The
+[former readme and examples](../../docs/history/v1a-arduino-readme.md) are retained
+for history, not an upload instruction. Preserve the existing device program
+before any replacement; no upload or hardware verification occurred in this review.

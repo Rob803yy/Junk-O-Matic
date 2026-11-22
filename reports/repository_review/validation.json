@@ -1,0 +1,69 @@
+{
+  "revision": "REPO-R1",
+  "review_date": "2026-11-22",
+  "baseline_commit": "adb9280f30513fd852968d12e9bc6479bd2e188d",
+  "baseline_files_excluding_license": 193,
+  "legacy_files_reviewed": 36,
+  "findings_by_severity": {
+    "high": 6,
+    "medium": 11,
+    "low": 3
+  },
+  "checks": [
+    {
+      "name": "Prioritized register, all six hats, baseline citations and deliverable paths",
+      "result": "passed",
+      "findings": 20
+    },
+    {
+      "name": "Revised/new Markdown local file links",
+      "result": "passed",
+      "links_checked": 177,
+      "documents_checked": 36
+    },
+    {
+      "name": "Preserved engineering/legacy/example sources (Git normalized blobs)",
+      "result": "passed",
+      "files": 138
+    },
+    {
+      "name": "Held PDF byte hashes",
+      "result": "passed",
+      "files": 13
+    },
+    {
+      "name": "Historical page bodies and root dependency declarations retained",
+      "result": "passed"
+    },
+    {
+      "name": "Changed Python AST syntax",
+      "result": "passed",
+      "files": [
+        "app/streamlit_app.py",
+        "scripts/convert/build_inventory.py",
+        "scripts/repository_review/check_review.py",
+        "scripts/repository_review/tests/test_inventory.py"
+      ]
+    },
+    {
+      "name": "Inventory behavior unit receipt and source correspondence",
+      "result": "passed",
+      "tests": 8
+    },
+    {
+      "name": "Legacy parser mismatch reproduced using fake serial only",
+      "result": "passed"
+    },
+    {
+      "name": "Local evidence/dataset/output/venv ignore rules",
+      "result": "passed"
+    }
+  ],
+  "limits": [
+    "License content/interpretation excluded as requested.",
+    "No physical test, serial hardware contact, software upload, Pi deployment, native-app or Streamlit/browser run.",
+    "External URL availability, dependency security/locking and full historical runtime hardening not tested.",
+    "Original engineering receipts remain historical; unrelated firmware/CAD test suites not rerun.",
+    "Prepared locally for posting; remote settings/branches/PRs unchanged by this review."
+  ]
+}
