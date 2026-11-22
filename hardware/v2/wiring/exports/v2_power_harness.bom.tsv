@@ -1,0 +1,18 @@
+Id	Description	Qty	Unit	Designators
+1	Cable, 2 wires	0	m	H01, H02, H03, H04, H05, H06, H07, H08, H09
+2	Connector, 12V converter input / DRAFT - physical connector TBD, 2 pins	1		U12_IN
+3	Connector, 12V converter output / DRAFT - physical connector TBD, 2 pins	1		U12_OUT
+4	Connector, 3S propulsion pack / DRAFT - physical connector TBD, 2 pins	1		B1
+5	Connector, 5V converter input / DRAFT - physical connector TBD, 2 pins	1		U5_IN
+6	Connector, 5V converter output / DRAFT - physical connector TBD, 2 pins	1		U5_OUT
+7	Connector, Adapter contacts / DRAFT - physical connector TBD, 2 pins	1		A1_IN
+8	Connector, Adapter leads / DRAFT - physical connector TBD, 2 pins	1		A1_OUT
+9	Connector, Auxiliary distribution / DRAFT - physical connector TBD, 2 pins	1		XT1
+10	Connector, ESC input / DRAFT - physical connector TBD, 2 pins	1		ESC1
+11	Connector, Kobalt pack / DRAFT - physical connector TBD, 2 pins	1		B2
+12	Connector, Lighting supply TBD / DRAFT - physical connector TBD, 2 pins	1		L1
+13	Connector, Pi power entry TBD / DRAFT - physical connector TBD, 2 pins	1		PI1
+14	Connector, Protection input / DRAFT - physical connector TBD, 2 pins	1		F1_IN
+15	Connector, Protection output / DRAFT - physical connector TBD, 2 pins	1		F1_OUT
+16	Connector, Switch input / DRAFT - physical connector TBD, 2 pins	1		S1_IN
+17	Connector, Switch output / DRAFT - physical connector TBD, 2 pins	1		S1_OUT

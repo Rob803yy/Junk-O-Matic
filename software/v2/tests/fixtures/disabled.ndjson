@@ -1,0 +1,2 @@
+{"v":2,"type":"telemetry","fw":"v2-r0","seq":0,"ms":100,"imu_raw":null,"echo_us":null,"distance_mm":null,"flags":5}
+{"v":2,"type":"telemetry","fw":"v2-r0","seq":1,"ms":200,"imu_raw":null,"echo_us":null,"distance_mm":null,"flags":5}

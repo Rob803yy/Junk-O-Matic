@@ -1,0 +1,228 @@
+metadata:
+  title: v2_power_harness / DRAFT R0 - NOT AS BUILT
+  revision: R0
+  notes: All links proposed or untraced. Wire gauge, colour, length and physical pin
+    numbering TBD.
+connectors:
+  B2:
+    type: Kobalt pack / DRAFT - physical connector TBD
+    pins: &id001
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id001
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  A1_IN:
+    type: Adapter contacts / DRAFT - physical connector TBD
+    pins: &id002
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id002
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  A1_OUT:
+    type: Adapter leads / DRAFT - physical connector TBD
+    pins: &id003
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id003
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  F1_IN:
+    type: Protection input / DRAFT - physical connector TBD
+    pins: &id004
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id004
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  F1_OUT:
+    type: Protection output / DRAFT - physical connector TBD
+    pins: &id005
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id005
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  S1_IN:
+    type: Switch input / DRAFT - physical connector TBD
+    pins: &id006
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id006
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  S1_OUT:
+    type: Switch output / DRAFT - physical connector TBD
+    pins: &id007
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id007
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  XT1:
+    type: Auxiliary distribution / DRAFT - physical connector TBD
+    pins: &id008
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id008
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  U5_IN:
+    type: 5V converter input / DRAFT - physical connector TBD
+    pins: &id009
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id009
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  U5_OUT:
+    type: 5V converter output / DRAFT - physical connector TBD
+    pins: &id010
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id010
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  PI1:
+    type: Pi power entry TBD / DRAFT - physical connector TBD
+    pins: &id011
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id011
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  U12_IN:
+    type: 12V converter input / DRAFT - physical connector TBD
+    pins: &id012
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id012
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  U12_OUT:
+    type: 12V converter output / DRAFT - physical connector TBD
+    pins: &id013
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id013
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  L1:
+    type: Lighting supply TBD / DRAFT - physical connector TBD
+    pins: &id014
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id014
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  B1:
+    type: 3S propulsion pack / DRAFT - physical connector TBD
+    pins: &id015
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id015
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+  ESC1:
+    type: ESC input / DRAFT - physical connector TBD
+    pins: &id016
+    - POS_TBD
+    - RET_TBD
+    pinlabels: *id016
+    notes: Logical functions only; physical order/view, part number and ratings TBD.
+cables:
+  H01:
+    wirecount: 2
+    notes: H01 proposed trace; no colour, gauge or length specified.
+  H02:
+    wirecount: 2
+    notes: H02 proposed trace; no colour, gauge or length specified.
+  H03:
+    wirecount: 2
+    notes: H03 proposed trace; no colour, gauge or length specified.
+  H04:
+    wirecount: 2
+    notes: H04 proposed trace; no colour, gauge or length specified.
+  H05:
+    wirecount: 2
+    notes: H05 proposed trace; no colour, gauge or length specified.
+  H06:
+    wirecount: 2
+    notes: H06 proposed trace; no colour, gauge or length specified.
+  H07:
+    wirecount: 2
+    notes: H07 proposed trace; no colour, gauge or length specified.
+  H08:
+    wirecount: 2
+    notes: H08 proposed trace; no colour, gauge or length specified.
+  H09:
+    wirecount: 2
+    notes: H09 proposed trace; no colour, gauge or length specified.
+connections:
+- - B2:
+    - POS_TBD
+    - RET_TBD
+  - H01:
+    - 1
+    - 2
+  - A1_IN:
+    - POS_TBD
+    - RET_TBD
+- - A1_OUT:
+    - POS_TBD
+    - RET_TBD
+  - H02:
+    - 1
+    - 2
+  - F1_IN:
+    - POS_TBD
+    - RET_TBD
+- - F1_OUT:
+    - POS_TBD
+    - RET_TBD
+  - H03:
+    - 1
+    - 2
+  - S1_IN:
+    - POS_TBD
+    - RET_TBD
+- - S1_OUT:
+    - POS_TBD
+    - RET_TBD
+  - H04:
+    - 1
+    - 2
+  - XT1:
+    - POS_TBD
+    - RET_TBD
+- - XT1:
+    - POS_TBD
+    - RET_TBD
+  - H05:
+    - 1
+    - 2
+  - U5_IN:
+    - POS_TBD
+    - RET_TBD
+- - U5_OUT:
+    - POS_TBD
+    - RET_TBD
+  - H06:
+    - 1
+    - 2
+  - PI1:
+    - POS_TBD
+    - RET_TBD
+- - XT1:
+    - POS_TBD
+    - RET_TBD
+  - H07:
+    - 1
+    - 2
+  - U12_IN:
+    - POS_TBD
+    - RET_TBD
+- - U12_OUT:
+    - POS_TBD
+    - RET_TBD
+  - H08:
+    - 1
+    - 2
+  - L1:
+    - POS_TBD
+    - RET_TBD
+- - B1:
+    - POS_TBD
+    - RET_TBD
+  - H09:
+    - 1
+    - 2
+  - ESC1:
+    - POS_TBD
+    - RET_TBD

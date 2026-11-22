@@ -56,3 +56,16 @@ desktop.ini
 *.hex
 *.elf
 *.bin
+
+# V2 local acquisition / native editor scratch
+runs/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.raw
+*.FCBak
+*.FCStd1
+*.qet~
+*.qet.lck
+*.tmp
