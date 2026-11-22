@@ -1,56 +1,148 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000"><rect width="1500" height="1000" fill="#f5f7fa"/>
-<text x="40" y="48" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#243347">LitterBuggy V2 / power domains</text>
-<text x="40" y="78" font-family="Arial,sans-serif" font-size="15" font-weight="400" fill="#243347">Intended domain separation; all source paths and power entries require physical trace</text>
-<polyline points="350,230.0 455.0,230.0 455.0,230.0 560,230.0" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="358" y="222.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">+ and return: trace</text>
-<polyline points="900,230.0 1000.0,230.0 1000.0,230.0 1100,230.0" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="908" y="222.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">power / signals TBD</text>
-<polyline points="350,540.0 455.0,540.0 455.0,540.0 560,540.0" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="358" y="532.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">polarity: verify</text>
-<polyline points="900,540.0 1000.0,540.0 1000.0,540.0 1100,540.0" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="908" y="532.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">feed / returns TBD</text>
-<polyline points="1275.0,610 1275.0,610 1275.0,750 1275.0,750" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="1283.0" y="672.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">branch feeds TBD</text>
-<rect x="40" y="160" width="310" height="140" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="54" y="186" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">B1 / propulsion pack</text>
-<text x="54" y="212" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">3S named in owner scope</text>
-<text x="54" y="232" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Chemistry / connector TBD</text>
-<text x="54" y="288" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<rect x="560" y="160" width="340" height="140" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="574" y="186" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">ESC + BEC / receiver</text>
-<text x="574" y="212" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">BEC topology unverified</text>
-<text x="574" y="232" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Steering, shift and motor</text>
-<text x="574" y="288" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<rect x="1100" y="160" width="350" height="140" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="1114" y="186" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">Propulsion loads</text>
-<text x="1114" y="212" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Motor + servos</text>
-<text x="1114" y="232" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No Pi control in draft</text>
-<text x="1114" y="288" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<rect x="40" y="470" width="310" height="140" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="54" y="496" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">B2 / auxiliary pack</text>
-<text x="54" y="522" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Kobalt 24V designation</text>
-<text x="54" y="542" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Actual range / cutoff TBD</text>
-<text x="54" y="598" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<rect x="560" y="470" width="340" height="140" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="574" y="496" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">Adapter + protection</text>
-<text x="574" y="522" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Dock / fuse / switch</text>
-<text x="574" y="542" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Installed order and rating TBD</text>
-<text x="574" y="598" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<rect x="1100" y="470" width="350" height="140" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="1114" y="496" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">DC/DC converters</text>
-<text x="1114" y="522" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">5V / 12V from repository</text>
-<text x="1114" y="542" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Input ratings / settings TBD</text>
-<text x="1114" y="598" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<rect x="1100" y="750" width="350" height="130" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="1114" y="776" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">Auxiliary loads</text>
-<text x="1114" y="802" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Pi / Uno / sensors / lights</text>
-<text x="1114" y="822" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">USB backfeed review required</text>
-<text x="1114" y="868" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<text x="40" y="740" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">U5: source-listed 5V 10A; U5A: separate source-listed 5V 3A.</text>
-<text x="40" y="761" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">U5A routing is OPEN; outputs are not paralleled.</text>
-<text x="40" y="782" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">12V converter is a proposal; fitted lighting voltage unknown.</text>
-<text x="40" y="803" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">KB624-03 is a battery designation, not a fuse/switch.</text>
-<text x="40" y="824" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No shared ground, isolation or selected fuse value is assumed.</text>
-<text x="40" y="845" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Detailed review drawing: ../electrical/v2_electrical.qet</text>
-<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R1 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1660" viewBox="0 0 1900 1660" role="img">
+<title>02 / LitterBuggy V2 — power domains</title><desc>Functional allocation only | every electrical path still requires trace, rating review and physical verification. ARCH-R2; see README for scope.</desc>
+<rect width="1900" height="1660" fill="#f8fafc"/>
+<rect x="40" y="170" width="1820" height="330" rx="12" fill="#edf2f7" stroke="#d4dde7"/>
+<rect x="40" y="615" width="1820" height="770" rx="12" fill="#edf2f7" stroke="#d4dde7"/>
+<rect x="40" y="1420" width="1820" height="170" rx="12" fill="#fff7ed" stroke="#d4dde7"/>
+<polyline id="PWR-E01" points="440,342.5 710,342.5" fill="none" stroke="#a45b00" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="710,342.5 699.0,337.5 699.0,347.5" fill="#a45b00"/>
+<polyline id="PWR-E02" points="1180,342.5 1420,342.5" fill="none" stroke="#a45b00" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1420,342.5 1409.0,337.5 1409.0,347.5" fill="#a45b00"/>
+<polyline id="PWR-E03" points="440,957.5 525,957.5 525,1005 610,1005.0" fill="none" stroke="#a45b00" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="610,1005.0 599.0,1000.0 599.0,1010.0" fill="#a45b00"/>
+<polyline id="PWR-E04" points="980,793.0 1040,793 1040,792.5 1100,792.5" fill="none" stroke="#a45b00" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1100,792.5 1089.0,787.5 1089.0,797.5" fill="#a45b00"/>
+<polyline id="PWR-E05" points="980,1005.0 1040,1005 1040,1022.5 1100,1022.5" fill="none" stroke="#a45b00" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1100,1022.5 1089.0,1017.5 1089.0,1027.5" fill="#a45b00"/>
+<polyline id="PWR-E06" points="980,1217.0 1040,1217 1040,1252.5 1100,1252.5" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1100,1252.5 1089.0,1247.5 1089.0,1257.5" fill="#7251a3"/>
+<polyline id="PWR-E07" points="1430,792.5 1550,792.5" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1550,792.5 1539.0,787.5 1539.0,797.5" fill="#7251a3"/>
+<polyline id="PWR-E08" points="1430,1252.5 1550,1252.5" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1550,1252.5 1539.0,1247.5 1539.0,1257.5" fill="#7251a3"/>
+<polyline id="PWR-E09" points="1690.0,885 1690.0,965" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1690.0,965 1695.0,954.0 1685.0,954.0" fill="#7251a3"/>
+<rect id="PWR-B1" x="70" y="245" width="370" height="195" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>Owner scope + historical source | REC-012, BOM</title></rect>
+<rect id="PWR-RC" x="710" y="245" width="470" height="195" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>Functional grouping; not verified topology | REC-013, REC-010, BOM</title></rect>
+<rect id="PWR-DRIVE" x="1420" y="245" width="410" height="195" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>Stock reference + untraced current drive | REC-013, FW, LOGGER</title></rect>
+<rect id="PWR-B2A1" x="70" y="780" width="370" height="355" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>REC-004/005; source quantity != installed | REC-004, REC-005, BOM, REC-006</title></rect>
+<rect id="PWR-PROTECT" x="610" y="740" width="370" height="530" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>Architecture hypotheses; no chosen ratings | REC-009, REC-005, BOM</title></rect>
+<rect id="PWR-U5" x="1100" y="700" width="330" height="185" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>S04 V1.0 C32; REC-008 | REC-008, BOM</title></rect>
+<rect id="PWR-U5A" x="1100" y="930" width="330" height="185" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>S04 V1.0 C33; REC-007 | REC-007, BOM</title></rect>
+<rect id="PWR-U12" x="1100" y="1160" width="330" height="185" rx="8" fill="white" stroke="#7251a3" stroke-width="2"><title>S04 V2.0 C10; REC-008 | REC-008, BOM</title></rect>
+<rect id="PWR-PI1" x="1550" y="700" width="280" height="185" rx="8" fill="white" stroke="#b33a3a" stroke-width="2"><title>REC-003 / REC-011 | REC-003, REC-011</title></rect>
+<rect id="PWR-UNO1" x="1550" y="965" width="280" height="160" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>Owner Uno identity != power path | REC-011, OWNER-UNO</title></rect>
+<rect id="PWR-LIGHTS" x="1550" y="1160" width="280" height="185" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>CAD-P01/P02; REC-008 | CAD-P01, CAD-P02, REC-008</title></rect>
+<text id="title" x="40" y="56" font-family="Arial,DejaVu Sans,sans-serif" font-size="30" font-weight="700" fill="#243347">02 / LitterBuggy V2 — power domains</text>
+<text id="subtitle" x="40" y="91" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Functional allocation only | every electrical path still requires trace, rating review and physical verification</text>
+<text id="legend" x="40" y="128" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#243347">CONFIRMED = stated scope only   |   CONFLICTING = evidence disagrees   |   PROPOSED = intent   |   UNKNOWN = insufficient evidence</text>
+<text id="traction-title" x="62" y="205" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="700" fill="#243347">B1 / RC PROPULSION DOMAIN — CURRENT 3S SCOPE; NO NEW MOTION-CONTROL INTERFACE</text>
+<text id="auxiliary-title" x="62" y="650" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="700" fill="#243347">B2 / AUXILIARY DOMAIN — SOURCE-LISTED CONVERTERS; OUTPUT ASSIGNMENTS NOT VERIFIED</text>
+<text id="power-review-title" x="62" y="1455" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="700" fill="#243347">NEXT PHYSICAL CHECKS / RETAIN UNKNOWN VALUES UNTIL MEASURED OR TRACED</text>
+<text id="PWR-B1-title" x="84" y="276" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">B1 / propulsion pack</text>
+<text id="PWR-B1-line-0" x="84" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">3S is owner project scope.</text>
+<text id="PWR-B1-line-1" x="84" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Model / chemistry / label unknown.</text>
+<text id="PWR-B1-line-2" x="84" y="355" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Connector, polarity, cutoff and</text>
+<text id="PWR-B1-line-3" x="84" y="378" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">installed protection unverified.</text>
+<text id="PWR-B1-basis" x="84" y="409" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Owner scope + historical source</text>
+<text id="PWR-B1-status" x="84" y="428" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  PWR-B1</text>
+<text id="PWR-RC-title" x="724" y="276" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">ESC / BEC / receiver functions</text>
+<text id="PWR-RC-line-0" x="724" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Installed models and BEC routing open.</text>
+<text id="PWR-RC-line-1" x="724" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Receiver / manual RC path to be traced.</text>
+<text id="PWR-RC-line-2" x="724" y="355" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No receiver-channel / servo pin map set.</text>
+<text id="PWR-RC-line-3" x="724" y="378" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Manual override behavior not tested.</text>
+<text id="PWR-RC-basis" x="724" y="409" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Functional grouping; not verified topology</text>
+<text id="PWR-RC-status" x="724" y="428" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  PWR-RC</text>
+<text id="PWR-DRIVE-title" x="1434" y="276" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">Motor / steering / shift functions</text>
+<text id="PWR-DRIVE-line-0" x="1434" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Stock SCX6: 4WD and two-speed.</text>
+<text id="PWR-DRIVE-line-1" x="1434" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Installed modifications unverified.</text>
+<text id="PWR-DRIVE-line-2" x="1434" y="355" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Motor power vs servo/BEC feeds open.</text>
+<text id="PWR-DRIVE-line-3" x="1434" y="378" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No Pi / Uno actuation link in draft.</text>
+<text id="PWR-DRIVE-basis" x="1434" y="409" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Stock reference + untraced current drive</text>
+<text id="PWR-DRIVE-status" x="1434" y="428" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  PWR-DRIVE</text>
+<text id="PWR-B2A1-title" x="84" y="811" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">B2 / A1 pack + adapter</text>
+<text id="PWR-B2A1-line-0" x="84" y="844" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Kobalt 24V family in project scope.</text>
+<text id="PWR-B2A1-line-1" x="84" y="867" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Exact pack / capacity / range open.</text>
+<text id="PWR-B2A1-line-2" x="84" y="890" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Historical blue KBT adapter.</text>
+<text id="PWR-B2A1-line-3" x="84" y="913" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Installed adapter count unknown.</text>
+<text id="PWR-B2A1-line-4" x="84" y="936" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Dock contacts / polarity untraced.</text>
+<text id="PWR-B2A1-line-5" x="84" y="959" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Cutoff / current rating unverified.</text>
+<text id="PWR-B2A1-line-6" x="84" y="982" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">KB624-03 is a battery model,</text>
+<text id="PWR-B2A1-line-7" x="84" y="1005" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">not a switch identification.</text>
+<text id="PWR-B2A1-basis" x="84" y="1104" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">REC-004/005; source quantity != installed</text>
+<text id="PWR-B2A1-status" x="84" y="1123" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  PWR-B2A1</text>
+<text id="PWR-PROTECT-title" x="624" y="771" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">F1 / S1 / FB1 functions</text>
+<text id="PWR-PROTECT-line-0" x="624" y="804" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">F1 fuse + S1 switch: proposals.</text>
+<text id="PWR-PROTECT-line-1" x="624" y="827" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">FB1 fuse block: source-listed.</text>
+<text id="PWR-PROTECT-line-2" x="624" y="850" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Fitted state and physical order open.</text>
+<text id="PWR-PROTECT-line-3" x="624" y="873" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">This box specifies no series order</text>
+<text id="PWR-PROTECT-line-4" x="624" y="896" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">or branch fuse hierarchy.</text>
+<text id="PWR-PROTECT-line-5" x="624" y="919" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347"></text>
+<text id="PWR-PROTECT-line-6" x="624" y="942" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Fuse values / wire gauge / contacts</text>
+<text id="PWR-PROTECT-line-7" x="624" y="965" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">and connector orientation unknown.</text>
+<text id="PWR-PROTECT-line-8" x="624" y="988" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">5/10/15A kit values are not choices.</text>
+<text id="PWR-PROTECT-line-9" x="624" y="1011" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No selected 30A auxiliary rating.</text>
+<text id="PWR-PROTECT-line-10" x="624" y="1034" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No cutoff / hot-swap claim adopted.</text>
+<text id="PWR-PROTECT-basis" x="624" y="1239" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Architecture hypotheses; no chosen ratings</text>
+<text id="PWR-PROTECT-status" x="624" y="1258" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  PWR-PROTECT</text>
+<text id="PWR-U5-title" x="1114" y="731" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">U5 / primary converter</text>
+<text id="PWR-U5-line-0" x="1114" y="764" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Source: 24V to 5V 10A.</text>
+<text id="PWR-U5-line-1" x="1114" y="787" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Model / input range / setting open.</text>
+<text id="PWR-U5-line-2" x="1114" y="810" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Installed loads untraced.</text>
+<text id="PWR-U5-line-3" x="1114" y="833" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">10A is not measured capability.</text>
+<text id="PWR-U5-basis" x="1114" y="854" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">S04 V1.0 C32; REC-008</text>
+<text id="PWR-U5-status" x="1114" y="873" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  PWR-U5</text>
+<text id="PWR-U5A-title" x="1114" y="961" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">U5A / separate converter</text>
+<text id="PWR-U5A-line-0" x="1114" y="994" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Source: 24V to 5V 3A.</text>
+<text id="PWR-U5A-line-1" x="1114" y="1017" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Fitted state / setting open.</text>
+<text id="PWR-U5A-line-2" x="1114" y="1040" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">OUTPUT OPEN: no assigned load.</text>
+<text id="PWR-U5A-line-3" x="1114" y="1063" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No parallel / backup function set.</text>
+<text id="PWR-U5A-basis" x="1114" y="1084" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">S04 V1.0 C33; REC-007</text>
+<text id="PWR-U5A-status" x="1114" y="1103" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  PWR-U5A</text>
+<text id="PWR-U12-title" x="1114" y="1191" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#7251a3">U12 / proposed converter</text>
+<text id="PWR-U12-line-0" x="1114" y="1224" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Source proposal: 12V 5A+.</text>
+<text id="PWR-U12-line-1" x="1114" y="1247" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Model / input range unselected.</text>
+<text id="PWR-U12-line-2" x="1114" y="1270" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Lighting voltage not established.</text>
+<text id="PWR-U12-line-3" x="1114" y="1293" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Fitted state / routing unknown.</text>
+<text id="PWR-U12-basis" x="1114" y="1314" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">S04 V2.0 C10; REC-008</text>
+<text id="PWR-U12-status" x="1114" y="1333" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#7251a3">PROPOSED  /  PWR-U12</text>
+<text id="PWR-PI1-title" x="1564" y="731" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#b33a3a">PI1 / power entry OPEN</text>
+<text id="PWR-PI1-line-0" x="1564" y="764" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Pi 3B vs Pi 4 conflict.</text>
+<text id="PWR-PI1-line-1" x="1564" y="787" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Connector / supply untraced.</text>
+<text id="PWR-PI1-line-2" x="1564" y="810" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Proposed U5 allocation only.</text>
+<text id="PWR-PI1-line-3" x="1564" y="833" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">USB 5V coexistence open.</text>
+<text id="PWR-PI1-basis" x="1564" y="854" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">REC-003 / REC-011</text>
+<text id="PWR-PI1-status" x="1564" y="873" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#b33a3a">CONFLICTING  /  PWR-PI1</text>
+<text id="PWR-UNO1-title" x="1564" y="996" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">UNO1 / supply OPEN</text>
+<text id="PWR-UNO1-line-0" x="1564" y="1029" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No external 5V feed selected.</text>
+<text id="PWR-UNO1-line-1" x="1564" y="1052" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">USB power path unverified.</text>
+<text id="PWR-UNO1-line-2" x="1564" y="1075" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Sensor supply branches open.</text>
+<text id="PWR-UNO1-basis" x="1564" y="1094" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Owner Uno identity != power path</text>
+<text id="PWR-UNO1-status" x="1564" y="1113" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  PWR-UNO1</text>
+<text id="PWR-LIGHTS-title" x="1564" y="1191" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">Lights / other loads</text>
+<text id="PWR-LIGHTS-line-0" x="1564" y="1224" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Lights visible in photos.</text>
+<text id="PWR-LIGHTS-line-1" x="1564" y="1247" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Voltage / feed untraced.</text>
+<text id="PWR-LIGHTS-line-2" x="1564" y="1270" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">U12 assignment proposed.</text>
+<text id="PWR-LIGHTS-line-3" x="1564" y="1293" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No 12V fitting claim.</text>
+<text id="PWR-LIGHTS-basis" x="1564" y="1314" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">CAD-P01/P02; REC-008</text>
+<text id="PWR-LIGHTS-status" x="1564" y="1333" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  PWR-LIGHTS</text>
+<text id="domain-separation-0" x="70" y="564" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" font-weight="700" fill="#334155">NO COMMON 0V LINK IS ASSERTED BETWEEN B1 AND B2. Separate source boxes do not establish galvanic isolation.</text>
+<text id="domain-separation-1" x="70" y="591" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" font-weight="700" fill="#334155">All power arrows mean intended source-to-load allocation (+ and return unresolved), not a wiring or energization instruction.</text>
+<text id="check-power-left-0" x="70" y="1500" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">PWR-O01  Read pack / dock / converter labels; trace both conductors and protection order.</text>
+<text id="check-power-left-1" x="70" y="1526" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">PWR-O02  Confirm Pi power entry and Uno USB/external-power coexistence before choosing a route.</text>
+<text id="check-power-right-0" x="1060" y="1500" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">PWR-O03  Establish each light / sensor supply and converter load.</text>
+<text id="check-power-right-1" x="1060" y="1526" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#334155">PWR-O04  Resolve returns / grounding; verify ratings under load.</text>
+<text id="footer" x="40" y="1631" font-family="Arial,DejaVu Sans,sans-serif" font-size="14" font-weight="400" fill="#243347">ARCH-R2 | 2026-11-22 | Editable source + SVG/PNG | PDFs HELD | Scope and evidence: architecture-model.json / README.md</text>
+<rect x="520.5" y="311.5" width="109" height="24" fill="#f8fafc"/>
+<text id="PWR-E01-label" x="527.5" y="326.5" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#a45b00">+ / return: trace</text>
+<rect x="1226.5" y="311.5" width="147" height="24" fill="#f8fafc"/>
+<text id="PWR-E02-label" x="1233.5" y="326.5" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#a45b00">power / signals: trace</text>
+<rect x="503.0" y="950.25" width="44" height="24" fill="#f8fafc"/>
+<text id="PWR-E03-label" x="510.0" y="965.25" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#a45b00">trace</text>
+<rect x="1471.0" y="761.5" width="38" height="24" fill="#f8fafc"/>
+<text id="PWR-E07-label" x="1478.0" y="776.5" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#7251a3">5V?</text>
+<rect x="1467.5" y="1221.5" width="45" height="24" fill="#f8fafc"/>
+<text id="PWR-E08-label" x="1474.5" y="1236.5" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#7251a3">12V?</text>
+<rect x="1700.0" y="913.0" width="69" height="24" fill="#f8fafc"/>
+<text id="PWR-E09-label" x="1707.0" y="928.0" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#7251a3">USB 5V?</text>
 </svg>

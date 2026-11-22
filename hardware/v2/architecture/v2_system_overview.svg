@@ -1,73 +1,131 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000"><rect width="1500" height="1000" fill="#f5f7fa"/>
-<text x="40" y="48" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#243347">LitterBuggy V2 / system overview</text>
-<text x="40" y="78" font-family="Arial,sans-serif" font-size="15" font-weight="400" fill="#243347">Existing build reconstruction | component identities and interfaces have separate evidence status</text>
-<polyline points="380,215.0 470.0,215.0 470.0,215.0 560,215.0" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="388" y="207.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">drive / support: trace</text>
-<polyline points="920,215.0 1010.0,215.0 1010.0,215.0 1100,215.0" fill="none" stroke="#3978a8" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="928" y="207.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#3978a8">mechanical: dimensions TBD</text>
-<polyline points="380,495.0 470.0,495.0 470.0,495.0 560,495.0" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="388" y="487.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">source feed: trace</text>
-<polyline points="920,495.0 1010.0,495.0 1010.0,495.0 1100,495.0" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="928" y="487.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">power entry TBD</text>
-<polyline points="740.0,580 740.0,580 740.0,720 740.0,720" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="748.0" y="642.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">Uno supply route TBD</text>
-<polyline points="920,795.0 1010.0,795.0 1010.0,495.0 1100,495.0" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="928" y="637.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">USB / serial: confirm</text>
-<polyline points="920,795.0 1010.0,795.0 1010.0,795.0 1100,795.0" fill="none" stroke="#b26a00" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="928" y="787.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#b26a00">I/O mapping TBD</text>
-<rect x="40" y="140" width="340" height="150" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="54" y="166" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">RC drive system</text>
-<text x="54" y="192" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">3S propulsion pack (owner scope)</text>
-<text x="54" y="212" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Stock SCX6: 4WD / two-speed</text>
-<text x="54" y="232" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Installed modifications unverified</text>
-<text x="54" y="278" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<rect x="560" y="140" width="360" height="150" rx="8" fill="white" stroke="#3978a8" stroke-width="2"/>
-<text x="574" y="166" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#3978a8">SCX6 + cart mounting interface</text>
-<text x="574" y="192" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Raised tub and metal interface</text>
-<text x="574" y="212" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Visible in historical photos</text>
-<text x="574" y="232" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Dimensions and joints unmeasured</text>
-<text x="574" y="278" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#3978a8">HISTORICAL</text>
-<rect x="1100" y="140" width="350" height="150" rx="8" fill="white" stroke="#3978a8" stroke-width="2"/>
-<text x="1114" y="166" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#3978a8">Gorilla Cart / payload</text>
-<text x="1114" y="192" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Tub above chassis in photos</text>
-<text x="1114" y="212" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Payload offset changes lean</text>
-<text x="1114" y="232" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">No validated load envelope</text>
-<text x="1114" y="278" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#3978a8">HISTORICAL</text>
-<rect x="40" y="410" width="340" height="170" rx="8" fill="white" stroke="#3978a8" stroke-width="2"/>
-<text x="54" y="436" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#3978a8">Auxiliary power</text>
-<text x="54" y="462" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Kobalt pack / blue KBT adapter</text>
-<text x="54" y="482" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Red + black leads visible</text>
-<text x="54" y="502" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Polarity and cutoff unverified</text>
-<text x="54" y="568" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#3978a8">HISTORICAL</text>
-<rect x="560" y="410" width="360" height="170" rx="8" fill="white" stroke="#b26a00" stroke-width="2"/>
-<text x="574" y="436" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b26a00">Converters / distribution</text>
-<text x="574" y="462" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">5V 10A + separate 5V 3A listed</text>
-<text x="574" y="482" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">12V branch is a proposal</text>
-<text x="574" y="502" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Settings / routing unverified</text>
-<text x="574" y="568" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b26a00">UNKNOWN</text>
-<rect x="1100" y="410" width="350" height="170" rx="8" fill="white" stroke="#b33a3a" stroke-width="2"/>
-<text x="1114" y="436" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b33a3a">Raspberry Pi / model conflict</text>
-<text x="1114" y="462" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Pi 3B in S06; Pi 4 elsewhere</text>
-<text x="1114" y="482" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Power entry, OS and fitting TBD</text>
-<text x="1114" y="502" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">New draft: logging only</text>
-<text x="1114" y="568" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b33a3a">CONFLICTING</text>
-<rect x="560" y="720" width="360" height="150" rx="8" fill="white" stroke="#216e4e" stroke-width="2"/>
-<text x="574" y="746" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#216e4e">Elegoo Uno R3</text>
-<text x="574" y="772" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Board identity confirmed by owner</text>
-<text x="574" y="792" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Existing sketch not recovered</text>
-<text x="574" y="812" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">New draft defaults to idle sensors</text>
-<text x="574" y="858" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED</text>
-<rect x="1100" y="720" width="350" height="150" rx="8" fill="white" stroke="#b33a3a" stroke-width="2"/>
-<text x="1114" y="746" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#b33a3a">Sensors / availability conflict</text>
-<text x="1114" y="772" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">HC-SR04 reported lost (S06)</text>
-<text x="1114" y="792" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">A02YYUW UART is proposed</text>
-<text x="1114" y="812" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">IMU / LED / buzzer fitting TBD</text>
-<text x="1114" y="858" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#b33a3a">CONFLICTING</text>
-<text x="40" y="650" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Owner confirms Uno; other claims source-attributed.</text>
-<text x="40" y="671" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">S01-S14: docs/reconciliation/source-inventory.json</text>
-<text x="40" y="692" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Version map is provisional: V2 reconstruction,</text>
-<text x="40" y="713" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">V3 future capability concepts; owner review pending.</text>
-<text x="40" y="734" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Posters do not prove installation or performance.</text>
-<text x="40" y="755" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#243347">Grounds, mount dimensions and Pi remain unresolved.</text>
-<text x="40" y="975" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#243347">DRAFT R1 | 2026-11-21 | Dashed links = unresolved/proposed, not an instruction to wire | Technical review pending</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1540" viewBox="0 0 1900 1540" role="img">
+<title>01 / LitterBuggy V2 — system overview</title><desc>Physical reconstruction + proposed observation system | configuration CFG-V2-R1 | mechanical basis CAD-R3. ARCH-R2; see README for scope.</desc>
+<rect width="1900" height="1540" fill="#f8fafc"/>
+<rect x="40" y="170" width="1820" height="330" rx="12" fill="#edf2f7" stroke="#d4dde7"/>
+<rect x="40" y="530" width="1820" height="590" rx="12" fill="#edf2f7" stroke="#d4dde7"/>
+<rect x="40" y="1150" width="1820" height="300" rx="12" fill="#fff7ed" stroke="#d4dde7"/>
+<polyline id="SYS-E01" points="510,342.5 610.0,342.5 610.0,345.0 710,345.0" fill="none" stroke="#a45b00" stroke-width="2" stroke-dasharray="7 5"/>
+<polyline id="SYS-E02" points="1180,345.0 1300.0,345.0 1300.0,342.5 1420,342.5" fill="none" stroke="#216e4e" stroke-width="2"/>
+<polyline id="SYS-E03" points="510,702.5 710,702.5" fill="none" stroke="#a45b00" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="710,702.5 699.0,697.5 699.0,707.5" fill="#a45b00"/>
+<polyline id="SYS-E04" points="1180,702.5 1420,702.5" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1420,702.5 1409.0,697.5 1409.0,707.5" fill="#7251a3"/>
+<polyline id="SYS-E05" points="1062.5,805 1062.5,840 1625,840 1625.0,880" fill="none" stroke="#a45b00" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1625.0,880 1630.0,869.0 1620.0,869.0" fill="#a45b00"/>
+<polyline id="SYS-E06" points="510,980.0 710,980.0" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="710,980.0 699.0,975.0 699.0,985.0" fill="#7251a3"/>
+<polyline id="SYS-E07" points="1180,980.0 1420,980.0" fill="none" stroke="#7251a3" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="1420,980.0 1409.0,975.0 1409.0,985.0" fill="#7251a3"/>
+<rect id="SYS-CH1" x="70" y="245" width="440" height="195" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>Photo + source scope; not an inspection | CAD-P04, CAD-P06, REC-012, REC-013</title></rect>
+<rect id="SYS-FRAME" x="710" y="225" width="470" height="240" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>Owner relationship only; CAD-U03/U06/U07 | CAD-U03, CAD-U06, CAD-U07, CAD-P04, CAD-P06</title></rect>
+<rect id="SYS-TUB" x="1420" y="245" width="410" height="195" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>Owner orientation + hinge relationship | CAD-U01, CAD-U04, CAD-U05, CAD-U06</title></rect>
+<rect id="SYS-B2" x="70" y="600" width="440" height="205" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>BOM / historical media; CAD appearance | REC-004, REC-005, REC-009, CAD-P01, CAD-P02</title></rect>
+<rect id="SYS-RAILS" x="710" y="600" width="470" height="205" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>Source ratings; not measured capability | REC-007, REC-008, REC-009, REC-010</title></rect>
+<rect id="SYS-CASE" x="1420" y="600" width="410" height="205" rx="8" fill="white" stroke="#a45b00" stroke-width="2"><title>Appearance in photos; internals unresolved | CAD-P01, CAD-P02, CAD-P05, REC-022, REC-024</title></rect>
+<rect id="SYS-SENSORS" x="70" y="880" width="440" height="200" rx="8" fill="white" stroke="#b33a3a" stroke-width="2"><title>Historical availability vs proposed profiles | REC-014, REC-015, REC-016, FW</title></rect>
+<rect id="SYS-UNO1" x="710" y="880" width="470" height="200" rx="8" fill="white" stroke="#216e4e" stroke-width="2"><title>Board identity only; not pin/deployment proof | OWNER-UNO, REC-011, REC-033, FW</title></rect>
+<rect id="SYS-PI1" x="1420" y="880" width="410" height="200" rx="8" fill="white" stroke="#b33a3a" stroke-width="2"><title>Source conflict; source code != deployment | REC-003, REC-033, REC-037, LOGGER</title></rect>
+<text id="title" x="40" y="56" font-family="Arial,DejaVu Sans,sans-serif" font-size="30" font-weight="700" fill="#243347">01 / LitterBuggy V2 — system overview</text>
+<text id="subtitle" x="40" y="91" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Physical reconstruction + proposed observation system | configuration CFG-V2-R1 | mechanical basis CAD-R3</text>
+<text id="legend" x="40" y="128" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#243347">CONFIRMED = stated scope only   |   CONFLICTING = evidence disagrees   |   PROPOSED = intent   |   UNKNOWN = insufficient evidence</text>
+<text id="mechanical-title" x="62" y="205" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="700" fill="#243347">MECHANICAL / OWNER-CONFIRMED RELATIONSHIPS; ALL NUMERIC DIMENSIONS UNMEASURED</text>
+<text id="observation-title" x="62" y="565" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="700" fill="#243347">POWER + OBSERVATION / ROUTES ARE LOGICAL HYPOTHESES, NOT TRACED WIRES</text>
+<text id="review-title" x="62" y="1185" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="700" fill="#243347">REVIEW BOUNDARY / PHYSICAL OBSERVATIONS, DESIGN INTENT AND CODE EVIDENCE STAY SEPARATE</text>
+<text id="SYS-CH1-title" x="84" y="276" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">CH1 / SCX6 mobility base</text>
+<text id="SYS-CH1-line-0" x="84" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">SCX6 identified in project / photographs.</text>
+<text id="SYS-CH1-line-1" x="84" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Stock reference: 4WD and two-speed.</text>
+<text id="SYS-CH1-line-2" x="84" y="355" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Installed drive modifications unverified.</text>
+<text id="SYS-CH1-line-3" x="84" y="378" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">3S propulsion remains project scope.</text>
+<text id="SYS-CH1-basis" x="84" y="409" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Photo + source scope; not an inspection</text>
+<text id="SYS-CH1-status" x="84" y="428" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  SYS-CH1</text>
+<text id="SYS-FRAME-title" x="724" y="256" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">Mounting frame / member ordering</text>
+<text id="SYS-FRAME-line-0" x="724" y="289" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Gray rectangular frame stays on chassis.</text>
+<text id="SYS-FRAME-line-1" x="724" y="312" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Fore/aft members BELOW gray frame.</text>
+<text id="SYS-FRAME-line-2" x="724" y="335" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Transverse member(s) ABOVE gray frame.</text>
+<text id="SYS-FRAME-line-3" x="724" y="358" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Indoor / outdoor hardware is the same.</text>
+<text id="SYS-FRAME-line-4" x="724" y="381" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Joint detail, sections and dimensions open.</text>
+<text id="SYS-FRAME-basis" x="724" y="434" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Owner relationship only; CAD-U03/U06/U07</text>
+<text id="SYS-FRAME-status" x="724" y="453" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  SYS-FRAME</text>
+<text id="SYS-TUB-title" x="1434" y="276" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">Gorilla tub / attached tipping</text>
+<text id="SYS-TUB-line-0" x="1434" y="309" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Front = yellow-handle end (+X).</text>
+<text id="SYS-TUB-line-1" x="1434" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Normal hinge at opposite / rear end.</text>
+<text id="SYS-TUB-line-2" x="1434" y="355" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Tub tips; outer frame stays stationary.</text>
+<text id="SYS-TUB-line-3" x="1434" y="378" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Axis position, latch and travel open.</text>
+<text id="SYS-TUB-basis" x="1434" y="409" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Owner orientation + hinge relationship</text>
+<text id="SYS-TUB-status" x="1434" y="428" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  SYS-TUB</text>
+<text id="SYS-B2-title" x="84" y="631" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">B2 + A1 / auxiliary source</text>
+<text id="SYS-B2-line-0" x="84" y="664" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Kobalt 24V family is project scope.</text>
+<text id="SYS-B2-line-1" x="84" y="687" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Blue KBT adapter in historical media.</text>
+<text id="SYS-B2-line-2" x="84" y="710" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Actual pack label / cutoff / polarity open.</text>
+<text id="SYS-B2-line-3" x="84" y="733" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Blue front-corner hardware not identified.</text>
+<text id="SYS-B2-basis" x="84" y="774" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">BOM / historical media; CAD appearance</text>
+<text id="SYS-B2-status" x="84" y="793" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  SYS-B2</text>
+<text id="SYS-RAILS-title" x="724" y="631" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">Converters / protection / distribution</text>
+<text id="SYS-RAILS-line-0" x="724" y="664" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">U5: source-listed 5V 10A; route open.</text>
+<text id="SYS-RAILS-line-1" x="724" y="687" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">U5A: separate 5V 3A; load unassigned.</text>
+<text id="SYS-RAILS-line-2" x="724" y="710" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">U12: proposed 12V 5A+ branch.</text>
+<text id="SYS-RAILS-line-3" x="724" y="733" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Fuse / switch / returns require tracing.</text>
+<text id="SYS-RAILS-basis" x="724" y="774" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Source ratings; not measured capability</text>
+<text id="SYS-RAILS-status" x="724" y="793" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  SYS-RAILS</text>
+<text id="SYS-CASE-title" x="1434" y="631" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#a45b00">External enclosure / visible lights</text>
+<text id="SYS-CASE-line-0" x="1434" y="664" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Orange case on enclosure-side wall.</text>
+<text id="SYS-CASE-line-1" x="1434" y="687" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">White front lights; red rim light strips.</text>
+<text id="SYS-CASE-line-2" x="1434" y="710" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Case contents / light feeds untraced.</text>
+<text id="SYS-CASE-line-3" x="1434" y="733" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No assembled IP rating established.</text>
+<text id="SYS-CASE-basis" x="1434" y="774" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Appearance in photos; internals unresolved</text>
+<text id="SYS-CASE-status" x="1434" y="793" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#a45b00">UNKNOWN  /  SYS-CASE</text>
+<text id="SYS-SENSORS-title" x="84" y="911" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#b33a3a">IMU / range / feedback candidates</text>
+<text id="SYS-SENSORS-line-0" x="84" y="944" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">MPU-6050 fitting and wiring unknown.</text>
+<text id="SYS-SENSORS-line-1" x="84" y="967" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">HC-SR04 reported lost in S06.</text>
+<text id="SYS-SENSORS-line-2" x="84" y="990" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">A02YYUW UART alternative unselected.</text>
+<text id="SYS-SENSORS-line-3" x="84" y="1013" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No validated heading or obstacle control.</text>
+<text id="SYS-SENSORS-basis" x="84" y="1049" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Historical availability vs proposed profiles</text>
+<text id="SYS-SENSORS-status" x="84" y="1068" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#b33a3a">CONFLICTING  /  SYS-SENSORS</text>
+<text id="SYS-UNO1-title" x="724" y="911" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#216e4e">UNO1 / Elegoo Uno R3</text>
+<text id="SYS-UNO1-line-0" x="724" y="944" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Board identity confirmed by owner.</text>
+<text id="SYS-UNO1-line-1" x="724" y="967" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Current pins / supply / sketch unknown.</text>
+<text id="SYS-UNO1-line-2" x="724" y="990" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">New draft: acquisition; defaults OFF.</text>
+<text id="SYS-UNO1-line-3" x="724" y="1013" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">No vehicle motion commands in draft.</text>
+<text id="SYS-UNO1-basis" x="724" y="1049" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Board identity only; not pin/deployment proof</text>
+<text id="SYS-UNO1-status" x="724" y="1068" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#216e4e">CONFIRMED  /  SYS-UNO1</text>
+<text id="SYS-PI1-title" x="1434" y="911" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#b33a3a">PI1 / Raspberry Pi + logger draft</text>
+<text id="SYS-PI1-line-0" x="1434" y="944" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Pi 3B (S06) vs Pi 4 elsewhere.</text>
+<text id="SYS-PI1-line-1" x="1434" y="967" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Fitted board, OS and power entry open.</text>
+<text id="SYS-PI1-line-2" x="1434" y="990" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Draft preserves raw bytes + SQLite.</text>
+<text id="SYS-PI1-line-3" x="1434" y="1013" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" font-weight="400" fill="#243347">Deployment / serial capture unverified.</text>
+<text id="SYS-PI1-basis" x="1434" y="1049" font-family="Arial,DejaVu Sans,sans-serif" font-size="12" font-weight="400" fill="#475569">Source conflict; source code != deployment</text>
+<text id="SYS-PI1-status" x="1434" y="1068" font-family="Arial,DejaVu Sans,sans-serif" font-size="11" font-weight="700" fill="#b33a3a">CONFLICTING  /  SYS-PI1</text>
+<text id="review-left-0" x="70" y="1234" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">CONFIRMED SCOPE</text>
+<text id="review-left-1" x="70" y="1259" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">Owner confirms Uno identity and mechanical</text>
+<text id="review-left-2" x="70" y="1284" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">relationships above. Photo references support</text>
+<text id="review-left-3" x="70" y="1309" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">appearance; they do not measure dimensions.</text>
+<text id="review-left-4" x="70" y="1334" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">Bucket omitted from CAD by display request;</text>
+<text id="review-left-5" x="70" y="1359" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">this is not a claim it was absent in operation.</text>
+<text id="review-mid-0" x="710" y="1234" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">OPEN INTERFACES</text>
+<text id="review-mid-1" x="710" y="1259" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">Trace power entries, returns and connector views.</text>
+<text id="review-mid-2" x="710" y="1284" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">Recover running sketch and sample its serial output.</text>
+<text id="review-mid-3" x="710" y="1309" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">Identify Pi / sensor boards; inspect current fit.</text>
+<text id="review-mid-4" x="710" y="1334" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">Measure mounts, hinge and moving clearances.</text>
+<text id="review-mid-5" x="710" y="1359" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">No link from Pi / Uno to ESC is established.</text>
+<text id="review-right-0" x="1360" y="1234" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">V1 / V2 / V3 DISCIPLINE</text>
+<text id="review-right-1" x="1360" y="1259" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">V2 reconstruction is the present review scope.</text>
+<text id="review-right-2" x="1360" y="1284" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">Posters are concepts, not installation evidence.</text>
+<text id="review-right-3" x="1360" y="1309" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">Autonomy, sorting, RTK and intake upgrades</text>
+<text id="review-right-4" x="1360" y="1334" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">remain future / unverified; version allocation</text>
+<text id="review-right-5" x="1360" y="1359" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="400" fill="#334155">and performance claims are not validated.</text>
+<text id="footer" x="40" y="1511" font-family="Arial,DejaVu Sans,sans-serif" font-size="14" font-weight="400" fill="#243347">ARCH-R2 | 2026-11-22 | Editable source + SVG/PNG | PDFs HELD | Scope and evidence: architecture-model.json / README.md</text>
+<rect x="541.0" y="312.75" width="138" height="24" fill="#f8fafc"/>
+<text id="SYS-E01-label" x="548.0" y="327.75" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#a45b00">mount joints: OPEN</text>
+<rect x="1221.0" y="312.75" width="158" height="24" fill="#f8fafc"/>
+<text id="SYS-E02-label" x="1228.0" y="327.75" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#216e4e">rear hinge / fixed frame</text>
+<rect x="571.0" y="671.5" width="78" height="24" fill="#f8fafc"/>
+<text id="SYS-E03-label" x="578.0" y="686.5" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#a45b00">feed: trace</text>
+<rect x="1231.5" y="671.5" width="137" height="24" fill="#f8fafc"/>
+<text id="SYS-E04-label" x="1238.5" y="686.5" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#7251a3">lighting feed: OPEN</text>
+<rect x="1271.75" y="809.0" width="149" height="24" fill="#f8fafc"/>
+<text id="SYS-E05-label" x="1278.75" y="824.0" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#a45b00">Pi power entry: OPEN</text>
+<rect x="571.5" y="949.0" width="77" height="24" fill="#f8fafc"/>
+<text id="SYS-E06-label" x="578.5" y="964.0" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#7251a3">I/O: OPEN</text>
+<rect x="1227.0" y="949.0" width="146" height="24" fill="#f8fafc"/>
+<text id="SYS-E07-label" x="1234.0" y="964.0" font-family="Arial,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#7251a3">USB serial: proposed</text>
 </svg>

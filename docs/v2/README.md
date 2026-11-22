@@ -10,7 +10,7 @@ remain unresolved. Version allocation is proposed pending owner confirmation.
 
 | Stage | Editable source | Current review material |
 | --- | --- | --- |
-| System overview | [Overview](../../hardware/v2/architecture/v2_system_overview.drawio), [power domains](../../hardware/v2/architecture/v2_power_domains.drawio), [data flow](../../hardware/v2/architecture/v2_data_flow.drawio) | Matching SVG/PNG in [architecture](../../hardware/v2/architecture) |
+| Architecture (ARCH-R2) | [Overview](../../hardware/v2/architecture/v2_system_overview.drawio), [power domains](../../hardware/v2/architecture/v2_power_domains.drawio), [data flow](../../hardware/v2/architecture/v2_data_flow.drawio) | Current SVG/PNG, evidence scopes and feedback IDs in [architecture review guide](../../hardware/v2/architecture/README.md) |
 | Digital connectivity | [Connectivity diagram](../../hardware/v2/architecture/v2_digital_connectivity.drawio) | [SVG](../../hardware/v2/architecture/v2_digital_connectivity.svg); open UART replacement and power interfaces |
 | Power schematic | [Three-sheet QElectroTech project](../../hardware/v2/electrical/v2_electrical.qet) | [Native PNG previews](../../hardware/v2/electrical/exports); all drawn nets untraced hypotheses |
 | Wiring | [Power YAML](../../hardware/v2/wiring/v2_power_harness.yml), [sensor YAML](../../hardware/v2/wiring/v2_sensor_harness.yml) | [Registers and HTML/SVG/PNG/BOM](../../hardware/v2/wiring); logical functions, physical pins TBD |
@@ -31,10 +31,18 @@ Word pagination and PDF proofing follow content review, as requested.
 
 ## Evidence markings and limits
 
-Confirmed, conflicting, proposed and unknown have distinct meanings. Blue in
-diagrams indicates historical observation, not current installation verification.
-Green confirms Uno identity only. Red exposes conflicts. Dashed links and QET
-TBD nets are unresolved/proposed; no physical pin numbering is implied.
+Confirmed, conflicting, proposed and unknown have distinct meanings. ARCH-R2
+uses these four states with a scope on every component. Green confirms only the
+stated owner identity/relationship or source-only code behavior; it does not
+verify installation, deployment or performance. The separate digital-connectivity
+R1 diagram retains its historical legend. Dashed electrical links and QET TBD
+nets are unresolved/proposed; no physical connector numbering is implied.
+
+ARCH-R2 separates physical support, power allocation and draft acquisition flow.
+It incorporates CAD-R3's fixed outer frame, lower fore/aft members, upper transverse
+member(s) and rear hinge. It keeps U5A unassigned and Uno power entry open, and
+shows raw-first capture, validation/error storage and provenance from the actual
+logger source. Existing firmware, wiring, CAD and all PDFs are unchanged by this pass.
 
 CAD-R3 uses seven photograph references, including under-frame/low-front views and owner confirmation of the rear hinge and fixed frame; [mechanical review guide](../../hardware/v2/mechanical/README.md) and [observation record](../../hardware/v2/mechanical/photo-observations.json) describe the changes. Yellow-handle end is owner-confirmed front; bucket is omitted by owner request.
 
